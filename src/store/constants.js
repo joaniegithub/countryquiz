@@ -10,4 +10,3 @@ export const GAME_NEXT = 'GAME_NEXT';
 export const GAME_ANSWER = 'GAME_ANSWER';
 
 export const SHOW_RULES = 'SHOW_RULES';
-

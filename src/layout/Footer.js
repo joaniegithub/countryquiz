@@ -4,34 +4,13 @@ import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 // import { openRules } from "store/actions";
 // import { mainPadding } from "styles/styles";
 // import { useDispatch } from "react-redux";
-import { Link } from '@mui/material';
-import { Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 
-const styles = () => ({
-    footer: {
-        display: 'flex !important',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        // ...mainPadding,
-        backgroundColor: '#fafafa',
-        paddingTop: '4px',
-        paddingBottom: '4px',
-    },
-    footerLinks: {
-        display: 'block',
-    },
-    footerCopyright: {
-        display: 'block',
-        fontSize: '12px',
-        lineHeight: '20px',
-        width: '100%',
-        textAlign: 'right',
-        margin: '0',
-    },
-});
+import { SIDE_NAV_WIDTH } from './SideNav';
+
+const HEIGHT = 36;
 
 const Footer = (props) => {
-    const { classes } = props;
     // const dispatch = useDispatch();
 
     // const handleClickRules = () => {
@@ -39,26 +18,40 @@ const Footer = (props) => {
     // };
 
     return (
-        <Stack
-            alignItems="center"
-            direction="row"
-            justifyContent="space-between"
-            spacing={2}
+        <Box
+            component="footer"
             sx={{
-                px: 2,
+                left: {
+                    md: `${SIDE_NAV_WIDTH}px`,
+                    position: 'relative',
+                },
+                width: {
+                    md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                },
             }}
         >
-            {/* <Link onClick={() => handleClickRules()} size="small" component="button">
-			About
-		</Link> */}
-            <p>Country Quiz @2024 Joanie Lessnick</p>
-            <OfflineBoltIcon
+            <Stack
+                alignItems="center"
+                direction="row"
+                justifyContent="space-between"
+                spacing={2}
                 sx={{
-                    fontSize: 24,
-                    marginRight: '4px',
+                    minHeight: HEIGHT,
+                    px: 2,
                 }}
-            />
-        </Stack>
+            >
+                {/* <Link onClick={() => handleClickRules()} size="small" component="button">
+                About
+            </Link> */}
+                <p>Country Quiz @2024 Joanie Lessnick</p>
+                <OfflineBoltIcon
+                    sx={{
+                        fontSize: 24,
+                        marginRight: '4px',
+                    }}
+                />
+            </Stack>
+        </Box>
     );
 };
 

@@ -1,9 +1,12 @@
 import * as React from 'react';
+import { useState } from 'react';
 
-import { Box, Container, Stack } from '@mui/material';
+import { Box, Container } from '@mui/material';
 
 import Footer from './Footer';
 import Header from './Header';
+import SideNav from './SideNav';
+import { SIDE_NAV_WIDTH } from './SideNav';
 
 const images = [
     'arab_tile',
@@ -25,57 +28,70 @@ const images = [
     'trees',
 ];
 
-// const styles = (theme) => ({
-// 	container: {
-// 		backgroundColor: "#fff",
-// 		margin: "0",
-// 		padding: "0 !important",
-
-// 		minHeight: "100%",
-// 		display: "flex !important",
-// 		flexDirection: "column",
-// 		"@media (min-width: 901px)": {
-// 			border: "#ddd 1px solid",
-// 			minHeight: "initial",
-// 		},
-// 	},
-// 	// ["@media (mmin-width: 900px)"]: {
-// 	// 	// eslint-disable-line no-useless-computed-key
-// 	// 	minHeight: "initial",
-// 	// },
-
-// 	main: {
-// 		// margin: "0 16px",
-// 		flexGrow: 1,
-// 	},
-// });
-
 const Layout = (props) => {
     const { deferredPrompt } = props;
+    const [openNav, setOpenNav] = useState(false);
 
     return (
-        <Container maxWidth="md">
-            <Header images={images} deferredPrompt={deferredPrompt} />
+        <Container
+            maxWidth="md"
+            sx={{
+                // backdropFilter: "blur(6px)",
+                // backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
+                // position: "sticky",
+                // top: 0,
+                // width: {
+                // 	md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                // },
+                // zIndex: (theme) => theme.zIndex.appBar,
+                maxWidth: (theme) => theme.breakpoints.values.sm,
+                minHeight: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                px: 2,
+            }}
+            md={{
+                maxWidth: (theme) => theme.breakpoints.values.md,
+            }}
+        >
+            <SideNav
+                deferredPrompt={deferredPrompt}
+                onClose={() => setOpenNav(false)}
+                open={openNav}
+            />
+            <Header images={images} onNavOpen={() => setOpenNav(true)} />
             <Box
                 component="main"
                 sx={{
                     // backdropFilter: "blur(6px)",
                     // backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
                     // position: "sticky",
-                    // left: {
-                    // 	md: `${SIDE_NAV_WIDTH}px`,
-                    // },
+                    left: {
+                        md: `${SIDE_NAV_WIDTH}px`,
+                        position: 'relative',
+                    },
                     // top: 0,
-                    // width: {
-                    // 	md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                    // },
+                    width: {
+                        md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                    },
                     // zIndex: (theme) => theme.zIndex.appBar,
+                    flexGrow: 1,
                     px: 2,
                 }}
             >
                 {props.children}
             </Box>
-            <Footer />
+            <Footer
+                sx={{
+                    left: {
+                        md: `${SIDE_NAV_WIDTH}px`,
+                        position: 'relative',
+                    },
+                    width: {
+                        md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                    },
+                }}
+            />
         </Container>
     );
 };

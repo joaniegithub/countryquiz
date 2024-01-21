@@ -38,7 +38,8 @@ export const startGame = () => {
     return {
         type: constants.START_GAME,
     };
-};export const gameNext = () => {
+};
+export const gameNext = () => {
     return {
         type: constants.GAME_NEXT,
     };
