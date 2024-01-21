@@ -1,4 +1,5 @@
 import * as constants from 'store/constants';
+import data from 'data/countries.json';
 
 export const defaultSettings = {};
 
@@ -7,7 +8,7 @@ const defaultState = {
     settings: defaultSettings,
     currentGame: undefined,
     showRules: false,
-    countriesData: undefined,
+    countriesData: [...(Object.values(data))],
 };
 
 const gameDefaultState = {
@@ -16,8 +17,8 @@ const gameDefaultState = {
     // turnNumbers: [],
     // dealer: -1,
     currentScore: 0,
-    currentTurn: -1,
-    currentPhase: -1,
+    currentTurn: 0,
+    currentPhase: 0,
     // nbCards: 52,
     // overrideMode: false,
     // overridePhase: -1,
@@ -64,15 +65,15 @@ const getChoices = (nbChoices, answers, answersFrom) => {
 		if (indexUsed.indexOf(rnd) >= 0 
 		|| answers.indexOf(answersFrom[rnd]) >= 0 
 		|| choices.indexOf(answersFrom[rnd]) >= 0) {
-			console.log(rnd, answersFrom[rnd]); // already in the choices
+			// console.log(rnd, answersFrom[rnd]); // already in the choices
 			continue;
 		}
 		choices.push(answersFrom[rnd]);
 		indexUsed.push(rnd);
 	}
-	console.log(choices, answers);
+	// console.log(choices, answers);
 	choices.splice((choices.length+1) * Math.random() | 0, 0, answers);
-	console.log(choices);
+	// console.log(choices);
 	return choices;
 }
 
@@ -88,7 +89,13 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             };
 
         case constants.NEW_GAME:
-            const independentCountries = shuffle(state.countriesData.filter(
+            return {
+                ...state,
+                currentGame: undefined,
+            };
+
+        case constants.START_GAME:
+            const independentCountries = shuffle(Object.values(data).filter(
                 (c) => c.independent === true
             ));
 
@@ -120,16 +127,6 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     ...gameDefaultState,
                     mode,
                     questions,
-                },
-            };
-
-        case constants.START_GAME:
-            return {
-                ...state,
-                currentGame: {
-                    ...game,
-                    currentTurn: 0,
-                    currentPhase: 0,
                 },
             };
 

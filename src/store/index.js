@@ -30,7 +30,7 @@ function loadFromLocalStorage() {
             ...parsedState,
             settings: mergedSettings,
             showRules: false,
-            countriesData: [...(Object.values(data))],
+            // countriesData: [...(Object.values(data))],
         };
         return newState;
     } catch (e) {

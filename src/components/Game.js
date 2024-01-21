@@ -24,7 +24,7 @@ const Game = (props) => {
     const [chosenAnswer, setChosenAnswer] = useState("");
     const game = useCurrentGame();
     const dispatch = useDispatch();
-
+	
 	if (!game) {
 		return null;
 	}
