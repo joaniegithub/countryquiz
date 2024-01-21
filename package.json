@@ -1,38 +1,73 @@
 {
-  "name": "countryquiz",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "countryquiz",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "http://joaniegithub.github.io/countryquiz",
+    "keywords": [
+        "country",
+        "quiz",
+        "game"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "main": "template.json",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/joaniegithub/countryquiz",
+        "directory": "packages/joaniegithub/countryquiz"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.3",
+        "@emotion/styled": "^11.11.0",
+        "@fontsource/roboto": "^5.0.8",
+        "@mui/icons-material": "^5.15.5",
+        "@mui/lab": "5.0.0-alpha.155",
+        "@mui/material": "5.14.20",
+        "@mui/system": "5.14.20",
+        "@mui/x-date-pickers": "6.18.4",
+        "@reduxjs/toolkit": "^2.0.1",
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "customize-cra": "^1.0.0",
+        "gh-pages": "^6.1.1",
+        "react": "^18.2.0",
+        "react-app-rewired": "^2.2.1",
+        "react-dom": "^18.2.0",
+        "react-github-btn": "^1.4.0",
+        "react-redux": "^9.1.0",
+        "react-router-dom": "^6.21.3",
+        "react-scripts": "5.0.1",
+        "universal-cookie": "^7.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "prettier": "3.2.4"
+    }
 }
