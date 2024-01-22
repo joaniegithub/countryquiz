@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import data from 'data/countries.json';
 
 import reducer, { defaultSettings } from './reducer';
 

@@ -18,7 +18,6 @@ import {
     IconButton,
     Stack,
     SvgIcon,
-    Typography,
     useMediaQuery,
 } from '@mui/material';
 

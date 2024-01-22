@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { gameAnswer, gameNext, newGame, useCurrentGame } from 'store/actions';
+import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';

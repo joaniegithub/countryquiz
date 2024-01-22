@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import { Box, Container } from '@mui/material';
 
 import Footer from './Footer';
 import Header from './Header';
-import SideNav from './SideNav';
+// import SideNav from './SideNav';
 import { SIDE_NAV_WIDTH } from './SideNav';
 
 const images = [
@@ -30,7 +30,7 @@ const images = [
 
 const Layout = (props) => {
     const { deferredPrompt } = props;
-    const [openNav, setOpenNav] = useState(false);
+    // const [openNav, setOpenNav] = useState(false);
 
     return (
         <Container
@@ -54,12 +54,16 @@ const Layout = (props) => {
                 maxWidth: (theme) => theme.breakpoints.values.md,
             }}
         >
-            <SideNav
+            {/* <SideNav
                 deferredPrompt={deferredPrompt}
                 onClose={() => setOpenNav(false)}
                 open={openNav}
+            /> */}
+            <Header 
+                images={images} 
+                // onNavOpen={() => setOpenNav(true)}
+                deferredPrompt={deferredPrompt}
             />
-            <Header images={images} onNavOpen={() => setOpenNav(true)} />
             <Box
                 component="main"
                 sx={{
@@ -68,14 +72,14 @@ const Layout = (props) => {
                     // position: "sticky",
 					display: "flex",
 					flexDirection: "column",
-                    left: {
-                        md: `${SIDE_NAV_WIDTH}px`,
-                        position: 'relative',
-                    },
+                    // left: {
+                    //     md: `${SIDE_NAV_WIDTH}px`,
+                    //     position: 'relative',
+                    // },
                     // top: 0,
-                    width: {
-                        md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                    },
+                    // width: {
+                    //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                    // },
                     // zIndex: (theme) => theme.zIndex.appBar,
                     flexGrow: 1,
                     px: 2,

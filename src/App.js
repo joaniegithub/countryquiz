@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 
 import { ThemeProvider } from '@mui/material';
-import { Box } from '@mui/system';
 
 import './App.css';
 import Game from './components/Game';
-import NewGame from './components/NewGame';
+import Home from './components/Home';
 import Layout from './layout/Layout';
 import { useCurrentGame } from './store/actions';
 import { createTheme as createMyTheme } from './theme';
@@ -66,10 +65,10 @@ const CountryQuizApp = (props) => {
     return (
         <ThemeProvider theme={theme}>
             <Layout deferredPrompt={deferredPrompt}>
-                {currentGame && currentGame.currentTurn >= 0 ? (
+                {currentGame ? (
                     <Game />
                 ) : (
-                    <NewGame />
+                    <Home />
                 )}
                 {/* <InfoModal openInfoModal={showRules} onCloseInfoModal={handleCloseInfoModal} /> */}
             </Layout>

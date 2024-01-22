@@ -1,29 +1,15 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { startGame, useCurrentGame } from 'store/actions';
+// import { useState } from 'react';
 
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import {
-    Box,
     Button,
-    Container,
+    Card,
     Stack,
-    SvgIcon,
-    Typography,
-    useMediaQuery,
 } from '@mui/material';
 
 const NewGame = (props) => {
-    const game = useCurrentGame();
-    const dispatch = useDispatch();
-
-    // const handleClickNewGame = () => {
-    // 	dispatch(newGame());
-    // };
-    const handleClickStart = () => {
-        dispatch(startGame());
-    };
+    const { onClickStart } = props;
 
     return (
         <React.Fragment>
@@ -34,14 +20,24 @@ const NewGame = (props) => {
 				height="100%"
 				flexGrow={1}
             >
-				<Button
-					variant="contained"
-					size="large"
-					endIcon={<OfflineBoltIcon />}
-					onClick={handleClickStart}
-				>
-					Nouvelle partie
-				</Button>
+                <Card
+                    sx={{
+                        px: 2,
+                        py: 2,
+                        mt: 1,
+                        textAlign: 'center',
+                    }}
+                >
+                    <div>mode:</div><br/>
+                    <Button
+                        variant="contained"
+                        size="large"
+                        endIcon={<OfflineBoltIcon />}
+                        onClick={onClickStart}
+                    >
+                        Start Game
+                    </Button>
+                </Card>
             </Stack>
         </React.Fragment>
     );

@@ -6,7 +6,7 @@ import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 // import { useDispatch } from "react-redux";
 import { Box, Stack } from '@mui/material';
 
-import { SIDE_NAV_WIDTH } from './SideNav';
+// import { SIDE_NAV_WIDTH } from './SideNav';
 
 const HEIGHT = 36;
 
@@ -21,13 +21,13 @@ const Footer = (props) => {
         <Box
             component="footer"
             sx={{
-                left: {
-                    md: `${SIDE_NAV_WIDTH}px`,
-                    position: 'relative',
-                },
-                width: {
-                    md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                },
+                // left: {
+                //     md: `${SIDE_NAV_WIDTH}px`,
+                //     position: 'relative',
+                // },
+                // width: {
+                //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                // },
             }}
         >
             <Stack
