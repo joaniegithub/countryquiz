@@ -68,7 +68,7 @@ export const SideNav = (props) => {
     const handleCancelGame = () => {
         setConfirmCancelGameOpen(true);
     };
-
+	
     const content = (
         <Box
             sx={{
@@ -159,22 +159,49 @@ export const SideNav = (props) => {
         </Box>
     );
 
+	const dialog = 
+            <Dialog
+                open={confirmCancelGameOpen}
+                onClose={handleConfirmCancelGameClose}
+                aria-labelledby="alert-dialog-title"
+            >
+                <DialogTitle id="alert-dialog-title">{`Abandonner la partie?`}</DialogTitle>
+                <DialogActions>
+                    <Button
+                        variant="outlined"
+                        onClick={handleConfirmCancelGameDisagree}
+                    >
+                        Non
+                    </Button>
+                    <Button
+                        variant="contained"
+                        onClick={handleConfirmCancelGameClose}
+                        autoFocus
+                    >
+                        Oui
+                    </Button>
+                </DialogActions>
+            </Dialog>;
+
     if (mdgUp) {
         return (
-            <Drawer
-                anchor="left"
-                open
-                PaperProps={{
-                    sx: {
-                        backgroundColor: 'neutral.800',
-                        color: 'common.white',
-                        width: SIDE_NAV_WIDTH,
-                    },
-                }}
-                variant="permanent"
-            >
-                {content}
-            </Drawer>
+			<React.Fragment>
+				<Drawer
+					anchor="left"
+					open
+					PaperProps={{
+						sx: {
+							backgroundColor: 'neutral.800',
+							color: 'common.white',
+							width: SIDE_NAV_WIDTH,
+						},
+					}}
+					variant="permanent"
+				>
+					{content}
+				</Drawer>
+				{dialog}
+			</React.Fragment>
         );
     }
 
@@ -217,28 +244,7 @@ export const SideNav = (props) => {
                 </Stack>
                 {content}
             </Drawer>
-            <Dialog
-                open={confirmCancelGameOpen}
-                onClose={handleConfirmCancelGameClose}
-                aria-labelledby="alert-dialog-title"
-            >
-                <DialogTitle id="alert-dialog-title">{`Abandonner la partie?`}</DialogTitle>
-                <DialogActions>
-                    <Button
-                        variant="outlined"
-                        onClick={handleConfirmCancelGameDisagree}
-                    >
-                        Non
-                    </Button>
-                    <Button
-                        variant="contained"
-                        onClick={handleConfirmCancelGameClose}
-                        autoFocus
-                    >
-                        Oui
-                    </Button>
-                </DialogActions>
-            </Dialog>
+			{dialog}
         </React.Fragment>
     );
 };

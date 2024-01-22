@@ -27,14 +27,22 @@ const NewGame = (props) => {
 
     return (
         <React.Fragment>
-            <Button
-                variant="contained"
-                size="small"
-                endIcon={<OfflineBoltIcon />}
-                onClick={handleClickStart}
+            <Stack
+                alignItems="center"
+                direction="column"
+                justifyContent="center"
+				height="100%"
+				flexGrow={1}
             >
-                Nouvelle partie
-            </Button>
+				<Button
+					variant="contained"
+					size="large"
+					endIcon={<OfflineBoltIcon />}
+					onClick={handleClickStart}
+				>
+					Nouvelle partie
+				</Button>
+            </Stack>
         </React.Fragment>
     );
 };

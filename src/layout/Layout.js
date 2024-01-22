@@ -66,6 +66,8 @@ const Layout = (props) => {
                     // backdropFilter: "blur(6px)",
                     // backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
                     // position: "sticky",
+					display: "flex",
+					flexDirection: "column",
                     left: {
                         md: `${SIDE_NAV_WIDTH}px`,
                         position: 'relative',

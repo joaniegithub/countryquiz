@@ -88,7 +88,7 @@ const Game = (props) => {
                             fontWeight: 700,
                         }}
                     >
-                        {question ? question.question+(question.flag ? " "+question.flag : '') : ''}
+                        {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
                     </Typography>
                 </Card>
             </Box>

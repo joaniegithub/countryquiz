@@ -129,7 +129,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     answers,
                     allAnswers
                 );
-console.log(c.flag);
+
                 return {
                     country: c.cca3,
                     flag: c.flag,
