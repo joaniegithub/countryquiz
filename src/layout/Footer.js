@@ -20,15 +20,17 @@ const Footer = (props) => {
     return (
         <Box
             component="footer"
-            sx={{
-                // left: {
-                //     md: `${SIDE_NAV_WIDTH}px`,
-                //     position: 'relative',
-                // },
-                // width: {
-                //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                // },
-            }}
+            sx={
+                {
+                    // left: {
+                    //     md: `${SIDE_NAV_WIDTH}px`,
+                    //     position: 'relative',
+                    // },
+                    // width: {
+                    //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                    // },
+                }
+            }
         >
             <Stack
                 alignItems="center"

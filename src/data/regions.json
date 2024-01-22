@@ -1,0 +1,193 @@
+[
+    {
+        "name": "Americas",
+        "translations": {
+            "fra": "Amériques"
+        },
+        "subregions": [
+            {
+                "name": "Caribbean",
+                "translations": {
+                    "fra": "Caraïbes"
+                }
+            },
+            {
+                "name": "Central America",
+                "translations": {
+                    "fra": "Amérique centrale"
+                }
+            },
+            {
+                "name": "North America",
+                "translations": {
+                    "fra": "Amérique du Nord"
+                }
+            },
+            {
+                "name": "South America",
+                "translations": {
+                    "fra": "Amérique du Sud"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Europe",
+        "translations": {
+            "fra": "Europe"
+        }, 
+        "subregions": [
+            {
+                "name": "Central Europe",
+                "translations": {
+                    "fra": "Europe centrale"
+                }
+            },
+            {
+                "name": "Eastern Europe",
+                "translations": {
+                    "fra": "Europe de l'Est"
+                }
+            },
+            {
+                "name": "Northern Europe",
+                "translations": {
+                    "fra": "Europe du Nord"
+                }
+            },
+            {
+                "name": "Southeast Europe",
+                "translations": {
+                    "fra": "Europe du Sud-Est"
+                }
+            },
+            {
+                "name": "Southern Europe",
+                "translations": {
+                    "fra": "Europe du Sud"
+                }
+            },
+            {
+                "name": "Western Europe",
+                "translations": {
+                    "fra": "Europe de l'Ouest"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Asia",
+        "translations": {
+            "fra": "Asie"
+        }, 
+        "subregions": [
+            {
+                "name": "Central Asia",
+                "translations": {
+                    "fra": "Asie centrale"
+                }
+            },
+            {
+                "name": "Eastern Asia",
+                "translations": {
+                    "fra": "Asie de l'Est"
+                }
+            },
+            {
+                "name": "South-Eastern Asia",
+                "translations": {
+                    "fra": "Asie du Sud-Est"
+                }
+            },
+            {
+                "name": "Southern Asia",
+                "translations": {
+                    "fra": "Asie du Sud"
+                }
+            },
+            {
+                "name": "Western Asia",
+                "translations": {
+                    "fra": "Asie de l'Ouest"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Africa",
+        "translations": {
+            "fra": "Afrique"
+        },
+        "subregions": [
+            {
+                "name": "Eastern Africa",
+                "translations": {
+                    "fra": "Afrique de l'Est"
+                }
+            },
+            {
+                "name": "Middle Africa",
+                "translations": {
+                    "fra": "Afrique centrale"
+                }
+            },
+            {
+                "name": "Northern Africa",
+                "translations": {
+                    "fra": "Afrique du Nord"
+                }
+            },
+            {
+                "name": "Southern Africa",
+                "translations": {
+                    "fra": "Afrique australe"
+                }
+            },
+            {
+                "name": "Western Africa",
+                "translations": {
+                    "fra": "Afrique de l'Ouest"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Oceania",
+        "translations": {
+            "fra": "Océanie"
+        },
+        "subregions": [
+            {
+                "name": "Australasia",
+                "translations": {
+                    "fra": "Australasie"
+                }
+            },
+            {
+                "name": "Melanesia",
+                "translations": {
+                    "fra": "Mélanésie"
+                }
+            },
+            {
+                "name": "Micronesia",
+                "translations": {
+                    "fra": "Micronésie"
+                }
+            },
+            {
+                "name": "Polynesia",
+                "translations": {
+                    "fra": "Polynésie"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Antarctic",
+        "translations": {
+            "fra": "Antarctique"
+        },
+        "subregions": []
+    }
+]

@@ -5,6 +5,7 @@ import {
     outlinedInputClasses,
     paperClasses,
     tableCellClasses,
+    typographyClasses,
 } from '@mui/material';
 
 // Used only to create transitions
@@ -161,7 +162,10 @@ export function createComponents(config) {
                         'box-shadow',
                     ]),
                     '&:hover': {
-                        backgroundColor: palette.action.hover,
+                        // backgroundColor: palette.action.hover,
+                        [`& .${outlinedInputClasses.notchedOutline}`]: {
+                            borderColor: palette.neutral[400],
+                        },
                     },
                     '&:before': {
                         display: 'none',
@@ -175,11 +179,11 @@ export function createComponents(config) {
                     [`&.${filledInputClasses.focused}`]: {
                         backgroundColor: 'transparent',
                         borderColor: palette.primary.main,
-                        boxShadow: `${palette.primary.main} 0 0 0 2px`,
+                        // boxShadow: `${palette.primary.main} 0 0 0 2px`,
                     },
                     [`&.${filledInputClasses.error}`]: {
                         borderColor: palette.error.main,
-                        boxShadow: `${palette.error.main} 0 0 0 2px`,
+                        // boxShadow: `${palette.error.main} 0 0 0 2px`,
                     },
                 },
                 input: {
@@ -193,22 +197,22 @@ export function createComponents(config) {
             styleOverrides: {
                 root: {
                     '&:hover': {
-                        backgroundColor: palette.action.hover,
+                        // backgroundColor: palette.action.hover,
                         [`& .${outlinedInputClasses.notchedOutline}`]: {
-                            borderColor: palette.neutral[200],
+                            borderColor: palette.neutral[400],
                         },
                     },
                     [`&.${outlinedInputClasses.focused}`]: {
                         backgroundColor: 'transparent',
                         [`& .${outlinedInputClasses.notchedOutline}`]: {
                             borderColor: palette.primary.main,
-                            boxShadow: `${palette.primary.main} 0 0 0 2px`,
+                            // boxShadow: `${palette.primary.main} 0 0 0 2px`,
                         },
                     },
                     [`&.${filledInputClasses.error}`]: {
                         [`& .${outlinedInputClasses.notchedOutline}`]: {
                             borderColor: palette.error.main,
-                            boxShadow: `${palette.error.main} 0 0 0 2px`,
+                            // boxShadow: `${palette.error.main} 0 0 0 2px`,
                         },
                     },
                 },
@@ -221,7 +225,7 @@ export function createComponents(config) {
                     borderColor: palette.neutral[200],
                     transition: muiTheme.transitions.create([
                         'border-color',
-                        'box-shadow',
+                        // 'box-shadow',
                     ]),
                 },
             },
@@ -245,6 +249,13 @@ export function createComponents(config) {
                             transform: 'translate(14px, -9px) scale(0.85)',
                         },
                     },
+                },
+            },
+        },
+        MuiRadio: {
+            styleOverrides: {
+                sizeSmall: {
+                    padding: 4,
                 },
             },
         },
@@ -293,10 +304,10 @@ export function createComponents(config) {
                 },
             },
         },
-        MuiTextField: {
-            defaultProps: {
-                variant: 'filled',
-            },
-        },
+        // MuiTextField: {
+        //     defaultProps: {
+        //         variant: 'filled',
+        //     },
+        // },
     };
 }

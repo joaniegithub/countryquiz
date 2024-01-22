@@ -1,10 +1,12 @@
 // import { wrapperForAbsolute, mainPadding, colors } from "styles/styles";
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { newGame, useCurrentGame } from 'store/actions';
 
 import CloseIcon from '@mui/icons-material/Close';
-import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
 import InstallMobileIcon from '@mui/icons-material/InstallMobile';
+import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
     Box,
@@ -13,13 +15,9 @@ import {
     DialogActions,
     DialogTitle,
     IconButton,
-    Stack,
-    // SvgIcon,
-    Typography,
-    // useMediaQuery,
+    Stack, // SvgIcon,
+    Typography, // useMediaQuery,
 } from '@mui/material';
-import { newGame, useCurrentGame } from "store/actions";
-import { useDispatch } from "react-redux";
 import { alpha } from '@mui/material/styles';
 
 // import { SIDE_NAV_WIDTH } from './SideNav';
@@ -40,9 +38,9 @@ const Header = (props) => {
     // };
 
     const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-    );
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
 
     // Installation must be done by a user gesture! Here, the button click
     const handleClickInstall = (e) => {
@@ -60,13 +58,11 @@ const Header = (props) => {
         });
     };
 
-    const handleClickSettings = (e) => {
-        
-    };
+    const handleClickSettings = (e) => {};
     const handleClickClose = (e) => {
         setConfirmCancelGameOpen(true);
     };
-    
+
     // Confirm Delete Dialog
     const [confirmCancelGameOpen, setConfirmCancelGameOpen] = useState(false);
     const handleConfirmCancelGameClose = () => {
@@ -141,7 +137,7 @@ const Header = (props) => {
                                 //     color: "#ccc",
                                 // }}
                             >
-                            <CloseIcon/>
+                                <CloseIcon />
                             </IconButton>
                         ) : (
                             <React.Fragment>
@@ -151,7 +147,7 @@ const Header = (props) => {
                                         onClick={handleClickInstall}
                                         size="small"
                                         sx={{
-                                            color: "#ccc",
+                                            color: '#ccc',
                                         }}
                                     >
                                         {isMobile ? (
@@ -166,7 +162,7 @@ const Header = (props) => {
                                     onClick={handleClickSettings}
                                     size="small"
                                     sx={{
-                                        color: "#ccc",
+                                        color: '#ccc',
                                     }}
                                 >
                                     <SettingsIcon />

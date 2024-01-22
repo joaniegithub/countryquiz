@@ -1,6 +1,6 @@
 import * as React from 'react';
-// import { useState } from 'react';
 
+// import { useState } from 'react';
 import { Box, Container } from '@mui/material';
 
 import Footer from './Footer';
@@ -44,14 +44,15 @@ const Layout = (props) => {
                 // 	md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
                 // },
                 // zIndex: (theme) => theme.zIndex.appBar,
-                maxWidth: (theme) => theme.breakpoints.values.sm,
+                maxWidth: (theme) => {return {
+                    xs: theme.breakpoints.values.sm,
+                    md: theme.breakpoints.values.md,
+                };},
+                // maxWidth: (theme) => theme.breakpoints.values.sm,
                 minHeight: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
                 px: 2,
-            }}
-            md={{
-                maxWidth: (theme) => theme.breakpoints.values.md,
             }}
         >
             {/* <SideNav
@@ -59,8 +60,8 @@ const Layout = (props) => {
                 onClose={() => setOpenNav(false)}
                 open={openNav}
             /> */}
-            <Header 
-                images={images} 
+            <Header
+                images={images}
                 // onNavOpen={() => setOpenNav(true)}
                 deferredPrompt={deferredPrompt}
             />
@@ -70,8 +71,8 @@ const Layout = (props) => {
                     // backdropFilter: "blur(6px)",
                     // backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
                     // position: "sticky",
-					display: "flex",
-					flexDirection: "column",
+                    display: 'flex',
+                    flexDirection: 'column',
                     // left: {
                     //     md: `${SIDE_NAV_WIDTH}px`,
                     //     position: 'relative',

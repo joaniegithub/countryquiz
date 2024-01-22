@@ -5,14 +5,7 @@ import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import {
-    Box,
-    Button,
-    Card,
-    Stack,
-    SvgIcon,
-    Typography,
-} from '@mui/material';
+import { Box, Button, Card, Stack, SvgIcon, Typography } from '@mui/material';
 
 const Game = (props) => {
     const [chosenAnswer, setChosenAnswer] = useState('');
@@ -88,7 +81,9 @@ const Game = (props) => {
                             fontWeight: 700,
                         }}
                     >
-                        {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
+                        {question
+                            ? question.question /*+(question.flag ? " "+question.flag : '')*/
+                            : ''}
                     </Typography>
                 </Card>
             </Box>
@@ -128,7 +123,7 @@ const Game = (props) => {
                                   sx={{
                                       width: '100%',
                                   }}
-								  key={choice}
+                                  key={choice}
                                   {...(icon
                                       ? {
                                             endIcon: (

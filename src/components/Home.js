@@ -3,12 +3,10 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { startGame } from 'store/actions';
 
-import NewGame from './NewGame';
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
-import {
-    Button,
-    Stack,
-} from '@mui/material';
+import { Button, Stack } from '@mui/material';
+
+import NewGame from './NewGame';
 
 const Home = (props) => {
     const [showGameOptions, setShowGameOptions] = useState(false);
@@ -29,8 +27,8 @@ const Home = (props) => {
                 alignItems="center"
                 direction="column"
                 justifyContent="center"
-				height="100%"
-				flexGrow={1}
+                height="100%"
+                flexGrow={1}
             >
                 {showGameOptions ? (
                     <NewGame onClickStart={handleClickStart} />

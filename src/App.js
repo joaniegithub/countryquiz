@@ -65,11 +65,7 @@ const CountryQuizApp = (props) => {
     return (
         <ThemeProvider theme={theme}>
             <Layout deferredPrompt={deferredPrompt}>
-                {currentGame ? (
-                    <Game />
-                ) : (
-                    <Home />
-                )}
+                {currentGame ? <Game /> : <Home />}
                 {/* <InfoModal openInfoModal={showRules} onCloseInfoModal={handleCloseInfoModal} /> */}
             </Layout>
         </ThemeProvider>

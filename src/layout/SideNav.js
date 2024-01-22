@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { newGame, useCurrentGame } from 'store/actions';
 import { useDispatch } from 'react-redux';
+import { newGame, useCurrentGame } from 'store/actions';
 
 import CloseIcon from '@mui/icons-material/Close';
 import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
@@ -54,7 +54,7 @@ export const SideNav = (props) => {
             }
         });
     };
-    
+
     // Confirm Delete Dialog
     const [confirmCancelGameOpen, setConfirmCancelGameOpen] = useState(false);
     const handleConfirmCancelGameClose = () => {
@@ -67,7 +67,7 @@ export const SideNav = (props) => {
     const handleCancelGame = () => {
         setConfirmCancelGameOpen(true);
     };
-	
+
     const content = (
         <Box
             sx={{
@@ -158,49 +158,50 @@ export const SideNav = (props) => {
         </Box>
     );
 
-	const dialog = 
-            <Dialog
-                open={confirmCancelGameOpen}
-                onClose={handleConfirmCancelGameClose}
-                aria-labelledby="alert-dialog-title"
-            >
-                <DialogTitle id="alert-dialog-title">{`Abandonner la partie?`}</DialogTitle>
-                <DialogActions>
-                    <Button
-                        variant="outlined"
-                        onClick={handleConfirmCancelGameDisagree}
-                    >
-                        Non
-                    </Button>
-                    <Button
-                        variant="contained"
-                        onClick={handleConfirmCancelGameClose}
-                        autoFocus
-                    >
-                        Oui
-                    </Button>
-                </DialogActions>
-            </Dialog>;
+    const dialog = (
+        <Dialog
+            open={confirmCancelGameOpen}
+            onClose={handleConfirmCancelGameClose}
+            aria-labelledby="alert-dialog-title"
+        >
+            <DialogTitle id="alert-dialog-title">{`Abandonner la partie?`}</DialogTitle>
+            <DialogActions>
+                <Button
+                    variant="outlined"
+                    onClick={handleConfirmCancelGameDisagree}
+                >
+                    Non
+                </Button>
+                <Button
+                    variant="contained"
+                    onClick={handleConfirmCancelGameClose}
+                    autoFocus
+                >
+                    Oui
+                </Button>
+            </DialogActions>
+        </Dialog>
+    );
 
     if (mdgUp) {
         return (
-			<React.Fragment>
-				<Drawer
-					anchor="left"
-					open
-					PaperProps={{
-						sx: {
-							backgroundColor: 'neutral.800',
-							color: 'common.white',
-							width: SIDE_NAV_WIDTH,
-						},
-					}}
-					variant="permanent"
-				>
-					{content}
-				</Drawer>
-				{dialog}
-			</React.Fragment>
+            <React.Fragment>
+                <Drawer
+                    anchor="left"
+                    open
+                    PaperProps={{
+                        sx: {
+                            backgroundColor: 'neutral.800',
+                            color: 'common.white',
+                            width: SIDE_NAV_WIDTH,
+                        },
+                    }}
+                    variant="permanent"
+                >
+                    {content}
+                </Drawer>
+                {dialog}
+            </React.Fragment>
         );
     }
 
@@ -243,7 +244,7 @@ export const SideNav = (props) => {
                 </Stack>
                 {content}
             </Drawer>
-			{dialog}
+            {dialog}
         </React.Fragment>
     );
 };

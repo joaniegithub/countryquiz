@@ -28,13 +28,38 @@ const gameDefaultState = {
     flashCardMode: false,
 };
 
-const gameModes = [
+export const gameModes = [
     {
-        name: 'default',
+        key: 0,
+        name: 'Country\'s Capital',
         questionProperty: 'name',
         questionSubProperty: 'common',
         answerProperty: 'capital',
         answerSubProperty: undefined,
+    },
+    {
+        key: 1,
+        name: 'Capital\'s Country',
+        questionProperty: 'capital',
+        questionSubProperty: undefined,
+        answerProperty: 'name',
+        answerSubProperty: 'common',
+    },
+    {
+        key: 2,
+        name: 'Flag\'s Country',
+        questionProperty: undefined,
+        questionSubProperty: 'flag',
+        answerProperty: 'name',
+        answerSubProperty: 'common',
+    },
+    {
+        key: 3,
+        name: 'Borders\'s Country',
+        questionProperty: 'borders',
+        questionSubProperty: undefined,
+        answerProperty: 'name',
+        answerSubProperty: 'common',
     },
 ];
 
@@ -154,7 +179,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
         case constants.GAME_ANSWER:
             const chosenAnswer = payload.chosenAnswer;
             const allQuestions = [...game.questions];
-            const question = {...allQuestions[game.currentTurn]};
+            const question = { ...allQuestions[game.currentTurn] };
             const result = chosenAnswer === question.answers;
             // question.result = result;
             const currentScore = result
@@ -166,10 +191,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 currentGame: {
                     ...game,
                     questions: allQuestions.map((q, i) => {
-                        return (game.currentTurn === i
-                            ? {...q, result}
-                            : q
-                        );
+                        return game.currentTurn === i ? { ...q, result } : q;
                     }),
                     currentPhase: 1,
                     currentScore,
