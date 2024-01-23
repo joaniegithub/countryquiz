@@ -1,31 +1,35 @@
 import * as React from 'react';
 import { useCallback, useState } from 'react';
 import regionsData from 'data/regions.json';
+import { useDispatch } from 'react-redux';
+import { startGame } from 'store/actions';
 
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
-import { Button, Card, FormControl, FormControlLabel, FormLabel, InputLabel, Radio, RadioGroup, Slider, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, FormControl, FormControlLabel, FormLabel, InputLabel, Radio, RadioGroup, Stack, TextField, Typography } from '@mui/material';
 import { gameModes } from 'store/reducer';
 import { Box } from '@mui/system';
 
 const NewGame = (props) => {
-    const { onClickStart } = props;
-    const [region, setRegion] = useState("all");
-    const [mode, setMode] = useState(0);
+    const [ region, setRegion ] = useState("all");
+    const [ gameMode, setGameMode ] = useState("0");
+    const [ difficultyLevel, setDifficultyLevel ] = useState("normal");
+    const dispatch = useDispatch();
+
+    const handleChangeMode = useCallback((event) => {
+        setGameMode(event.target.value);
+    }, []);
 
     const handleChangeRegion = useCallback((event) => {
         setRegion(event.target.value);
-        //   setValues((prevState) => ({
-        //     ...prevState,
-        //     [event.target.name]: event.target.value
-        //   }));
     }, []);
-    const handleChangeMode = useCallback((event) => {
-        setMode(event.target.value);
-        //   setValues((prevState) => ({
-        //     ...prevState,
-        //     [event.target.name]: event.target.value
-        //   }));
+
+    const handleChangeDifficultyLevel = useCallback((event) => {
+        setDifficultyLevel(event.target.value);
     }, []);
+
+    const handleClickStart = () => {
+        dispatch(startGame(gameMode, region, difficultyLevel));
+    };
 
     return (
         <React.Fragment>
@@ -45,7 +49,6 @@ const NewGame = (props) => {
                     }}
                 >
                     <Stack
-                        container
                         spacing={3}
                     >
                         <Typography 
@@ -66,10 +69,10 @@ const NewGame = (props) => {
                             required
                             select
                             SelectProps={{ native: true }}
-                            value={mode || 0}
+                            value={gameMode || 0}
                         >
                             {gameModes.map((option) => (
-                                <option key={option.key} value={option.name}>
+                                <option key={option.key} value={option.key} disabled={option.disabled}>
                                     {option.name}
                                 </option>
                             ))}
@@ -88,49 +91,12 @@ const NewGame = (props) => {
                             <option key="all" value="all">
                                 World
                             </option>
-                            {regionsData.map((option) => (
+                            {regionsData.map((option) => option.name === "Antarctic" ? null : (
                                 <option key={option.name} value={option.name}>
                                     {option.name}
                                 </option>
                             ))}
                         </TextField>
-                        {/*<Box
-                                sx={{
-                                    px: 3,
-                                }}
-                        >
-                            <InputLabel>
-                                Difficulty
-                            </InputLabel>
-                            <Slider
-                                aria-label="Small steps"
-                                defaultValue={1}
-                                label="Difficulty"
-                                name="Difficulty"
-                                step={1}
-                                marks={[
-                                    {
-                                        value: 0,
-                                        label: 'Flashcard',
-                                    },
-                                    {
-                                        value: 1,
-                                        label: 'Normal',
-                                    },
-                                    {
-                                        value: 2,
-                                        label: 'Hard',
-                                    },
-                                    {
-                                        value: 3,
-                                        label: 'Expert',
-                                    },
-                                ]}
-                                min={0}
-                                max={3}
-                                valueLabelDisplay="auto"
-                            />
-                        </Box>*/}
                         <FormControl>
                             <FormLabel id="demo-row-radio-buttons-group-label">Difficulty</FormLabel>
                             <RadioGroup
@@ -142,18 +108,21 @@ const NewGame = (props) => {
                                 }}
                                 aria-labelledby="demo-row-radio-buttons-group-label"
                                 name="row-radio-buttons-group"
+                                onChange={handleChangeDifficultyLevel}
+                                value={difficultyLevel}
                             >
-                                <FormControlLabel value="0" control={<Radio size="small" />} label="Flashcard" />
-                                <FormControlLabel value="1" control={<Radio size="small" />} label="Normal" />
-                                <FormControlLabel value="2" control={<Radio size="small" />} label="Hard" />
-                                <FormControlLabel value="3" control={<Radio size="small" />} label="Expert" />
+                                {/* TODO: link levels avec les niveaux disponibles pour le mode choisi */}
+                                <FormControlLabel value="flashcard" control={<Radio size="small" />} label="Flashcard" disabled={true} />
+                                <FormControlLabel value="normal" control={<Radio size="small" />} label="Normal" />
+                                <FormControlLabel value="hard" control={<Radio size="small" />} label="Hard" />
+                                <FormControlLabel value="expert" control={<Radio size="small" />} label="Expert" disabled={true} />
                             </RadioGroup>
                         </FormControl>
                         <Button
                             variant="contained"
                             size="large"
                             endIcon={<OfflineBoltIcon />}
-                            onClick={onClickStart}
+                            onClick={handleClickStart}
                         >
                             Start Game
                         </Button>

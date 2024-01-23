@@ -34,9 +34,12 @@ export const newGame = () => {
         type: constants.NEW_GAME,
     };
 };
-export const startGame = () => {
+export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel) => {
     return {
         type: constants.START_GAME,
+        chosenGameMode: _chosenGameMode,
+        chosenRegion: _chosenRegion,
+        chosenDifficultyLevel: _chosenDifficultyLevel,
     };
 };
 export const gameNext = () => {

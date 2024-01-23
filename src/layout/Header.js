@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { newGame, useCurrentGame } from 'store/actions';
 
-import CloseIcon from '@mui/icons-material/Close';
+import CancelIcon from '@mui/icons-material/Cancel';
 import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
 import InstallMobileIcon from '@mui/icons-material/InstallMobile';
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
@@ -137,7 +137,7 @@ const Header = (props) => {
                                 //     color: "#ccc",
                                 // }}
                             >
-                                <CloseIcon />
+                                <CancelIcon />
                             </IconButton>
                         ) : (
                             <React.Fragment>

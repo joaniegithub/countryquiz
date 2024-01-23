@@ -5,7 +5,7 @@ import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { Box, Button, Card, Stack, SvgIcon, Typography } from '@mui/material';
+import { Box, Button, Card, LinearProgress, Stack, SvgIcon, Typography } from '@mui/material';
 
 const Game = (props) => {
     const [chosenAnswer, setChosenAnswer] = useState('');
@@ -18,6 +18,7 @@ const Game = (props) => {
 
     const turn = game.currentTurn;
     const phase = game.currentPhase;
+    const difficultyLevel = game.difficultyLevel;
     const question = game.questions && game.questions[turn];
     const rightAnswer = question ? question.answers : undefined;
 
@@ -51,22 +52,38 @@ const Game = (props) => {
                     my: 2,
                 }}
             >
+            <LinearProgress 
+                variant="determinate"
+                value={(game.currentTurn / game.questions.length) * 100}
+                thickness={6}
+            />
                 <Stack
                     alignItems="center"
                     direction="row"
                     justifyContent="space-between"
                     spacing={2}
                     sx={{
-                        px: 2,
+                        px: 0,
                     }}
                 >
-                    <Typography>
-                        {game.currentTurn + 1}. Quelle est la capitale de...
-                    </Typography>
-                    <Typography>
+                <Typography
+                    color="secondary"
+                    fontSize="12px"
+                    textAlign="right"
+                    fontWeight="bold"
+                    width="100%"
+                >
                         {game.currentScore + ' / ' + game.questions.length}
                     </Typography>
                 </Stack>
+                <Typography
+                    color="secondary"
+                    fontSize="20px"
+                    textAlign="center"
+                    fontWeight="500"
+                >
+                    {game.gameMode.questionPhrase.fra}
+                </Typography>
                 <Card
                     sx={{
                         px: 2,
@@ -140,7 +157,10 @@ const Game = (props) => {
                                           fontWeight: 600,
                                       }}
                                   >
-                                      {choice}
+                                      {difficultyLevel === "hard" && phase === 0 
+                                        ? choice[0]+" * * * "+choice[choice.length-1]
+                                        : choice
+                                    }
                                   </Typography>
                               </Button>
                           );
