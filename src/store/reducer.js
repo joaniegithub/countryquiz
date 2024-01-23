@@ -1,5 +1,7 @@
+import { countryCites, gameModes } from 'data/config';
 import data from 'data/countries.json';
 import * as constants from 'store/constants';
+import { shuffle } from 'util/util';
 
 export const defaultSettings = {};
 
@@ -23,61 +25,6 @@ const gameDefaultState = {
     flashCardMode: false,
 };
 
-export const gameModes = [
-    {
-        key: "0",
-        name: 'Country\'s Capital',
-        questionPhrase: {
-            fra: "Quelle est la capitale de ce pays?",
-            eng: "What is this country's capital?"
-        },
-        questionProperty: 'name',
-        questionSubProperty: 'common',
-        answerProperty: 'capital',
-        answerSubProperty: undefined,
-        disabled: false,
-    },
-    {
-        key: "1",
-        name: 'Capital\'s Country',
-        questionPhrase: {
-            fra: "De quel pays cette ville est-elle la capitale?",
-            eng: "Which country is this capital from?"
-        },
-        questionProperty: 'capital',
-        questionSubProperty: undefined,
-        answerProperty: 'name',
-        answerSubProperty: 'common',
-        disabled: false,
-    },
-    {
-        key: "2",
-        name: 'Flag\'s Country',
-        questionPhrase: {
-            fra: "À quel pays appartient ce drapeau?",
-            eng: "Which country does this flag belong to?"
-        },
-        questionProperty: undefined,
-        questionSubProperty: 'flag',
-        answerProperty: 'name',
-        answerSubProperty: 'common',
-        disabled: true,
-    },
-    {
-        key: "3",
-        name: 'Borders\'s Country',
-        questionPhrase: {
-            fra: "Quel pays partage une frontière avec chacun d'eux?",
-            eng: "Which country shares a border with them?"
-        },
-        questionProperty: 'borders',
-        questionSubProperty: undefined,
-        answerProperty: 'name',
-        answerSubProperty: 'common',
-        disabled: true,
-    },
-];
-
 const reducer = (state = defaultState, { type, ...payload }) => {
     console.log(state, type, payload);
     const game = state.currentGame;
@@ -100,17 +47,34 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenRegion = payload.chosenRegion;
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
 
-            // todo: déplacer la logique de construction dui quiz dans un utilitaire
+            // todo: d\u00e9placer la logique de construction dui quiz dans un utilitaire
             
             const mode = gameModes.find(gm => gm.key === chosenGameMode);
-
+            
+            // const independentCountries = Object.values(data);
+            // countryCites.forEach(countryStr => {
+            //     const countryData = countryStr.split("|");
+            //     let line = "";
+            //     if(countryData.length > 2) {
+            //         const c = independentCountries.find(c => c.name.common === countryData[0]);
+            //         for (let i=2; i<countryData.length; i++){
+            //             if(c.capital.indexOf(countryData[i]) >= 0) {
+            //                 continue;
+            //             } else {
+            //                 line += " | "+countryData[i];
+            //             }
+            //         }
+            //         // console.log(c.name.common, c.capital[0], countryData[3]);
+            //         console.log(c.name.common, c.capital[0], line);
+            //     }
+            // });
             const independentCountries = Object.values(data).filter((c) => c.independent === true);
             const allCountries = chosenRegion === "all" 
                 ? independentCountries 
                 : independentCountries.filter(c => c.region === chosenRegion)
 
                 // todo: make sure answers at hard mode will be unique with first and last letter
-                // utiliser un utilitaire qui sera ailleurs, et y déplacer shuffle
+                // utiliser un utilitaire qui sera ailleurs, et y d\u00e9placer shuffle
             const allAnswers = allCountries.reduceRight(
                 (cAnswers, c) => {
                     const answers = mode.answerSubProperty
@@ -206,32 +170,12 @@ const reducer = (state = defaultState, { type, ...payload }) => {
     }
 };
 
-const shuffle = (array) => {
-    let currentIndex = array.length,
-        randomIndex;
-
-    // While there remain elements to shuffle.
-    while (currentIndex > 0) {
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex],
-            array[currentIndex],
-        ];
-    }
-
-    return array;
-};
-
 const getChoices = (nbChoices, answers, answersFrom, difficultyLevel) => {
     const choices = [];
     const indexUsed = [];
     const max = answersFrom.length;
     // todo: utiliser difficultyLevel; ajouter plein de villes qui ne sont pas des capitales,
-    // et prendre des villes de la même région
+    // et prendre des villes de la même r\u00e9gion
     while (choices.length < nbChoices - 1) {
         const rnd = Math.floor(Math.random() * max);
         if (

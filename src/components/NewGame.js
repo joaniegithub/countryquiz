@@ -5,9 +5,8 @@ import { useDispatch } from 'react-redux';
 import { startGame } from 'store/actions';
 
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
-import { Button, Card, FormControl, FormControlLabel, FormLabel, InputLabel, Radio, RadioGroup, Stack, TextField, Typography } from '@mui/material';
-import { gameModes } from 'store/reducer';
-import { Box } from '@mui/system';
+import { Button, Card, Stack, TextField, Typography } from '@mui/material';
+import { difficultyLevels, gameModes } from 'data/config';
 
 const NewGame = (props) => {
     const [ region, setRegion ] = useState("all");
@@ -97,7 +96,24 @@ const NewGame = (props) => {
                                 </option>
                             ))}
                         </TextField>
-                        <FormControl>
+                        <TextField
+                            fullWidth
+                            label="Difficulty"
+                            name="Difficulty"
+                            onChange={handleChangeDifficultyLevel}
+                            required
+                            select
+                            SelectProps={{ native: true }}
+                            value={difficultyLevel}
+                            
+                        >
+                            {difficultyLevels.map((option) => (
+                                <option key={option.key} value={option.key} disabled={option.disabled}>
+                                    {option.name}
+                                </option>
+                            ))}
+                        </TextField>
+                        {/*<FormControl>
                             <FormLabel id="demo-row-radio-buttons-group-label">Difficulty</FormLabel>
                             <RadioGroup
                                 sx={{
@@ -111,13 +127,13 @@ const NewGame = (props) => {
                                 onChange={handleChangeDifficultyLevel}
                                 value={difficultyLevel}
                             >
-                                {/* TODO: link levels avec les niveaux disponibles pour le mode choisi */}
+                                {/* TODO: link levels avec les niveaux disponibles pour le mode choisi * /}
                                 <FormControlLabel value="flashcard" control={<Radio size="small" />} label="Flashcard" disabled={true} />
                                 <FormControlLabel value="normal" control={<Radio size="small" />} label="Normal" />
                                 <FormControlLabel value="hard" control={<Radio size="small" />} label="Hard" />
                                 <FormControlLabel value="expert" control={<Radio size="small" />} label="Expert" disabled={true} />
                             </RadioGroup>
-                        </FormControl>
+                        </FormControl>*/}
                         <Button
                             variant="contained"
                             size="large"

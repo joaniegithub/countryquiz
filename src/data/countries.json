@@ -4340,7 +4340,7 @@
             "root": "+5",
             "suffixes": ["91"]
         },
-        "capital": ["Sucre"],
+        "capital": ["Sucre", "La Paz"],
         "altSpellings": [
             "BO",
             "Buliwya",
@@ -15508,7 +15508,7 @@
             "root": "+3",
             "suffixes": ["54"]
         },
-        "capital": ["Reykjavik"],
+        "capital": ["Reykjav\u00edk"],
         "altSpellings": [
             "IS",
             "Island",
