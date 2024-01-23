@@ -14,16 +14,9 @@ const defaultState = {
 const gameDefaultState = {
     gameMode: 1,
     questions: [],
-    // nbTurns: -1,
-    // turnNumbers: [],
-    // dealer: -1,
     currentScore: 0,
     currentTurn: 0,
     currentPhase: 0,
-    // nbCards: 52,
-    // overrideMode: false,
-    // overridePhase: -1,
-    // overrideTurn: -1,
     mode: 0,
     difficultyLevel: "normal",
     nbChoices: 4,
@@ -106,6 +99,8 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenGameMode = payload.chosenGameMode;
             const chosenRegion = payload.chosenRegion;
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
+
+            // todo: déplacer la logique de construction dui quiz dans un utilitaire
             
             const mode = gameModes.find(gm => gm.key === chosenGameMode);
 
@@ -165,7 +160,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const allQuestions = [...game.questions];
             const question = { ...allQuestions[game.currentTurn] };
             const result = chosenAnswer === question.answers;
-            // question.result = result;
+            
             const currentScore = result
                 ? game.currentScore + 1
                 : game.currentScore;
@@ -209,7 +204,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
         default:
             return state;
     }
-}; // {reducer, startState, middleware}
+};
 
 const shuffle = (array) => {
     let currentIndex = array.length,
