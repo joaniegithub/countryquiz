@@ -6,12 +6,12 @@ import { startGame } from 'store/actions';
 
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import { Button, Card, Stack, TextField, Typography } from '@mui/material';
-import { difficultyLevels, gameModes } from 'data/config';
+import { DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
 
 const NewGame = (props) => {
     const [ region, setRegion ] = useState("all");
     const [ gameMode, setGameMode ] = useState("0");
-    const [ difficultyLevel, setDifficultyLevel ] = useState("normal");
+    const [ difficultyLevel, setDifficultyLevel ] = useState(DIFFICULTY_NORMAL);
     const dispatch = useDispatch();
 
     const handleChangeMode = useCallback((event) => {

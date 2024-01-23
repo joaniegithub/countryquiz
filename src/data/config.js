@@ -1,24 +1,30 @@
+export const GAME_VERSION = "1.01";
+
+export const DIFFICULTY_FLASHCARD = "flashCard";
+export const DIFFICULTY_NORMAL = "normal";
+export const DIFFICULTY_HARD = "hard";
+export const DIFFICULTY_EXPERT = "expert";
 
 export const difficultyLevels = [
     {
-        key: "flashCard",
+        key: DIFFICULTY_FLASHCARD,
         name: "Flashcard",
         disabled: true,
     },
     {
-        key: "normal",
+        key: DIFFICULTY_NORMAL,
         name: "Normal",
         disabled: false,
     },
     {
-        key: "hard",
+        key: DIFFICULTY_HARD,
         name: "Hard",
         disabled: false,
     },
     {
-        key: "expert",
+        key: DIFFICULTY_EXPERT,
         name: "Expert",
-        disabled: true,
+        disabled: false,
     },
 ];
 
@@ -88,8 +94,8 @@ export const countryCites = [
     "Andorra|Andorra Andorra|Andorra la Vella|Les Escaldes",
     "Angola|Angola Angola|Luanda|Huambo",
     "Anguilla|Anguilla Anguilla (UK)|The Valley|North Side",
-    "Antigua and Barbuda|Antigua and Barbuda Antigua and Barbuda|St. John's|All Saints",
-    "Argentina|Argentina Argentina|Buenos Aires|C\u00f3rdoba",
+    "Antigua and Barbuda|Antigua and Barbuda Antigua and Barbuda|Saint John's|All Saints",
+    "Argentina|Argentina Argentina|Buenos Aires|C\\u00f3rdoba",
     "Armenia|Armenia Armenia|Yerevan|Gyumri",
     "Aruba|Aruba Aruba (Netherlands)|Oranjestad|Sint Nicolaas",
     "Australia|Australia Australia|Canberra|Sydney|Melbourne",
@@ -109,7 +115,7 @@ export const countryCites = [
     "Bosnia and Herzegovina|Bosnia and Herzegovina Bosnia and Herzegovina|Sarajevo|Banja Luka",
     "Botswana|Botswana Botswana|Gaborone|Francistown",
     // "Bouvet Island",
-    "Brazil|Brazil Brazil|Bras\u00edlia|S\u00e3o Paulo|Rio de Janeiro",
+    "Brazil|Brazil Brazil|Bras\\u00edlia|S\\u00e3o Paulo|Rio de Janeiro",
     "British Indian Ocean Territory",
     "British Virgin Islands|British Virgin Islands British Virgin Islands (UK)|Road Town|Spanish Town",
     "Brunei|Brunei Brunei|Bandar Seri Begawan|Kuala Belait",
@@ -117,7 +123,7 @@ export const countryCites = [
     "Burkina Faso|Burkina Faso Burkina Faso|Ouagadougou|Bobo-Dioulasso",
     "Burundi|Burundi Burundi|Bujumbura|Muyinga",
     "Cambodia|Cambodia Cambodia|Phnom Penh|Siem Reap",
-    "Cameroon|Cameroon Cameroon|Yaound\u00e9|Douala|Yaound\u00e9",
+    "Cameroon|Cameroon Cameroon|Yaound\\u00e9|Douala|Yaound\\u00e9",
     "Canada|Canada Canada|Ottawa|Toronto|Montreal|Vancouver",
     "Cape Verde|Cape Verde Cape Verde|Praia|Mindelo",
     // "Caribbean Netherlands",
@@ -128,15 +134,15 @@ export const countryCites = [
     "China|China China|Beijing|Shanghai",
     "Christmas Island|Christmas Island Christmas Island (Australia)|Flying Fish Cove|Poon Saan|West Island",
     "Cocos (Keeling) Islands|Cocos (Keeling) Islands Cocos Islands (Australia)|West Island|Bantam",
-    "Colombia|Colombia Colombia|Bogot\u00e1|Medell\u00edn",
+    "Colombia|Colombia Colombia|Bogot\\u00e1|Medell\\u00edn",
     "Comoros|Comoros Comoros|Moroni|Mutsamudu",
     "DR Congo|Democratic Republic of the Congo Democratic Republic of the Congo|Kinshasa|Lubumbashi",
     "Republic of the Congo|Republic of the Congo Republic of the Congo|Brazzaville|Pointe-Noire",
     "Cook Islands|Cook Islands Cook Islands (New Zealand)|Avarua|Amuri",
-    "Costa Rica|Costa Rica Costa Rica|San Jos\u00e9|Alajuela",
+    "Costa Rica|Costa Rica Costa Rica|San Jos\\u00e9|Alajuela",
     "Croatia|Croatia Croatia|Zagreb|Split",
     "Cuba|Cuba Cuba|Havana|Santiago de Cuba",
-    "Cura\u00e7ao|Cura\u00e7ao Cura\u00e7ao (Netherlands)|Willemstad|Sint Michiel",
+    "Cura\\u00e7ao|Cura\\u00e7ao Cura\\u00e7ao (Netherlands)|Willemstad|Sint Michiel",
     "Cyprus|Cyprus Cyprus|Nicosia|Limassol",
     "Czechia|Czech Republic Czech Republic|Prague|Brno|Ostrava",
     "Denmark|Denmark Denmark|Copenhagen|Aarhus",
@@ -152,12 +158,12 @@ export const countryCites = [
     "Eswatini|Swaziland Swaziland|Mbabane|Manzini",
     "Ethiopia|Ethiopia Ethiopia|Addis Ababa|Dire Dawa",
     "Falkland Islands|Falkland Islands Falkland Islands (UK)|Stanley|Goose Green",
-    "Faroe Islands|Faroe Islands Faroe Islands (Denmark)|T\u00f3rshavn|Klaksv\u00edk",
+    "Faroe Islands|Faroe Islands Faroe Islands (Denmark)|T\\u00f3rshavn|Klaksv\\u00edk",
     "Fiji|Fiji Fiji|Suva|Nasinu",
     "Finland|Finland Finland|Helsinki|Espoo|Tampere",
     "France|France France|Paris|Marseille|Lyon",
     "French Guiana|French Guiana French Guiana (France)|Cayenne|Saint-Laurent-du-Maroni",
-    "French Polynesia|French Polynesia French Polynesia (France)|Papeet\u0113|Mahina",
+    "French Polynesia|French Polynesia French Polynesia (France)|Papeet\\u0113|Mahina",
     "French Southern and Antarctic Lands",
     "Gabon|Gabon Gabon|Libreville|Port-Gentil|Brikama",
     "Gambia|Gambia Gambia|Banjul|Serekunda",
@@ -169,18 +175,18 @@ export const countryCites = [
     "Greenland|Greenland Greenland (Denmark)|Nuuk|Sisimiut",
     "Grenada|Grenada Grenada|St. George's|Gouyave",
     // "Guadeloupe",
-    "Guam|Guam Guam (US)|Hag\u00e5t\u00f1a|Tamuning|Mangilao",
+    "Guam|Guam Guam (US)|Hag\\u00e5t\\u00f1a|Tamuning|Mangilao",
     "Guatemala|Guatemala Guatemala|Guatemala City|Quetzaltenango",
     "Guernsey|Guernsey Guernsey (UK)|St. Peter Port|Vale",
-    "Guinea|Guinea Guinea|Conakry|Nz\u00e9r\u00e9kor\u00e9",
-    "Guinea-Bissau|Guinea-Bissau Guinea-Bissau|Bissau|Gab\u00fa",
+    "Guinea|Guinea Guinea|Conakry|Nz\\u00e9r\\u00e9kor\\u00e9",
+    "Guinea-Bissau|Guinea-Bissau Guinea-Bissau|Bissau|Gab\\u00fa",
     "Guyana|Guyana Guyana|Georgetown|Linden",
     "Haiti|Haiti Haiti|Port-au-Prince|Gonaïves",
     "Heard Island and McDonald Islands",
     "Honduras|Honduras Honduras|Tegucigalpa|San Pedro Sula",
     "Hong Kong|Hong Kong Hong Kong (China)|City of Victoria|Kowloon",
     "Hungary|Hungary Hungary|Budapest|Debrecen",
-    "Iceland|Iceland Iceland|Reykjav\u00edk|K\u00f3pavogur",
+    "Iceland|Iceland Iceland|Reykjav\\u00edk|K\\u00f3pavogur",
     "India|India India|New Delhi|Mumbai",
     "Indonesia|Indonesia Indonesia|Jakarta|Surabaya",
     "Iran|Iran Iran|Tehran|Mashhad",
@@ -189,7 +195,7 @@ export const countryCites = [
     "Isle of Man|Isle of Man Isle of Man (UK)|Douglas|Onchan",
     "Israel|Israel Israel|Jerusalem|Tel Aviv",
     "Italy|Italy Italy|Rome|Milan",
-    "Ivory Coast|Côte d'Ivoire Côte d'Ivoire|Yamoussoukro|Abidjan|Bouak\u00e9",
+    "Ivory Coast|Côte d'Ivoire Côte d'Ivoire|Yamoussoukro|Abidjan|Bouak\\u00e9",
     "Jamaica|Jamaica Jamaica|Kingston|Spanish Town",
     "Japan|Japan Japan|Tokyo|Yokohama|Osaka",
     "Jersey|Jersey Jersey (UK)|Saint Helier|Saint Saviour",
@@ -213,7 +219,7 @@ export const countryCites = [
     "Madagascar|Madagascar Madagascar|Antananarivo|Toamasina",
     "Malawi|Malawi Malawi|Lilongwe|Blantyre",
     "Malaysia|Malaysia Malaysia|Kuala Lumpur|George Town",
-    "Maldives|Maldives Maldives|Mal\u00e9|Addu City",
+    "Maldives|Maldives Maldives|Mal\\u00e9|Addu City",
     "Mali|Mali Mali|Bamako|Sikasso",
     "Malta|Malta Malta|Valletta|Birkirkara|Rita|Mosta",
     "Marshall Islands|Marshall Islands Marshall Islands|Majuro|Ebeye",
@@ -223,7 +229,7 @@ export const countryCites = [
     "Mayotte|Mayotte Mayotte (France)|Mamoudzou|Dzaoudzi",
     "Mexico|Mexico Mexico|Mexico City|Ecatepec",
     "Micronesia|Federated States of Micronesia Federated States of Micronesia|Palikir|Weno",
-    "Moldova|Moldova Moldova|Chi\u0219in\u0103u|Tiraspol",
+    "Moldova|Moldova Moldova|Chi\\u0219in\\u0103u|Tiraspol",
     "Monaco|Monaco Monaco|Monaco|Monte Carlo|La Condamine",
     "Mongolia|Mongolia Mongolia|Ulaanbaatar|Darkhan",
     "Montenegro|Montenegro Montenegro|Podgorica|Nikšić",
@@ -236,9 +242,9 @@ export const countryCites = [
     "Nauru|Nauru Nauru|Yaren|Denigomudu",
     "Nepal|Nepal Nepal|Kathmandu|Pokhara",
     "Netherlands|Netherlands Netherlands|Amsterdam|Rotterdam",
-    "New Caledonia|New Caledonia New Caledonia (France)|Noum\u00e9a|W\u00e9",
+    "New Caledonia|New Caledonia New Caledonia (France)|Noum\\u00e9a|W\\u00e9",
     "New Zealand|New Zealand New Zealand|Wellington|Auckland",
-    "Nicaragua|Nicaragua Nicaragua|Managua|Le\u00f3n",
+    "Nicaragua|Nicaragua Nicaragua|Managua|Le\\u00f3n",
     "Niger|Niger Niger|Niamey|Zinder",
     "Nigeria|Nigeria Nigeria|Abuja|Lagos|Kano",
     "Niue|Niue Niue (New Zealand)|Alofi|Hakupu",
@@ -251,21 +257,21 @@ export const countryCites = [
     "Pakistan|Pakistan Pakistan|Islamabad|Karachi|Lahore",
     "Palau|Palau Palau|Ngerulmud|Koror|Airai",
     "Palestine|State of Palestine Palestine|East Jerusalem|Gaza City|Hebron",
-    "Panama|Panama Panama|Panama City|Col\u00f3n",
+    "Panama|Panama Panama|Panama City|Col\\u00f3n",
     "Papua New Guinea|Papua New Guinea Papua New Guinea|Port Moresby|Lae",
-    "Paraguay|Paraguay Paraguay|Asunci\u00f3n|Ciudad del Este",
+    "Paraguay|Paraguay Paraguay|Asunci\\u00f3n|Ciudad del Este",
     "Peru|Peru Peru|Lima|Arequipa",
     "Philippines|Philippines Philippines|Manila|Quezon City|Cebu City",
     "Pitcairn Islands|Pitcairn Islands Pitcairn Islands (UK)|Adamstown",
-    "Poland|Poland Poland|Warsaw|Krak\u00f3w",
+    "Poland|Poland Poland|Warsaw|Krak\\u00f3w",
     "Portugal|Portugal Portugal|Lisbon|Porto",
-    "Puerto Rico|Puerto Rico Puerto Rico (US)|San Juan|Bayam\u00f3n|Ponce",
+    "Puerto Rico|Puerto Rico Puerto Rico (US)|San Juan|Bayam\\u00f3n|Ponce",
     "Qatar|Qatar Qatar|Doha|Al Rayyan",
-    // "R\u00e9union",
+    // "R\\u00e9union",
     "Romania|Romania Romania|Bucharest|Cluj-Napoca|Constanța",
     "Russia|Russia Russia|Moscow|Saint Petersburg",
     "Rwanda|Rwanda Rwanda|Kigali|Muhanga",
-    "Saint Barth\u00e9lemy|Saint Barth\u00e9lemy Saint Barth\u00e9lemy (France)|Gustavia|St. Jean",
+    "Saint Barth\\u00e9lemy|Saint Barth\\u00e9lemy Saint Barth\\u00e9lemy (France)|Gustavia|St. Jean",
     "Saint Helena, Ascension and Tristan da Cunha|Saint Helena Saint Helena (UK)|Jamestown|Half Tree Hollow",
     "Saint Kitts and Nevis|Saint Kitts and Nevis Saint Kitts and Nevis|Basseterre|Charlestown",
     "Saint Lucia|Saint Lucia Saint Lucia|Castries|Gros Islet",
@@ -274,7 +280,7 @@ export const countryCites = [
     "Saint Vincent and the Grenadines|Saint Vincent and the Grenadines Saint Vincent and the Grenadines|Kingstown|Georgetown",
     "Samoa|Samoa Samoa|Apia|Vaitele",
     "San Marino|San Marino San Marino|City of San Marino|Dogana|Borgo Maggiore",
-    "S\u00e3o Tom\u00e9 and Pr\u00edncipe|S\u00e3o Tom\u00e9 and Pr\u00edncipe S\u00e3o Tom\u00e9 and Pr\u00edncipe|S\u00e3o Tom\u00e9|Trindade",
+    "S\\u00e3o Tom\\u00e9 and Pr\\u00edncipe|S\\u00e3o Tom\\u00e9 and Pr\\u00edncipe S\\u00e3o Tom\\u00e9 and Pr\\u00edncipe|S\\u00e3o Tom\\u00e9|Trindade",
     "Saudi Arabia|Saudi Arabia Saudi Arabia|Riyadh|Jeddah",
     "Senegal|Senegal Senegal|Dakar|Touba",
     "Serbia|Serbia Serbia|Belgrade|Novi Sad",
@@ -304,7 +310,7 @@ export const countryCites = [
     "Tanzania|Tanzania Tanzania|Dodoma|Dar es Salaam|Mwanza",
     "Thailand|Thailand Thailand|Bangkok|Nonthaburi|Pak Kret",
     "Timor-Leste|East Timor East Timor|Dili|Dare",
-    "Togo|Togo Togo|Lom\u00e9|Sokod\u00e9",
+    "Togo|Togo Togo|Lom\\u00e9|Sokod\\u00e9",
     "Tokelau|Tokelau Tokelau (New Zealand)|Fakaofo|Atafu",
     "Tonga|Tonga Tonga|Nuku'alofa|Neiafu",
     // ",Transnistria Transnistria (Moldova)|Tiraspol|Tighina",
@@ -332,3 +338,32 @@ export const countryCites = [
     "Yemen|Yemen Yemen|Sana'a|Aden",
     "Zambia|Zambia Zambia|Lusaka|Kitwe",
     "Zimbabwe|Zimbabwe Zimbabwe|Harare|Bulawayo"];
+
+    // const independentCountries = Object.values(countriesData);
+    // countryCites.forEach(countryStr => {
+    //     const countryData = countryStr.split("|");
+    //     let line = "";
+    //     if(countryData.length > 2) {
+    //         const c = independentCountries.find(c => c.name.common === countryData[0]);
+    //         if(c){
+    //             console.log(c.name.common);
+    //             c["cities"] = [];
+    //             for (let i=2; i<countryData.length; i++){
+    //                 if(c.capital.indexOf(countryData[i]) >= 0) {
+    //                     continue;
+    //                 } else {
+    //                     line += " | "+countryData[i];
+    //                     c["cities"].push(countryData[i]);
+    //                 }
+    //             }
+    //             // console.log(c.name.common, c.capital[0], countryData[3]);
+    //             // console.log(c.name.common, c.capital[0], line);
+    //             // console.log(c.name.common, c.capital, c.otherCities);
+    //         }
+    //     }
+    // });
+    // console.log(JSON.stringify(countriesData));
+
+    // return {
+    //     ...state,
+    // };

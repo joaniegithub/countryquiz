@@ -1,5 +1,5 @@
-import { countryCites, gameModes } from 'data/config';
-import data from 'data/countries.json';
+import { DIFFICULTY_HARD, DIFFICULTY_NORMAL, GAME_VERSION, countryCites, gameModes } from 'data/config';
+import countriesData from 'data/countries.json';
 import * as constants from 'store/constants';
 import { shuffle } from 'util/util';
 
@@ -10,7 +10,7 @@ const defaultState = {
     settings: defaultSettings,
     currentGame: undefined,
     showRules: false,
-    countriesData: [...Object.values(data)],
+    countriesData: [...Object.values(countriesData)],
 };
 
 const gameDefaultState = {
@@ -20,9 +20,10 @@ const gameDefaultState = {
     currentTurn: 0,
     currentPhase: 0,
     mode: 0,
-    difficultyLevel: "normal",
+    difficultyLevel: DIFFICULTY_NORMAL,
     nbChoices: 4,
     flashCardMode: false,
+    version: GAME_VERSION,
 };
 
 const reducer = (state = defaultState, { type, ...payload }) => {
@@ -47,40 +48,29 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenRegion = payload.chosenRegion;
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
 
-            // todo: d\u00e9placer la logique de construction dui quiz dans un utilitaire
+            // todo: d\\u00e9placer la logique de construction dui quiz dans un utilitaire
             
             const mode = gameModes.find(gm => gm.key === chosenGameMode);
             
-            // const independentCountries = Object.values(data);
-            // countryCites.forEach(countryStr => {
-            //     const countryData = countryStr.split("|");
-            //     let line = "";
-            //     if(countryData.length > 2) {
-            //         const c = independentCountries.find(c => c.name.common === countryData[0]);
-            //         for (let i=2; i<countryData.length; i++){
-            //             if(c.capital.indexOf(countryData[i]) >= 0) {
-            //                 continue;
-            //             } else {
-            //                 line += " | "+countryData[i];
-            //             }
-            //         }
-            //         // console.log(c.name.common, c.capital[0], countryData[3]);
-            //         console.log(c.name.common, c.capital[0], line);
-            //     }
-            // });
-            const independentCountries = Object.values(data).filter((c) => c.independent === true);
+            const independentCountries = Object.values(countriesData).filter((c) => c.independent === true);
             const allCountries = chosenRegion === "all" 
                 ? independentCountries 
                 : independentCountries.filter(c => c.region === chosenRegion)
 
                 // todo: make sure answers at hard mode will be unique with first and last letter
-                // utiliser un utilitaire qui sera ailleurs, et y d\u00e9placer shuffle
+                // utiliser un utilitaire qui sera ailleurs, et y d\\u00e9placer shuffle
             const allAnswers = allCountries.reduceRight(
                 (cAnswers, c) => {
-                    const answers = mode.answerSubProperty
+                    const answers = (mode.answerSubProperty
                         ? c[mode.answerProperty][mode.answerSubProperty]
-                        : c[mode.answerProperty];
-                    return cAnswers.concat(...(Array.isArray(answers) ? answers : [answers]));
+                        : c[mode.answerProperty])/*.map(a => {
+                            return {
+                                answer: a,
+                                region: chosenRegion === "all" ? c.region : c.subregion
+                            };
+                        })*/;
+                    
+                    return cAnswers.concat(...answers);
                 },
                 []
             );
@@ -96,7 +86,10 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 const choices = getChoices(
                     gameDefaultState.nbChoices,
                     answers,
-                    allAnswers
+                    allAnswers,
+                    c,
+                    mode,
+                    chosenDifficultyLevel
                 );
 
                 return {
@@ -170,12 +163,12 @@ const reducer = (state = defaultState, { type, ...payload }) => {
     }
 };
 
-const getChoices = (nbChoices, answers, answersFrom, difficultyLevel) => {
+const getChoices = (nbChoices, answers, answersFrom, country, mode, difficultyLevel) => {
     const choices = [];
     const indexUsed = [];
     const max = answersFrom.length;
-    // todo: utiliser difficultyLevel; ajouter plein de villes qui ne sont pas des capitales,
-    // et prendre des villes de la même r\u00e9gion
+    
+    // tous les modes: sélection des choix par région ou subregion seulement
     while (choices.length < nbChoices - 1) {
         const rnd = Math.floor(Math.random() * max);
         if (
@@ -183,15 +176,24 @@ const getChoices = (nbChoices, answers, answersFrom, difficultyLevel) => {
             answers.indexOf(answersFrom[rnd]) >= 0 ||
             choices.indexOf(answersFrom[rnd]) >= 0
         ) {
-            // console.log(rnd, answersFrom[rnd]); // already in the choices
             continue;
         }
         choices.push(answersFrom[rnd]);
         indexUsed.push(rnd);
     }
-    // console.log(choices, answers);
+    
+    // pour mode 0: on inclut aussi des villes non capitales de temps en temps
+    if (difficultyLevel === DIFFICULTY_HARD) {
+        if (mode.key === "0") {
+            if (country.cities && country.cities.length && Math.random()*2 < 1) {
+                const otherCities = country.cities;
+                choices[Math.floor(Math.random()*choices.length)] = otherCities[Math.floor(Math.random()*otherCities.length)];
+            }
+        }
+    }
+
+    // ajouter la bonne réponse parmis les choix
     choices.splice(((choices.length + 1) * Math.random()) | 0, 0, answers);
-    // console.log(choices);
     return choices;
 };
 

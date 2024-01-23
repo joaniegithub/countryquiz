@@ -177,20 +177,20 @@ const Header = (props) => {
                 onClose={handleConfirmCancelGameClose}
                 aria-labelledby="alert-dialog-title"
             >
-                <DialogTitle id="alert-dialog-title">{`Abandonner la partie?`}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{`Abandon the game?`}</DialogTitle>
                 <DialogActions>
                     <Button
                         variant="outlined"
                         onClick={handleConfirmCancelGameDisagree}
                     >
-                        Non
+                        No
                     </Button>
                     <Button
                         variant="contained"
                         onClick={handleConfirmCancelGameClose}
                         autoFocus
                     >
-                        Oui
+                        Yes
                     </Button>
                 </DialogActions>
             </Dialog>

@@ -6,6 +6,7 @@ import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Box, Button, Card, LinearProgress, Stack, SvgIcon, Typography } from '@mui/material';
+import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
 
 const Game = (props) => {
     const [chosenAnswer, setChosenAnswer] = useState('');
@@ -82,7 +83,7 @@ const Game = (props) => {
                     textAlign="center"
                     fontWeight="500"
                 >
-                    {game.gameMode.questionPhrase.fra}
+                    {game.gameMode.questionPhrase.eng}
                 </Typography>
                 <Card
                     sx={{
@@ -157,7 +158,7 @@ const Game = (props) => {
                                           fontWeight: 600,
                                       }}
                                   >
-                                      {difficultyLevel === "hard" && phase === 0 
+                                      {difficultyLevel === DIFFICULTY_EXPERT && phase === 0 
                                         ? choice[0]+" * * * "+choice[choice.length-1]
                                         : choice
                                     }
@@ -181,7 +182,7 @@ const Game = (props) => {
                     disabled={phase === 0}
                     onClick={handleNext}
                 >
-                    Tour suivant
+                    Next
                 </Button>
             </Stack>
         </React.Fragment>
