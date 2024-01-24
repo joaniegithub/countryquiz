@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Header from './Header';
 // import SideNav from './SideNav';
 import { SIDE_NAV_WIDTH } from './SideNav';
+import BG from 'components/ui/BG';
 
 const images = [
     'arab_tile',
@@ -33,6 +34,8 @@ const Layout = (props) => {
     // const [openNav, setOpenNav] = useState(false);
 
     return (
+        <React.Fragment>
+            <BG />
         <Container
             maxWidth="md"
             sx={{
@@ -101,6 +104,7 @@ const Layout = (props) => {
                 }}
             />
         </Container>
+        </React.Fragment>
     );
 };
 export default Layout;

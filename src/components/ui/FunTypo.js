@@ -12,17 +12,8 @@ const FunTypo = (props) => {
 		strokeWidth = "2px",
 		distance = "3px",
 		patternZoom = 1,
-		// fontSize,
-		// fontWeight,
-		// lineHeight,
-		// mb
 		sx,
 	} = props;
-
-    // const title = "Country";
-    // const title2 = "Quiz";
-    // const color = "000";
-    // const strokeWidth = "px";
 
     return (
 		<Typography
