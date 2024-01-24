@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { startGame, useGameOptions } from 'store/actions';
 
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
-import { Box, Button, Card, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Card, Stack, TextField, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
 import { DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
 import FunTypo from './ui/FunTypo';
 import { useTheme } from '@emotion/react';
@@ -133,6 +133,23 @@ const NewGame = (props) => {
 									</option>
 								))}
 							</TextField>
+							<ToggleButtonGroup
+								color="secondary"
+								value={difficultyLevel}
+								exclusive
+								onChange={handleChangeDifficultyLevel}
+								aria-label="Difficulty"
+								label="Difficulty"
+								name="Difficulty"
+								size="small"
+								variant="outlined"
+							>
+								{difficultyLevels.map((option) => (
+									<ToggleButton key={option.key} value={option.key} disabled={option.disabled}>
+										{option.name}
+									</ToggleButton>
+								))}
+							</ToggleButtonGroup>
 							{/*<FormControl>
 								<FormLabel id="demo-row-radio-buttons-group-label">Difficulty</FormLabel>
 								<RadioGroup
@@ -170,7 +187,7 @@ const NewGame = (props) => {
 										fontSize:"24px",
 										lineHeight:"24px",
 										fontWeight:700,
-										mb:"6px",
+										mb:"4px",
 									}}
 								/>
 							</Button>

@@ -125,7 +125,7 @@ const Home = (props) => {
 									fontSize:"24px",
 									lineHeight:"24px",
 									fontWeight:700,
-									mb:"6px",
+									mb:"4px",
 								}}
 							/>
 						</Button>
@@ -145,7 +145,7 @@ const Home = (props) => {
 									fontSize:"24px",
 									lineHeight:"24px",
 									fontWeight:700,
-									mb:"6px",
+									mb:"4px",
 								}}
 							/>
 						</Button>
