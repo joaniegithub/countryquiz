@@ -27,7 +27,7 @@ const gameDefaultState = {
 };
 
 const reducer = (state = defaultState, { type, ...payload }) => {
-    console.log(state, type, payload);
+    // console.log(state, type, payload);
     const game = state.currentGame;
 
     switch (type) {
@@ -41,6 +41,11 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             return {
                 ...state,
                 currentGame: undefined,
+                gameOptions: game ? {
+                    gameMode: game.gameMode.key,
+                    region: game.region,
+                    difficultyLevel: game.difficultyLevel,
+                } : undefined,
             };
 
         case constants.START_GAME:
@@ -57,8 +62,8 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 ? independentCountries 
                 : independentCountries.filter(c => c.region === chosenRegion)
 
-                // todo: make sure answers at hard mode will be unique with first and last letter
-                // utiliser un utilitaire qui sera ailleurs, et y d\\u00e9placer shuffle
+			// todo: make sure answers at hard mode will be unique with first and last letter
+			// utiliser un utilitaire qui sera ailleurs, et y d\\u00e9placer shuffle
             const allAnswers = allCountries.reduceRight(
                 (cAnswers, c) => {
                     const answers = (mode.answerSubProperty
@@ -70,10 +75,11 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                             };
                         })*/;
                     
-                    return cAnswers.concat(...answers);
+                    return cAnswers.concat(...(Array.isArray(answers) ? answers : [answers]));
                 },
                 []
             );
+			console.log(allAnswers);
 
             const questions = allCountries.map((c) => {
                 const question = mode.questionSubProperty
@@ -107,6 +113,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 currentGame: {
                     ...gameDefaultState,
                     gameMode: mode,
+					region: chosenRegion,
                     difficultyLevel: chosenDifficultyLevel,
                     questions: shuffle(questions),
                 },

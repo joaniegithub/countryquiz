@@ -44,6 +44,7 @@ const Layout = (props) => {
                 // 	md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
                 // },
                 // zIndex: (theme) => theme.zIndex.appBar,
+				maxHeight: "100vh",
                 maxWidth: (theme) => {return {
                     xs: theme.breakpoints.values.sm,
                     md: theme.breakpoints.values.md,

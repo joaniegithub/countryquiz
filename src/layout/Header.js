@@ -19,6 +19,8 @@ import {
     Typography, // useMediaQuery,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
+import FunTypo from 'components/ui/FunTypo';
+import { typography } from '@mui/system';
 
 // import { SIDE_NAV_WIDTH } from './SideNav';
 
@@ -78,98 +80,113 @@ const Header = (props) => {
             <Box
                 component="header"
                 sx={{
-                    backdropFilter: 'blur(6px)',
-                    backgroundColor: (theme) =>
-                        alpha(theme.palette.background.default, 0.8),
-                    left: {
-                        // md: `${SIDE_NAV_WIDTH}px`,
-                        position: 'relative',
-                    },
-                    // width: {
-                    //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                    // backdropFilter: 'blur(6px)',
+                    // backgroundColor: (theme) =>
+                    //     alpha(theme.palette.background.default, 0.8),
+                    // left: {
+                    //     // md: `${SIDE_NAV_WIDTH}px`,
+                    //     position: 'relative',
                     // },
+                    // // width: {
+                    // //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
+                    // // },
+					position: "relative",
                 }}
             >
+				{game && (
+					<Typography
+						component="h1"
+						sx={{
+							position:"absolute",
+							top: 0,
+							left: 0,
+							right: 0,
+							height: TOP_NAV_HEIGHT,
+							lineHeight: TOP_NAV_HEIGHT+"px",
+							textAlign: "center",
+							px: 2,
+							mt: "-2px",
+						}}
+					>
+						<FunTypo
+							text="Country"
+							color="000"
+							stroke={true}
+							strokeWidth="1px"
+							distance="2px"
+							sx={{
+								fontSize:"32px",
+								lineHeight:TOP_NAV_HEIGHT+"px",
+								fontWeight:800,
+								textAlign:"center",
+							}}
+						/>&nbsp;
+						<FunTypo
+							text="Quiz"
+							color="000"
+							stroke={false}
+							strokeWidth="1px"
+							distance="2px"
+							sx={{
+								fontSize:"32px",
+								lineHeight:TOP_NAV_HEIGHT+"px",
+								fontWeight:800,
+								textAlign:"center",
+							}}
+						/>
+					</Typography>
+				)}
                 <Stack
                     alignItems="center"
                     direction="row"
-                    justifyContent="space-between"
-                    spacing={2}
+                    justifyContent="flex-end"
+                    spacing={1}
                     sx={{
                         minHeight: TOP_NAV_HEIGHT,
                         px: 2,
                     }}
                 >
-                    <Stack alignItems="center" direction="row" spacing={2}>
-                        {/*!mdgUp && (
-                            <IconButton onClick={onNavOpen}>
-                                <SvgIcon fontSize="small">
-                                    <Menu />
-                                </SvgIcon>
-                            </IconButton>
-                        )*/}
-                        <OfflineBoltIcon
-                            color="primary"
-                            sx={{
-                                fontSize: 36,
-                                marginRight: '4px',
-                            }}
-                        />
-                        <Typography
-                            variant="h1"
-                            color="primary"
-                            sx={{
-                                fontSize: 32,
-                                marginRight: '4px',
-                                fontWeight: 800,
-                            }}
-                        >
-                            Country Quiz
-                        </Typography>
-                    </Stack>
-                    <Stack alignItems="center" direction="row" spacing={2}>
-                        {game ? (
-                            <IconButton
-                                aria-label="close"
-                                onClick={handleClickClose}
-                                size="small"
-                                // sx={{
-                                //     color: "#ccc",
-                                // }}
-                            >
-                                <CancelIcon />
-                            </IconButton>
-                        ) : (
-                            <React.Fragment>
-                                {deferredPrompt && showInstallButton && (
-                                    <IconButton
-                                        aria-label="Install"
-                                        onClick={handleClickInstall}
-                                        size="small"
-                                        sx={{
-                                            color: '#ccc',
-                                        }}
-                                    >
-                                        {isMobile ? (
-                                            <InstallMobileIcon />
-                                        ) : (
-                                            <InstallDesktopIcon />
-                                        )}
-                                    </IconButton>
-                                )}
-                                <IconButton
-                                    aria-label="Settings"
-                                    onClick={handleClickSettings}
-                                    size="small"
-                                    sx={{
-                                        color: '#ccc',
-                                    }}
-                                >
-                                    <SettingsIcon />
-                                </IconButton>
-                            </React.Fragment>
-                        )}
-                    </Stack>
+					{game ? (
+						<IconButton
+							aria-label="close"
+							onClick={handleClickClose}
+							size="small"
+							// sx={{
+							//     color: "#ccc",
+							// }}
+						>
+							<CancelIcon />
+						</IconButton>
+					) : (
+						<React.Fragment>
+							{/*deferredPrompt && showInstallButton && (
+								<IconButton
+									aria-label="Install"
+									onClick={handleClickInstall}
+									size="small"
+									sx={{
+										color: '#ccc',
+									}}
+								>
+									{isMobile ? (
+										<InstallMobileIcon />
+									) : (
+										<InstallDesktopIcon />
+									)}
+								</IconButton>
+									)*/}
+							<IconButton
+								aria-label="Settings"
+								onClick={handleClickSettings}
+								size="small"
+								sx={{
+									color: '#ccc',
+								}}
+							>
+								<SettingsIcon />
+							</IconButton>
+						</React.Fragment>
+					)}
                 </Stack>
             </Box>
             <Dialog

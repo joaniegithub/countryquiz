@@ -11,6 +11,11 @@ export const useCurrentGame = () => {
         return state.currentGame;
     });
 };
+export const useGameOptions = () => {
+    return useSelector((state) => {
+        return state.gameOptions;
+    });
+};
 export const useShowRules = () => {
     return useSelector((state) => {
         return state.showRules;

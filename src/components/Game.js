@@ -5,6 +5,7 @@ import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { Box, Button, Card, LinearProgress, Stack, SvgIcon, Typography } from '@mui/material';
 import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
 
@@ -178,9 +179,11 @@ const Game = (props) => {
             >
                 <Button
                     variant="outlined"
-                    size="small"
+					color="secondary"
+                    // size="small"
                     disabled={phase === 0}
                     onClick={handleNext}
+					endIcon={<ArrowCircleRightIcon />}
                 >
                     Next
                 </Button>
