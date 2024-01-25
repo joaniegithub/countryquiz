@@ -1,12 +1,9 @@
-// import { wrapperForAbsolute, mainPadding, colors } from "styles/styles";
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { newGame, useCurrentGame } from 'store/actions';
+import { useTheme } from '@emotion/react';
+import { newGame, useInGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
-import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
-import InstallMobileIcon from '@mui/icons-material/InstallMobile';
-import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
     Box,
@@ -15,57 +12,35 @@ import {
     DialogActions,
     DialogTitle,
     IconButton,
-    Stack, // SvgIcon,
-    Typography, // useMediaQuery,
+    Stack,
+    Typography,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 import FunTypo from 'components/ui/FunTypo';
-import { typography } from '@mui/system';
-
-// import { SIDE_NAV_WIDTH } from './SideNav';
+import Settings from 'components/Settings';
 
 export const TOP_NAV_HEIGHT = 64;
 
 const Header = (props) => {
     const { deferredPrompt } = props;
-    const [showInstallButton, setShowInstallButton] = useState(true);
-    const game = useCurrentGame();
+    const inGame = useInGame();
+    const theme = useTheme();
     const dispatch = useDispatch();
 
-    // const { onNavOpen } = props;
     // const mdgUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
-    // const handleClickLock = () => {
-    // 	dispatch(changeOverrideMode());
-    // };
-
-    const isMobile =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-        );
-
-    // Installation must be done by a user gesture! Here, the button click
-    const handleClickInstall = (e) => {
-        // hide our user interface that shows our A2HS button
-        // Show the prompt
-        deferredPrompt.prompt();
-        // Wait for the user to respond to the prompt
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the A2HS prompt');
-                setShowInstallButton(false);
-            } else {
-                console.log('User dismissed the A2HS prompt');
-            }
-        });
-    };
-
-    const handleClickSettings = (e) => {};
-    const handleClickClose = (e) => {
+    const handleClickCloseGame = (e) => {
         setConfirmCancelGameOpen(true);
     };
 
-    // Confirm Delete Dialog
+    // Settings Delete Dialog
+    const [settingsOpen, setSettingsOpen] = useState(false);
+    const handleClickSettings = (e) => {
+        setSettingsOpen(true);
+    };
+    const handleSettingsClose = () => {
+        setSettingsOpen(false);
+    };
+    // Confirm Quit Game Dialog
     const [confirmCancelGameOpen, setConfirmCancelGameOpen] = useState(false);
     const handleConfirmCancelGameClose = () => {
         setConfirmCancelGameOpen(false);
@@ -80,20 +55,10 @@ const Header = (props) => {
             <Box
                 component="header"
                 sx={{
-                    // backdropFilter: 'blur(6px)',
-                    // backgroundColor: (theme) =>
-                    //     alpha(theme.palette.background.default, 0.8),
-                    // left: {
-                    //     // md: `${SIDE_NAV_WIDTH}px`,
-                    //     position: 'relative',
-                    // },
-                    // // width: {
-                    // //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                    // // },
 					position: "relative",
                 }}
             >
-				{game && (
+				{inGame && (
 					<Typography
 						component="h1"
 						sx={{
@@ -110,7 +75,7 @@ const Header = (props) => {
 					>
 						<FunTypo
 							text="Country"
-							color="000"
+							color={theme.palette.text.title.replace("#", "")}
 							stroke={true}
 							strokeWidth="1px"
 							distance="2px"
@@ -123,7 +88,7 @@ const Header = (props) => {
 						/>&nbsp;
 						<FunTypo
 							text="Quiz"
-							color="000"
+							color={theme.palette.text.title.replace("#", "")}
 							stroke={false}
 							strokeWidth="1px"
 							distance="2px"
@@ -146,35 +111,16 @@ const Header = (props) => {
                         px: 2,
                     }}
                 >
-					{game ? (
+					{inGame ? (
 						<IconButton
 							aria-label="close"
-							onClick={handleClickClose}
+							onClick={handleClickCloseGame}
 							size="small"
-							// sx={{
-							//     color: "#ccc",
-							// }}
 						>
 							<CancelIcon />
 						</IconButton>
 					) : (
 						<React.Fragment>
-							{/*deferredPrompt && showInstallButton && (
-								<IconButton
-									aria-label="Install"
-									onClick={handleClickInstall}
-									size="small"
-									sx={{
-										color: '#ccc',
-									}}
-								>
-									{isMobile ? (
-										<InstallMobileIcon />
-									) : (
-										<InstallDesktopIcon />
-									)}
-								</IconButton>
-									)*/}
 							<IconButton
 								aria-label="Settings"
 								onClick={handleClickSettings}
@@ -194,7 +140,7 @@ const Header = (props) => {
                 onClose={handleConfirmCancelGameClose}
                 aria-labelledby="alert-dialog-title"
             >
-                <DialogTitle id="alert-dialog-title">{`Abandon the game?`}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{`Quit the game?`}</DialogTitle>
                 <DialogActions>
                     <Button
                         variant="outlined"
@@ -211,6 +157,11 @@ const Header = (props) => {
                     </Button>
                 </DialogActions>
             </Dialog>
+            <Settings
+                settingsDialogOpen={settingsOpen}
+                handleClose={handleSettingsClose}
+                deferredPrompt={deferredPrompt}
+            />
         </React.Fragment>
     );
 };

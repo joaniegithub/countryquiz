@@ -9,7 +9,7 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { Box, Button, Card, LinearProgress, Stack, SvgIcon, Typography } from '@mui/material';
 import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
 
-const Game = (props) => {
+const Game = () => {
     const [chosenAnswer, setChosenAnswer] = useState('');
     const game = useCurrentGame();
     const dispatch = useDispatch();
@@ -28,9 +28,6 @@ const Game = (props) => {
         if (phase === 1) {
             dispatch(gameNext());
         }
-        // setTimeout(function () {
-        // 	document.getElementById("tableContainer").scrollTo(1000, 0);
-        // }, 200);
     };
 
     const handleChoiceClick = (_chosenAnswer) => {
@@ -38,46 +35,68 @@ const Game = (props) => {
             setChosenAnswer(_chosenAnswer);
             dispatch(gameAnswer(_chosenAnswer));
         }
-        // setTimeout(function () {
-        // 	document.getElementById("tableContainer").scrollTo(1000, 0);
-        // }, 200);
     };
 
-    // const handleNew = () => {
-    //     dispatch(newGame());
-    // };
-
     return (
-        <React.Fragment>
-            <Box
+        <Box
+            display="flex"
+            alignItems="center"
+            flexDirection="column"
+            justifyContent="space-between"
+            sx={{
+                width: "100%",
+                flexGrow: 1,
+            }}
+        >
+            <Stack
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                justifyContent="space-between"
                 sx={{
                     my: 2,
+                    width: "100%",
                 }}
             >
-            <LinearProgress 
-                variant="determinate"
-                value={(game.currentTurn / game.questions.length) * 100}
-                thickness={6}
-            />
+                <LinearProgress 
+                    variant="determinate"
+                    value={(game.currentTurn / game.questions.length) * 100}
+                    thickness={6}
+                    sx={{
+                        flexGrow: 1,
+                        marginRight: "16px",
+                    }}
+                />
                 <Stack
                     alignItems="center"
-                    direction="row"
+                    flexDirection="row"
                     justifyContent="space-between"
                     spacing={2}
                     sx={{
                         px: 0,
                     }}
                 >
-                <Typography
-                    color="secondary"
-                    fontSize="12px"
-                    textAlign="right"
-                    fontWeight="bold"
-                    width="100%"
-                >
+                    <Typography
+                        color="secondary"
+                        fontSize="12px"
+                        textAlign="right"
+                        fontWeight="bold"
+                        width="100%"
+                    >
                         {game.currentScore + ' / ' + game.questions.length}
                     </Typography>
                 </Stack>
+            </Stack>
+            <Stack
+                alignItems="center"
+                flexDirection="column"
+                justifyContent="center"
+                spacing={2}
+                sx={{
+                    flexGrow: 1,
+                    width: "100%",
+                }}
+            >
                 <Typography
                     color="secondary"
                     fontSize="20px"
@@ -92,6 +111,8 @@ const Game = (props) => {
                         py: 2,
                         mt: 1,
                         textAlign: 'center',
+                        width: "100%",
+                        boxSizing: "border-box",
                     }}
                 >
                     <Typography
@@ -105,14 +126,6 @@ const Game = (props) => {
                             : ''}
                     </Typography>
                 </Card>
-            </Box>
-            <Stack
-                alignItems="center"
-                direction="column"
-                justifyContent="center"
-                spacing={2}
-                sx={{}}
-            >
                 {question && question.choices
                     ? question.choices.map((choice, index) => {
                           let color = 'primary';
@@ -171,16 +184,16 @@ const Game = (props) => {
             </Stack>
             <Stack
                 justifyContent="center"
-                direction="column"
+                flexDirection="column"
                 spacing={1}
                 sx={{
                     my: 4,
+                    width: "100%",
                 }}
             >
                 <Button
                     variant="outlined"
 					color="secondary"
-                    // size="small"
                     disabled={phase === 0}
                     onClick={handleNext}
 					endIcon={<ArrowCircleRightIcon />}
@@ -188,7 +201,7 @@ const Game = (props) => {
                     Next
                 </Button>
             </Stack>
-        </React.Fragment>
+        </Box>
     );
 };
 

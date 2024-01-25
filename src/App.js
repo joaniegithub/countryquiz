@@ -1,56 +1,26 @@
 import { useEffect, useState } from 'react';
 
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import './App.css';
 import Game from './components/Game';
 import Home from './components/Home';
 import Layout from './layout/Layout';
-import { useCurrentGame } from './store/actions';
+import { useInGame, useIsDarkMode } from './store/actions';
+
 import { createTheme as createMyTheme } from './theme';
+import { createTheme as createMyThemeDark } from './theme/dark';
 
 const theme = createMyTheme();
-// const useStyles = makeStyles((theme) => {
-// 	root: {
-// 		// some CSS that accesses the theme
-// 	}
-// });
-// const styles = () => ({
-// 	box: {
-// 		padding: "14px 0",
-// 		display: "flex",
-// 		flexDirection: "column",
-// 		alignItems: "flex-start",
-// 		justifyContent: "center",
+const darkTheme = createMyThemeDark();
 
-// 		minHeight: "480px",
-// 	},
-// });
-
-/*module.exports = {
-	printWidth: 80,
-	tabWidth: 4,
-	trailingComma: "all",
-	singleQuote: true,
-	jsxBracketSameLine: true,
-	semi: true,
-	plugins: [require("./lib/src/index.js")],
-	importOrder: ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^@mui/(.*)$", "^[./]"],
-	importOrderSeparation: true,
-	importOrderSortSpecifiers: true,
-};
-*/
 
 const CountryQuizApp = (props) => {
-    // const { classes } = props;
-    // const dispatch = useDispatch();
     const [deferredPrompt, setDeferredPrompt] = useState(undefined);
 
-    const currentGame = useCurrentGame();
-
-    // const handleCloseInfoModal = () => {
-    // 	dispatch(openRules(false));
-    // };
+    const inGame = useInGame();
+    const isDarkMode = useIsDarkMode();
+    const selectedTheme = isDarkMode ? darkTheme : theme;
 
     useEffect(() => {
         window.addEventListener('beforeinstallprompt', function (event) {
@@ -61,34 +31,15 @@ const CountryQuizApp = (props) => {
         });
     }, []);
 
-    //<Box className={classes.box}>
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={selectedTheme}>
+            <CssBaseline />
             <Layout deferredPrompt={deferredPrompt}>
-                {currentGame ? <Game /> : <Home />}
+                {inGame ? <Game /> : <Home />}
                 {/* <InfoModal openInfoModal={showRules} onCloseInfoModal={handleCloseInfoModal} /> */}
             </Layout>
         </ThemeProvider>
     );
-
-    //   return (
-    //     <div className="App">
-    //       <header className="App-header">
-    //         <img src={logo} className="App-logo" alt="logo" />
-    //         <p>
-    //           Edit <code>src/App.js</code> and save to reload.
-    //         </p>
-    //         <a
-    //           className="App-link"
-    //           href="https://reactjs.org"
-    //           target="_blank"
-    //           rel="noopener noreferrer"
-    //         >
-    //           Learn React
-    //         </a>
-    //       </header>
-    //     </div>
-    //   );
 };
 
 export default CountryQuizApp;

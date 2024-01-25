@@ -1,12 +1,10 @@
 import * as React from 'react';
+import { useMemo } from 'react';
 
-// import { useState } from 'react';
 import { Box, Container } from '@mui/material';
 
 import Footer from './Footer';
 import Header from './Header';
-// import SideNav from './SideNav';
-import { SIDE_NAV_WIDTH } from './SideNav';
 import BG from 'components/ui/BG';
 
 const images = [
@@ -31,79 +29,42 @@ const images = [
 
 const Layout = (props) => {
     const { deferredPrompt } = props;
-    // const [openNav, setOpenNav] = useState(false);
+    const bg = useMemo( () => <BG/>, [] );
 
     return (
         <React.Fragment>
-            <BG />
-        <Container
-            maxWidth="md"
-            sx={{
-                // backdropFilter: "blur(6px)",
-                // backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
-                // position: "sticky",
-                // top: 0,
-                // width: {
-                // 	md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                // },
-                // zIndex: (theme) => theme.zIndex.appBar,
-				maxHeight: "100vh",
-                maxWidth: (theme) => {return {
-                    xs: theme.breakpoints.values.sm,
-                    md: theme.breakpoints.values.md,
-                };},
-                // maxWidth: (theme) => theme.breakpoints.values.sm,
-                minHeight: '100vh',
-                display: 'flex',
-                flexDirection: 'column',
-                px: 2,
-            }}
-        >
-            {/* <SideNav
-                deferredPrompt={deferredPrompt}
-                onClose={() => setOpenNav(false)}
-                open={openNav}
-            /> */}
-            <Header
-                images={images}
-                // onNavOpen={() => setOpenNav(true)}
-                deferredPrompt={deferredPrompt}
-            />
-            <Box
-                component="main"
+            {bg}
+            <Container
+                maxWidth="md"
                 sx={{
-                    // backdropFilter: "blur(6px)",
-                    // backgroundColor: (theme) => alpha(theme.palette.background.default, 0.8),
-                    // position: "sticky",
+                    maxHeight: "100vh",
+                    maxWidth: (theme) => {return {
+                        xs: theme.breakpoints.values.sm,
+                        // md: theme.breakpoints.values.md,
+                    };},
+                    minHeight: '100vh',
                     display: 'flex',
                     flexDirection: 'column',
-                    // left: {
-                    //     md: `${SIDE_NAV_WIDTH}px`,
-                    //     position: 'relative',
-                    // },
-                    // top: 0,
-                    // width: {
-                    //     md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                    // },
-                    // zIndex: (theme) => theme.zIndex.appBar,
-                    flexGrow: 1,
                     px: 2,
                 }}
             >
-                {props.children}
-            </Box>
-            <Footer
-                sx={{
-                    left: {
-                        md: `${SIDE_NAV_WIDTH}px`,
-                        position: 'relative',
-                    },
-                    width: {
-                        md: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
-                    },
-                }}
-            />
-        </Container>
+                <Header
+                    images={images}
+                    deferredPrompt={deferredPrompt}
+                />
+                <Box
+                    component="main"
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        flexGrow: 1,
+                        px: 2,
+                    }}
+                >
+                    {props.children}
+                </Box>
+                <Footer />
+            </Container>
         </React.Fragment>
     );
 };

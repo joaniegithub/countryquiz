@@ -5,7 +5,8 @@ import {
     outlinedInputClasses,
     paperClasses,
     tableCellClasses,
-    typographyClasses,
+    toggleButtonGroupClasses,
+    toggleButtonClasses,
 } from '@mui/material';
 
 // Used only to create transitions
@@ -53,6 +54,7 @@ export function createComponents(config) {
         MuiCard: {
             styleOverrides: {
                 root: {
+                    backgroundColor: palette.background,
                     borderRadius: 20,
                     [`&.${paperClasses.elevation1}`]: {
                         boxShadow:
@@ -300,6 +302,37 @@ export function createComponents(config) {
                     [`& .${tableCellClasses.paddingCheckbox}`]: {
                         paddingTop: 4,
                         paddingBottom: 4,
+                    },
+                },
+            },
+        },
+        MuiToggleButtonGroup: {
+            styleOverrides: {
+                root: {
+                    [`& .${toggleButtonGroupClasses.grouped}:not(:first-of-type)`]: {
+                        margin: "0 2px",
+                        borderLeft: 'none',
+                        borderTopLeftRadius: '8px',
+                        borderBottomLeftRadius: '8px',
+                    },
+                    [`& .${toggleButtonGroupClasses.grouped}:not(:last-of-type)`]: {
+                        borderRight: 'none',
+                        borderTopRightRadius: '8px',
+                        borderBottomRightRadius: '8px',
+                    },
+                },
+            },
+        },
+        MuiToggleButton: {
+            styleOverrides: {
+                root: {
+                    border: 'none',
+                    backgroundColor: 'transparent',
+                    margin: "0 2px",
+
+                    [`&.${toggleButtonClasses.disabled}`]: {
+                        border: 'none',
+                        backgroundColor: 'transparent',
                     },
                 },
             },

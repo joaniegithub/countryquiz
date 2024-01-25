@@ -6,6 +6,21 @@ export const useSettings = () => {
         return state.settings;
     });
 };
+export const useIsDarkMode = () => {
+    return useSelector((state) => {
+        return state.settings.isDarkMode;
+    });
+};
+export const useLanguage = () => {
+    return useSelector((state) => {
+        return state.settings.language;
+    });
+};
+export const useInGame = () => {
+    return useSelector((state) => {
+        return state.inGame;
+    });
+};
 export const useCurrentGame = () => {
     return useSelector((state) => {
         return state.currentGame;
@@ -27,12 +42,12 @@ export const useCountriesData = () => {
     });
 };
 
-// export const editSettings = (_settingsData) => {
-// 	return {
-// 		type: constants.EDIT_SETTINGS,
-// 		settings: _settingsData,
-// 	};
-// };
+export const editSettings = (_settingsData) => {
+	return {
+		type: constants.EDIT_SETTINGS,
+		settings: _settingsData,
+	};
+};
 
 export const newGame = () => {
     return {

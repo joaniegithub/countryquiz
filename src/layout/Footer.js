@@ -1,14 +1,8 @@
 import * as React from 'react';
 
-import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
-// import { openRules } from "store/actions";
-// import { mainPadding } from "styles/styles";
-// import { useDispatch } from "react-redux";
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-// import { SIDE_NAV_WIDTH } from './SideNav';
-
-const HEIGHT = 36;
+const HEIGHT = 24;
 
 const Footer = (props) => {
     // const dispatch = useDispatch();
@@ -22,10 +16,11 @@ const Footer = (props) => {
             component="footer"
         >
 			<Typography
+                component="p"
 				fontSize="12px"
 				textAlign="center"
-				lineHeight="24px"
-			>
+				lineHeight={`${HEIGHT}px`}
+            >
 				Country Quiz @2024 Joanie Lessnick
 			</Typography>
         </Box>

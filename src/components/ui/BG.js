@@ -21,11 +21,12 @@ const BG = (props) => {
 		neutral[800],
 		neutral[900],
 	];
-	console.log(colors);
+	// console.log(colors);
 
     return (
 		<Box
 			component="span"
+			backgroundColor="background.default"
 			sx={{
 				pointerEvents: "none",
 				position: "absolute",
@@ -33,7 +34,8 @@ const BG = (props) => {
 				width: "100%",
 				height: "100%",
 				overflow: "hidden",
-				zIndex: 2,
+				zIndex: -1,
+				// backgroundColor: (theme) => theme.palette.background,
 			}}
 		>
 			{colors.map((color, i) => {

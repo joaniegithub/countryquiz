@@ -9,7 +9,7 @@ import {
     neutral,
     success,
     warning,
-} from './colors';
+} from '../colors';
 
 export function createPalette() {
     return {
@@ -22,23 +22,23 @@ export function createPalette() {
             selected: alpha(neutral[900], 0.12),
         },
         background: {
-            default: common.white,
-            paper: common.white,
+            default: neutral[900],
+            paper: neutral[900],
         },
         divider: '#F2F4F7',
         error,
         info,
-        mode: 'light',
+        mode: 'dark',
         neutral,
         primary: indigo,
-        secondary: indigoDark,
+        secondary: indigo,
         success,
         text: {
-            title: common.black,
-            main: neutral[900],
-            primary: neutral[900],
-            secondary: neutral[500],
-            disabled: alpha(neutral[900], 0.38),
+            title: common.white,
+            main: neutral[50],
+            primary: neutral[50],
+            secondary: neutral[50],
+            disabled: alpha(neutral[50], 0.38),
         },
         warning,
     };

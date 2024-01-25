@@ -1,13 +1,17 @@
-import { DIFFICULTY_HARD, DIFFICULTY_NORMAL, GAME_VERSION, countryCites, gameModes } from 'data/config';
+import { DIFFICULTY_HARD, DIFFICULTY_NORMAL, GAME_VERSION, gameModes } from 'data/config';
 import countriesData from 'data/countries.json';
 import * as constants from 'store/constants';
 import { shuffle } from 'util/util';
 
-export const defaultSettings = {};
+export const defaultSettings = {
+    isDarkMode: false,
+    language: "end",
+};
 
 const defaultState = {
     name: 'CountryQuiz',
     settings: defaultSettings,
+    inGame: false,
     currentGame: undefined,
     showRules: false,
     countriesData: [...Object.values(countriesData)],
@@ -41,6 +45,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             return {
                 ...state,
                 currentGame: undefined,
+                inGame: false,
                 gameOptions: game ? {
                     gameMode: game.gameMode.key,
                     region: game.region,
@@ -79,7 +84,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 },
                 []
             );
-			console.log(allAnswers);
+			// console.log(allAnswers);
 
             const questions = allCountries.map((c) => {
                 const question = mode.questionSubProperty
@@ -110,6 +115,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
 
             return {
                 ...state,
+                inGame: true,
                 currentGame: {
                     ...gameDefaultState,
                     gameMode: mode,
@@ -158,12 +164,6 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 ...state,
                 showRules: payload.visibility,
             };
-
-        // case constants.SAVE_SETTING_PROPERTY_SETTINGS:
-        // 	return {
-        // 		...state,
-        // 		settings: { ...state.settings, ...payload.settings },
-        // 	};
 
         default:
             return state;

@@ -12,7 +12,6 @@ import { TOP_NAV_HEIGHT } from 'layout/Header';
 const Home = (props) => {
     const [showGameOptions, setShowGameOptions] = useState(false);
     const theme = useTheme();
-    // const game = useCurrentGame();
 
     const handleClickNewGame = () => {
         setShowGameOptions(true);
@@ -51,7 +50,7 @@ const Home = (props) => {
 					>
 						<FunTypo
 							text="Country"
-							color="000"
+							color={theme.palette.text.title.replace("#", "")}
 							stroke={true}
 							strokeWidth="2px"
 							distance={6*(showGameOptions?0.75:1)+"px"}
@@ -61,13 +60,13 @@ const Home = (props) => {
 								lineHeight: 110 * (showGameOptions?0.75:1)+"px",
 								fontWeight: 800,
 								textAlign:"center",
-								mb: -36 * (showGameOptions?0.75:1)+"px",
+								mb: -56 * (showGameOptions?0.75:1)+"px",
 								transition: "0.25s ease",
 							}}
 						/>
 						<FunTypo
 							text="Quiz"
-							color="000"
+							color={theme.palette.text.title.replace("#", "")}
 							stroke={false}
 							strokeWidth="2px"
 							distance={7*(showGameOptions?0.75:1)+"px"}
@@ -124,7 +123,7 @@ const Home = (props) => {
 								sx={{
 									fontSize:"24px",
 									lineHeight:"24px",
-									fontWeight:700,
+									fontWeight:800,
 									mb:"4px",
 								}}
 							/>

@@ -116,23 +116,6 @@ const NewGame = (props) => {
 									</option>
 								))}
 							</TextField>
-							<TextField
-								fullWidth
-								label="Difficulty"
-								name="Difficulty"
-								onChange={handleChangeDifficultyLevel}
-								required
-								select
-								SelectProps={{ native: true }}
-								value={difficultyLevel}
-								
-							>
-								{difficultyLevels.map((option) => (
-									<option key={option.key} value={option.key} disabled={option.disabled}>
-										{option.name}
-									</option>
-								))}
-							</TextField>
 							<ToggleButtonGroup
 								color="secondary"
 								value={difficultyLevel}
@@ -142,7 +125,7 @@ const NewGame = (props) => {
 								label="Difficulty"
 								name="Difficulty"
 								size="small"
-								variant="outlined"
+								justifyContent="center"
 							>
 								{difficultyLevels.map((option) => (
 									<ToggleButton key={option.key} value={option.key} disabled={option.disabled}>
@@ -150,27 +133,6 @@ const NewGame = (props) => {
 									</ToggleButton>
 								))}
 							</ToggleButtonGroup>
-							{/*<FormControl>
-								<FormLabel id="demo-row-radio-buttons-group-label">Difficulty</FormLabel>
-								<RadioGroup
-									sx={{
-										flexDirection: {
-											xs: "column",
-											sm: "row",
-										},
-									}}
-									aria-labelledby="demo-row-radio-buttons-group-label"
-									name="row-radio-buttons-group"
-									onChange={handleChangeDifficultyLevel}
-									value={difficultyLevel}
-								>
-									{/* TODO: link levels avec les niveaux disponibles pour le mode choisi * /}
-									<FormControlLabel value="flashcard" control={<Radio size="small" />} label="Flashcard" disabled={true} />
-									<FormControlLabel value="normal" control={<Radio size="small" />} label="Normal" />
-									<FormControlLabel value="hard" control={<Radio size="small" />} label="Hard" />
-									<FormControlLabel value="expert" control={<Radio size="small" />} label="Expert" disabled={true} />
-								</RadioGroup>
-							</FormControl>*/}
 							<Button
 								variant="contained"
 								size="large"
@@ -199,3 +161,46 @@ const NewGame = (props) => {
 };
 
 export default NewGame;
+
+
+/*
+
+<TextField
+	fullWidth
+	label="Difficulty"
+	name="Difficulty"
+	onChange={handleChangeDifficultyLevel}
+	required
+	select
+	SelectProps={{ native: true }}
+	value={difficultyLevel}
+	
+>
+	{difficultyLevels.map((option) => (
+		<option key={option.key} value={option.key} disabled={option.disabled}>
+			{option.name}
+		</option>
+	))}
+</TextField>
+<FormControl>
+	<FormLabel id="demo-row-radio-buttons-group-label">Difficulty</FormLabel>
+	<RadioGroup
+		sx={{
+			flexDirection: {
+				xs: "column",
+				sm: "row",
+			},
+		}}
+		aria-labelledby="demo-row-radio-buttons-group-label"
+		name="row-radio-buttons-group"
+		onChange={handleChangeDifficultyLevel}
+		value={difficultyLevel}
+	>
+		{/* TODO: link levels avec les niveaux disponibles pour le mode choisi * /}
+		<FormControlLabel value="flashcard" control={<Radio size="small" />} label="Flashcard" disabled={true} />
+		<FormControlLabel value="normal" control={<Radio size="small" />} label="Normal" />
+		<FormControlLabel value="hard" control={<Radio size="small" />} label="Hard" />
+		<FormControlLabel value="expert" control={<Radio size="small" />} label="Expert" disabled={true} />
+	</RadioGroup>
+</FormControl>
+*/
