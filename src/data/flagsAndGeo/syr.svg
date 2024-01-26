@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="600" viewBox="0 0 180 120">
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="900" height="600" viewBox="0 0 180 120">
 <rect width="180" height="120" fill="#000"/>
 <rect width="180" height="80" fill="#fff"/>
 <rect width="180" height="40" fill="#ce1126"/>
@@ -7,12 +7,12 @@
 <g id="f">
 <g id="t">
 <path d="M54,47v13h8" transform="rotate(18,54,47)" id="o"/>
-<use xlink:href="#o" x="-108" transform="scale(-1,1)"/>
+<use xlinkHref="#o" x="-108" transform="scale(-1,1)"/>
 </g>
-<use xlink:href="#t" transform="rotate(72,54,60)"/>
+<use xlinkHref="#t" transform="rotate(72,54,60)"/>
 </g>
-<use xlink:href="#t" transform="rotate(-72,54,60)"/>
-<use xlink:href="#f" transform="rotate(144,54,60)"/>
+<use xlinkHref="#t" transform="rotate(-72,54,60)"/>
+<use xlinkHref="#f" transform="rotate(144,54,60)"/>
 </g>
-<use xlink:href="#s" x="72"/>
+<use xlinkHref="#s" x="72"/>
 </svg>

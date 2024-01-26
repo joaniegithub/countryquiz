@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlnsSvg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlnsXlink="http://www.w3.org/1999/xlink"
    version="1.0"
    width="600"
    height="300"
@@ -31,7 +31,7 @@
        y="0"
        width="600"
        height="300"
-       xlink:href="#use3396" />
+       xlinkHref="#use3396" />
     <use
        transform="translate(0,-99.50701)"
        id="use3396"
@@ -39,7 +39,7 @@
        y="0"
        width="600"
        height="300"
-       xlink:href="#path570" />
+       xlinkHref="#path570" />
     <path
        d="M 266.07172,130.83824 C 292.85723,130.83824 301.78594,150.73961 337.50016,150.73961 C 355.35696,150.73961 364.28567,130.83824 382.14308,130.83824 C 408.9286,130.83824 417.8573,150.73961 453.57152,150.73961 C 471.42833,150.73961 480.35704,130.83824 498.21263,130.83824 C 524.99875,130.83824 533.92927,150.73961 569.64047,150.73961 C 587.50091,150.73961 593.27699,145.09997 600.00013,141.05544 L 600.00013,111.62098 C 593.27699,115.66551 587.50091,125.11828 569.64047,125.11828 C 533.92927,125.11828 524.99875,105.21691 498.21263,105.21691 C 480.35704,105.21691 471.42833,125.11828 453.57152,125.11828 C 417.8573,125.11828 408.9286,105.21691 382.14308,105.21691 C 364.28567,105.21691 355.35696,125.11828 337.50016,125.11828 C 301.78594,125.11828 292.85723,105.21691 266.07172,105.21691"
        id="path573"
@@ -51,7 +51,7 @@
        y="0"
        width="600"
        height="300"
-       xlink:href="#path573" />
+       xlinkHref="#path573" />
     <use
        transform="translate(0,-99.507016)"
        id="use2597"
@@ -59,7 +59,7 @@
        y="0"
        width="600"
        height="300"
-       xlink:href="#path573" />
+       xlinkHref="#path573" />
     <g
        transform="matrix(0.5,0,0,0.5,0,154.7222)"
        id="g6773">
@@ -82,7 +82,7 @@
          y="0"
          width="600"
          height="600"
-         xlink:href="#path4054" />
+         xlinkHref="#path4054" />
       <use
          transform="matrix(0,-0.502146,2.017316,0,621.6497,-9.4444)"
          id="use6677"
@@ -90,7 +90,7 @@
          y="0"
          width="600"
          height="600"
-         xlink:href="#path4054" />
+         xlinkHref="#path4054" />
       <use
          transform="matrix(1,0,0,-1,-4.715239e-8,-318.8888)"
          id="use6679"
@@ -98,7 +98,7 @@
          y="0"
          width="600"
          height="600"
-         xlink:href="#use6677" />
+         xlinkHref="#use6677" />
     </g>
     <path
        d="M 177.64,50 L 200,50 L 300,0 L 277.64,0 L 177.64,50 z"
@@ -126,7 +126,7 @@
          y="0"
          width="600"
          height="300"
-         xlink:href="#rect3179" />
+         xlinkHref="#rect3179" />
       <use
          transform="matrix(0,0.5,-1,0,450,0)"
          id="use6765"
@@ -134,7 +134,7 @@
          y="0"
          width="600"
          height="300"
-         xlink:href="#use6763" />
+         xlinkHref="#use6763" />
     </g>
     <rect
        width="300"
@@ -152,7 +152,7 @@
        y="0"
        width="600"
        height="300"
-       xlink:href="#use3168" />
+       xlinkHref="#use3168" />
     <g
        id="g2838">
       <g

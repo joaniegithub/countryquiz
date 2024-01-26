@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 
 import Settings from 'components/Settings';
 import FunTypo from 'components/ui/FunTypo';
-import { newGame, useInGame } from 'store/actions';
+import { newGame } from 'store/actions';
+import { useInGame } from 'store/selector';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';

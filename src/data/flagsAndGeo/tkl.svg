@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" xmlns:xlink="http://www.w3.org/1999/xlink" width="1800" height="900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" xmlnsXlink="http://www.w3.org/1999/xlink" width="1800" height="900">
 <defs>
 <g id="star">
 <g id="arm" transform="translate(0,-0.324925)">
 <path d="M1,0H0V0.5z"/>
 <path d="M1,0H0V-0.5z" transform="rotate(-36,1,0)"/>
 </g>
-<use xlink:href="#arm" transform="rotate(72)"/>
-<use xlink:href="#arm" transform="rotate(144)"/>
-<use xlink:href="#arm" transform="rotate(216)"/>
-<use xlink:href="#arm" transform="rotate(288)"/>
+<use xlinkHref="#arm" transform="rotate(72)"/>
+<use xlinkHref="#arm" transform="rotate(144)"/>
+<use xlinkHref="#arm" transform="rotate(216)"/>
+<use xlinkHref="#arm" transform="rotate(288)"/>
 </g>
 </defs>
 <rect width="1800" height="900" fill="#00247d"/>
@@ -18,9 +18,9 @@
 <path d="m318.12503,795.3246c0,0 -13.16343,9.4029 -13.12495,16.4061c0.043,7.7725 14.76557,18.0468 14.76557,18.0468l1338.74505,14.7656 24.6093,-16.4062 -34.453,-21.328 -1330.54197,-11.4843z"/>
 </g>
 <g fill="#fff">
-<use xlink:href="#star" transform="translate(342.9565,112.5812) scale(45)"/>
-<use xlink:href="#star" transform="translate(521.20459,267.53) scale(37.5)"/>
-<use xlink:href="#star" transform="translate(135,321.8075) scale(45)"/>
-<use xlink:href="#star" transform=" translate(342.9565,652.5812) scale(52.5)"/>
+<use xlinkHref="#star" transform="translate(342.9565,112.5812) scale(45)"/>
+<use xlinkHref="#star" transform="translate(521.20459,267.53) scale(37.5)"/>
+<use xlinkHref="#star" transform="translate(135,321.8075) scale(45)"/>
+<use xlinkHref="#star" transform=" translate(342.9565,652.5812) scale(52.5)"/>
 </g>
 </svg>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" xmlnsXlink="http://www.w3.org/1999/xlink" width="500" height="300">
 
 <title>Flag of Haiti</title>
 
@@ -90,7 +90,7 @@
 
 </g>
 
-<use xlink:href="#flags_half" transform="matrix(-1,0,0,1,499.85852,0)"/>
+<use xlinkHref="#flags_half" transform="matrix(-1,0,0,1,499.85852,0)"/>
 
 </g>
 
@@ -116,7 +116,7 @@
 
 </g>
 
-<use xlink:href="#tree_half" transform="matrix(-1,0,0,1,499.85867,0)"/>
+<use xlinkHref="#tree_half" transform="matrix(-1,0,0,1,499.85867,0)"/>
 
 <g id="trunk">
 
@@ -170,7 +170,7 @@
 
 <g id="i1">
 
-<use xlink:href="#ip" transform="matrix(1,0,0,-1,-0.00226132,320.36968)"/>
+<use xlinkHref="#ip" transform="matrix(1,0,0,-1,-0.00226132,320.36968)"/>
 
 <path fill="#016a16" stroke="#fff" stroke-width="0.1811" stroke-linecap="round" d="m238.358,161.75c0,1.29873-0.81458,2.35278-1.81827,2.35278s-1.81827-1.05405-1.81827-2.35278v-1.27647h3.63654v1.27647z"/>
 
@@ -292,7 +292,7 @@
 
 </g>
 
-<use xlink:href="#items_half" transform="matrix(-1,0,0,1,499.85853,0)"/>
+<use xlinkHref="#items_half" transform="matrix(-1,0,0,1,499.85853,0)"/>
 
 <g id="drum" stroke-width="0.231">
 

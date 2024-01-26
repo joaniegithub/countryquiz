@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" xmlnsXlink="http://www.w3.org/1999/xlink" width="600" height="400">
 
 <clipPath id="c">
 
@@ -95,13 +95,13 @@
 
 </g>
 
-<use xlink:href="#x" x="13.603532"/>
+<use xlinkHref="#x" x="13.603532"/>
 
-<use xlink:href="#x" x="27.449532"/>
+<use xlinkHref="#x" x="27.449532"/>
 
-<use xlink:href="#x" x="41.781532"/>
+<use xlinkHref="#x" x="41.781532"/>
 
-<use xlink:href="#x" x="55.627532"/>
+<use xlinkHref="#x" x="55.627532"/>
 
 </g>
 

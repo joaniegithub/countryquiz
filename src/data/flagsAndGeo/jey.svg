@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="600" viewBox="0 0 30 18">
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="1000" height="600" viewBox="0 0 30 18">
 
 <rect width="30" height="18" fill="#fff"/>
 
@@ -89,9 +89,9 @@
 
 </g>
 
-<use xlink:href="#leopard" transform="matrix(0.9,0,0,0.9,1.45342,1.67136)"/>
+<use xlinkHref="#leopard" transform="matrix(0.9,0,0,0.9,1.45342,1.67136)"/>
 
-<use xlink:href="#leopard" transform="matrix(0.67,0,0,0.75,4.90869,3.35378)"/>
+<use xlinkHref="#leopard" transform="matrix(0.67,0,0,0.75,4.90869,3.35378)"/>
 
 </g>
 </svg>

@@ -2,17 +2,17 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlnsDc="http://purl.org/dc/elements/1.1/"
+   xmlnsCc="http://creativecommons.org/ns#"
+   xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlnsSvg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
    width="1600"
    height="1200"
    viewBox="0 0 1600 1200"
    id="svg2"
-   xml:space="preserve"
+   xmlSpace="preserve"
    style="fill-rule:evenodd"><defs
    id="defs4" /><polygon
    points="0,1200 1600,1200 1600,0 0,0 "
@@ -1710,4 +1710,4 @@
    style="fill:#000" />
 <metadata
    id="metadata3537"><rdf:RDF><cc:Work
-       rdf:about=""><dc:title></dc:title></cc:Work></rdf:RDF></metadata></svg>
+       rdfAbout=""><dc:title></dc:title></cc:Work></rdf:RDF></metadata></svg>

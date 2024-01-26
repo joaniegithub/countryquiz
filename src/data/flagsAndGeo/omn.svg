@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="300" viewBox="0 0 1200 600">
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="600" height="300" viewBox="0 0 1200 600">
 	<title>Flag of Oman</title>
 	<rect width="1200" fill="#db161b" height="600"/>
 	<rect height="200" width="900" x="300" fill="#fff"/>
@@ -78,7 +78,7 @@
 		<path d="M70.812,119.43l2.974,2.66"/>
 		<path d="M68.829,119.43l2.974,2.66"/>
 	</g>
-	<use xlink:href="#a" x="-300" transform="scale(-1,1)"/>
+	<use xlinkHref="#a" x="-300" transform="scale(-1,1)"/>
 	<g id="b">
 		<path d="M126.51,147.12c-48.114,47.05-68.638,53-59.006,56.79s40.616-20.49,72.856-52.75c32.24-32.25,51.98-60.956,42.35-64.747-9.63-3.792-5.03,10.662-56.2,60.707z" fill-rule="evenodd" stroke="#db161b" stroke-width="0.42368097pt" fill="#fff"/>
 		<path d="M86.008,181.31l16.852,4.42c-15.861,15.03-33.708,21.22-38.665,18.57-4.958-2.65,8.923-8.84,21.813-22.99z" fill-rule="evenodd" stroke="#db161b" stroke-width="0.33028123" fill="#fff"/>
@@ -100,7 +100,7 @@
 		<path d="M209.03,47.727l-5.64-2.597" fill-rule="evenodd" stroke="#db161b" stroke-width="0.33422136pt" fill="#fff"/>
 		<ellipse rx="3.5433" ry="3.5433" stroke="#db161b" transform="matrix(-0.4490005,0.1132067,0.1013394,0.3938715,444.34717,-55.797864)" cy="92.126" cx="545.67" stroke-width="1pt" fill="#db161b"/>
 	</g>
-	<use xlink:href="#b" x="-300" transform="scale(-1,1)"/>
+	<use xlinkHref="#b" x="-300" transform="scale(-1,1)"/>
 	<path d="M135.26,84.958c0,30.942,0.18,42.602-2.1,44.202-2.16,1.71-62.348,0-62.348,8.84s49.578,17.68,64.448,17.68c19.83,0,29.75-8.84,29.75-26.52v-44.202h-29.75z" fill-rule="evenodd" stroke="#db161b" stroke-width="0.30510197pt" fill="#fff"/>
 	<path d="M135.26,93.798v4.42c9.92,1.474,19.83,1.474,29.75,0v-4.42c-9.92,1.474-19.83,1.474-29.75,0z" fill-rule="evenodd" stroke="#db161b" stroke-width="0.26422367pt" fill="#fff"/>
 	<path d="M135.26,84.958v4.42c9.92,1.473,19.83,1.473,29.75,0v-4.42c-9.92,1.473-19.83,1.473-29.75,0z" fill-rule="evenodd" stroke="#db161b" stroke-width="0.26422367pt" fill="#fff"/>

@@ -1,47 +1,6 @@
-import { useSelector } from 'react-redux';
 import * as constants from 'store/constants';
 
-export const useSettings = () => {
-    return useSelector((state) => {
-        return state.settings;
-    });
-};
-export const useIsDarkMode = () => {
-    return useSelector((state) => {
-        return state.settings.isDarkMode;
-    });
-};
-export const useLanguage = () => {
-    return useSelector((state) => {
-        return state.settings.language;
-    });
-};
-export const useInGame = () => {
-    return useSelector((state) => {
-        return state.inGame;
-    });
-};
-export const useCurrentGame = () => {
-    return useSelector((state) => {
-        return state.currentGame;
-    });
-};
-export const useGameOptions = () => {
-    return useSelector((state) => {
-        return state.gameOptions;
-    });
-};
-export const useShowRules = () => {
-    return useSelector((state) => {
-        return state.showRules;
-    });
-};
-export const useCountriesData = () => {
-    return useSelector((state) => {
-        return state.countriesData;
-    });
-};
-
+// ACTIONS
 export const editSettings = (_settingsData) => {
     return {
         type: constants.EDIT_SETTINGS,
@@ -54,6 +13,7 @@ export const newGame = () => {
         type: constants.NEW_GAME,
     };
 };
+
 export const startGame = (
     _chosenGameMode,
     _chosenRegion,
@@ -66,20 +26,23 @@ export const startGame = (
         chosenDifficultyLevel: _chosenDifficultyLevel,
     };
 };
+
 export const gameNext = () => {
     return {
         type: constants.GAME_NEXT,
     };
 };
+
 export const gameAnswer = (_chosenAnswer) => {
     return {
         type: constants.GAME_ANSWER,
         chosenAnswer: _chosenAnswer,
     };
 };
-export const openRules = (_visibility) => {
-    return {
-        type: constants.SHOW_RULES,
-        visibility: _visibility,
-    };
-};
+
+// export const openRules = (_visibility) => {
+//     return {
+//         type: constants.SHOW_RULES,
+//         visibility: _visibility,
+//     };
+// };

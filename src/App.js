@@ -6,7 +6,7 @@ import './App.css';
 import Game from './components/Game';
 import Home from './components/Home';
 import Layout from './layout/Layout';
-import { useInGame, useIsDarkMode } from './store/actions';
+import { useInGame, useIsDarkMode } from './store/selector';
 import { createTheme as createMyTheme } from './theme';
 import { createTheme as createMyThemeDark } from './theme/dark';
 

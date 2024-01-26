@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlnsXlink="http://www.w3.org/1999/xlink"
    width="1008"
    height="504"
    viewBox="0 0 252 126">
@@ -19,23 +19,23 @@
 <g id="upper_star_part" fill="#DE2010" transform="translate(34,63) scale(32)">
   <g>
     <polygon id="triangle_ur" points="0,0 0,1 .75,1" transform="translate(0,-1) rotate(26.26769855)"/>
-    <use id="triangle_ul" xlink:href="#triangle_ur" transform="scale(-1,1)"/>
+    <use id="triangle_ul" xlinkHref="#triangle_ur" transform="scale(-1,1)"/>
     <polygon id="triangle2_ur" points="0,0 0,1 .75,1" transform="translate(0,-1) rotate(19.57996077)"/>
-    <use id="triangle2_ul" xlink:href="#triangle2_ur" transform="scale(-1,1)"/>
+    <use id="triangle2_ul" xlinkHref="#triangle2_ur" transform="scale(-1,1)"/>
   </g>
-  <use xlink:href="#triangle_ur" transform="rotate(72)"/>
-  <use xlink:href="#triangle_ul" transform="rotate(-72)"/>
-  <use xlink:href="#triangle2_ur" transform="rotate(72)"/>
-  <use xlink:href="#triangle2_ul" transform="rotate(-72)"/>
+  <use xlinkHref="#triangle_ur" transform="rotate(72)"/>
+  <use xlinkHref="#triangle_ul" transform="rotate(-72)"/>
+  <use xlinkHref="#triangle2_ur" transform="rotate(72)"/>
+  <use xlinkHref="#triangle2_ul" transform="rotate(-72)"/>
 </g>
 
 <g id="lower_star_part" fill="#DE2010" transform="translate(34,63) scale(27.5)">
   <g id="cone_l">
     <polygon id="triangle_l" points="0,0 0,1 .5,1" transform="translate(0,-1) rotate(24.22482095)"/>
-    <use xlink:href="#triangle_l" transform="scale(-1,1)"/>
+    <use xlinkHref="#triangle_l" transform="scale(-1,1)"/>
   </g>
-  <use xlink:href="#cone_l" transform="rotate(144)"/>
-  <use xlink:href="#cone_l" transform="rotate(-144)"/>
+  <use xlinkHref="#cone_l" transform="rotate(144)"/>
+  <use xlinkHref="#cone_l" transform="rotate(-144)"/>
 </g>
 
 </g>

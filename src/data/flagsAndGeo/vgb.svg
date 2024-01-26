@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" xmlnsXlink="http://www.w3.org/1999/xlink" width="1200" height="600">
 
 <defs>
 
@@ -47,27 +47,27 @@
 
 </g>
 
-<use xlink:href="#lamp" x="-0.77220062" y="41.304015"/>
+<use xlinkHref="#lamp" x="-0.77220062" y="41.304015"/>
 
-<use xlink:href="#lamp" x="-1.0892006" y="82.013015"/>
+<use xlinkHref="#lamp" x="-1.0892006" y="82.013015"/>
 
-<use xlink:href="#lamp" x="25.626799" y="126.09901"/>
+<use xlinkHref="#lamp" x="25.626799" y="126.09901"/>
 
-<use xlink:href="#lamp" x="-4.5742006" y="162.16301"/>
+<use xlinkHref="#lamp" x="-4.5742006" y="162.16301"/>
 
-<use xlink:href="#lamp" x="-3.7822006" y="204.77301"/>
+<use xlinkHref="#lamp" x="-3.7822006" y="204.77301"/>
 
-<use xlink:href="#lamp" x="146.2798" y="0.67201485"/>
+<use xlinkHref="#lamp" x="146.2798" y="0.67201485"/>
 
-<use xlink:href="#lamp" x="144.9358" y="41.218015"/>
+<use xlinkHref="#lamp" x="144.9358" y="41.218015"/>
 
-<use xlink:href="#lamp" x="143.1438" y="82.661015"/>
+<use xlinkHref="#lamp" x="143.1438" y="82.661015"/>
 
-<use xlink:href="#lamp" x="145.1598" y="123.43101"/>
+<use xlinkHref="#lamp" x="145.1598" y="123.43101"/>
 
-<use xlink:href="#lamp" x="144.7118" y="164.20101"/>
+<use xlinkHref="#lamp" x="144.7118" y="164.20101"/>
 
-<use xlink:href="#lamp" x="144.9358" y="205.19501"/>
+<use xlinkHref="#lamp" x="144.9358" y="205.19501"/>
 
 <g fill="#ffc6b5" stroke="#000" stroke-width="0.9437">
 

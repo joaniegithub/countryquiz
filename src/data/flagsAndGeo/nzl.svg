@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
 
 height="600" width="1200" viewBox="0 0 1200 600">
 
@@ -18,10 +18,10 @@ height="600" width="1200" viewBox="0 0 1200 600">
 <path d="M 0,0 L 0,0.5 L 1,0 z"/>
 <path d="M 0,0 L 0,-0.5 L 1,0 z" transform="rotate(-36,1,0)"/>
 </g>
-<use xlink:href="#Arm" transform="scale(-1,1)"/>
-<use xlink:href="#Arm" transform="rotate(72,0,0)"/>
-<use xlink:href="#Arm" transform="rotate(-72,0,0)"/>
-<use xlink:href="#Arm" transform="rotate(-72,0,0) scale(-1,1)"/>
+<use xlinkHref="#Arm" transform="scale(-1,1)"/>
+<use xlinkHref="#Arm" transform="rotate(72,0,0)"/>
+<use xlinkHref="#Arm" transform="rotate(-72,0,0)"/>
+<use xlinkHref="#Arm" transform="rotate(-72,0,0) scale(-1,1)"/>
 </g>
 </defs>
 
@@ -38,22 +38,22 @@ height="600" width="1200" viewBox="0 0 1200 600">
 
 <g id="Southern_Cross">
 <g id="Gamma_Crucis">
-<use xlink:href="#Pentagram" fill="#ffffff" transform="translate(900,120) scale(45.4)"/>
-<use xlink:href="#Pentagram" fill="#cc142b" transform="translate(900,120) scale(30)"/>
+<use xlinkHref="#Pentagram" fill="#ffffff" transform="translate(900,120) scale(45.4)"/>
+<use xlinkHref="#Pentagram" fill="#cc142b" transform="translate(900,120) scale(30)"/>
 </g>
 <g transform="rotate(82,900,240)">
 <g id="Delta_Crucis">
-<use xlink:href="#Pentagram" fill="#ffffff" transform="translate(900,120) rotate(-82) scale(40.4)"/>
-<use xlink:href="#Pentagram" fill="#cc142b" transform="translate(900,120) rotate(-82) scale(25)"/>
+<use xlinkHref="#Pentagram" fill="#ffffff" transform="translate(900,120) rotate(-82) scale(40.4)"/>
+<use xlinkHref="#Pentagram" fill="#cc142b" transform="translate(900,120) rotate(-82) scale(25)"/>
 </g>
 <g id="Beta_Crucis">
-<use xlink:href="#Pentagram" fill="#ffffff" transform="translate(900,380) rotate(-82) scale(45.4)"/>
-<use xlink:href="#Pentagram" fill="#cc142b" transform="translate(900,380) rotate(-82) scale(30)"/>
+<use xlinkHref="#Pentagram" fill="#ffffff" transform="translate(900,380) rotate(-82) scale(45.4)"/>
+<use xlinkHref="#Pentagram" fill="#cc142b" transform="translate(900,380) rotate(-82) scale(30)"/>
 </g>
 </g>
 <g id="Alpha_Crucis">
-<use xlink:href="#Pentagram" fill="#ffffff" transform="translate(900,480) scale(50.4)"/>
-<use xlink:href="#Pentagram" fill="#cc142b" transform="translate(900,480) scale(35)"/>
+<use xlinkHref="#Pentagram" fill="#ffffff" transform="translate(900,480) scale(50.4)"/>
+<use xlinkHref="#Pentagram" fill="#cc142b" transform="translate(900,480) scale(35)"/>
 </g>
 </g>
 </svg>

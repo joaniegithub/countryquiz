@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" xmlnsXlink="http://www.w3.org/1999/xlink" width="900" height="600">
 <rect width="900" height="600" fill="#cf142b"/>
 <rect width="450" height="600" fill="#fff"/>
 <g>
@@ -17,9 +17,9 @@
 <path d="m77.572,73.287,1.0714-1.0714,6.4282,6.4283-1.0714,1.0714z"/>
 
 </g>
-<use xlink:href="#vi" transform="rotate(90,105.555,105.557)"/>
-<use xlink:href="#vi" transform="rotate(180,105.555,105.557)"/>
-<use xlink:href="#vi" transform="rotate(270,105.555,105.557)"/>
+<use xlinkHref="#vi" transform="rotate(90,105.555,105.557)"/>
+<use xlinkHref="#vi" transform="rotate(180,105.555,105.557)"/>
+<use xlinkHref="#vi" transform="rotate(270,105.555,105.557)"/>
 <g fill="none" stroke="#96877d" stroke-width="0.514">
 <circle cx="105.555" cy="105.557" r="31.822"/>
 <circle cx="105.555" cy="105.557" r="24.245"/>

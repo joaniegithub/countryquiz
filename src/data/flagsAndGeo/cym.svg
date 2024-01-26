@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" xmlnsXlink="http://www.w3.org/1999/xlink" width="1200" height="600">
 
 <clipPath id="c">
 <path d="M0,0V150H700V300H600zM600,0H300V350H0V300z"/>
@@ -13,13 +13,13 @@
 <path d="M0,300H600V0H1200V600H0z" fill="#00247d"/>
 <g stroke="#000" stroke-width="1.4377">
 <g id="border" stroke="#fff" stroke-width="9.6" stroke-linejoin="round">
-<use xlink:href="#shield"/>
-<use xlink:href="#motto1"/>
-<use xlink:href="#motto2"/>
-<use xlink:href="#rope"/>
-<use xlink:href="#turtle"/>
-<use xlink:href="#pineapple1"/>
-<use xlink:href="#pineapple2"/>
+<use xlinkHref="#shield"/>
+<use xlinkHref="#motto1"/>
+<use xlinkHref="#motto2"/>
+<use xlinkHref="#rope"/>
+<use xlinkHref="#turtle"/>
+<use xlinkHref="#pineapple1"/>
+<use xlinkHref="#pineapple2"/>
 </g>
 <g id="motto">
 
@@ -427,9 +427,9 @@
 
 </g>
 
-<use xlink:href="#star" x="90.09665"/>
+<use xlinkHref="#star" x="90.09665"/>
 
-<use xlink:href="#star" x="45.04765" y="52.23713"/>
+<use xlinkHref="#star" x="45.04765" y="52.23713"/>
 
 <path fill="none" stroke="#000" stroke-width="1.4377" d="m989.722,232.949v93.4509c0,80.9908-38.3388,108.786-89.617,130.831-51.2781-22.0448-90.0962-49.8405-90.0962-130.831v-93.4509h179.713z"/>
 

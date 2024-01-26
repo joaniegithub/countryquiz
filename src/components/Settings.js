@@ -18,34 +18,16 @@ import {
     ToggleButtonGroup,
 } from '@mui/material';
 
-import { editSettings, useIsDarkMode, useLanguage } from '../store/actions';
+import { editSettings } from '../store/actions';
+import { useIsDarkMode, useLanguage } from '../store/selector';
 
 const Settings = (props) => {
     const { settingsDialogOpen, handleClose, deferredPrompt } = props;
     const [showInstallButton, setShowInstallButton] = useState(true);
-    // const [ language, setLanguage ] = useState("fra");
     const dispatch = useDispatch();
     const isDarkMode = useIsDarkMode();
     const language = useLanguage();
 	const { t, i18n } = useTranslation();
-    
-    // console.log(i18n);
-    // const languages = [
-    //     {
-    //         key: 'fra',
-    //         name: {
-    //             fra: 'Français',
-    //             eng: 'French',
-    //         },
-    //     },
-    //     {
-    //         key: 'eng',
-    //         name: {
-    //             fra: 'Anglais',
-    //             eng: 'English',
-    //         },
-    //     },
-    // ];
 
     const handleClickLightMode = () => {
         dispatch(editSettings({ isDarkMode: !isDarkMode }));
@@ -115,7 +97,6 @@ const Settings = (props) => {
                         name="Language"
                         size="small"
                         variant="text"
-                        // disabled={true}
                         sx={{
                             justifyContent: 'center',
                         }}

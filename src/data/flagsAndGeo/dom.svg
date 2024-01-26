@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="625">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" xmlnsXlink="http://www.w3.org/1999/xlink" width="1000" height="625">
 
 <rect height="625" width="1000" fill="#FFF"/>
 
@@ -84,7 +84,7 @@
 
 </g>
 
-<use xlink:href="#h" transform="matrix(-1,0,0,1,998.25705,0.06919)"/>
+<use xlinkHref="#h" transform="matrix(-1,0,0,1,998.25705,0.06919)"/>
 
 <g stroke="#000" stroke-width="0.2359">
 
@@ -702,19 +702,19 @@
 
 </g>
 
-<use xlink:href="#b" transform="matrix(0.15669945,0,0,0.18127975,444.56657,235.35279)"/>
+<use xlinkHref="#b" transform="matrix(0.15669945,0,0,0.18127975,444.56657,235.35279)"/>
 
-<use xlink:href="#b" transform="matrix(0.15669945,0,0,0.15669945,443.68543,248.31983)"/>
+<use xlinkHref="#b" transform="matrix(0.15669945,0,0,0.15669945,443.68543,248.31983)"/>
 
-<use xlink:href="#b" transform="matrix(0.16898961,0,0,0.16898961,439.99242,252.04284)"/>
+<use xlinkHref="#b" transform="matrix(0.16898961,0,0,0.16898961,439.99242,252.04284)"/>
 
-<use xlink:href="#b" transform="matrix(0.16898961,0,0,0.16898961,438.74414,256.22825)"/>
+<use xlinkHref="#b" transform="matrix(0.16898961,0,0,0.16898961,438.74414,256.22825)"/>
 
-<use xlink:href="#b" transform="matrix(0.16898961,0,0,0.16898961,440.28613,257.84368)"/>
+<use xlinkHref="#b" transform="matrix(0.16898961,0,0,0.16898961,440.28613,257.84368)"/>
 
-<use xlink:href="#b" transform="matrix(0.1228861,0,0,0.1228861,463.22156,286.0505)"/>
+<use xlinkHref="#b" transform="matrix(0.1228861,0,0,0.1228861,463.22156,286.0505)"/>
 
-<use xlink:href="#b" transform="matrix(0.1228861,0,0,0.1228861,464.29275,287.30532)"/>
+<use xlinkHref="#b" transform="matrix(0.1228861,0,0,0.1228861,464.29275,287.30532)"/>
 
 <path d="m458.76,316.61c-0.22029-0.95456-1.1014-1.2483-1.1014-1.2483"/>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" xmlnsXlink="http://www.w3.org/1999/xlink" width="1000" height="500">
 
 <rect width="1000" height="500" fill="#0021ad"/>
 
@@ -18,11 +18,11 @@
 
 <path d="m233.39,335.53-13.752-9.1669-13.391,9.6641,4.7117-15.568-13.582-9.4155,16.667-0.44539,4.9883-15.496,5.5945,15.299,16.667-0.15537-13.21,9.9023,5.3073,15.382z"/>
 
-<use xlink:href="#s" x="2.5215" y="269.0608"/>
+<use xlinkHref="#s" x="2.5215" y="269.0608"/>
 
-<use xlink:href="#s" x="-112.0655" y="123.2228"/>
+<use xlinkHref="#s" x="-112.0655" y="123.2228"/>
 
-<use xlink:href="#s" x="108.4275" y="85.0268"/>
+<use xlinkHref="#s" x="108.4275" y="85.0268"/>
 
 </g>
 </svg>

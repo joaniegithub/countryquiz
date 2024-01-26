@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" xmlnsXlink="http://www.w3.org/1999/xlink" width="960" height="600">
 
 <defs>
 
@@ -10,11 +10,11 @@
 <stop stop-color="#b07e09" offset="1"/>
 
 </radialGradient>
-<radialGradient id="rg1" xlink:href="#rgbase" gradientUnits="userSpaceOnUse" cx="447.41758" cy="308.26917" r="16.53415"/>
-<radialGradient id="rg2" xlink:href="#rgbase" gradientUnits="userSpaceOnUse" cx="451.55806" cy="312.99521" r="10.9114"/>
-<radialGradient id="rg3" xlink:href="#rgbase" gradientUnits="userSpaceOnUse" cx="454.11008" cy="308.64279" r="9.7796"/>
-<radialGradient id="rg4" xlink:href="#rgbase" gradientUnits="userSpaceOnUse" cx="458.39039" cy="307.05652" r="17.35437"/>
-<radialGradient id="rg5" xlink:href="#rgbase" gradientUnits="userSpaceOnUse" cx="445.97552" cy="252.36294" r="13.01791"/>
+<radialGradient id="rg1" xlinkHref="#rgbase" gradientUnits="userSpaceOnUse" cx="447.41758" cy="308.26917" r="16.53415"/>
+<radialGradient id="rg2" xlinkHref="#rgbase" gradientUnits="userSpaceOnUse" cx="451.55806" cy="312.99521" r="10.9114"/>
+<radialGradient id="rg3" xlinkHref="#rgbase" gradientUnits="userSpaceOnUse" cx="454.11008" cy="308.64279" r="9.7796"/>
+<radialGradient id="rg4" xlinkHref="#rgbase" gradientUnits="userSpaceOnUse" cx="458.39039" cy="307.05652" r="17.35437"/>
+<radialGradient id="rg5" xlinkHref="#rgbase" gradientUnits="userSpaceOnUse" cx="445.97552" cy="252.36294" r="13.01791"/>
 <radialGradient id="rg6" gradientUnits="userSpaceOnUse" cx="477.85817" cy="215.26555" r="0.34463">
 <stop stop-color="#a50a0a" offset="0.2592"/>
 
@@ -417,7 +417,7 @@
 
 </g>
 
-<use xlink:href="#gun" transform="matrix(-0.99877061,-0.04957067,-0.04957067,0.99877061,973.59129,23.686411)"/>
+<use xlinkHref="#gun" transform="matrix(-0.99877061,-0.04957067,-0.04957067,0.99877061,973.59129,23.686411)"/>
 
 <g stroke="#24420e" stroke-width="0.1639">
 
@@ -491,7 +491,7 @@
 </g>
 </g>
 
-<use xlink:href="#sword" transform="matrix(-0.99823174,-0.05944245,-0.05944245,0.99823174,979.09134,28.304721)"/>
+<use xlinkHref="#sword" transform="matrix(-0.99823174,-0.05944245,-0.05944245,0.99823174,979.09134,28.304721)"/>
 
 <g stroke="#24420e" stroke-width="0.1639">
 

@@ -1,4 +1,5 @@
 import {
+    CAPITAL,
     DIFFICULTY_HARD,
     DIFFICULTY_NORMAL,
     GAME_VERSION,
@@ -23,7 +24,7 @@ const defaultState = {
 };
 
 const gameDefaultState = {
-    gameMode: 1,
+    gameMode: CAPITAL,
     questions: [],
     currentScore: 0,
     currentTurn: 0,
@@ -70,7 +71,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
             const independentCountries = Object.values(countriesData).filter(
-                (c) => c.independent === true
+                (c) => c.independent === true || c.independent === false
             );
             const allCountries =
                 chosenRegion === 'all'
@@ -113,7 +114,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     mode,
                     chosenDifficultyLevel
                 );
-
+console.log(c.cca3);
                 return {
                     country: c.cca3,
                     flag: c.flag,

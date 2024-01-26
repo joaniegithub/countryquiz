@@ -1,3 +1,47 @@
+import { useSelector } from 'react-redux';
+
+// SELECTOR HOOKS
+export const useSettings = () => {
+    return useSelector((state) => {
+        return state.settings;
+    });
+};
+export const useIsDarkMode = () => {
+    return useSelector((state) => {
+        return state.settings.isDarkMode;
+    });
+};
+export const useLanguage = () => {
+    return useSelector((state) => {
+        return state.settings.language;
+    });
+};
+export const useInGame = () => {
+    return useSelector((state) => {
+        return state.inGame;
+    });
+};
+export const useCurrentGame = () => {
+    return useSelector((state) => {
+        return state.currentGame;
+    });
+};
+export const useGameOptions = () => {
+    return useSelector((state) => {
+        return state.gameOptions;
+    });
+};
+// export const useShowRules = () => {
+//     return useSelector((state) => {
+//         return state.showRules;
+//     });
+// };
+export const useCountriesData = () => {
+    return useSelector((state) => {
+        return state.countriesData;
+    });
+};
+
 // export const getGameCanGoNext = (game) => {
 //     if (game.currentPhase === 0) {
 //         // Betting phase

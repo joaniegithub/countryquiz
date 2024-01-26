@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" xmlnsXlink="http://www.w3.org/1999/xlink" width="600" height="300">
 
 <rect width="600" height="300" fill="#cf142b"/>
 
@@ -46,9 +46,9 @@
 
 </g>
 
-<use xlink:href="#leg" transform="rotate(120,300,150)"/>
+<use xlinkHref="#leg" transform="rotate(120,300,150)"/>
 
-<use xlink:href="#leg" transform="rotate(240,300,150)"/>
+<use xlinkHref="#leg" transform="rotate(240,300,150)"/>
 
 <path stroke-width="1.3" d="m304.618,169.37c-1.77371-0.90291-3.12727-1.08318-3.77369-0.64598-1.0276-5.7458-1.93184-11.499-3.25176-17.2272-10.8958-4.53683-13.1985-5.57274-16.7735-7.12698,1.6688-1.08462,2.5017-2.1667,2.44628-2.94512,5.48981,1.98297,10.9244,4.07648,16.5451,5.79752,9.37693-7.16766,11.4254-8.64389,14.5589-10.9628,0.10491,1.98753,0.62557,3.24988,1.32741,3.5911-4.46221,3.76283-8.99251,7.42252-13.2934,11.4297,1.51891,11.7045,1.77313,14.2166,2.21459,18.0897z"/>
 

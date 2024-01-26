@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" xmlnsXlink="http://www.w3.org/1999/xlink" width="1200" height="600">
 
 <defs>
 
@@ -12,23 +12,23 @@
 
 </linearGradient>
 
-<linearGradient id="grad1" xlink:href="#gradbase" x1="826.45044" y1="419.93194" x2="786.12402" y2="396.11032"/>
+<linearGradient id="grad1" xlinkHref="#gradbase" x1="826.45044" y1="419.93194" x2="786.12402" y2="396.11032"/>
 
-<linearGradient id="grad2" xlink:href="#gradbase" x1="851.56865" y1="436.06697" x2="763.03312" y2="419.67318"/>
+<linearGradient id="grad2" xlinkHref="#gradbase" x1="851.56865" y1="436.06697" x2="763.03312" y2="419.67318"/>
 
-<linearGradient id="grad3" xlink:href="#gradbase" x1="1016.1496" y1="398.53933" x2="974.91928" y2="400.94143"/>
+<linearGradient id="grad3" xlinkHref="#gradbase" x1="1016.1496" y1="398.53933" x2="974.91928" y2="400.94143"/>
 
-<linearGradient id="grad4" xlink:href="#gradbase" x1="1033.33547" y1="421.21868" x2="945.904" y2="428.64452"/>
+<linearGradient id="grad4" xlinkHref="#gradbase" x1="1033.33547" y1="421.21868" x2="945.904" y2="428.64452"/>
 
-<linearGradient id="grad5" xlink:href="#gradbase" x1="1023.35736" y1="445.13212" x2="776.64586" y2="445.13212"/>
+<linearGradient id="grad5" xlinkHref="#gradbase" x1="1023.35736" y1="445.13212" x2="776.64586" y2="445.13212"/>
 
-<linearGradient id="grad6" xlink:href="#gradbase" x1="783.43027" y1="462.50282" x2="1144.08805" y2="465.42083"/>
+<linearGradient id="grad6" xlinkHref="#gradbase" x1="783.43027" y1="462.50282" x2="1144.08805" y2="465.42083"/>
 
-<linearGradient id="grad7" xlink:href="#gradbase" x1="1032.1278" y1="442.28699" x2="1002.94064" y2="444.03323"/>
+<linearGradient id="grad7" xlinkHref="#gradbase" x1="1032.1278" y1="442.28699" x2="1002.94064" y2="444.03323"/>
 
-<linearGradient id="grad8" xlink:href="#gradbase" x1="775.74733" y1="471.7178" x2="803.90792" y2="476.1845"/>
+<linearGradient id="grad8" xlinkHref="#gradbase" x1="775.74733" y1="471.7178" x2="803.90792" y2="476.1845"/>
 
-<linearGradient id="grad9" xlink:href="#gradbase" x1="803.17707" y1="466.88819" x2="755.30821" y2="440.32034"/>
+<linearGradient id="grad9" xlinkHref="#gradbase" x1="803.17707" y1="466.88819" x2="755.30821" y2="440.32034"/>
 
 <clipPath id="c">
 <path d="M0,0V150H700V300H600zM600,0H300V350H0V300z"/>
@@ -42,7 +42,7 @@
 <path d="M300,0V350M0,150H700" stroke="#cf142b" stroke-width="60"/>
 <path d="M0,300H600V0H1200V600H0z" fill="#00247d"/>
 <g stroke="#000" stroke-width="1.8">
-<use xlink:href="#scroll" stroke="#fff" stroke-width="12"/>
+<use xlinkHref="#scroll" stroke="#fff" stroke-width="12"/>
 <g id="scroll" stroke-linejoin="bevel">
 
 <path fill="url(#grad1)" d="m826.45,427.735s-8.53598-13.8843-15.65-12.8926c-7.11256,0.99174-13.7516,9.91737-14.2266,10.4124-0.47347,0.49666-10.9063-11.4042-10.4329-11.9008,0.47498-0.49508,10.9078-26.2802,16.5985-27.272,5.69065-0.99174,17.9773,1.89709,17.9773,2.88882,0,0.99174,5.73375,38.7641,5.73375,38.7641z"/>

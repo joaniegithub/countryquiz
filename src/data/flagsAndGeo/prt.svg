@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" xmlnsXlink="http://www.w3.org/1999/xlink" width="600" height="400">
 
 <rect width="600" height="400" fill="#f00"/>
 
@@ -77,29 +77,29 @@
 
 <path id="cp1" d="m190.94,141.56,0.13141,3.4775-4.1256,0.002,0.11641-3.4793h3.8786-0.00089z"/>
 
-<use xlink:href="#cp1" x="10.609"/>
+<use xlinkHref="#cp1" x="10.609"/>
 
 <path id="cp2" d="m186.3,139.04,1.1994,0.003v0.87224h0.8775v-0.89253l1.2294,0.004v0.889h0.87926v-0.89253l1.2302,0.002-0.002,2.0117c0,0.31398-0.2487,0.51859-0.5362,0.51859h-4.3169c-0.28926,0-0.55824-0.23548-0.55913-0.52564l-0.003-1.9888h0.00088z"/>
 
-<use xlink:href="#cp2" x="10.609"/>
+<use xlinkHref="#cp2" x="10.609"/>
 
 <path fill="#000" stroke="none" d="m193.9,140.61c-0.0265-0.62706,0.87661-0.63411,0.86603,0v1.5364h-0.866v-1.536"/>
 
 <path id="cp3" fill="#000" stroke="none" d="m188.57,142.84c-0.003-0.6059,0.83693-0.61824,0.82635,0v1.1871h-0.826v-1.187"/>
 
-<use xlink:href="#cp3" x="10.641"/>
+<use xlinkHref="#cp3" x="10.641"/>
 
 </g>
 
-<use xlink:href="#castle" y="46.3198"/>
+<use xlinkHref="#castle" y="46.3198"/>
 
-<use xlink:href="#castle" transform="matrix(0.70460892,-0.70959585,0.70959585,0.70460892,-35.341459,275.10898)"/>
+<use xlinkHref="#castle" transform="matrix(0.70460892,-0.70959585,0.70959585,0.70460892,-35.341459,275.10898)"/>
 
 </g>
 
-<use xlink:href="#castle" x="45.7138"/>
+<use xlinkHref="#castle" x="45.7138"/>
 
-<use xlink:href="#castle3" transform="matrix(-1,0,0,1,479.79195,0)"/>
+<use xlinkHref="#castle3" transform="matrix(-1,0,0,1,479.79195,0)"/>
 
 <g id="quina" fill="#fff">
 
@@ -112,13 +112,13 @@
 <circle cx="244.383" cy="203.905" r="1.486"/>
 </g>
 
-<use xlink:href="#quina" y="-26.016"/>
+<use xlinkHref="#quina" y="-26.016"/>
 
-<use xlink:href="#quina" x="-20.799"/>
+<use xlinkHref="#quina" x="-20.799"/>
 
-<use xlink:href="#quina" x="20.745"/>
+<use xlinkHref="#quina" x="20.745"/>
 
-<use xlink:href="#quina" y="25.784"/>
+<use xlinkHref="#quina" y="25.784"/>
 
 </g>
 </svg>

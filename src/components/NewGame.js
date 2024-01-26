@@ -4,9 +4,10 @@ import { useDispatch } from 'react-redux';
 import { useTheme } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
 
-import { DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
+import { CAPITAL, DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
 import regionsData from 'data/regions.json';
-import { startGame, useGameOptions } from 'store/actions';
+import { startGame } from 'store/actions';
+import { useGameOptions } from 'store/selector';
 
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import {
@@ -30,7 +31,7 @@ const NewGame = (props) => {
     const gameOptions = useGameOptions();
 
     const [gameMode, setGameMode] = useState(
-        (gameOptions && gameOptions.gameMode) || '0'
+        (gameOptions && gameOptions.gameMode) || CAPITAL
     );
     const [region, setRegion] = useState(
         (gameOptions && gameOptions.region) || 'all'
@@ -111,7 +112,7 @@ const NewGame = (props) => {
                             required
                             select
                             SelectProps={{ native: true }}
-                            value={gameMode || 0}
+                            value={gameMode || CAPITAL}
                         >
                             {gameModes.map((option) => (
                                 <option
@@ -156,6 +157,9 @@ const NewGame = (props) => {
                             label={t("Difficulty")}
                             name="Difficulty"
                             size="small"
+							sx={{
+								justifyContent: 'center',
+							}}
                         >
                             {difficultyLevels.map((option) => (
                                 <ToggleButton

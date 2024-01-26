@@ -5,8 +5,9 @@ import { useDispatch } from 'react-redux';
 import { useTheme } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
 
-import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
-import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
+import { gameAnswer, gameNext } from 'store/actions';
+import { useCurrentGame } from 'store/selector';
+import { COUNTRY_BY_FLAG, DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
 
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import {
@@ -20,6 +21,7 @@ import {
 } from '@mui/material';
 
 import GameButton from './ui/GameButton';
+import GameFlag from './ui/GameFlag';
 
 const Game = () => {
     const dispatch = useDispatch();
@@ -51,8 +53,6 @@ const Game = () => {
             dispatch(gameAnswer(_chosenAnswer));
         }
     };
-
-    console.log(i18n);
 
     return (
         <Box
@@ -135,15 +135,21 @@ const Game = () => {
                     >
                         {game.gameMode.questionPhrase[i18n.language]}
                     </Typography>
-                    <Typography
-                        fontSize="22px"
-                        fontWeight="700"
-                        lineHeight="24px"
-                    >
-                        {question
-                            ? question.question /*+(question.flag ? " "+question.flag : '')*/
-                            : ''}
-                    </Typography>
+                    {game.gameMode.key === COUNTRY_BY_FLAG ? (
+                        <React.Fragment>
+                            <GameFlag country={question.country.toLowerCase()} />
+                        </React.Fragment>
+                    ) : (
+                        <Typography
+                            fontSize="22px"
+                            fontWeight="700"
+                            lineHeight="24px"
+                        >
+                            {question
+                                ? question.question /*+(question.flag ? " "+question.flag : '')*/
+                                : ''}
+                        </Typography>
+                    )}
                 </Card>
                 {question && question.choices
                     ? question.choices.map((choice, index) => {
