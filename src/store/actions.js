@@ -43,10 +43,10 @@ export const useCountriesData = () => {
 };
 
 export const editSettings = (_settingsData) => {
-	return {
-		type: constants.EDIT_SETTINGS,
-		settings: _settingsData,
-	};
+    return {
+        type: constants.EDIT_SETTINGS,
+        settings: _settingsData,
+    };
 };
 
 export const newGame = () => {
@@ -54,7 +54,11 @@ export const newGame = () => {
         type: constants.NEW_GAME,
     };
 };
-export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel) => {
+export const startGame = (
+    _chosenGameMode,
+    _chosenRegion,
+    _chosenDifficultyLevel
+) => {
     return {
         type: constants.START_GAME,
         chosenGameMode: _chosenGameMode,

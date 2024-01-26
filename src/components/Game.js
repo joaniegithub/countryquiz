@@ -1,12 +1,21 @@
+import { useTheme } from '@emotion/react';
+import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
 import * as React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTheme } from '@emotion/react';
 import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import { Box, Button, Card, LinearProgress, Stack, SvgIcon, Typography } from '@mui/material';
-import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
+import {
+    Box,
+    Button,
+    Card,
+    LinearProgress,
+    Stack,
+    SvgIcon,
+    Typography,
+} from '@mui/material';
+
 import GameButton from './ui/GameButton';
 
 const Game = () => {
@@ -45,7 +54,7 @@ const Game = () => {
             flexDirection="column"
             justifyContent="space-between"
             sx={{
-                width: "100%",
+                width: '100%',
                 flexGrow: 1,
             }}
         >
@@ -56,15 +65,15 @@ const Game = () => {
                 justifyContent="space-between"
                 sx={{
                     my: 2,
-                    width: "100%",
+                    width: '100%',
                 }}
             >
-                <LinearProgress 
+                <LinearProgress
                     variant="determinate"
                     value={(game.currentTurn / game.questions.length) * 100}
                     sx={{
                         flexGrow: 1,
-                        marginRight: "16px",
+                        marginRight: '16px',
                     }}
                 />
                 <Stack
@@ -95,8 +104,8 @@ const Game = () => {
                 spacing={2}
                 sx={{
                     flexGrow: 1,
-                    width: "100%",
-                    position: "relative",
+                    width: '100%',
+                    position: 'relative',
                 }}
             >
                 <Card
@@ -105,8 +114,8 @@ const Game = () => {
                         py: 4,
                         mt: 1,
                         textAlign: 'center',
-                        width: "100%",
-                        boxSizing: "border-box",
+                        width: '100%',
+                        boxSizing: 'border-box',
                     }}
                 >
                     <Typography
@@ -136,17 +145,22 @@ const Game = () => {
                                   onClick={() => {
                                       handleChoiceClick(choice);
                                   }}
-                                  colorEffect={theme.palette.primary.main.replace("#", "")}
+                                  colorEffect={theme.palette.primary.main.replace(
+                                      '#',
+                                      ''
+                                  )}
                                   key={choice}
                                   phase={phase}
                                   choice={choice}
                                   rightAnswer={rightAnswer}
                                   chosenAnswer={chosenAnswer}
                               >
-                                      {difficultyLevel === DIFFICULTY_EXPERT && phase === 0 
-                                        ? choice[0]+" * * * "+choice[choice.length-1]
-                                        : choice
-                                    }
+                                  {difficultyLevel === DIFFICULTY_EXPERT &&
+                                  phase === 0
+                                      ? choice[0] +
+                                        ' * * * ' +
+                                        choice[choice.length - 1]
+                                      : choice}
                               </GameButton>
                           );
                       })
@@ -158,15 +172,15 @@ const Game = () => {
                 spacing={1}
                 sx={{
                     my: 4,
-                    width: "100%",
+                    width: '100%',
                 }}
             >
                 <Button
                     variant="outlined"
-					color="secondary"
+                    color="secondary"
                     disabled={phase === 0}
                     onClick={handleNext}
-					endIcon={<ArrowCircleRightIcon />}
+                    endIcon={<ArrowCircleRightIcon />}
                 >
                     Next
                 </Button>

@@ -1,11 +1,16 @@
-import { DIFFICULTY_HARD, DIFFICULTY_NORMAL, GAME_VERSION, gameModes } from 'data/config';
+import {
+    DIFFICULTY_HARD,
+    DIFFICULTY_NORMAL,
+    GAME_VERSION,
+    gameModes,
+} from 'data/config';
 import countriesData from 'data/countries.json';
 import * as constants from 'store/constants';
 import { shuffle } from 'util/util';
 
 export const defaultSettings = {
     isDarkMode: false,
-    language: "eng",
+    language: 'eng',
 };
 
 const defaultState = {
@@ -46,11 +51,13 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 ...state,
                 currentGame: undefined,
                 inGame: false,
-                gameOptions: game ? {
-                    gameMode: game.gameMode.key,
-                    region: game.region,
-                    difficultyLevel: game.difficultyLevel,
-                } : undefined,
+                gameOptions: game
+                    ? {
+                          gameMode: game.gameMode.key,
+                          region: game.region,
+                          difficultyLevel: game.difficultyLevel,
+                      }
+                    : undefined,
             };
 
         case constants.START_GAME:
@@ -59,32 +66,36 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
 
             // todo: d\\u00e9placer la logique de construction dui quiz dans un utilitaire
-            
-            const mode = gameModes.find(gm => gm.key === chosenGameMode);
-            
-            const independentCountries = Object.values(countriesData).filter((c) => c.independent === true);
-            const allCountries = chosenRegion === "all" 
-                ? independentCountries 
-                : independentCountries.filter(c => c.region === chosenRegion)
 
-			// todo: make sure answers at hard mode will be unique with first and last letter
-			// utiliser un utilitaire qui sera ailleurs, et y d\\u00e9placer shuffle
-            const allAnswers = allCountries.reduceRight(
-                (cAnswers, c) => {
-                    const answers = (mode.answerSubProperty
-                        ? c[mode.answerProperty][mode.answerSubProperty]
-                        : c[mode.answerProperty])/*.map(a => {
+            const mode = gameModes.find((gm) => gm.key === chosenGameMode);
+
+            const independentCountries = Object.values(countriesData).filter(
+                (c) => c.independent === true
+            );
+            const allCountries =
+                chosenRegion === 'all'
+                    ? independentCountries
+                    : independentCountries.filter(
+                          (c) => c.region === chosenRegion
+                      );
+
+            // todo: make sure answers at hard mode will be unique with first and last letter
+            // utiliser un utilitaire qui sera ailleurs, et y d\\u00e9placer shuffle
+            const allAnswers = allCountries.reduceRight((cAnswers, c) => {
+                const answers = mode.answerSubProperty
+                    ? c[mode.answerProperty][mode.answerSubProperty]
+                    : c[mode.answerProperty]; /*.map(a => {
                             return {
                                 answer: a,
                                 region: chosenRegion === "all" ? c.region : c.subregion
                             };
-                        })*/;
-                    
-                    return cAnswers.concat(...(Array.isArray(answers) ? answers : [answers]));
-                },
-                []
-            );
-			// console.log(allAnswers);
+                        })*/
+
+                return cAnswers.concat(
+                    ...(Array.isArray(answers) ? answers : [answers])
+                );
+            }, []);
+            // console.log(allAnswers);
 
             const questions = allCountries.map((c) => {
                 const question = mode.questionSubProperty
@@ -93,7 +104,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 let answers = mode.answerSubProperty
                     ? c[mode.answerProperty][mode.answerSubProperty]
                     : c[mode.answerProperty];
-                    answers = Array.isArray(answers) ? answers.join(', ') : answers;
+                answers = Array.isArray(answers) ? answers.join(', ') : answers;
                 const choices = getChoices(
                     gameDefaultState.nbChoices,
                     answers,
@@ -119,7 +130,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 currentGame: {
                     ...gameDefaultState,
                     gameMode: mode,
-					region: chosenRegion,
+                    region: chosenRegion,
                     difficultyLevel: chosenDifficultyLevel,
                     questions: shuffle(questions),
                 },
@@ -130,7 +141,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const allQuestions = [...game.questions];
             const question = { ...allQuestions[game.currentTurn] };
             const result = chosenAnswer === question.answers;
-            
+
             const currentScore = result
                 ? game.currentScore + 1
                 : game.currentScore;
@@ -170,11 +181,18 @@ const reducer = (state = defaultState, { type, ...payload }) => {
     }
 };
 
-const getChoices = (nbChoices, answers, answersFrom, country, mode, difficultyLevel) => {
+const getChoices = (
+    nbChoices,
+    answers,
+    answersFrom,
+    country,
+    mode,
+    difficultyLevel
+) => {
     const choices = [];
     const indexUsed = [];
     const max = answersFrom.length;
-    
+
     // tous les modes: sélection des choix par région ou subregion seulement
     while (choices.length < nbChoices - 1) {
         const rnd = Math.floor(Math.random() * max);
@@ -188,13 +206,18 @@ const getChoices = (nbChoices, answers, answersFrom, country, mode, difficultyLe
         choices.push(answersFrom[rnd]);
         indexUsed.push(rnd);
     }
-    
+
     // pour mode 0: on inclut aussi des villes non capitales de temps en temps
     if (difficultyLevel === DIFFICULTY_HARD) {
-        if (mode.key === "0") {
-            if (country.cities && country.cities.length && Math.random()*2 < 1) {
+        if (mode.key === '0') {
+            if (
+                country.cities &&
+                country.cities.length &&
+                Math.random() * 2 < 1
+            ) {
                 const otherCities = country.cities;
-                choices[Math.floor(Math.random()*choices.length)] = otherCities[Math.floor(Math.random()*otherCities.length)];
+                choices[Math.floor(Math.random() * choices.length)] =
+                    otherCities[Math.floor(Math.random() * otherCities.length)];
             }
         }
     }

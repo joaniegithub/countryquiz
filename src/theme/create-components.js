@@ -5,8 +5,8 @@ import {
     outlinedInputClasses,
     paperClasses,
     tableCellClasses,
-    toggleButtonGroupClasses,
     toggleButtonClasses,
+    toggleButtonGroupClasses,
 } from '@mui/material';
 
 // Used only to create transitions
@@ -260,7 +260,7 @@ export function createComponents(config) {
                     borderColor: palette.primary.alpha4,
                     borderStyle: 'solid',
                     borderWidth: 3,
-                    height: "12px",
+                    height: '12px',
                 },
             },
         },
@@ -319,17 +319,19 @@ export function createComponents(config) {
         MuiToggleButtonGroup: {
             styleOverrides: {
                 root: {
-                    [`& .${toggleButtonGroupClasses.grouped}:not(:first-of-type)`]: {
-                        margin: "0 2px",
-                        borderLeft: 'none',
-                        borderTopLeftRadius: '8px',
-                        borderBottomLeftRadius: '8px',
-                    },
-                    [`& .${toggleButtonGroupClasses.grouped}:not(:last-of-type)`]: {
-                        borderRight: 'none',
-                        borderTopRightRadius: '8px',
-                        borderBottomRightRadius: '8px',
-                    },
+                    [`& .${toggleButtonGroupClasses.grouped}:not(:first-of-type)`]:
+                        {
+                            margin: '0 2px',
+                            borderLeft: 'none',
+                            borderTopLeftRadius: '8px',
+                            borderBottomLeftRadius: '8px',
+                        },
+                    [`& .${toggleButtonGroupClasses.grouped}:not(:last-of-type)`]:
+                        {
+                            borderRight: 'none',
+                            borderTopRightRadius: '8px',
+                            borderBottomRightRadius: '8px',
+                        },
                 },
             },
         },
@@ -338,7 +340,7 @@ export function createComponents(config) {
                 root: {
                     border: 'none',
                     backgroundColor: 'transparent',
-                    margin: "0 2px",
+                    margin: '0 2px',
 
                     [`&.${toggleButtonClasses.disabled}`]: {
                         border: 'none',

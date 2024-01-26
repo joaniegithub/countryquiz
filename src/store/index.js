@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { GAME_VERSION } from 'data/config';
 
 import reducer, { defaultSettings } from './reducer';
-import { GAME_VERSION } from 'data/config';
 
 // convert object to string and store in localStorage
 function saveToLocalStorage(state) {
@@ -27,15 +27,18 @@ function loadFromLocalStorage() {
             ...parsedState.settings,
         };
         let resetCurrentGame = false;
-        if (parsedState.currentGame 
-            && (!parsedState.currentGame.version || parsedState.currentGame.version !== GAME_VERSION)) {
+        if (
+            parsedState.currentGame &&
+            (!parsedState.currentGame.version ||
+                parsedState.currentGame.version !== GAME_VERSION)
+        ) {
             resetCurrentGame = true;
         }
         const newState = {
             ...parsedState,
             settings: mergedSettings,
             showRules: false,
-            ...(resetCurrentGame ? {currentGame: undefined} : {}),
+            ...(resetCurrentGame ? { currentGame: undefined } : {}),
             // countriesData: [...(Object.values(data))],
         };
         return newState;

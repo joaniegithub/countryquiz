@@ -1,6 +1,8 @@
+import { useTheme } from '@emotion/react';
+import Settings from 'components/Settings';
+import FunTypo from 'components/ui/FunTypo';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTheme } from '@emotion/react';
 import { newGame, useInGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -15,8 +17,6 @@ import {
     Stack,
     Typography,
 } from '@mui/material';
-import FunTypo from 'components/ui/FunTypo';
-import Settings from 'components/Settings';
 
 export const TOP_NAV_HEIGHT = 64;
 
@@ -55,52 +55,53 @@ const Header = (props) => {
             <Box
                 component="header"
                 sx={{
-					position: "relative",
+                    position: 'relative',
                 }}
             >
-				{inGame && (
-					<Typography
-						component="h1"
-						sx={{
-							position:"absolute",
-							top: 0,
-							left: 0,
-							right: 0,
-							height: TOP_NAV_HEIGHT,
-							lineHeight: TOP_NAV_HEIGHT+"px",
-							textAlign: "center",
-							px: 2,
-							mt: "-2px",
-						}}
-					>
-						<FunTypo
-							text="Country"
-							color={theme.palette.text.title.replace("#", "")}
-							stroke={true}
-							strokeWidth="1px"
-							distance="2px"
-							sx={{
-								fontSize:"36px",
-								lineHeight:TOP_NAV_HEIGHT+"px",
-								fontWeight:800,
-								textAlign:"center",
-							}}
-						/>&nbsp;
-						<FunTypo
-							text="Quiz"
-							color={theme.palette.text.title.replace("#", "")}
-							stroke={false}
-							strokeWidth="1px"
-							distance="2px"
-							sx={{
-								fontSize:"36px",
-								lineHeight:TOP_NAV_HEIGHT+"px",
-								fontWeight:800,
-								textAlign:"center",
-							}}
-						/>
-					</Typography>
-				)}
+                {inGame && (
+                    <Typography
+                        component="h1"
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            height: TOP_NAV_HEIGHT,
+                            lineHeight: TOP_NAV_HEIGHT + 'px',
+                            textAlign: 'center',
+                            px: 2,
+                            mt: '-2px',
+                        }}
+                    >
+                        <FunTypo
+                            text="Country"
+                            color={theme.palette.text.title.replace('#', '')}
+                            stroke={true}
+                            strokeWidth="1px"
+                            distance="2px"
+                            sx={{
+                                fontSize: '36px',
+                                lineHeight: TOP_NAV_HEIGHT + 'px',
+                                fontWeight: 800,
+                                textAlign: 'center',
+                            }}
+                        />
+                        &nbsp;
+                        <FunTypo
+                            text="Quiz"
+                            color={theme.palette.text.title.replace('#', '')}
+                            stroke={false}
+                            strokeWidth="1px"
+                            distance="2px"
+                            sx={{
+                                fontSize: '36px',
+                                lineHeight: TOP_NAV_HEIGHT + 'px',
+                                fontWeight: 800,
+                                textAlign: 'center',
+                            }}
+                        />
+                    </Typography>
+                )}
                 <Stack
                     alignItems="center"
                     direction="row"
@@ -111,27 +112,27 @@ const Header = (props) => {
                         px: 0,
                     }}
                 >
-					{inGame ? (
-						<IconButton
-							aria-label="close"
-							onClick={handleClickCloseGame}
-							size="large"
+                    {inGame ? (
+                        <IconButton
+                            aria-label="close"
+                            onClick={handleClickCloseGame}
+                            size="large"
                             color="text"
-						>
-							<CancelIcon />
-						</IconButton>
-					) : (
-						<React.Fragment>
-							<IconButton
-								aria-label="Settings"
-								onClick={handleClickSettings}
-								size="large"
+                        >
+                            <CancelIcon />
+                        </IconButton>
+                    ) : (
+                        <React.Fragment>
+                            <IconButton
+                                aria-label="Settings"
+                                onClick={handleClickSettings}
+                                size="large"
                                 color="text"
-							>
-								<SettingsIcon />
-							</IconButton>
-						</React.Fragment>
-					)}
+                            >
+                                <SettingsIcon />
+                            </IconButton>
+                        </React.Fragment>
+                    )}
                 </Stack>
             </Box>
             <Dialog

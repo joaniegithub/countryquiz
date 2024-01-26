@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
-import InstallMobileIcon from '@mui/icons-material/InstallMobile';
 import CloseIcon from '@mui/icons-material/Close';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
+import InstallMobileIcon from '@mui/icons-material/InstallMobile';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {
     Button,
@@ -18,11 +17,11 @@ import {
     ToggleButtonGroup,
 } from '@mui/material';
 
-import { editSettings, useLanguage, useIsDarkMode } from '../store/actions';
+import { editSettings, useIsDarkMode, useLanguage } from '../store/actions';
 
 const Settings = (props) => {
     const { settingsDialogOpen, handleClose, deferredPrompt } = props;
-    const [ showInstallButton, setShowInstallButton ] = useState(true);
+    const [showInstallButton, setShowInstallButton] = useState(true);
     // const [ language, setLanguage ] = useState("fra");
     const dispatch = useDispatch();
     const isDarkMode = useIsDarkMode();
@@ -31,26 +30,27 @@ const Settings = (props) => {
 
     const languages = [
         {
-            key: "fra",
+            key: 'fra',
             name: {
-                "fra": "Français",
-                "eng": "French",
-            }
+                fra: 'Français',
+                eng: 'French',
+            },
         },
         {
-            key: "eng",
+            key: 'eng',
             name: {
-                "fra": "Anglais",
-                "eng": "English",
-            }
-        }];
+                fra: 'Anglais',
+                eng: 'English',
+            },
+        },
+    ];
 
     const handleClickLightMode = () => {
-        dispatch(editSettings({isDarkMode: !isDarkMode}));
-    }
+        dispatch(editSettings({ isDarkMode: !isDarkMode }));
+    };
     const handleClickLanguage = (event) => {
-        dispatch(editSettings({language: event.target.value}));
-    }
+        dispatch(editSettings({ language: event.target.value }));
+    };
 
     const isMobile =
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -91,20 +91,14 @@ const Settings = (props) => {
             >
                 <CloseIcon />
             </IconButton>
-            <DialogContent >
-                <Stack
-                    justifyItems="center"
-                    spacing={2}
-                >
+            <DialogContent>
+                <Stack justifyItems="center" spacing={2}>
                     <Button
                         onClick={handleClickLightMode}
                         value={isDarkMode}
-                        endIcon=
-                            {isDarkMode ? (
-                                <DarkModeIcon />
-                            ) : (
-                                <LightModeIcon />
-                            )}
+                        endIcon={
+                            isDarkMode ? <DarkModeIcon /> : <LightModeIcon />
+                        }
                     >
                         Dark Mode
                     </Button>
@@ -120,7 +114,7 @@ const Settings = (props) => {
                         variant="text"
                         // disabled={true}
                         sx={{
-                            justifyContent: "center",
+                            justifyContent: 'center',
                         }}
                     >
                         {languages.map((lang) => (
@@ -132,18 +126,19 @@ const Settings = (props) => {
                     {deferredPrompt && showInstallButton && (
                         <Button
                             onClick={handleClickInstall}
-                            endIcon=
-                                {isMobile ? (
+                            endIcon={
+                                isMobile ? (
                                     <InstallMobileIcon />
                                 ) : (
                                     <InstallDesktopIcon />
-                                )}
+                                )
+                            }
                         >
                             Install Country Quiz
                         </Button>
                     )}
                 </Stack>
-            </DialogContent >
+            </DialogContent>
         </Dialog>
     );
 };

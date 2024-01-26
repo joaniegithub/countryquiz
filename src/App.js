@@ -7,20 +7,25 @@ import Game from './components/Game';
 import Home from './components/Home';
 import Layout from './layout/Layout';
 import { useInGame, useIsDarkMode } from './store/actions';
-
 import { createTheme as createMyTheme } from './theme';
 import { createTheme as createMyThemeDark } from './theme/dark';
 
 const theme = createMyTheme();
 const darkTheme = createMyThemeDark();
 
-
 const CountryQuizApp = (props) => {
     const [deferredPrompt, setDeferredPrompt] = useState(undefined);
 
     const inGame = useInGame();
     const isDarkMode = useIsDarkMode();
-    const selectedTheme = isDarkMode ? darkTheme : theme;
+
+    const selectedTheme =
+        isDarkMode ||
+        (isDarkMode === undefined &&
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ? darkTheme
+            : theme;
 
     useEffect(() => {
         window.addEventListener('beforeinstallprompt', function (event) {

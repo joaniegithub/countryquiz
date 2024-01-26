@@ -1,3 +1,4 @@
+import BG from 'components/ui/BG';
 import * as React from 'react';
 import { useMemo } from 'react';
 
@@ -5,7 +6,6 @@ import { Box, Container } from '@mui/material';
 
 import Footer from './Footer';
 import Header from './Header';
-import BG from 'components/ui/BG';
 
 const images = [
     'arab_tile',
@@ -29,7 +29,7 @@ const images = [
 
 const Layout = (props) => {
     const { deferredPrompt } = props;
-    const bg = useMemo( () => <BG/>, [] );
+    const bg = useMemo(() => <BG />, []);
 
     return (
         <React.Fragment>
@@ -37,21 +37,20 @@ const Layout = (props) => {
             <Container
                 maxWidth="md"
                 sx={{
-                    maxHeight: "100vh",
-                    maxWidth: (theme) => {return {
-                        xs: theme.breakpoints.values.sm,
-                        // md: theme.breakpoints.values.md,
-                    };},
+                    maxHeight: '100vh',
+                    maxWidth: (theme) => {
+                        return {
+                            xs: theme.breakpoints.values.sm,
+                            // md: theme.breakpoints.values.md,
+                        };
+                    },
                     minHeight: '100vh',
                     display: 'flex',
                     flexDirection: 'column',
                     px: 2,
                 }}
             >
-                <Header
-                    images={images}
-                    deferredPrompt={deferredPrompt}
-                />
+                <Header images={images} deferredPrompt={deferredPrompt} />
                 <Box
                     component="main"
                     sx={{
