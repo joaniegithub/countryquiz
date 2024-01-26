@@ -36,6 +36,10 @@ const gameDefaultState = {
     version: GAME_VERSION,
 };
 
+export const getAllCountriesCodes = () => {
+	return countriesData;
+}
+
 const reducer = (state = defaultState, { type, ...payload }) => {
     // console.log(state, type, payload);
     const game = state.currentGame;
@@ -114,7 +118,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     mode,
                     chosenDifficultyLevel
                 );
-console.log(c.cca3);
+// console.log(c.cca3);
                 return {
                     country: c.cca3,
                     flag: c.flag,

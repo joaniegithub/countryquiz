@@ -2,13 +2,15 @@ import { useTheme } from '@emotion/react';
 import { TOP_NAV_HEIGHT } from 'layout/Header';
 import * as React from 'react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import { Box, Button, Stack, Typography } from '@mui/material';
 
 import NewGame from './NewGame';
 import FunTypo from './ui/FunTypo';
-import { useTranslation } from 'react-i18next';
+import GameFlag from './ui/GameFlag';
+import countriesData from 'data/countries.json';
 
 const Home = (props) => {
     const [showGameOptions, setShowGameOptions] = useState(false);
@@ -159,6 +161,14 @@ const Home = (props) => {
                     )}
                 </Box>
             </Stack>
+			{Object.values(countriesData).map(c => {
+				return (
+					<React.Fragment>
+						<Typography>{c.cca3}</Typography>
+						<GameFlag country={c.cca3.toLowerCase()} />
+					</React.Fragment>
+				);
+			})}
         </React.Fragment>
     );
 };
