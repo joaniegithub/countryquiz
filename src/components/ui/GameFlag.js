@@ -13,6 +13,7 @@ const GameFlag = (props) => {
             sx={{
               height: "auto",
               width: "60%",
+			  border: "2px solid #fff",
               boxShadow:
                   '0px 5px 22px rgba(0, 0, 0, 0.4), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.3)',
             //   maxHeight: { xs: 233, md: 167 },

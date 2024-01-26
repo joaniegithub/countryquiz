@@ -53,6 +53,12 @@ const Header = (props) => {
     const handleConfirmCancelGameDisagree = () => {
         setConfirmCancelGameOpen(false);
     };
+  const closeRef = React.useRef<HTMLElement>(null);
+	const handleEntering = () => {
+		if (closeRef.current != null) {
+			closeRef.current.focus();
+		}
+	};
 
     return (
         <React.Fragment>
@@ -141,11 +147,15 @@ const Header = (props) => {
             </Box>
             <Dialog
                 open={confirmCancelGameOpen}
-                onClose={handleConfirmCancelGameClose}
-                aria-labelledby="alert-dialog-title"
-            >
-                <DialogTitle id="alert-dialog-title">{t("Quit the game?")}</DialogTitle>
-                <DialogActions>
+      			TransitionProps={{ onEntering: handleEntering }}
+                // onClose={handleConfirmCancelGameClose}
+                aria-labelledby="quit-dialog-title"
+			>
+                <DialogTitle id="quit-dialog-title">{t("Quit the game?")}</DialogTitle>
+                <DialogActions
+					sx={{
+						p: "12px",
+					}}>
                     <Button
                         variant="outlined"
                         onClick={handleConfirmCancelGameDisagree}

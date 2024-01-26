@@ -117,7 +117,6 @@ const Home = (props) => {
                         <Button
                             color="secondary"
                             variant="outlined"
-                            size="small"
                             onClick={handleClickBack}
                             startIcon={<ArrowCircleLeftIcon />}
                         >

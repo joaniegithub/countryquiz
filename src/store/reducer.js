@@ -75,7 +75,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
             const independentCountries = Object.values(countriesData).filter(
-                (c) => c.independent === true || c.independent === false
+                (c) => c.independent === true
             );
             const allCountries =
                 chosenRegion === 'all'
@@ -118,7 +118,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     mode,
                     chosenDifficultyLevel
                 );
-// console.log(c.cca3);
+
                 return {
                     country: c.cca3,
                     flag: c.flag,

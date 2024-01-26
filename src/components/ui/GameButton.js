@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTheme } from '@emotion/react';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -17,6 +18,7 @@ const GameButton = (props) => {
         rightAnswer,
         chosenAnswer,
     } = props;
+    const theme = useTheme();
 
     let color = 'primary';
     let icon = undefined;
@@ -39,10 +41,10 @@ const GameButton = (props) => {
             variant="contained"
             sx={{
                 // position: "relative",
-                ...(color === 'secondary'
+                ...(color === 'secondary' || color === 'success'
                     ? {
                           outlineOffset: '3px',
-                          outline: `2px solid #${colorEffect}`,
+                          outline: `2px solid ${theme.palette[color].main}`,
                       }
                     : {}),
                 textAlign: 'center',

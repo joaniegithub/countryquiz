@@ -22,6 +22,7 @@ import {
 
 import GameButton from './ui/GameButton';
 import GameFlag from './ui/GameFlag';
+import FunTypo from './ui/FunTypo';
 
 const Game = () => {
     const dispatch = useDispatch();
@@ -125,25 +126,31 @@ const Game = () => {
                         boxSizing: 'border-box',
                     }}
                 >
-                    <Typography
-                        color="secondary"
-                        fontSize="18px"
-                        textAlign="center"
-                        fontWeight="500"
-                        lineHeight="24px"
-                        mb={2}
-                    >
-                        {game.gameMode.questionPhrase[i18n.language]}
-                    </Typography>
+					<FunTypo
+						text={game.gameMode.questionPhrase[i18n.language]}
+						color={theme.palette.secondary.main.replace(
+							'#',
+							''
+						)}
+						stroke={false}
+						distance="3px"
+						sx={{
+							display: 'block',
+							fontSize: '24px',
+							lineHeight: '24px',
+							fontWeight: 600,
+							mb: '16px',
+						}}
+					/>
                     {game.gameMode.key === COUNTRY_BY_FLAG ? (
                         <React.Fragment>
                             <GameFlag country={question.country.toLowerCase()} />
                         </React.Fragment>
                     ) : (
                         <Typography
-                            fontSize="22px"
-                            fontWeight="700"
-                            lineHeight="24px"
+                            fontSize="24px"
+                            fontWeight="800"
+                            lineHeight="28px"
                         >
                             {question
                                 ? question.question /*+(question.flag ? " "+question.flag : '')*/
@@ -195,7 +202,23 @@ const Game = () => {
                     onClick={handleNext}
                     endIcon={<ArrowCircleRightIcon />}
                 >
-                    {t("Next")}
+					<FunTypo
+						text={t("Next")}
+						color={(phase === 0 ? theme.palette.text.primary : theme.palette.secondary.main).replace(
+							'#',
+							''
+						)}
+						stroke={false}
+						strokeWidth="2px"
+						distance="3px"
+						sx={{
+							fontSize: '24px',
+							lineHeight: '24px',
+							fontWeight: 700,
+							mb: '4px',
+							...(phase === 0 ? {opacity: 0.38} : {}),
+						}}
+					/>
                 </Button>
             </Stack>
         </Box>

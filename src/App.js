@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
@@ -15,6 +16,9 @@ const darkTheme = createMyThemeDark();
 
 const CountryQuizApp = (props) => {
     const [deferredPrompt, setDeferredPrompt] = useState(undefined);
+
+	const { i18n } = useTranslation();
+	console.log(i18n);
     
     const inGame = useInGame();
     const isDarkMode = useIsDarkMode();

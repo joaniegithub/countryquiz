@@ -174,7 +174,7 @@ const NewGame = (props) => {
                         <Button
                             variant="contained"
                             size="large"
-                            endIcon={<PlayCircleFilledIcon />}
+                            // endIcon={<PlayCircleFilledIcon />}
                             onClick={handleClickStart}
                         >
                             <FunTypo
