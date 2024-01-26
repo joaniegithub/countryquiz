@@ -38,7 +38,7 @@ const BG = (props) => {
 			}}
 		>
 			{colors.map((color, i) => {
-				const size = Math.random()*50+10+"vw";
+				const size = (Math.random()*0.5+0.1)*600+"px";
 				// const rotate = (i / colors.length)*90+"deg";
 				const patternZoom = Math.random()+3;
 				// const color = colors[Math.floor(Math.random() * colors.length)];
