@@ -5,7 +5,7 @@ import { shuffle } from 'util/util';
 
 export const defaultSettings = {
     isDarkMode: false,
-    language: "end",
+    language: "eng",
 };
 
 const defaultState = {

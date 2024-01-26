@@ -1,4 +1,4 @@
-export const GAME_VERSION = "1.03";
+export const GAME_VERSION = "1.04";
 
 export const DIFFICULTY_FLASHCARD = "flashCard";
 export const DIFFICULTY_NORMAL = "normal";

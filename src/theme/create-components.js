@@ -254,6 +254,16 @@ export function createComponents(config) {
                 },
             },
         },
+        MuiLinearProgress: {
+            styleOverrides: {
+                root: {
+                    borderColor: palette.primary.alpha4,
+                    borderStyle: 'solid',
+                    borderWidth: 3,
+                    height: "12px",
+                },
+            },
+        },
         MuiRadio: {
             styleOverrides: {
                 sizeSmall: {

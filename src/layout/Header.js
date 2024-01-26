@@ -80,7 +80,7 @@ const Header = (props) => {
 							strokeWidth="1px"
 							distance="2px"
 							sx={{
-								fontSize:"32px",
+								fontSize:"36px",
 								lineHeight:TOP_NAV_HEIGHT+"px",
 								fontWeight:800,
 								textAlign:"center",
@@ -93,7 +93,7 @@ const Header = (props) => {
 							strokeWidth="1px"
 							distance="2px"
 							sx={{
-								fontSize:"32px",
+								fontSize:"36px",
 								lineHeight:TOP_NAV_HEIGHT+"px",
 								fontWeight:800,
 								textAlign:"center",
@@ -108,14 +108,15 @@ const Header = (props) => {
                     spacing={1}
                     sx={{
                         minHeight: TOP_NAV_HEIGHT,
-                        px: 2,
+                        px: 0,
                     }}
                 >
 					{inGame ? (
 						<IconButton
 							aria-label="close"
 							onClick={handleClickCloseGame}
-							size="small"
+							size="large"
+                            color="text"
 						>
 							<CancelIcon />
 						</IconButton>
@@ -124,10 +125,8 @@ const Header = (props) => {
 							<IconButton
 								aria-label="Settings"
 								onClick={handleClickSettings}
-								size="small"
-								sx={{
-									color: '#ccc',
-								}}
+								size="large"
+                                color="text"
 							>
 								<SettingsIcon />
 							</IconButton>

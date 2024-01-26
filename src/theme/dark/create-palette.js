@@ -22,7 +22,7 @@ export function createPalette() {
             selected: alpha(neutral[900], 0.12),
         },
         background: {
-            default: neutral[900],
+            default: neutral[1000],
             paper: neutral[900],
         },
         divider: '#F2F4F7',

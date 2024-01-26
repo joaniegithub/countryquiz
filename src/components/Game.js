@@ -1,18 +1,19 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useTheme } from '@emotion/react';
 import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
 
-import CancelIcon from '@mui/icons-material/Cancel';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { Box, Button, Card, LinearProgress, Stack, SvgIcon, Typography } from '@mui/material';
 import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
+import GameButton from './ui/GameButton';
 
 const Game = () => {
     const [chosenAnswer, setChosenAnswer] = useState('');
     const game = useCurrentGame();
     const dispatch = useDispatch();
+    const theme = useTheme();
 
     if (!game) {
         return null;
@@ -61,7 +62,6 @@ const Game = () => {
                 <LinearProgress 
                     variant="determinate"
                     value={(game.currentTurn / game.questions.length) * 100}
-                    thickness={6}
                     sx={{
                         flexGrow: 1,
                         marginRight: "16px",
@@ -78,12 +78,13 @@ const Game = () => {
                 >
                     <Typography
                         color="secondary"
-                        fontSize="12px"
+                        fontSize="14px"
                         textAlign="right"
-                        fontWeight="bold"
+                        fontWeight="800"
                         width="100%"
                     >
-                        {game.currentScore + ' / ' + game.questions.length}
+                        {game.currentTurn + ' / ' + game.questions.length}
+                        {/*game.currentScore*/}
                     </Typography>
                 </Stack>
             </Stack>
@@ -95,20 +96,13 @@ const Game = () => {
                 sx={{
                     flexGrow: 1,
                     width: "100%",
+                    position: "relative",
                 }}
             >
-                <Typography
-                    color="secondary"
-                    fontSize="20px"
-                    textAlign="center"
-                    fontWeight="500"
-                >
-                    {game.gameMode.questionPhrase.eng}
-                </Typography>
                 <Card
                     sx={{
                         px: 2,
-                        py: 2,
+                        py: 4,
                         mt: 1,
                         textAlign: 'center',
                         width: "100%",
@@ -116,10 +110,19 @@ const Game = () => {
                     }}
                 >
                     <Typography
-                        sx={{
-                            fontSize: 20,
-                            fontWeight: 700,
-                        }}
+                        color="secondary"
+                        fontSize="18px"
+                        textAlign="center"
+                        fontWeight="500"
+                        lineHeight="24px"
+                        mb={2}
+                    >
+                        {game.gameMode.questionPhrase.eng}
+                    </Typography>
+                    <Typography
+                        fontSize="22px"
+                        fontWeight="700"
+                        lineHeight="24px"
                     >
                         {question
                             ? question.question /*+(question.flag ? " "+question.flag : '')*/
@@ -128,56 +131,23 @@ const Game = () => {
                 </Card>
                 {question && question.choices
                     ? question.choices.map((choice, index) => {
-                          let color = 'primary';
-                          let icon = undefined;
-                          if (phase === 1) {
-                              if (
-                                  choice === rightAnswer &&
-                                  chosenAnswer === choice
-                              ) {
-                                  color = 'success';
-                                  icon = <CheckCircleIcon />;
-                              } else if (choice === rightAnswer) {
-                                  color = 'secondary';
-                              } else if (choice === chosenAnswer) {
-                                  color = 'error';
-                                  icon = <CancelIcon />;
-                              }
-                          }
-
                           return (
-                              <Button
+                              <GameButton
                                   onClick={() => {
                                       handleChoiceClick(choice);
                                   }}
-                                  variant="contained"
-                                  color={color}
-                                  sx={{
-                                      width: '100%',
-                                  }}
+                                  colorEffect={theme.palette.primary.main.replace("#", "")}
                                   key={choice}
-                                  {...(icon
-                                      ? {
-                                            endIcon: (
-                                                <SvgIcon fontSize="small">
-                                                    {icon}
-                                                </SvgIcon>
-                                            ),
-                                        }
-                                      : {})}
+                                  phase={phase}
+                                  choice={choice}
+                                  rightAnswer={rightAnswer}
+                                  chosenAnswer={chosenAnswer}
                               >
-                                  <Typography
-                                      sx={{
-                                          fontSize: 16,
-                                          fontWeight: 600,
-                                      }}
-                                  >
                                       {difficultyLevel === DIFFICULTY_EXPERT && phase === 0 
                                         ? choice[0]+" * * * "+choice[choice.length-1]
                                         : choice
                                     }
-                                  </Typography>
-                              </Button>
+                              </GameButton>
                           );
                       })
                     : null}

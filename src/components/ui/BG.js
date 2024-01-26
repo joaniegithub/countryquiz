@@ -26,7 +26,6 @@ const BG = (props) => {
     return (
 		<Box
 			component="span"
-			backgroundColor="background.default"
 			sx={{
 				pointerEvents: "none",
 				position: "absolute",
