@@ -1,9 +1,12 @@
-import { useTheme } from '@emotion/react';
-import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
+
 import * as React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useTheme } from '@emotion/react';
+import { useTranslation } from 'react-i18next';
+
 import { gameAnswer, gameNext, useCurrentGame } from 'store/actions';
+import { DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
 
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import {
@@ -19,10 +22,12 @@ import {
 import GameButton from './ui/GameButton';
 
 const Game = () => {
-    const [chosenAnswer, setChosenAnswer] = useState('');
-    const game = useCurrentGame();
     const dispatch = useDispatch();
     const theme = useTheme();
+	const { t, i18n } = useTranslation();
+    
+    const [chosenAnswer, setChosenAnswer] = useState('');
+    const game = useCurrentGame();
 
     if (!game) {
         return null;
@@ -46,6 +51,8 @@ const Game = () => {
             dispatch(gameAnswer(_chosenAnswer));
         }
     };
+
+    console.log(i18n);
 
     return (
         <Box
@@ -126,7 +133,7 @@ const Game = () => {
                         lineHeight="24px"
                         mb={2}
                     >
-                        {game.gameMode.questionPhrase.eng}
+                        {game.gameMode.questionPhrase[i18n.language]}
                     </Typography>
                     <Typography
                         fontSize="22px"
@@ -182,7 +189,7 @@ const Game = () => {
                     onClick={handleNext}
                     endIcon={<ArrowCircleRightIcon />}
                 >
-                    Next
+                    {t("Next")}
                 </Button>
             </Stack>
         </Box>

@@ -1,8 +1,10 @@
-import { useTheme } from '@emotion/react';
-import Settings from 'components/Settings';
-import FunTypo from 'components/ui/FunTypo';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useTheme } from '@emotion/react';
+import { useTranslation } from 'react-i18next';
+
+import Settings from 'components/Settings';
+import FunTypo from 'components/ui/FunTypo';
 import { newGame, useInGame } from 'store/actions';
 
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -25,6 +27,7 @@ const Header = (props) => {
     const inGame = useInGame();
     const theme = useTheme();
     const dispatch = useDispatch();
+	const { t } = useTranslation();
 
     // const mdgUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
@@ -74,7 +77,7 @@ const Header = (props) => {
                         }}
                     >
                         <FunTypo
-                            text="Country"
+                            text={t("Country")}
                             color={theme.palette.text.title.replace('#', '')}
                             stroke={true}
                             strokeWidth="1px"
@@ -88,7 +91,7 @@ const Header = (props) => {
                         />
                         &nbsp;
                         <FunTypo
-                            text="Quiz"
+                            text={t("Quiz")}
                             color={theme.palette.text.title.replace('#', '')}
                             stroke={false}
                             strokeWidth="1px"
@@ -114,7 +117,7 @@ const Header = (props) => {
                 >
                     {inGame ? (
                         <IconButton
-                            aria-label="close"
+                            aria-label={t("Close")}
                             onClick={handleClickCloseGame}
                             size="large"
                             color="text"
@@ -124,7 +127,7 @@ const Header = (props) => {
                     ) : (
                         <React.Fragment>
                             <IconButton
-                                aria-label="Settings"
+                                aria-label={t("Settings")}
                                 onClick={handleClickSettings}
                                 size="large"
                                 color="text"
@@ -140,20 +143,20 @@ const Header = (props) => {
                 onClose={handleConfirmCancelGameClose}
                 aria-labelledby="alert-dialog-title"
             >
-                <DialogTitle id="alert-dialog-title">{`Quit the game?`}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{t("Quit the game?")}</DialogTitle>
                 <DialogActions>
                     <Button
                         variant="outlined"
                         onClick={handleConfirmCancelGameDisagree}
                     >
-                        No
+                        {t("No")}
                     </Button>
                     <Button
                         variant="contained"
                         onClick={handleConfirmCancelGameClose}
                         autoFocus
                     >
-                        Yes
+                        {t("Yes")}
                     </Button>
                 </DialogActions>
             </Dialog>

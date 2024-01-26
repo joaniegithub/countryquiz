@@ -8,14 +8,17 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 
 import NewGame from './NewGame';
 import FunTypo from './ui/FunTypo';
+import { useTranslation } from 'react-i18next';
 
 const Home = (props) => {
     const [showGameOptions, setShowGameOptions] = useState(false);
     const theme = useTheme();
+	const { t } = useTranslation();
 
     const handleClickNewGame = () => {
         setShowGameOptions(true);
     };
+
     const handleClickBack = () => {
         setShowGameOptions(false);
     };
@@ -49,7 +52,7 @@ const Home = (props) => {
                 >
                     <Typography variant="h1" display="block" mt="-20px">
                         <FunTypo
-                            text="Country"
+                            text={t("Country")}
                             color={theme.palette.text.title.replace('#', '')}
                             stroke={true}
                             strokeWidth="2px"
@@ -67,7 +70,7 @@ const Home = (props) => {
                             }}
                         />
                         <FunTypo
-                            text="Quiz"
+                            text={t("Quiz")}
                             color={theme.palette.text.title.replace('#', '')}
                             stroke={false}
                             strokeWidth="2px"
@@ -117,7 +120,7 @@ const Home = (props) => {
                             startIcon={<ArrowCircleLeftIcon />}
                         >
                             <FunTypo
-                                text="Home"
+                                text={t("Home")}
                                 color={theme.palette.secondary.main.replace(
                                     '#',
                                     ''
@@ -140,7 +143,7 @@ const Home = (props) => {
                             onClick={handleClickNewGame}
                         >
                             <FunTypo
-                                text="New Game"
+                                text={t("New Game")}
                                 color="fff"
                                 stroke={false}
                                 strokeWidth="2px"

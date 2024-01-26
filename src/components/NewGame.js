@@ -1,9 +1,11 @@
-import { useTheme } from '@emotion/react';
-import { DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
-import regionsData from 'data/regions.json';
 import * as React from 'react';
 import { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useTheme } from '@emotion/react';
+import { useTranslation } from 'react-i18next';
+
+import { DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
+import regionsData from 'data/regions.json';
 import { startGame, useGameOptions } from 'store/actions';
 
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
@@ -21,9 +23,11 @@ import {
 import FunTypo from './ui/FunTypo';
 
 const NewGame = (props) => {
-    const gameOptions = useGameOptions();
     const dispatch = useDispatch();
     const theme = useTheme();
+	const { t, i18n } = useTranslation();
+
+    const gameOptions = useGameOptions();
 
     const [gameMode, setGameMode] = useState(
         (gameOptions && gameOptions.gameMode) || '0'
@@ -83,7 +87,7 @@ const NewGame = (props) => {
                             }
                         >
                             <FunTypo
-                                text="Game Options"
+                                text={t("Game Options")}
                                 color={theme.palette.secondary.main.replace(
                                     '#',
                                     ''
@@ -101,7 +105,7 @@ const NewGame = (props) => {
                         </Typography>
                         <TextField
                             fullWidth
-                            label="Mode"
+                            label={t("Mode")}
                             name="Mode"
                             onChange={handleChangeMode}
                             required
@@ -121,7 +125,7 @@ const NewGame = (props) => {
                         </TextField>
                         <TextField
                             fullWidth
-                            label="Region"
+                            label={t("Region")}
                             name="Region"
                             onChange={handleChangeRegion}
                             required
@@ -130,15 +134,15 @@ const NewGame = (props) => {
                             value={region}
                         >
                             <option key="all" value="all">
-                                World
+								{t("World")}
                             </option>
                             {regionsData.map((option) =>
-                                option.name === 'Antarctic' ? null : (
+                                option.eng === 'Antarctic' ? null : (
                                     <option
-                                        key={option.name}
-                                        value={option.name}
+                                        key={option[i18n.language]}
+                                        value={option[i18n.language]}
                                     >
-                                        {option.name}
+                                        {option[i18n.language]}
                                     </option>
                                 )
                             )}
@@ -148,11 +152,10 @@ const NewGame = (props) => {
                             value={difficultyLevel}
                             exclusive
                             onChange={handleChangeDifficultyLevel}
-                            aria-label="Difficulty"
-                            label="Difficulty"
+                            aria-label={t("Difficulty")}
+                            label={t("Difficulty")}
                             name="Difficulty"
                             size="small"
-                            justifyContent="center"
                         >
                             {difficultyLevels.map((option) => (
                                 <ToggleButton
@@ -160,7 +163,7 @@ const NewGame = (props) => {
                                     value={option.key}
                                     disabled={option.disabled}
                                 >
-                                    {option.name}
+                                    {t(option.name)}
                                 </ToggleButton>
                             ))}
                         </ToggleButtonGroup>
@@ -171,7 +174,7 @@ const NewGame = (props) => {
                             onClick={handleClickStart}
                         >
                             <FunTypo
-                                text="Start Game"
+                                text={t("Start Game")}
                                 color="fff"
                                 stroke={false}
                                 strokeWidth="2px"

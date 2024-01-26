@@ -1,0 +1,33 @@
+{
+  "eng": "Anglais",
+  "fra": "Français",
+
+  "Close": "Fermer",
+  "Yes": "Oui",
+  "No": "Non",
+
+  "Country": "Country",
+  "Quiz": "Quiz",
+  "Home": "Accueil",
+  "New Game": "Nouvelle Partie",
+
+  "Settings": "Paramètres",
+  "Dark Mode": "Mode sombre",
+  "Light Mode": "Mode clair",
+  "Install": "Installer",
+  "Language": "Langue",
+
+  "Game Options": "Options de jeu",
+  "Mode": "Mode",
+  "Region": "Région",
+  "World": "Monde entier",
+  "Difficulty": "Difficulty",
+  "Flashcard": "Flashcard",
+  "Normal": "Normal",
+  "Hard": "Difficile",
+  "Expert": "Expert",
+  "Start Game": "Start Game",
+
+  "Next": "Suivant",
+  "Quit the game?": "Quitter la partie?"
+}

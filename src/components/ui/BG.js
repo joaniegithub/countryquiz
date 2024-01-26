@@ -43,7 +43,9 @@ const BG = (props) => {
                 const patternZoom = Math.random() + 3;
                 // const color = colors[Math.floor(Math.random() * colors.length)];
                 return (
-                    <React.Fragment>
+                    <React.Fragment
+						key={"bg"+i}
+					>
                         <Box
                             component="span"
                             sx={{

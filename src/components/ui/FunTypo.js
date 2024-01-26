@@ -24,10 +24,10 @@ const FunTypo = (props) => {
                 zIndex: 2,
                 ...(stroke
                     ? {
-                          '-webkit-text-stroke-width': strokeWidth,
-                          '-moz-text-stroke-width': strokeWidth,
-                          '-webkit-text-stroke-color': '#' + color,
-                          '-moz-text-stroke-color': '#' + color,
+                         WebkitTextStrokeWidth: strokeWidth,
+                          MozTextStrokeWidth: strokeWidth,
+                          WebkitTextStrokeColor: '#' + color,
+                          MozTextStrokeColor: '#' + color,
                           color: 'transparent',
                       }
                     : {
@@ -53,13 +53,13 @@ const FunTypo = (props) => {
                     transform: 'translate(-50%, -50%)',
                     zIndex: 1,
                     width: '100%',
-                    '-webkit-text-stroke-width': 0,
-                    '-moz-text-stroke-width': 0,
-                    '-webkit-background-clip': 'text',
-                    '-moz-background-clip': 'text',
-                    'background-clip': 'text',
-                    '-webkit-text-fill-color': 'transparent',
-                    '-moz-text-fill-color': 'transparent',
+                    WebkitTextStrokeWidth: 0,
+                    MozWebkitTextStrokeWidth: 0,
+                    WebkitBackgroundClip: 'text',
+                    MozBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    MozTextFillColor: 'transparent',
                 },
             }}
         >

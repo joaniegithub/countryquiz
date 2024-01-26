@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import CloseIcon from '@mui/icons-material/Close';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -26,30 +27,32 @@ const Settings = (props) => {
     const dispatch = useDispatch();
     const isDarkMode = useIsDarkMode();
     const language = useLanguage();
-    console.log(language);
-
-    const languages = [
-        {
-            key: 'fra',
-            name: {
-                fra: 'Français',
-                eng: 'French',
-            },
-        },
-        {
-            key: 'eng',
-            name: {
-                fra: 'Anglais',
-                eng: 'English',
-            },
-        },
-    ];
+	const { t, i18n } = useTranslation();
+    
+    // console.log(i18n);
+    // const languages = [
+    //     {
+    //         key: 'fra',
+    //         name: {
+    //             fra: 'Français',
+    //             eng: 'French',
+    //         },
+    //     },
+    //     {
+    //         key: 'eng',
+    //         name: {
+    //             fra: 'Anglais',
+    //             eng: 'English',
+    //         },
+    //     },
+    // ];
 
     const handleClickLightMode = () => {
         dispatch(editSettings({ isDarkMode: !isDarkMode }));
     };
     const handleClickLanguage = (event) => {
         dispatch(editSettings({ language: event.target.value }));
+        i18n.changeLanguage(event.target.value);
     };
 
     const isMobile =
@@ -78,9 +81,9 @@ const Settings = (props) => {
             onClose={handleClose}
             aria-labelledby="settings-dialog-title"
         >
-            <DialogTitle id="settings-dialog-title">{`Settings`}</DialogTitle>
+            <DialogTitle id="settings-dialog-title">{t("Settings")}</DialogTitle>
             <IconButton
-                aria-label="close"
+                aria-label={t("Close")}
                 onClick={handleClose}
                 color="text"
                 sx={{
@@ -97,18 +100,18 @@ const Settings = (props) => {
                         onClick={handleClickLightMode}
                         value={isDarkMode}
                         endIcon={
-                            isDarkMode ? <DarkModeIcon /> : <LightModeIcon />
+                            isDarkMode ? <LightModeIcon /> : <DarkModeIcon />
                         }
                     >
-                        Dark Mode
+                        {t(isDarkMode ? "Light Mode" : "Dark Mode")}
                     </Button>
                     <ToggleButtonGroup
                         // color="secondary"
                         value={language}
                         exclusive
                         onChange={handleClickLanguage}
-                        aria-label="Language"
-                        label="Language"
+                        aria-label={t("Language")}
+                        label={t("Language")}
                         name="Language"
                         size="small"
                         variant="text"
@@ -117,9 +120,9 @@ const Settings = (props) => {
                             justifyContent: 'center',
                         }}
                     >
-                        {languages.map((lang) => (
-                            <ToggleButton key={lang.key} value={lang.key}>
-                                {lang.name[language]}
+                        {Object.keys(i18n.store.data).map((lang) => (
+                            <ToggleButton key={lang} value={lang}>
+                                {t(lang)}
                             </ToggleButton>
                         ))}
                     </ToggleButtonGroup>
@@ -134,7 +137,7 @@ const Settings = (props) => {
                                 )
                             }
                         >
-                            Install Country Quiz
+                            {t("Install")} Country Quiz
                         </Button>
                     )}
                 </Stack>

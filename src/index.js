@@ -5,6 +5,7 @@ import store from 'store/';
 
 import App from './App';
 import './index.css';
+import './i18n';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 

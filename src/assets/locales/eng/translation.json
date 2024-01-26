@@ -1,0 +1,33 @@
+{
+  "eng": "English",
+  "fra": "French",
+
+  "Close": "Close",
+  "Yes": "Yes",
+  "No": "No",
+
+  "Country": "Country",
+  "Quiz": "Quiz",
+  "Home": "Home",
+  "New Game": "New Game",
+
+  "Settings": "Settings",
+  "Dark Mode": "Dark Mode",
+  "Light Mode": "MLightde Mode",
+  "Install": "Install",
+  "Language": "Language",
+
+  "Game Options": "Game Options",
+  "Mode": "Mode",
+  "Region": "Region",
+  "World": "World",
+  "Difficulty": "Difficulty",
+  "Flashcard": "Flashcard",
+  "Normal": "Normal",
+  "Hard": "Hard",
+  "Expert": "Expert",
+  "Start Game": "Start Game",
+
+  "Next": "Next",
+  "Quit the game?": "Quit the game?"
+}
