@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { Box } from '@mui/material';
-import { countryFlags } from 'data/flags';
 
 const GameFlag = (props) => {
     const { country } = props;
@@ -9,7 +8,7 @@ const GameFlag = (props) => {
     return (
         <Box
             component="img"
-            src={countryFlags[country]}
+            src={`${process.env.PUBLIC_URL}/assets/flagsAndGeo/${country}.svg`}
             mt={1}
             sx={{
               height: "auto",

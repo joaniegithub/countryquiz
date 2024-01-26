@@ -161,14 +161,14 @@ const Home = (props) => {
                     )}
                 </Box>
             </Stack>
-			{Object.values(countriesData).map(c => {
+			{/*Object.values(countriesData).map(c => {
 				return (
 					<React.Fragment>
-						<Typography>{c.cca3}</Typography>
+						<Typography><br/>{c.cca3} {c.name.common}</Typography>
 						<GameFlag country={c.cca3.toLowerCase()} />
 					</React.Fragment>
 				);
-			})}
+			})*/}
         </React.Fragment>
     );
 };
