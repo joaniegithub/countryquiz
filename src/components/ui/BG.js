@@ -1,19 +1,19 @@
 import * as React from 'react';
-import { indigo, indigoDark, neutral } from 'theme/colors';
+import { purple, indigo, neutral } from 'theme/colors';
 
 import { Box } from '@mui/material';
 
 const BG = (props) => {
     const colors = [
         // ...(Object.keys(neutral).map((key) => neutral[key])),
+        // ...(Object.keys(purple).map((key) => purple[key])),
         // ...(Object.keys(indigo).map((key) => indigo[key])),
-        // ...(Object.keys(indigoDark).map((key) => indigoDark[key])),
+        purple.main,
+        purple.light,
+        purple.dark,
         indigo.main,
         indigo.light,
         indigo.dark,
-        indigoDark.main,
-        indigoDark.light,
-        indigoDark.dark,
         neutral[400],
         neutral[500],
         neutral[600],

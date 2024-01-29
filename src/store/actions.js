@@ -8,6 +8,13 @@ export const editSettings = (_settingsData) => {
     };
 };
 
+export const setInWiki = (_inWiki) => {
+    return {
+        type: constants.IN_WIKI,
+        inWiki: _inWiki,
+    };
+};
+
 export const newGame = () => {
     return {
         type: constants.NEW_GAME,

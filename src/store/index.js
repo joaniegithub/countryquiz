@@ -8,6 +8,7 @@ function saveToLocalStorage(state) {
     try {
         const stateToSave = { ...state };
         delete stateToSave.countriesData;
+        delete stateToSave.inWiki;
         const serialisedState = JSON.stringify(stateToSave);
         localStorage.setItem('CountryQuizStore', serialisedState);
     } catch (e) {
@@ -41,6 +42,7 @@ function loadFromLocalStorage() {
             ...(resetCurrentGame ? { currentGame: undefined } : {}),
             // countriesData: [...(Object.values(data))],
         };
+        console.log("store ready");
         return newState;
     } catch (e) {
         console.warn(e);

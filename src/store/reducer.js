@@ -4,6 +4,7 @@ import {
     DIFFICULTY_NORMAL,
     GAME_VERSION,
     gameModes,
+	DIFFICULTY_EXPERT,
 } from 'data/config';
 import countriesData from 'data/countries.json';
 import * as constants from 'store/constants';
@@ -18,6 +19,7 @@ const defaultState = {
     name: 'CountryQuiz',
     settings: defaultSettings,
     inGame: false,
+    inWiki: false,
     currentGame: undefined,
     showRules: false,
     countriesData: [...Object.values(countriesData)],
@@ -51,6 +53,12 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 settings: { ...state.settings, ...payload.settings },
             };
 
+        case constants.IN_WIKI:
+            return {
+                ...state,
+                inWiki: payload.inWiki,
+            };
+
         case constants.NEW_GAME:
             return {
                 ...state,
@@ -69,65 +77,9 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenGameMode = payload.chosenGameMode;
             const chosenRegion = payload.chosenRegion;
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
-
-            // todo: d\\u00e9placer la logique de construction dui quiz dans un utilitaire
-
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
-            const independentCountries = Object.values(countriesData).filter(
-                (c) => c.independent === true
-            );
-            const allCountries =
-                chosenRegion === 'all'
-                    ? independentCountries
-                    : independentCountries.filter(
-                          (c) => c.region === chosenRegion
-                      );
-
-            // todo: make sure answers at hard mode will be unique with first and last letter
-            // utiliser un utilitaire qui sera ailleurs, et y d\\u00e9placer shuffle
-            const allAnswers = allCountries.reduceRight((cAnswers, c) => {
-                const answers = mode.answerSubProperty
-                    ? c[mode.answerProperty][mode.answerSubProperty]
-                    : c[mode.answerProperty]; /*.map(a => {
-                            return {
-                                answer: a,
-                                region: chosenRegion === "all" ? c.region : c.subregion
-                            };
-                        })*/
-
-                return cAnswers.concat(
-                    ...(Array.isArray(answers) ? answers : [answers])
-                );
-            }, []);
-            // console.log(allAnswers);
-
-            const questions = allCountries.map((c) => {
-                const question = mode.questionSubProperty
-                    ? c[mode.questionProperty][mode.questionSubProperty]
-                    : c[mode.questionProperty];
-                let answers = mode.answerSubProperty
-                    ? c[mode.answerProperty][mode.answerSubProperty]
-                    : c[mode.answerProperty];
-                answers = Array.isArray(answers) ? answers.join(', ') : answers;
-                const choices = getChoices(
-                    gameDefaultState.nbChoices,
-                    answers,
-                    allAnswers,
-                    c,
-                    mode,
-                    chosenDifficultyLevel
-                );
-
-                return {
-                    country: c.cca3,
-                    flag: c.flag,
-                    question,
-                    choices,
-                    answers: answers,
-                    result: undefined,
-                };
-            });
+			const questions = getQuestions(mode, chosenRegion, chosenDifficultyLevel);
 
             return {
                 ...state,
@@ -186,35 +138,102 @@ const reducer = (state = defaultState, { type, ...payload }) => {
     }
 };
 
+const getQuestions = (mode, chosenRegion, chosenDifficultyLevel) => {
+	const independentCountries = countriesData;
+	// const independentCountries = Object.values(countriesData).filter(
+	// 	(c) => c.independent === true
+	// );
+	const allCountries =
+		chosenRegion === 'all'
+			? independentCountries
+			: independentCountries.filter(
+					(c) => c.region === chosenRegion
+				);
+
+	// creer une structure différente si on est à hard et en mode world
+	const allAnswers = allCountries.reduceRight((cAnswers, c) => {
+		const answers = mode.answerSubProperty
+			? c[mode.answerProperty][mode.answerSubProperty]
+			: c[mode.answerProperty]; /*.map(a => {
+					return {
+						answer: a,
+						region: chosenRegion === "all" ? c.region : c.subregion
+					};
+				})*/
+
+		return cAnswers.concat(
+			...(Array.isArray(answers) ? answers : [answers])
+		);
+	}, []);
+	// console.log(allAnswers);
+
+	const questions = allCountries.map((c) => {
+		const question = mode.questionSubProperty
+			? c[mode.questionProperty][mode.questionSubProperty]
+			: c[mode.questionProperty];
+		let answers = mode.answerSubProperty
+			? c[mode.answerProperty][mode.answerSubProperty]
+			: c[mode.answerProperty];
+		const answer = Array.isArray(answers) ? answers.join(', ') : answers;
+		const choices = getChoices(
+			gameDefaultState.nbChoices,
+			answer,
+			allAnswers,
+			c,
+			mode,
+			chosenDifficultyLevel
+		);
+
+		return {
+			country: c.cca3,
+			flag: c.flag,
+			question,
+			choices,
+			answer: answer,
+			result: undefined,
+		};
+	});
+
+	return questions;
+}
 const getChoices = (
     nbChoices,
-    answers,
+    answer,
     answersFrom,
     country,
     mode,
     difficultyLevel
 ) => {
     const choices = [];
+    const hardChoices = [getHardAnswer(answer)];
     const indexUsed = [];
     const max = answersFrom.length;
 
-    // tous les modes: sélection des choix par région ou subregion seulement
     while (choices.length < nbChoices - 1) {
         const rnd = Math.floor(Math.random() * max);
-        if (
-            indexUsed.indexOf(rnd) >= 0 ||
-            answers.indexOf(answersFrom[rnd]) >= 0 ||
-            choices.indexOf(answersFrom[rnd]) >= 0
+        if ( indexUsed.indexOf(rnd) >= 0
+            || answer.indexOf(answersFrom[rnd]) >= 0
+            || choices.indexOf(answersFrom[rnd]) >= 0
         ) {
             continue;
         }
+		if (difficultyLevel === DIFFICULTY_EXPERT && hardChoices.indexOf(getHardAnswer(answersFrom[rnd])) >= 0) {
+			// console.log(hardChoices);
+			// console.log(answersFrom[rnd]);
+			continue;
+		}
         choices.push(answersFrom[rnd]);
         indexUsed.push(rnd);
+		hardChoices.push(getHardAnswer(answersFrom[rnd]));
+		// aussi: choisir seulement parmis ceux de même région si on est en mode WORLD
     }
 
-    // pour mode 0: on inclut aussi des villes non capitales de temps en temps
-    if (difficultyLevel === DIFFICULTY_HARD) {
-        if (mode.key === '0') {
+    if (mode.key === CAPITAL) {
+    	if (difficultyLevel === DIFFICULTY_NORMAL) {
+		// on inclut des villes pas rapport qui existent pas de temps en temps
+            
+    	} else if (difficultyLevel === DIFFICULTY_HARD) {
+			// on inclut aussi des villes non capitales de temps en temps
             if (
                 country.cities &&
                 country.cities.length &&
@@ -227,9 +246,15 @@ const getChoices = (
         }
     }
 
+	// DIFFICULTY_EXPERT: s'Assurer que la premère et dernière lettre font en sorte que les choix sont uniques
+
     // ajouter la bonne réponse parmis les choix
-    choices.splice(((choices.length + 1) * Math.random()) | 0, 0, answers);
+    choices.splice(((choices.length + 1) * Math.random()) | 0, 0, answer);
     return choices;
+};
+
+export const getHardAnswer = (answer) => {
+	return answer[0] + answer[answer.length - 1];
 };
 
 export default reducer;

@@ -21,6 +21,11 @@ export const useInGame = () => {
         return state.inGame;
     });
 };
+export const useInWiki = () => {
+    return useSelector((state) => {
+        return state.inWiki;
+    });
+};
 export const useCurrentGame = () => {
     return useSelector((state) => {
         return state.currentGame;

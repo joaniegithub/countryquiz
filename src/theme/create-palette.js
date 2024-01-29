@@ -3,12 +3,12 @@ import { alpha } from '@mui/material/styles';
 
 import {
     error,
-    indigo,
-    indigoDark,
+    purpleDarkMode,
     info,
     neutral,
     success,
     warning,
+	indigoDarkMode,
 } from './colors';
 
 export function createPalette() {
@@ -25,13 +25,13 @@ export function createPalette() {
             default: common.white,
             paper: common.white,
         },
-        divider: '#F2F4F7',
+        divider: neutral[100],
         error,
         info,
         mode: 'light',
         neutral,
-        primary: indigo,
-        secondary: indigoDark,
+        primary: purpleDarkMode,
+        secondary: indigoDarkMode,
         success,
         text: {
             title: common.black,
@@ -42,4 +42,4 @@ export function createPalette() {
         },
         warning,
     };
-}
+};

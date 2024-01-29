@@ -9,13 +9,23 @@
   "Country": "Country",
   "Quiz": "Quiz",
   "Home": "Home",
-  "New Game": "New Game",
+  "Play": "Play CountryQuiz",
+  "Wiki": "Country Wiki",
 
   "Settings": "Settings",
   "Dark Mode": "Dark Mode",
-  "Light Mode": "MLightde Mode",
+  "Light Mode": "Light Mode",
   "Install": "Install",
   "Language": "Language",
+
+  "Choose a country": "Choose a country",
+  "Name": "Name",
+  "Status": "Status",
+  "independent": "independent",
+  "dependent": "dependent",
+  "Capital": "Capital",
+  "Other Cities": "Other Cities",
+  "Borders": "Borders",
 
   "Game Options": "Game Options",
   "Mode": "Mode",
@@ -27,6 +37,8 @@
   "Hard": "Hard",
   "Expert": "Expert",
   "Start Game": "Start Game",
+
+
 
   "Next": "Next",
   "Quit the game?": "Quit the game?"

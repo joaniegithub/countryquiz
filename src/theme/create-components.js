@@ -195,6 +195,44 @@ export function createComponents(config) {
                 },
             },
         },
+        MuiPopper: {
+            // defaultProps: {
+            //     titleTypographyProps: {
+            //         variant: 'h6',
+            //     },
+            //     subheaderTypographyProps: {
+            //         variant: 'body2',
+            //     },
+            // },
+            styleOverrides: {
+                root: {
+					// // scrollbarColor: "#6b6b6b #2b2b2b",
+					// scrollbarColor: "#6b6b6b #2b2b2b",
+					"&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+						borderRadius: 8,
+						backgroundColor: palette.neutral[100],
+					},
+					"&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+						borderRadius: 8,
+						backgroundColor: palette.neutral[400],
+						minHeight: 30,
+						border: "3px solid "+palette.neutral[100],
+					},
+					"&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus": {
+						backgroundColor: palette.neutral[400],
+					},
+					"&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active": {
+						backgroundColor: palette.neutral[400],
+					},
+					"&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover": {
+						backgroundColor: palette.neutral[400],
+					},
+					"&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
+						backgroundColor: palette.neutral[100],
+					},
+                },
+            },
+        },
         MuiOutlinedInput: {
             styleOverrides: {
                 root: {
@@ -291,7 +329,7 @@ export function createComponents(config) {
             styleOverrides: {
                 root: {
                     borderBottomColor: palette.divider,
-                    padding: '15px 16px',
+                    // padding: '15px 16px',
                 },
             },
         },

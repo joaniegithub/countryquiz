@@ -17,6 +17,7 @@ export const neutral = {
     200: '#E5E7EB',
     300: '#D2D6DB',
     400: '#9DA4AE',
+    450: '#7e8a9a',
     500: '#6C737F',
     600: '#4D5761',
     700: '#2F3746',
@@ -25,21 +26,41 @@ export const neutral = {
     1000: '#0a0f18',
 };
 
-export const indigo = withAlphas({
+export const purple = withAlphas({
     lightest: '#F5F7FF',
     light: '#b5b7ff',
     main: '#6366F1',
     dark: '#4338CA',
     darkest: '#312E81',
+    contrast: '#6366F1',
+    contrastText: '#FFFFFF',
+});
+export const purpleDarkMode = withAlphas({
+    lightest: '#F5F7FF',
+    light: '#b5b7ff',
+    main: '#6366F1',
+    dark: '#4338CA',
+    darkest: '#312E81',
+    contrast: '#6366F1',
     contrastText: '#FFFFFF',
 });
 
-export const indigoDark = withAlphas({
+export const indigo = withAlphas({
     lightest: '#F5F7FF',
     light: '#EBEEFE',
     main: '#312E81',
     dark: '#312E81',
     darkest: '#312E81',
+    contrast: '#312E81',
+    contrastText: '#FFFFFF',
+});
+export const indigoDarkMode = withAlphas({
+    lightest: '#F5F7FF',
+    light: '#EBEEFE',
+    main: '#312E81',
+    dark: '#312E81',
+    darkest: '#312E81',
+    contrast: '#6366F1',
     contrastText: '#FFFFFF',
 });
 

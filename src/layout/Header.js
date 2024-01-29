@@ -7,6 +7,7 @@ import Settings from 'components/Settings';
 import FunTypo from 'components/ui/FunTypo';
 import { newGame } from 'store/actions';
 import { useInGame } from 'store/selector';
+import { useInWiki } from 'store/selector';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -26,6 +27,7 @@ export const TOP_NAV_HEIGHT = 64;
 const Header = (props) => {
     const { deferredPrompt } = props;
     const inGame = useInGame();
+    const inWiki = useInWiki();
     const theme = useTheme();
     const dispatch = useDispatch();
 	const { t } = useTranslation();
@@ -68,7 +70,7 @@ const Header = (props) => {
                     position: 'relative',
                 }}
             >
-                {inGame && (
+                {(inGame || inWiki) && (
                     <Typography
                         component="h1"
                         sx={{

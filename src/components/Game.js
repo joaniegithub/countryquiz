@@ -40,7 +40,7 @@ const Game = () => {
     const phase = game.currentPhase;
     const difficultyLevel = game.difficultyLevel;
     const question = game.questions && game.questions[turn];
-    const rightAnswer = question ? question.answers : undefined;
+    const rightAnswer = question ? question.answer : undefined;
 
     const handleNext = () => {
         if (phase === 1) {
@@ -128,12 +128,12 @@ const Game = () => {
                 >
 					<FunTypo
 						text={game.gameMode.questionPhrase[i18n.language]}
-						color={theme.palette.secondary.main.replace(
+						color={theme.palette.primary.contrast.replace(
 							'#',
 							''
 						)}
 						stroke={false}
-						distance="3px"
+						distance="2px"
 						sx={{
 							display: 'block',
 							fontSize: '24px',

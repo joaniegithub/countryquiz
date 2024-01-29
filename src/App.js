@@ -7,7 +7,9 @@ import './App.css';
 import Game from './components/Game';
 import Home from './components/Home';
 import Layout from './layout/Layout';
-import { useInGame, useIsDarkMode } from './store/selector';
+import Wiki from './components/Wiki';
+
+import { useInGame, useInWiki, useIsDarkMode } from './store/selector';
 import { createTheme as createMyTheme } from './theme';
 import { createTheme as createMyThemeDark } from './theme/dark';
 
@@ -18,9 +20,10 @@ const CountryQuizApp = (props) => {
     const [deferredPrompt, setDeferredPrompt] = useState(undefined);
 
 	const { i18n } = useTranslation();
-	console.log(i18n);
+	// console.log(i18n);
     
     const inGame = useInGame();
+    const inWiki = useInWiki();
     const isDarkMode = useIsDarkMode();
 
     const selectedTheme =
@@ -44,7 +47,7 @@ const CountryQuizApp = (props) => {
         <ThemeProvider theme={selectedTheme}>
             <CssBaseline />
             <Layout deferredPrompt={deferredPrompt}>
-                {inGame ? <Game /> : <Home />}
+                {inGame ? <Game /> : inWiki ? <Wiki /> : <Home />}
                 {/* <InfoModal openInfoModal={showRules} onCloseInfoModal={handleCloseInfoModal} /> */}
             </Layout>
         </ThemeProvider>

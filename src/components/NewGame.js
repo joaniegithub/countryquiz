@@ -89,7 +89,7 @@ const NewGame = (props) => {
                         >
                             <FunTypo
                                 text={t("Game Options")}
-                                color={theme.palette.secondary.main.replace(
+                                color={theme.palette.primary.contrast.replace(
                                     '#',
                                     ''
                                 )}

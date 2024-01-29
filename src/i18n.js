@@ -17,14 +17,14 @@ i18n
     // .use(Backend)
     // detect user language
     // learn more: https://github.com/i18next/i18next-browser-languageDetector
-    // .use(LanguageDetector)
+    .use(LanguageDetector)
     // pass the i18n instance to react-i18next.
     .use(initReactI18next)
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
         fallbackLng: 'eng',
-        debug: true,
+        debug: false,
         // ns: [
         //   "translation"
         // ],
@@ -47,6 +47,14 @@ i18n
         // interpolation: {
         //     escapeValue: false, // not needed for react as it escapes by default
         // },
-    });
+	}, (err, t) => {
+		if (err) return console.log('something went wrong loading', err);
+        console.log("i18n ready", i18n);
+		if (i18n.language === "en" || i18n.language.indexOf("en-") > -1) {
+			i18n.changeLanguage("eng");
+		} else if (i18n.language === "fr" || i18n.language.indexOf("fr-") > -1) {
+			i18n.changeLanguage("fra");
+		}
+	});
 
 export default i18n;

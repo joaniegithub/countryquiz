@@ -57,7 +57,7 @@ const Layout = (props) => {
                         display: 'flex',
                         flexDirection: 'column',
                         flexGrow: 1,
-                        px: 2,
+                        px: 0,
                     }}
                 >
                     {props.children}

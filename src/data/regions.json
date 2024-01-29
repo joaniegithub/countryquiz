@@ -1,7 +1,7 @@
 [
     {
         "eng": "Americas",
-            "fra": "Amériques",
+        "fra": "Amériques",
         "subregions": [
             {
                 "eng": "Caribbean",
@@ -23,7 +23,7 @@
     },
     {
         "eng": "Europe",
-            "fra": "Europe",
+        "fra": "Europe",
         "subregions": [
             {
                 "eng": "Central Europe",
@@ -53,7 +53,7 @@
     },
     {
         "eng": "Asia",
-            "fra": "Asie",
+        "fra": "Asie",
         "subregions": [
             {
                 "eng": "Central Asia",
@@ -79,7 +79,7 @@
     },
     {
         "eng": "Africa",
-            "fra": "Afrique",
+        "fra": "Afrique",
         "subregions": [
             {
                 "eng": "Eastern Africa",
@@ -105,7 +105,7 @@
     },
     {
         "eng": "Oceania",
-            "fra": "Océanie",
+        "fra": "Océanie",
         "subregions": [
             {
                 "eng": "Australasia",
@@ -127,9 +127,7 @@
     },
     {
         "eng": "Antarctic",
-        "translations": {
-            "fra": "Antarctique"
-        },
+		"fra": "Antarctique",
         "subregions": []
     }
 ]
