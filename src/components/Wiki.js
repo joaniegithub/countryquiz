@@ -34,23 +34,6 @@ const Wiki = (props) => {
 
 	const [country, setCountry] = useState(undefined);
 
-	// const getCountries = countriesData.map(c => {
-	// 	console.log(c);
-	// 	return (
-	// 		<ListItem>
-	// 			<Box
-	// 				sx={{
-	// 					width: '40px',
-	// 				}}>
-	// 				<GameFlag border={false} country={c.cca3.toLowerCase()} />
-	// 			</Box>
-	// 			<Typography>
-	// 				{c.name.common}
-	// 			</Typography>
-	// 		</ListItem>
-	// 		);
-	// });
-
 	const handleChangeCountry = useCallback((event, newInputValue) => {
 		console.log(newInputValue);
 		setCountry(newInputValue);
@@ -93,6 +76,7 @@ const Wiki = (props) => {
 						sx={{ width: "100%" }}
 						options={countriesData}
 						// autoHighlight
+						blurOnSelect
 						getOptionLabel={(option) => option.name.common}
 						renderOption={(props, option) => (
 							<Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
@@ -122,23 +106,6 @@ const Wiki = (props) => {
 				</Card>
 				<CountryCard country={country} />
 			</Box>
-            {/*<List
-				display="flex"
-                alignItems="flex-start"
-                direction="column"
-                justifyContent="flex-start"
-                height="100%"
-                flexGrow={1}
-				position="relative"
-				sx={{
-					overflowY: 'scroll',
-					position: 'relative',
-					height: '100%',
-					width: "100%",
-				}}
-            >
-			{getCountries}
-            </List>*/}
 			<Box
 				sx={{
 					textAlign: 'center',
