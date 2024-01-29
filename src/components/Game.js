@@ -69,41 +69,69 @@ const Game = () => {
             <Stack
                 display="flex"
                 alignItems="center"
-                flexDirection="row"
+                direction="row"
                 justifyContent="space-between"
                 sx={{
                     my: 2,
                     width: '100%',
                 }}
             >
+				<Stack
+					display="flex"
+					alignItems="center"
+					direction="row"
+					sx={{
+						width: 'auto',
+					}}
+				>
+					<Typography
+						color="secondary.contrast"
+						fontSize="18px"
+						textAlign="right"
+						fontWeight="800"
+						flexGrow={0}
+					>
+						{game.currentTurn + ' / ' + game.questions.length}
+						{/*game.currentScore*/}
+					</Typography>
+            	</Stack>
                 <LinearProgress
+					color="secondary"
                     variant="determinate"
                     value={(game.currentTurn / game.questions.length) * 100}
+					flexGrow={1}
                     sx={{
                         flexGrow: 1,
                         marginRight: '16px',
+                        marginLeft: '16px',
                     }}
                 />
-                <Stack
-                    alignItems="center"
-                    flexDirection="row"
-                    justifyContent="space-between"
-                    spacing={2}
-                    sx={{
-                        px: 0,
-                    }}
-                >
-                    <Typography
-                        color="secondary"
-                        fontSize="14px"
-                        textAlign="right"
-                        fontWeight="800"
-                        width="100%"
-                    >
-                        {game.currentTurn + ' / ' + game.questions.length}
-                        {/*game.currentScore*/}
-                    </Typography>
-                </Stack>
+				<Stack
+					display="flex"
+					alignItems="center"
+					direction="row"
+					sx={{
+						width: 'auto',
+					}}
+				>
+					<FunTypo
+						text={game.currentScore+159}
+						color={theme.palette.secondary.contrast.replace(
+							'#',
+							''
+						)}
+						stroke={false}
+						distance="2px"
+						flexGrow={0}
+						sx={{
+							display: 'block',
+							fontSize: '20px',
+							lineHeight: '24px',
+							fontWeight: 800,
+							width: 'auto',
+						}}
+					/>
+				</Stack>
             </Stack>
             <Stack
                 alignItems="center"
@@ -196,7 +224,7 @@ const Game = () => {
                 }}
             >
                 <Button
-                    variant="outlined"
+                    variant="contained"
                     color="secondary"
                     disabled={phase === 0}
                     onClick={handleNext}
@@ -204,7 +232,7 @@ const Game = () => {
                 >
 					<FunTypo
 						text={t("Next")}
-						color={(phase === 0 ? theme.palette.text.primary : theme.palette.secondary.main).replace(
+						color={(phase === 0 ? theme.palette.text.primary : theme.palette.text.primary).replace(
 							'#',
 							''
 						)}

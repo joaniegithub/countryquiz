@@ -3,12 +3,12 @@ import { alpha } from '@mui/material/styles';
 
 import {
     error,
-    purpleDarkMode,
+    purple,
     info,
     neutral,
     success,
     warning,
-	indigoDarkMode,
+	indigo,
 } from './colors';
 
 export function createPalette() {
@@ -30,8 +30,8 @@ export function createPalette() {
         info,
         mode: 'light',
         neutral,
-        primary: purpleDarkMode,
-        secondary: indigoDarkMode,
+        primary: purple,
+        secondary: indigo,
         success,
         text: {
             title: common.black,

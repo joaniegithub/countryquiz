@@ -182,6 +182,7 @@ const Home = (props) => {
                     ) : (
                         <Button
                             color="secondary"
+							size="large"
 							variant="contained"
                             onClick={handleClickHome}
                             startIcon={<ArrowCircleLeftIcon />}

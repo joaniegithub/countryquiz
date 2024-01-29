@@ -148,6 +148,7 @@ const Wiki = (props) => {
 				<Button
 					color="secondary"
 					variant="contained"
+					size="large"
 					onClick={handleClickHome}
 					startIcon={<ArrowCircleLeftIcon />}
 				>
