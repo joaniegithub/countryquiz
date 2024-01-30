@@ -97,7 +97,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenAnswer = payload.chosenAnswer;
             const allQuestions = [...game.questions];
             const question = { ...allQuestions[game.currentTurn] };
-            const result = chosenAnswer === question.answers;
+            const result = chosenAnswer === question.answer;
 
             const currentScore = result
                 ? game.currentScore + 1
@@ -212,6 +212,7 @@ const getChoices = (
     while (choices.length < nbChoices - 1) {
         const rnd = Math.floor(Math.random() * max);
         if ( indexUsed.indexOf(rnd) >= 0
+            || answersFrom[rnd] === ""
             || answer.indexOf(answersFrom[rnd]) >= 0
             || choices.indexOf(answersFrom[rnd]) >= 0
         ) {

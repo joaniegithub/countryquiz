@@ -11,16 +11,16 @@ import { Box, Button, Stack, Typography } from '@mui/material';
 import { TOP_NAV_HEIGHT } from 'layout/Header';
 import NewGame from './NewGame';
 import FunTypo from './ui/FunTypo';
-import GameFlag from './ui/GameFlag';
-import countriesData from 'data/countries.json';
+// import GameFlag from './ui/GameFlag';
+// import countriesData from 'data/countries.json';
 import { setInWiki } from 'store/actions';
 import { useDispatch } from 'react-redux';
 
 const SCREEN_HOME = 0;
 const SCREEN_GAME_OPTIONS = 1;
-const SCREEN_WIKI = 2;
+// const SCREEN_WIKI = 2;
 
-const Home = (props) => {
+const Home = () => {
     const [screen, setScreen] = useState(0);
     const theme = useTheme();
     const dispatch = useDispatch();

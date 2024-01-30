@@ -104,7 +104,6 @@ const Row = (props) => {
 	);
 };
 const CellProp = (props) => {
-    const theme = useTheme();
 	return (
 		<TableCell 
 			{...props}

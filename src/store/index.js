@@ -42,7 +42,6 @@ function loadFromLocalStorage() {
             ...(resetCurrentGame ? { currentGame: undefined } : {}),
             // countriesData: [...(Object.values(data))],
         };
-        console.log("store ready");
         return newState;
     } catch (e) {
         console.warn(e);

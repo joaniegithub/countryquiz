@@ -140,8 +140,8 @@ const NewGame = (props) => {
                             {regionsData.map((option) =>
                                 option.eng === 'Antarctic' ? null : (
                                     <option
-                                        key={option[i18n.language]}
-                                        value={option[i18n.language]}
+                                        key={option.eng}
+                                        value={option.eng}
                                     >
                                         {option[i18n.language]}
                                     </option>

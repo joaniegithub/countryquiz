@@ -55,7 +55,7 @@ const Header = (props) => {
     const handleConfirmCancelGameDisagree = () => {
         setConfirmCancelGameOpen(false);
     };
-  const closeRef = React.useRef<HTMLElement>(null);
+  	const closeRef = React.useRef<HTMLElement>(null);
 	const handleEntering = () => {
 		if (closeRef.current != null) {
 			closeRef.current.focus();

@@ -7,11 +7,11 @@ import { Button, SvgIcon, Typography } from '@mui/material';
 
 const GameButton = (props) => {
     const {
-        text,
-        colorEffect = '000',
-        // stroke = false,
-        distance = '3px',
-        patternZoom = 2,
+        // text,
+        // colorEffect = '000',
+        // // stroke = false,
+        // distance = '3px',
+        // patternZoom = 2,
         onClick,
         phase,
         choice,

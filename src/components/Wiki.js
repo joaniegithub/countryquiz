@@ -35,7 +35,6 @@ const Wiki = (props) => {
 	const [country, setCountry] = useState(undefined);
 
 	const handleChangeCountry = useCallback((event, newInputValue) => {
-		console.log(newInputValue);
 		setCountry(newInputValue);
 	});
 
