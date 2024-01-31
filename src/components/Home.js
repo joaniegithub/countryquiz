@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import { Box, Button, Stack, SvgIcon, Typography } from '@mui/material';
+import { Box, Stack, SvgIcon, Typography } from '@mui/material';
 
 
 import  { ReactComponent as GlobeIcon } from 'assets/images/globe.svg';
@@ -16,6 +16,7 @@ import FunTypo from './ui/FunTypo';
 // import countriesData from 'data/countries.json';
 import { setInWiki } from 'store/actions';
 import { useDispatch } from 'react-redux';
+import MainButton from './ui/MainButton';
 
 const SCREEN_HOME = 0;
 const SCREEN_GAME_OPTIONS = 1;
@@ -147,75 +148,32 @@ const Home = () => {
                     {showHome ? (
 						<Stack
                 			spacing={2}
-							// display="flex"
-							// flexDirection="column"
-							// sx={{
-							// 	display: showGameOptions ? '65vh' : '5vh',
-							// 	transition: 'height 0.25s ease',
-							// 	// overflowY: "hidden",
-							// }}
 						>
-							<Button
-								variant="contained"
-								size="large"
-								onClick={handleClickNewGame}
+							<MainButton
+								buttonP={{
+									onClick: handleClickNewGame
+								}}
 							>
-								<FunTypo
-									text={t("Play")}
-									color="fff"
-									stroke={false}
-									strokeWidth="2px"
-									distance="3px"
-									sx={{
-										fontSize: '24px',
-										lineHeight: '24px',
-										fontWeight: 700,
-										mb: '4px',
-									}}
-								/>
-							</Button>
-							<Button
-								variant="contained"
-								size="large"
-								onClick={handleClickWiki}
+								{t("Play")}
+							</MainButton>
+							<MainButton
+								buttonP={{
+									onClick: handleClickWiki
+								}}
 							>
-								<FunTypo
-									text={t("Wiki")}
-									color="fff"
-									stroke={false}
-									strokeWidth="2px"
-									distance="3px"
-									sx={{
-										fontSize: '24px',
-										lineHeight: '24px',
-										fontWeight: 700,
-										mb: '4px',
-									}}
-								/>
-							</Button>
+								{t("Wiki")}
+							</MainButton>
 						</Stack>
                     ) : (
-                        <Button
-                            color="secondary"
-							size="large"
-							variant="contained"
-                            onClick={handleClickHome}
-                            startIcon={<ArrowCircleLeftIcon />}
+                        <MainButton
+							buttonP={{
+								color: 'secondary',
+								onClick: handleClickHome,
+								startIcon: (<ArrowCircleLeftIcon />),
+							}}
                         >
-                            <FunTypo
-                                text={t("Home")}
-								color="fff"
-                                stroke={false}
-                                strokeWidth="2px"
-                                distance="3px"
-                                sx={{
-                                    fontSize: '24px',
-                                    lineHeight: '24px',
-                                    fontWeight: 800,
-                                    mb: '4px',
-                                }}
-                            />
-                        </Button>
+							{t("Home")}
+                        </MainButton>
                     )}
                 </Box>
             </Stack>

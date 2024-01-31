@@ -9,6 +9,8 @@ import { newGame } from 'store/actions';
 import { useInGame } from 'store/selector';
 import { useInWiki } from 'store/selector';
 
+import MainButton from 'components/ui/MainButton';
+
 import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
@@ -21,6 +23,7 @@ import {
     Stack,
     Typography,
 } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 
 export const TOP_NAV_HEIGHT = 64;
 
@@ -156,21 +159,32 @@ const Header = (props) => {
                 <DialogTitle id="quit-dialog-title">{t("Quit the game?")}</DialogTitle>
                 <DialogActions
 					sx={{
-						p: "12px",
+						p: '12px',
+						justifyContent: 'center'
 					}}>
-                    <Button
-                        variant="outlined"
-                        onClick={handleConfirmCancelGameDisagree}
+                    <MainButton
+						buttonP={{
+							variant: 'outlined',
+							onClick: handleConfirmCancelGameDisagree
+						}}
+						typoP={{
+							fontSize: '16px',
+							fontWeight: '600'
+						}}
                     >
                         {t("No")}
-                    </Button>
-                    <Button
-                        variant="contained"
-                        onClick={handleConfirmCancelGameClose}
-                        autoFocus
+                    </MainButton>
+                    <MainButton
+						buttonP={{
+							onClick: handleConfirmCancelGameClose
+						}}
+						typoP={{
+							fontSize: '16px',
+							fontWeight: '600'
+						}}
                     >
                         {t("Yes")}
-                    </Button>
+                    </MainButton>
                 </DialogActions>
             </Dialog>
             <Settings

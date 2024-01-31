@@ -26,6 +26,7 @@ import {
 import FunTypo from './ui/FunTypo';
 import GameFlag from './ui/GameFlag';
 import CountryCard from './ui/CountryCard';
+import MainButton from './ui/MainButton';
 
 const Wiki = (props) => {
     const dispatch = useDispatch();
@@ -111,27 +112,15 @@ const Wiki = (props) => {
 					height: '10vh',
 				}}
 			>
-				<Button
-					color="secondary"
-					variant="contained"
-					size="large"
-					onClick={handleClickHome}
-					startIcon={<ArrowCircleLeftIcon />}
+				<MainButton
+					buttonP={{
+						color: 'secondary',
+						onClick: handleClickHome,
+						startIcon: (<ArrowCircleLeftIcon />),
+					}}
 				>
-					<FunTypo
-						text={t("Home")}
-						color="fff"
-						stroke={false}
-						strokeWidth="2px"
-						distance="3px"
-						sx={{
-							fontSize: '24px',
-							lineHeight: '24px',
-							fontWeight: 800,
-							mb: '4px',
-						}}
-					/>
-				</Button>
+					{t("Home")}
+				</MainButton>
 			</Box>
         </React.Fragment>
     );

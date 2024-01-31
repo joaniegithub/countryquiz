@@ -13,9 +13,10 @@ import {
     Box,
     Button,
     Stack,
+	Typography,
 } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 
-import FunTypo from './ui/FunTypo';
 import GameQuestion from './gameComponents/GameQuestion';
 import GameProgress from './gameComponents/GameProgress';
 import GameEnd from './gameComponents/GameEnd';
@@ -79,19 +80,12 @@ const Game = () => {
 						onClick={handleClickHome}
 						startIcon={<ArrowCircleLeftIcon />}
 					>
-						<FunTypo
-							text={t("Home")}
-							color="fff"
-							stroke={false}
-							strokeWidth="2px"
-							distance="3px"
-							sx={{
-								fontSize: '24px',
-								lineHeight: '24px',
-								fontWeight: 800,
-								mb: '4px',
-							}}
-						/>
+						<Typography
+							fontSize="18px"
+							fontWeight="600"
+						>
+							{t("Home")}
+						</Typography>
 					</Button>
 				) : (
 					<Button
@@ -102,23 +96,15 @@ const Game = () => {
 						onClick={handleNext}
 						endIcon={<ArrowCircleRightIcon />}
 					>
-						<FunTypo
-							text={t("Next")}
-							color={(phase === 0 ? theme.palette.text.primary : theme.palette.text.primary).replace(
-								'#',
-								''
-							)}
-							stroke={false}
-							strokeWidth="2px"
-							distance="3px"
+						<Typography
+							fontSize="20px"
+							fontWeight="700"
 							sx={{
-								fontSize: '24px',
-								lineHeight: '24px',
-								fontWeight: 700,
-								mb: '4px',
-								...(phase === 0 ? {opacity: 0.38} : {}),
+								textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
 							}}
-						/>
+						>
+							{t("Next")}
+						</Typography>
 					</Button>
 				)}
             </Stack>

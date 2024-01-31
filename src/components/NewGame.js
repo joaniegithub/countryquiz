@@ -20,6 +20,7 @@ import {
     ToggleButtonGroup,
     Typography,
 } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 
 import FunTypo from './ui/FunTypo';
 
@@ -202,19 +203,15 @@ const NewGame = (props) => {
                             // endIcon={<PlayCircleFilledIcon />}
                             onClick={handleClickStart}
                         >
-                            <FunTypo
-                                text={t("Start Game")}
-                                color="fff"
-                                stroke={false}
-                                strokeWidth="2px"
-                                distance="3px"
-                                sx={{
-                                    fontSize: '24px',
-                                    lineHeight: '24px',
-                                    fontWeight: 700,
-                                    mb: '4px',
-                                }}
-                            />
+							<Typography
+								fontSize="20px"
+								fontWeight="700"
+								sx={{
+									textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
+								}}
+							>
+								{t("Start Game")}
+							</Typography>
                         </Button>
                     </Stack>
                 </Card>

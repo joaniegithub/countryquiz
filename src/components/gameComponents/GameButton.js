@@ -3,7 +3,8 @@ import { useTheme } from '@emotion/react';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { Button, SvgIcon, Typography } from '@mui/material';
+import { SvgIcon } from '@mui/material';
+import MainButton from 'components/ui/MainButton';
 
 const GameButton = (props) => {
     const {
@@ -35,55 +36,54 @@ const GameButton = (props) => {
     }
 
     return (
-        <Button
-            color={color}
-            onClick={onClick}
-            variant="contained"
-            sx={{
-                // position: "relative",
-                ...(color === 'secondary' || color === 'success'
-                    ? {
-                          outlineOffset: '3px',
-                          outline: `2px solid ${theme.palette[color].main}`,
-                      }
-                    : {}),
-                textAlign: 'center',
-                width: '100%',
-                p: 1.6,
+        <MainButton
+			buttonP={{
+				color: color,
+				onClick: onClick,
+				variant: 'contained',
+				sx: {
+					// position: "relative",
+					...(color === 'secondary' || color === 'success'
+						? {
+							outlineOffset: '3px',
+							outline: `2px solid ${theme.palette[color].main}`,
+						}
+						: {}),
+					textAlign: 'center',
+					width: '100%',
+					p: 1.6,
 
-                // boxShadow: `2px 6px #${colorEffect}`,
+					// boxShadow: `2px 6px #${colorEffect}`,
 
-                /* '&:after': {
-					pointerEvents: "none",
-					content: '""',
-					background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg" width="'+(4*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 2 4 0 2" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
-					// background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" width="'+(6*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 6 4 6 3 1.5 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 1.5 4 0 3" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
-					display: "block",
-					height: "100%",
-					width: "100%",
-					position: "absolute",
-					left: "calc(50% + "+distance+")",
-					top: "calc(50% + "+distance+")",
-					transform: "translate(-50%, -50%)",
-					borderRadius: "12px",
-					zIndex: -1,
-				} */
-            }}
-            {...(icon
-                ? {
-                      endIcon: <SvgIcon fontSize="small">{icon}</SvgIcon>,
-                  }
-                : {})}
+					/* '&:after': {
+						pointerEvents: "none",
+						content: '""',
+						background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg" width="'+(4*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 2 4 0 2" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
+						// background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" width="'+(6*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 6 4 6 3 1.5 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 1.5 4 0 3" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
+						display: "block",
+						height: "100%",
+						width: "100%",
+						position: "absolute",
+						left: "calc(50% + "+distance+")",
+						top: "calc(50% + "+distance+")",
+						transform: "translate(-50%, -50%)",
+						borderRadius: "12px",
+						zIndex: -1,
+					} */
+				},
+				...(icon
+					? {
+						endIcon: <SvgIcon fontSize="small">{icon}</SvgIcon>,
+					}
+					: {})
+			}}
+			typoP={{
+				fontSize: '18px',
+				fontWeight: '600'
+			}}
         >
-            <Typography
-                sx={{
-                    fontSize: 18,
-                    fontWeight: 600,
-                }}
-            >
-                {props.children}
-            </Typography>
-        </Button>
+            {props.children}
+        </MainButton>
     );
 };
 

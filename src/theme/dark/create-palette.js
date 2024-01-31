@@ -62,5 +62,6 @@ export function createPalette() {
             disabled: alpha(neutralDark[1000], 0.38),
         },
         warning,
+		shadow: neutral[1000],
     };
 }
