@@ -104,6 +104,31 @@ const NewGame = (props) => {
                                 }}
                             />
                         </Typography>
+                        <ToggleButtonGroup
+                            color="secondary"
+                            value={difficultyLevel}
+                            exclusive
+                            onChange={handleChangeDifficultyLevel}
+                            aria-label={t("Difficulty")}
+                            label={t("Difficulty")}
+                            name="Difficulty"
+                            size="small"
+							// disabled={option.disabled}
+							sx={{
+								justifyContent: 'center',
+							}}
+                        >
+							<ToggleButton
+								value="short"
+							>
+								{t("Short")}
+							</ToggleButton>
+							<ToggleButton
+								value="long"
+							>
+								{t("Long")}
+							</ToggleButton>
+                        </ToggleButtonGroup>
                         <TextField
                             fullWidth
                             label={t("Mode")}
