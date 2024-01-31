@@ -146,7 +146,7 @@ const NewGame = (props) => {
                                     value={option.key}
                                     disabled={option.disabled}
                                 >
-                                    {option.name}
+                                    {option.name[i18n.language]}
                                 </option>
                             ))}
                         </TextField>

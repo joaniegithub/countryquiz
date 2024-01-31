@@ -36,7 +36,10 @@ export const difficultyLevels = [
 export const gameModes = [
     {
         key: CAPITAL,
-        name: "Country's Capital",
+        name: {
+            fra: "Pays - Capitale",
+            eng: "Country's Capital",
+        },
         questionPhrase: {
             fra: 'Quelle est la capitale de ce pays?',
             eng: "What is this country's capital?",
@@ -49,7 +52,10 @@ export const gameModes = [
     },
     {
         key: COUNTRY_BY_CAPITAL,
-        name: "Capital's Country",
+        name: {
+            fra: "Capitale - Pays",
+            eng: "Country's Capital",
+        },
         questionPhrase: {
             fra: 'De quel pays cette ville est-elle la capitale?',
             eng: 'Which country is this capital from?',
@@ -63,6 +69,10 @@ export const gameModes = [
     {
         key: COUNTRY_BY_FLAG,
         name: "Flag's Country",
+        name: {
+            fra: "Drapeau - Pays",
+            eng: "Flag's Country",
+        },
         questionPhrase: {
             fra: 'À quel pays appartient ce drapeau?',
             eng: 'Which country does this flag belong to?',
