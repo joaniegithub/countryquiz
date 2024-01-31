@@ -54,7 +54,7 @@ export const gameModes = [
         key: COUNTRY_BY_CAPITAL,
         name: {
             fra: "Capitale - Pays",
-            eng: "Country's Capital",
+            eng: "Capital's Country",
         },
         questionPhrase: {
             fra: 'De quel pays cette ville est-elle la capitale?',

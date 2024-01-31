@@ -113,7 +113,7 @@ const Home = () => {
                     justifyContent="flex-start"
 					width="100%"
                     sx={{
-                        height: showHome ? '35vh' : '65vh',
+                        height: showHome ? '35vh' : '69vh',
                         transition: 'height 0.25s ease',
                     }}
                 >
@@ -138,8 +138,9 @@ const Home = () => {
                     alignItems="center"
                     flexDirection="column"
                     justifyContent="flex-start"
+					my={2}
                     sx={{
-                        height: showHome ? '25vh' : '10vh',
+                        height: showHome ? '25vh' : '6vh',
                         transition: 'height 0.25s ease',
                     }}
                 >
