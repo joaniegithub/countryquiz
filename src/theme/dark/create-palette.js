@@ -35,7 +35,7 @@ Object.keys(neutral).forEach((key) => {
 export function createPalette() {
     return {
         action: {
-            active: neutralDark[500],
+            active: neutralDark[700],
             disabled: alpha(neutralDark[900], 0.38),
             disabledBackground: alpha(neutralDark[900], 0.12),
             focus: alpha(neutralDark[900], 0.16),

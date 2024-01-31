@@ -41,6 +41,10 @@ const NewGame = (props) => {
         (gameOptions && gameOptions.difficultyLevel) || DIFFICULTY_NORMAL
     );
 
+    const handleChangeLength = useCallback((event) => {
+        // setGameMode(event.target.value);
+    }, []);
+    
     const handleChangeMode = useCallback((event) => {
         setGameMode(event.target.value);
     }, []);
@@ -80,7 +84,6 @@ const NewGame = (props) => {
                             color="secondary"
                             display="block"
                             mt="-20px"
-                            pb="20px"
                             sx={
                                 {
                                     // fontSize: 20,
@@ -106,15 +109,15 @@ const NewGame = (props) => {
                             />
                         </Typography>
                         <ToggleButtonGroup
-                            color="secondary"
+                            color="primary"
                             value={difficultyLevel}
                             exclusive
-                            onChange={handleChangeDifficultyLevel}
-                            aria-label={t("Difficulty")}
-                            label={t("Difficulty")}
-                            name="Difficulty"
-                            size="small"
-							// disabled={option.disabled}
+                            onChange={handleChangeLength}
+                            aria-label={t("Length")}
+                            label={t("Length")}
+                            name="Length"
+                            size="short"
+							disabled={true}
 							sx={{
 								justifyContent: 'center',
 							}}
@@ -175,7 +178,7 @@ const NewGame = (props) => {
                             )}
                         </TextField>
                         <ToggleButtonGroup
-                            color="secondary"
+                            color="primary"
                             value={difficultyLevel}
                             exclusive
                             onChange={handleChangeDifficultyLevel}

@@ -43,7 +43,7 @@ const Home = () => {
 	const showGameOptions = screen === SCREEN_GAME_OPTIONS;
 
     return (
-        <React.Fragment>
+        <>
             <Stack
                 alignItems="center"
                 direction="column"
@@ -66,7 +66,6 @@ const Home = () => {
                             ? 'calc(40vh - ' + (TOP_NAV_HEIGHT) + 'px)'
                             : 'calc(20vh - ' + (TOP_NAV_HEIGHT) + 'px)',
                         transition: 'height 0.25s ease',
-                        // overflowY: "hidden",
                     }}
                 >
                     <Typography variant="h1" display="block" mt="-20px">
@@ -116,7 +115,6 @@ const Home = () => {
                     sx={{
                         height: showHome ? '35vh' : '65vh',
                         transition: 'height 0.25s ease',
-                        // overflowY: "hidden",
                     }}
                 >
                     {showGameOptions ? (
@@ -179,13 +177,13 @@ const Home = () => {
             </Stack>
 			{/*Object.values(countriesData).map(c => {
 				return (
-					<React.Fragment>
+					<>
 						<Typography><br/>{c.cca3} {c.name.common}</Typography>
 						<GameFlag country={c.cca3.toLowerCase()} />
-					</React.Fragment>
+					</>
 				);
 			})*/}
-        </React.Fragment>
+        </>
     );
 };
 

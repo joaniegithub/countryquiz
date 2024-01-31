@@ -79,17 +79,8 @@ const Settings = (props) => {
             </IconButton>
             <DialogContent>
                 <Stack justifyItems="center" spacing={2}>
-                    <Button
-                        onClick={handleClickLightMode}
-                        value={isDarkMode}
-                        endIcon={
-                            isDarkMode ? <LightModeIcon /> : <DarkModeIcon />
-                        }
-                    >
-                        {t(isDarkMode ? "Light Mode" : "Dark Mode")}
-                    </Button>
                     <ToggleButtonGroup
-                        // color="secondary"
+                        color="primary"
                         value={language}
                         exclusive
                         onChange={handleClickLanguage}
@@ -108,8 +99,18 @@ const Settings = (props) => {
                             </ToggleButton>
                         ))}
                     </ToggleButtonGroup>
+                    <Button
+                        onClick={handleClickLightMode}
+                        value={isDarkMode}
+                        endIcon={
+                            isDarkMode ? <LightModeIcon /> : <DarkModeIcon />
+                        }
+                    >
+                        {t(isDarkMode ? "Light Mode" : "Dark Mode")}
+                    </Button>
                     {deferredPrompt && showInstallButton && (
                         <Button
+                            variant="outlined"
                             onClick={handleClickInstall}
                             endIcon={
                                 isMobile ? (

@@ -60,6 +60,29 @@ export function createComponents(config) {
                         boxShadow:
                             '0px 5px 22px rgba(0, 0, 0, 0.04), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.03)',
                     },
+					"&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+						borderRadius: 8,
+                        backgroundColor: palette.background,
+					},
+					"&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+						borderRadius: 8,
+						backgroundColor: palette.neutral[400],
+						minHeight: 30,
+                        width: "5px",
+						border: "3px solid "+palette.neutral[200],
+					},
+					"&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus": {
+						backgroundColor: palette.neutral[400],
+					},
+					"&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active": {
+						backgroundColor: palette.neutral[400],
+					},
+					"&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover": {
+						backgroundColor: palette.neutral[400],
+					},
+					"&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
+                        backgroundColor: palette.background,
+					},
                 },
             },
         },
@@ -100,6 +123,7 @@ export function createComponents(config) {
                     flexDirection: 'column',
                     minHeight: '100%',
                     width: '100%',
+                    overflow: 'hidden',
                 },
                 body: {
                     display: 'flex',
@@ -107,6 +131,7 @@ export function createComponents(config) {
                     flexDirection: 'column',
                     minHeight: '100%',
                     width: '100%',
+                    overflow: 'hidden',
                 },
                 '#__next': {
                     display: 'flex',

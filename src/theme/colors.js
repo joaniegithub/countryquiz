@@ -49,17 +49,17 @@ export const indigo = withAlphas({
     lightest: '#F5F7FF',
     light: '#EBEEFE',
     main: '#312E81',
-    dark: '#312E81',
-    darkest: '#312E81',
-    contrast: '#312E81',
+    dark: '#282574',
+    darkest: '#282574',
+    contrast: '#282574',
     contrastText: '#FFFFFF',
 });
 export const indigoDarkMode = withAlphas({
     lightest: '#F5F7FF',
     light: '#EBEEFE',
     main: '#312E81',
-    dark: '#312E81',
-    darkest: '#312E81',
+    dark: '#282574',
+    darkest: '#282574',
     contrast: '#6366F1',
     contrastText: '#FFFFFF',
 });

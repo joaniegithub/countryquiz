@@ -12,18 +12,10 @@ import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import {
 	Autocomplete,
     Box,
-    Button,
     Card,
-	List,
-	ListItem,
-    Stack,
     TextField,
-    ToggleButton,
-    ToggleButtonGroup,
-    Typography,
 } from '@mui/material';
 
-import FunTypo from './ui/FunTypo';
 import GameFlag from './ui/GameFlag';
 import CountryCard from './ui/CountryCard';
 import MainButton from './ui/MainButton';
@@ -33,18 +25,30 @@ const Wiki = (props) => {
     const theme = useTheme();
 	const { t, i18n } = useTranslation();
 
-	const [country, setCountry] = useState(undefined);
+	const [country, setCountry] = useState(countriesData[0]);
+	const [countryIndex, setCountryIndex] = useState(0);
 
 	const handleChangeCountry = useCallback((event, newInputValue) => {
 		setCountry(newInputValue);
+		setCountryIndex(countriesData.indexOf(newInputValue));
 	});
 
     const handleClickHome = () => {
         dispatch(setInWiki(false));
     };
+    const handleClickPrevious = () => {
+		const newIndex = countryIndex-1 < 0 ? countriesData.length-1 : countryIndex-1;
+		setCountry(countriesData[newIndex]);
+		setCountryIndex(newIndex);
+    };
+    const handleClickNext = () => {
+		const newIndex = countryIndex+1 > countriesData.length ? 0 : countryIndex+1;
+		setCountry(countriesData[newIndex]);
+		setCountryIndex(newIndex);
+    };
 
     return (
-        <React.Fragment>
+        <>
 			<Box
 				display="flex"
                 alignItems="center"
@@ -53,11 +57,10 @@ const Wiki = (props) => {
                 height="100%"
                 flexGrow={1}
 				position="relative"
-				mt={2}
 				sx={{
 					position: 'relative',
-					height: '100%',
 					width: "100%",
+					height: "100%",
 				}}
 			>
 				<Card
@@ -104,25 +107,26 @@ const Wiki = (props) => {
 						onChange={handleChangeCountry}
 					/>
 				</Card>
-				<CountryCard country={country} />
-			</Box>
-			<Box
-				sx={{
-					textAlign: 'center',
-					height: '10vh',
-				}}
-			>
-				<MainButton
-					buttonP={{
-						color: 'secondary',
-						onClick: handleClickHome,
-						startIcon: (<ArrowCircleLeftIcon />),
+				<CountryCard country={country} onNext={handleClickNext} onPrevious={handleClickPrevious} />
+				<Box
+					my={2}
+					sx={{
+						textAlign: 'center',
+						// height: '10vh',
 					}}
 				>
-					{t("Home")}
-				</MainButton>
+					<MainButton
+						buttonP={{
+							color: 'secondary',
+							onClick: handleClickHome,
+							startIcon: (<ArrowCircleLeftIcon />),
+						}}
+					>
+						{t("Home")}
+					</MainButton>
+				</Box>
 			</Box>
-        </React.Fragment>
+        </>
     );
 };
 

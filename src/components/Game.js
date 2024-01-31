@@ -58,10 +58,10 @@ const Game = () => {
 			{isEnd ? (
 				<GameEnd game={game} />
 			) : (
-				<React.Fragment>
+				<>
 					<GameProgress game={game} />
 					<GameQuestion game={game} />
-				</React.Fragment>
+				</>
 			)}
             <Stack
                 justifyContent="center"

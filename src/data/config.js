@@ -68,7 +68,6 @@ export const gameModes = [
     },
     {
         key: COUNTRY_BY_FLAG,
-        name: "Flag's Country",
         name: {
             fra: "Drapeau - Pays",
             eng: "Flag's Country",

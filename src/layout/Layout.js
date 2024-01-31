@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import { Box, Container } from '@mui/material';
 
 import Footer from './Footer';
-import Header from './Header';
+import Header, { TOP_NAV_HEIGHT } from './Header';
 
 const images = [
     'arab_tile',
@@ -32,7 +32,7 @@ const Layout = (props) => {
     const bg = useMemo(() => <BG />, []);
 
     return (
-        <React.Fragment>
+        <>
             {bg}
             <Container
                 maxWidth="md"
@@ -58,13 +58,14 @@ const Layout = (props) => {
                         flexDirection: 'column',
                         flexGrow: 1,
                         px: 0,
+                        height: `calc(100vh - ${TOP_NAV_HEIGHT}px)`,
                     }}
                 >
                     {props.children}
                 </Box>
                 {/*<Footer />*/}
             </Container>
-        </React.Fragment>
+        </>
     );
 };
 export default Layout;
