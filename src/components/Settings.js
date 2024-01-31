@@ -16,6 +16,7 @@ import {
     Stack,
     ToggleButton,
     ToggleButtonGroup,
+    Typography,
 } from '@mui/material';
 
 import { editSettings } from '../store/actions';
@@ -121,6 +122,14 @@ const Settings = (props) => {
                             {t("Install")} Country Quiz
                         </Button>
                     )}
+                    <Typography
+                        component="p"
+                        fontSize="10px"
+                        textAlign="center"
+                        // lineHeight={`${HEIGHT}px`}
+                    >
+                        Country Quiz @2024 Joanie Lessnick
+                    </Typography>
                 </Stack>
             </DialogContent>
         </Dialog>

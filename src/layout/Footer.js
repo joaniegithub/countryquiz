@@ -13,14 +13,6 @@ const Footer = (props) => {
 
     return (
         <Box component="footer">
-            <Typography
-                component="p"
-                fontSize="12px"
-                textAlign="center"
-                lineHeight={`${HEIGHT}px`}
-            >
-                Country Quiz @2024 Joanie Lessnick
-            </Typography>
         </Box>
     );
 };

@@ -5,9 +5,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, SvgIcon, Typography } from '@mui/material';
 
 
+import  { ReactComponent as GlobeIcon } from 'assets/images/globe.svg';
 import { TOP_NAV_HEIGHT } from 'layout/Header';
 import NewGame from './NewGame';
 import FunTypo from './ui/FunTypo';
@@ -58,11 +59,11 @@ const Home = () => {
                     display="flex"
                     alignItems="center"
                     flexDirection="column"
-                    justifyContent="center"
+                    justifyContent="flex-end"
                     sx={{
                         height: showHome
-                            ? 'calc(60vh - ' + (TOP_NAV_HEIGHT + 24) + 'px)'
-                            : 'calc(25vh - ' + (TOP_NAV_HEIGHT + 24) + 'px)',
+                            ? 'calc(40vh - ' + (TOP_NAV_HEIGHT) + 'px)'
+                            : 'calc(20vh - ' + (TOP_NAV_HEIGHT) + 'px)',
                         transition: 'height 0.25s ease',
                         // overflowY: "hidden",
                     }}
@@ -82,7 +83,7 @@ const Home = () => {
                                     110 * (showHome ? 1 : 0.75) + 'px',
                                 fontWeight: 800,
                                 textAlign: 'center',
-                                mb: -56 * (showHome ? 1 : 0.75) + 'px',
+                                mb: -52 * (showHome ? 1 : 0.75) + 'px',
                                 transition: '0.25s ease',
                             }}
                         />
@@ -109,23 +110,37 @@ const Home = () => {
                     display="flex"
                     alignItems="center"
                     flexDirection="column"
-                    justifyContent="center"
+                    justifyContent="flex-start"
 					width="100%"
                     sx={{
-                        height: showHome ? '5vh' : '65vh',
+                        height: showHome ? '35vh' : '65vh',
                         transition: 'height 0.25s ease',
                         // overflowY: "hidden",
                     }}
                 >
-                    {showGameOptions && <NewGame />}
+                    {showGameOptions ? (
+                        <NewGame />
+                    ) : (
+                        <SvgIcon
+                            sx={{
+                                color: (theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.secondary.main),
+                                // color: purple.darkest,
+                                height: '240px',
+                                width: '240px',
+                                opacity: 0.5,
+                            }}
+                        >
+                            <GlobeIcon />
+                        </SvgIcon>
+                    )}
                 </Box>
                 <Box
                     display="flex"
                     alignItems="center"
                     flexDirection="column"
-                    justifyContent="center"
+                    justifyContent="flex-start"
                     sx={{
-                        height: showHome ? '35vh' : '10vh',
+                        height: showHome ? '25vh' : '10vh',
                         transition: 'height 0.25s ease',
                     }}
                 >

@@ -139,10 +139,14 @@ const reducer = (state = defaultState, { type, ...payload }) => {
 };
 
 const getQuestions = (mode, chosenRegion, chosenDifficultyLevel) => {
-	const independentCountries = countriesData;
-	// const independentCountries = Object.values(countriesData).filter(
-	// 	(c) => c.independent === true
-	// );
+	let independentCountries = countriesData;
+
+    if (chosenDifficultyLevel === DIFFICULTY_NORMAL) {
+        independentCountries = Object.values(countriesData).filter(
+            (c) => c.independent === true
+        );
+    }
+
 	const allCountries =
 		chosenRegion === 'all'
 			? independentCountries

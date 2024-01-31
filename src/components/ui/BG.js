@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { purple, indigo, neutral } from 'theme/colors';
+import  { ReactComponent as GlobeIcon } from 'assets/images/globe.svg';
 
-import { Box } from '@mui/material';
+import { Box, SvgIcon } from '@mui/material';
 
 const BG = (props) => {
     const colors = [
@@ -29,7 +30,9 @@ const BG = (props) => {
             sx={{
                 pointerEvents: 'none',
                 position: 'absolute',
-                display: 'block',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
                 width: '100%',
                 height: '100%',
                 overflow: 'hidden',
@@ -95,3 +98,16 @@ const BG = (props) => {
 };
 
 export default BG;
+/*
+
+            <SvgIcon
+                sx={{
+                    color: purple.darkest,
+                    height: '240px',
+                    width: '240px',
+                    opacity: 0.15,
+                }}
+            >
+                <GlobeIcon />
+            </SvgIcon>
+*/

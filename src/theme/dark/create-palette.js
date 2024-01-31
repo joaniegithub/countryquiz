@@ -56,10 +56,10 @@ export function createPalette() {
         success,
         text: {
             title: common.white,
-            main: neutralDark[900],
-            primary: neutralDark[900],
+            main: neutralDark[1000],
+            primary: neutralDark[1000],
             secondary: neutralDark[500],
-            disabled: alpha(neutralDark[900], 0.38),
+            disabled: alpha(neutralDark[1000], 0.38),
         },
         warning,
     };
