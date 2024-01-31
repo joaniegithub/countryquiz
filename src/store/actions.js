@@ -24,13 +24,15 @@ export const newGame = () => {
 export const startGame = (
     _chosenGameMode,
     _chosenRegion,
-    _chosenDifficultyLevel
+    _chosenDifficultyLevel,
+    _choosenIndependantOnly
 ) => {
     return {
         type: constants.START_GAME,
         chosenGameMode: _chosenGameMode,
         chosenRegion: _chosenRegion,
         chosenDifficultyLevel: _chosenDifficultyLevel,
+        chosenIndependantOnly: _choosenIndependantOnly,
     };
 };
 

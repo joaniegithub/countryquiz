@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTheme } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
 
-import regionsData from 'data/regions.json';
 import countriesData from 'data/countries.json';
 import { setInWiki } from 'store/actions';
 
@@ -22,16 +20,15 @@ import MainButton from './ui/MainButton';
 
 const Wiki = (props) => {
     const dispatch = useDispatch();
-    const theme = useTheme();
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
 	const [country, setCountry] = useState(countriesData[0]);
 	const [countryIndex, setCountryIndex] = useState(0);
 
-	const handleChangeCountry = useCallback((event, newInputValue) => {
+	const handleChangeCountry = (event, newInputValue) => {
 		setCountry(newInputValue);
 		setCountryIndex(countriesData.indexOf(newInputValue));
-	});
+    };
 
     const handleClickHome = () => {
         dispatch(setInWiki(false));
@@ -112,7 +109,6 @@ const Wiki = (props) => {
 					my={2}
 					sx={{
 						textAlign: 'center',
-						// height: '10vh',
 					}}
 				>
 					<MainButton

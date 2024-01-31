@@ -1,4 +1,4 @@
-export const GAME_VERSION = '1.05';
+export const GAME_VERSION = '1.06';
 
 export const DIFFICULTY_FLASHCARD = 'flashCard';
 export const DIFFICULTY_NORMAL = 'normal';
@@ -40,6 +40,10 @@ export const gameModes = [
             fra: "Pays - Capitale",
             eng: "Country's Capital",
         },
+        shortName: {
+            fra: "Capitales",
+            eng: "Capitals",
+        },
         questionPhrase: {
             fra: 'Quelle est la capitale de ce pays?',
             eng: "What is this country's capital?",
@@ -56,6 +60,10 @@ export const gameModes = [
             fra: "Capitale - Pays",
             eng: "Capital's Country",
         },
+        shortName: {
+            fra: "Capitales",
+            eng: "Capitals",
+        },
         questionPhrase: {
             fra: 'De quel pays cette ville est-elle la capitale?',
             eng: 'Which country is this capital from?',
@@ -71,6 +79,10 @@ export const gameModes = [
         name: {
             fra: "Drapeau - Pays",
             eng: "Flag's Country",
+        },
+        shortName: {
+            fra: "Drapeaux",
+            eng: "Flags",
         },
         questionPhrase: {
             fra: 'À quel pays appartient ce drapeau?',

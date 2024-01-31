@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import { gameAnswer } from 'store/actions';
+import { useGameMode } from 'store/selector';
 
 import {
     Card,
@@ -31,6 +32,7 @@ const GameQuestion = (props) => {
     const question = game.questions && game.questions[turn];
     const difficultyLevel = game.difficultyLevel;
     const rightAnswer = question ? question.answer : undefined;
+	const gameMode = useGameMode();
 
     const handleChoiceClick = (_chosenAnswer) => {
         if (phase === 0) {
@@ -64,7 +66,7 @@ const GameQuestion = (props) => {
 				}}
 			>
 				<FunTypo
-					text={game.gameMode.questionPhrase[i18n.language]}
+					text={gameMode.questionPhrase[i18n.language]}
 					color={theme.palette.primary.contrast.replace(
 						'#',
 						''
@@ -79,7 +81,7 @@ const GameQuestion = (props) => {
 						mb: '16px',
 					}}
 				/>
-				{game.gameMode.key === COUNTRY_BY_FLAG ? (
+				{gameMode.key === COUNTRY_BY_FLAG ? (
 					<React.Fragment>
 						<GameFlag country={question.country.toLowerCase()} />
 					</React.Fragment>

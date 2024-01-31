@@ -1,3 +1,4 @@
+import { gameModes } from 'data/config';
 import { useSelector } from 'react-redux';
 
 // SELECTOR HOOKS
@@ -34,6 +35,14 @@ export const useCurrentGame = () => {
 export const useGameOptions = () => {
     return useSelector((state) => {
         return state.gameOptions;
+    });
+};
+export const useGameMode = () => {
+    return useSelector((state) => {
+        if (state.currentGame) {
+            return gameModes.find((gm) => gm.key === state.currentGame.gameMode);
+        }
+        return undefined;
     });
 };
 // export const useShowRules = () => {

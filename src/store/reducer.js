@@ -32,6 +32,8 @@ const gameDefaultState = {
     currentTurn: 0,
     currentPhase: 0,
     mode: 0,
+    region: 'all',
+    independantOnly: false,
     difficultyLevel: DIFFICULTY_NORMAL,
     nbChoices: 4,
     flashCardMode: false,
@@ -69,6 +71,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                           gameMode: game.gameMode.key,
                           region: game.region,
                           difficultyLevel: game.difficultyLevel,
+                          independantOnly: game.independantOnly,
                       }
                     : undefined,
             };
@@ -77,16 +80,17 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenGameMode = payload.chosenGameMode;
             const chosenRegion = payload.chosenRegion;
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
+            const chosenIndependantOnly = payload.chosenIndependantOnly;
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
-			const questions = getQuestions(mode, chosenRegion, chosenDifficultyLevel);
+			const questions = getQuestions(mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly);
 
             return {
                 ...state,
                 inGame: true,
                 currentGame: {
                     ...gameDefaultState,
-                    gameMode: mode,
+                    gameMode: mode.key,
                     region: chosenRegion,
                     difficultyLevel: chosenDifficultyLevel,
                     questions: shuffle(questions),
@@ -138,19 +142,20 @@ const reducer = (state = defaultState, { type, ...payload }) => {
     }
 };
 
-const getQuestions = (mode, chosenRegion, chosenDifficultyLevel) => {
-	let independentCountries = countriesData;
+const getQuestions = (mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly) => {
+	let countriesList = countriesData;
 
-    if (chosenDifficultyLevel === DIFFICULTY_NORMAL) {
-        independentCountries = Object.values(countriesData).filter(
+    console.log(chosenIndependantOnly);
+    if (chosenIndependantOnly) {
+        countriesList = Object.values(countriesData).filter(
             (c) => c.independent === true
         );
     }
 
 	const allCountries =
 		chosenRegion === 'all'
-			? independentCountries
-			: independentCountries.filter(
+			? countriesList
+			: countriesList.filter(
 					(c) => c.region === chosenRegion
 				);
 

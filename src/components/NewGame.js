@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTheme } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
@@ -9,11 +9,11 @@ import regionsData from 'data/regions.json';
 import { startGame } from 'store/actions';
 import { useGameOptions } from 'store/selector';
 
-import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import {
-    Box,
     Button,
     Card,
+    Checkbox,
+    FormControlLabel,
     Stack,
     TextField,
     ToggleButton,
@@ -31,6 +31,9 @@ const NewGame = (props) => {
 
     const gameOptions = useGameOptions();
 
+    const [independantOnly, setIndependantOnly] = useState(
+        (gameOptions && gameOptions.independantOnly)
+    );
     const [gameMode, setGameMode] = useState(
         (gameOptions && gameOptions.gameMode) || CAPITAL
     );
@@ -41,24 +44,28 @@ const NewGame = (props) => {
         (gameOptions && gameOptions.difficultyLevel) || DIFFICULTY_NORMAL
     );
 
-    const handleChangeLength = useCallback((event) => {
+    const handleChangeLength = (event) => {
         // setGameMode(event.target.value);
-    }, []);
+    };
+
+    const handleChangeIndependant = (event) => {
+        setIndependantOnly(event.target.checked);
+    };
     
-    const handleChangeMode = useCallback((event) => {
+    const handleChangeMode = (event) => {
         setGameMode(event.target.value);
-    }, []);
+    };
 
-    const handleChangeRegion = useCallback((event) => {
+    const handleChangeRegion = (event) => {
         setRegion(event.target.value);
-    }, []);
+    };
 
-    const handleChangeDifficultyLevel = useCallback((event) => {
+    const handleChangeDifficultyLevel = (event) => {
         setDifficultyLevel(event.target.value);
-    }, []);
+    };
 
     const handleClickStart = () => {
-        dispatch(startGame(gameMode, region, difficultyLevel));
+        dispatch(startGame(gameMode, region, difficultyLevel, independantOnly));
     };
 
     return (
@@ -78,7 +85,7 @@ const NewGame = (props) => {
                         minWidth: '240px',
                     }}
                 >
-                    <Stack spacing={3}>
+                    <Stack spacing={2}>
                         <Typography
                             variant="h2"
                             color="secondary"
@@ -133,6 +140,15 @@ const NewGame = (props) => {
 								{t("Long")}
 							</ToggleButton>
                         </ToggleButtonGroup>
+                        <FormControlLabel
+                            control={<Checkbox defaultChecked />}
+                            value={independantOnly}
+                            onChange={handleChangeIndependant}
+                            label={<Typography fontSize="12px" color="textSecondary">{t("Independent countries only")}</Typography>}
+                            sx={{
+                                mt: '0 !important',
+                            }}
+                        />
                         <TextField
                             fullWidth
                             label={t("Mode")}
