@@ -3,7 +3,7 @@
         "eng": "Americas",
         "fra": "Amériques",
         "article": {
-            "eng": "of",
+            "eng": "of ",
             "fra": "des"
         },
         "subregions": [
@@ -29,7 +29,7 @@
         "eng": "Europe",
         "fra": "Europe",
         "article": {
-            "eng": "of",
+            "eng": "of ",
             "fra": "d'"
         },
         "subregions": [
@@ -63,7 +63,7 @@
         "eng": "Asia",
         "fra": "Asie",
         "article": {
-            "eng": "of",
+            "eng": "of ",
             "fra": "d'"
         },
         "subregions": [
@@ -93,7 +93,7 @@
         "eng": "Africa",
         "fra": "Afrique",
         "article": {
-            "eng": "of",
+            "eng": "of ",
             "fra": "d'"
         },
         "subregions": [
@@ -123,7 +123,7 @@
         "eng": "Oceania",
         "fra": "Océanie",
         "article": {
-            "eng": "of",
+            "eng": "of ",
             "fra": "d'"
         },
         "subregions": [
@@ -149,7 +149,7 @@
         "eng": "Antarctic",
 		"fra": "Antarctique",
         "article": {
-            "eng": "of",
+            "eng": "of ",
             "fra": "d'"
         },
         "subregions": []

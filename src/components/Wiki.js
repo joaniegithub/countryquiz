@@ -60,29 +60,18 @@ const Wiki = (props) => {
 					height: "100%",
 				}}
 			>
-				<Card
-					raised={true}
-					sx={{
-						px: 2,
-						py: 2,
-						mt: 2,
-						textAlign: 'center',
-						width: '100%',
-						boxSizing: 'border-box',
-					}}
-				>
 					<Autocomplete
 						id="country-select"
-						sx={{ width: "100%" }}
+						sx={{ width: "300px" }}
 						options={countriesData}
 						// autoHighlight
 						blurOnSelect
 						getOptionLabel={(option) => option.name.common}
 						renderOption={(props, option) => (
-							<Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+							<Box component="li" sx={{ '& > img': { mr: 1 } }} {...props}>
 								<Box
 									sx={{
-										width: '40px',
+										width: '36px',
 									}}
 								>
 									<GameFlag border={false} country={option.cca3.toLowerCase()} />
@@ -103,7 +92,6 @@ const Wiki = (props) => {
 						value={country}
 						onChange={handleChangeCountry}
 					/>
-				</Card>
 				<CountryCard country={country} onNext={handleClickNext} onPrevious={handleClickPrevious} />
 				<Box
 					my={2}

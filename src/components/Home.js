@@ -48,7 +48,7 @@ const Home = () => {
                 alignItems="center"
                 direction="column"
                 justifyContent="flex-start"
-                height="100%"
+                height="100vh"
                 flexGrow={1}
                 sx={
                     {

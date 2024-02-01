@@ -141,8 +141,7 @@ const NewGame = (props) => {
 							</ToggleButton>
                         </ToggleButtonGroup>
                         <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            value={independantOnly}
+                            control={<Checkbox defaultChecked={independantOnly} />}
                             onChange={handleChangeIndependant}
                             label={<Typography fontSize="12px" color="textSecondary">{t("Independent countries only")}</Typography>}
                             sx={{

@@ -47,6 +47,7 @@ export const getAllCountriesCodes = () => {
 const reducer = (state = defaultState, { type, ...payload }) => {
     // console.log(state, type, payload);
     const game = state.currentGame;
+    const settings = state.settings;
 
     switch (type) {
         case constants.EDIT_SETTINGS:
@@ -83,7 +84,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenIndependantOnly = payload.chosenIndependantOnly;
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
-			const questions = getQuestions(mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly);
+			const questions = getQuestions(settings.language, mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly);
 
             return {
                 ...state,
@@ -92,6 +93,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     ...gameDefaultState,
                     gameMode: mode.key,
                     region: chosenRegion,
+                    independantOnly: chosenIndependantOnly,
                     difficultyLevel: chosenDifficultyLevel,
                     questions: shuffle(questions),
                 },
@@ -142,10 +144,9 @@ const reducer = (state = defaultState, { type, ...payload }) => {
     }
 };
 
-const getQuestions = (mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly) => {
+const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly) => {
 	let countriesList = countriesData;
 
-    console.log(chosenIndependantOnly);
     if (chosenIndependantOnly) {
         countriesList = Object.values(countriesData).filter(
             (c) => c.independent === true
@@ -174,15 +175,21 @@ const getQuestions = (mode, chosenRegion, chosenDifficultyLevel, chosenIndependa
 			...(Array.isArray(answers) ? answers : [answers])
 		);
 	}, []);
-	// console.log(allAnswers);
+	// console.log(language);
 
 	const questions = allCountries.map((c) => {
-		const question = mode.questionSubProperty
+		let question = mode.questionSubProperty
 			? c[mode.questionProperty][mode.questionSubProperty]
 			: c[mode.questionProperty];
+		if (language === "fra" && mode.questionProperty === "name" && mode.questionSubProperty === "common") {
+			question = c.translations[language]["common"];
+		}
 		let answers = mode.answerSubProperty
 			? c[mode.answerProperty][mode.answerSubProperty]
 			: c[mode.answerProperty];
+		if (language === "fra" && mode.answerProperty === "name" && mode.answerSubProperty === "common") {
+			answers = c.translations[language];
+		}
 		const answer = Array.isArray(answers) ? answers.join(', ') : answers;
 		const choices = getChoices(
 			gameDefaultState.nbChoices,
