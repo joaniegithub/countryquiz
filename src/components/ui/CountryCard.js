@@ -35,6 +35,7 @@ const CountryCard = (props) => {
 						key={cBorder.name.common}
 						sx={{
 							background: 'transparent',
+							color: theme.palette.text.main,
 							border: 'none',
 							padding: 0,
 							cursor: 'pointer',
@@ -77,31 +78,51 @@ const CountryCard = (props) => {
 				flexGrow: 1,
 			}}
         >
-			<IconButton
-				onClick={onPrevious}
-				sx={{
-					backgroundColor: theme.palette.primary.alpha12,
-					color: theme.palette.text.primary,
-					position: 'absolute',
-					left: '-20px',
-					top: '50%',
-					transform: 'translate(0, -10px)',
-				}}
-			>
-				<ArrowBackIosNewIcon />
-			</IconButton>
 			<GameFlag
 				border={false} 
 				country={country.cca3.toLowerCase()}
 			/>
-			<Typography
-				fontSize="20px"
-				fontWeight="700"
-				lineHeight="28px"
-				pt="12px"
+			<Box
+				mt="12px"
+				sx={{
+					position: 'relative',
+				}}
 			>
-				{i18n.language === "fra" ? country.translations[i18n.language]["common"] : country.name.common}
-			</Typography>
+				<IconButton
+					onClick={onPrevious}
+					sx={{
+						backgroundColor: theme.palette.primary.alpha12,
+						color: theme.palette.text.primary,
+						position: 'absolute',
+						left: '0px',
+						top: '50%',
+						transform: 'translate(0, -20px)',
+					}}
+				>
+					<ArrowBackIosNewIcon />
+				</IconButton>
+				<Typography
+					fontSize="20px"
+					fontWeight="700"
+					lineHeight="28px"
+					mx="36px"
+				>
+					{i18n.language === "fra" ? country.translations[i18n.language]["common"] : country.name.common}
+				</Typography>
+				<IconButton
+					onClick={onNext}
+					sx={{
+						backgroundColor: theme.palette.primary.alpha12,
+						color: theme.palette.text.primary,
+						position: 'absolute',
+						right: '0px',
+						top: '50%',
+						transform: 'translate(0, -20px)',
+					}}
+				>
+					<ArrowForwardIosIcon />
+				</IconButton>
+			</Box>
 			<Table
 				size="small"
 				sx={{
@@ -150,19 +171,6 @@ const CountryCard = (props) => {
 					</Row>
 				</TableBody>
 			</Table>
-			<IconButton
-				onClick={onNext}
-				sx={{
-					backgroundColor: theme.palette.primary.alpha12,
-					color: theme.palette.text.primary,
-					position: 'absolute',
-					right: '-20px',
-					top: '50%',
-					transform: 'translate(0, -10px)',
-				}}
-			>
-				<ArrowForwardIosIcon />
-			</IconButton>
 		</Card>
     );
 };

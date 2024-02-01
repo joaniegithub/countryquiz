@@ -20,6 +20,7 @@
         "cca3": "ABW",
         "cioc": "ARU",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -440,6 +441,7 @@
         "cca3": "AIA",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -575,6 +577,7 @@
         "cca3": "ALA",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FIN",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -1406,6 +1409,7 @@
         "cca3": "ASM",
         "cioc": "ASA",
         "independent": false,
+        "sovereignState": "USA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -1669,6 +1673,7 @@
         "cca3": "ATF",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -3631,6 +3636,7 @@
         "cca3": "BLM",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -3771,6 +3777,7 @@
         "cca3": "SHN",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -4204,6 +4211,7 @@
         "cca3": "BMU",
         "cioc": "BER",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -4508,6 +4516,7 @@
         "cca3": "BES",
         "cioc": "",
         "independent": false,
+        "sovereignState": "NLD",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -5213,6 +5222,7 @@
         "cca3": "BVT",
         "cioc": "",
         "independent": false,
+        "sovereignState": "NOR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {},
@@ -5833,6 +5843,7 @@
         "cca3": "CCK",
         "cioc": "",
         "independent": false,
+        "sovereignState": "AUS",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -7031,6 +7042,7 @@
         "cca3": "COK",
         "cioc": "COK",
         "independent": false,
+        "sovereignState": "NZL",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -7886,6 +7898,7 @@
         "cca3": "CUW",
         "cioc": "",
         "independent": false,
+        "sovereignState": "NLD",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -8030,6 +8043,7 @@
         "cca3": "CXR",
         "cioc": "",
         "independent": false,
+        "sovereignState": "AUS",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -8165,6 +8179,7 @@
         "cca3": "CYM",
         "cioc": "CAY",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -9868,6 +9883,8 @@
         "cca3": "ESH",
         "cioc": "",
         "independent": false,
+        "sovereignState": "MAR",
+        "disputed": true,
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -10725,6 +10742,7 @@
         "cca3": "FLK",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -11003,6 +11021,7 @@
         "cca3": "FRO",
         "cioc": "",
         "independent": false,
+        "sovereignState": "DNK",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -11694,6 +11713,7 @@
         "cca3": "GGY",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -11974,6 +11994,7 @@
         "cca3": "GIB",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -12248,6 +12269,7 @@
         "cca3": "GLP",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -13087,6 +13109,7 @@
         "cca3": "GRL",
         "cioc": "",
         "independent": false,
+        "sovereignState": "DNK",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -13357,6 +13380,7 @@
         "cca3": "GUF",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -13500,6 +13524,7 @@
         "cca3": "GUM",
         "cioc": "GUM",
         "independent": false,
+        "sovereignState": "USA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -13776,6 +13801,7 @@
         "cca3": "HKG",
         "cioc": "HKG",
         "independent": false,
+        "sovereignState": "CHN",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -13912,6 +13938,7 @@
         "cca3": "HMD",
         "cioc": "",
         "independent": false,
+        "sovereignState": "AUS",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {},
@@ -14739,6 +14766,7 @@
         "cca3": "IMN",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -15030,6 +15058,7 @@
         "cca3": "IOT",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -16161,6 +16190,7 @@
         "cca3": "JEY",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -19402,6 +19432,7 @@
         "cca3": "MAC",
         "cioc": "",
         "independent": false,
+        "sovereignState": "CHN",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -19544,6 +19575,7 @@
         "cca3": "MAF",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -21510,6 +21542,7 @@
         "cca3": "MNP",
         "cioc": "",
         "independent": false,
+        "sovereignState": "USA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -21929,6 +21962,7 @@
         "cca3": "MSR",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -22064,6 +22098,7 @@
         "cca3": "MTQ",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -22627,6 +22662,7 @@
         "cca3": "MYT",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -22945,6 +22981,7 @@
         "cca3": "NCL",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -23219,6 +23256,7 @@
         "cca3": "NFK",
         "cioc": "",
         "independent": false,
+        "sovereignState": "AUS",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -23642,6 +23680,7 @@
         "cca3": "NIU",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -24922,6 +24961,7 @@
         "cca3": "PCN",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -25782,6 +25822,7 @@
         "cca3": "PRI",
         "cioc": "PUR",
         "independent": false,
+        "sovereignState": "USA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -26351,6 +26392,8 @@
         "cca3": "PSE",
         "cioc": "PLE",
         "independent": false,
+        "sovereignState": "ISR",
+        "disputed": true,
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -26499,6 +26542,7 @@
         "cca3": "PYF",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -26774,6 +26818,7 @@
         "cca3": "REU",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -27929,6 +27974,7 @@
         "cca3": "SGS",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -28064,6 +28110,7 @@
         "cca3": "SJM",
         "cioc": "",
         "independent": false,
+        "sovereignState": "NOR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -28893,6 +28940,7 @@
         "cca3": "SPM",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -30153,6 +30201,7 @@
         "cca3": "SXM",
         "cioc": "",
         "independent": false,
+        "sovereignState": "NDL",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -30579,6 +30628,7 @@
         "cca3": "TCA",
         "cioc": "",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -31295,6 +31345,7 @@
         "cca3": "TKL",
         "cioc": "",
         "independent": false,
+        "sovereignState": "NZL",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -32418,6 +32469,7 @@
         "cca3": "TWN",
         "cioc": "TPE",
         "independent": false,
+        "sovereignState": "CHN",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -32980,6 +33032,7 @@
         "cca3": "UMI",
         "cioc": "",
         "independent": false,
+        "sovereignState": "USA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -34334,6 +34387,7 @@
         "cca3": "VGB",
         "cioc": "IVB",
         "independent": false,
+        "sovereignState": "GBR",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -34469,6 +34523,7 @@
         "cca3": "VIR",
         "cioc": "ISV",
         "independent": false,
+        "sovereignState": "USA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {
@@ -34894,6 +34949,7 @@
         "cca3": "WLF",
         "cioc": "",
         "independent": false,
+        "sovereignState": "FRA",
         "status": "officially-assigned",
         "unMember": false,
         "currencies": {

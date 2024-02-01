@@ -121,9 +121,8 @@ export function createComponents(config) {
                     WebkitFontSmoothing: 'antialiased',
                     display: 'flex',
                     flexDirection: 'column',
-                    minHeight: '100%',
+                    minHeight: '100vh',
                     width: '100%',
-                    overflow: 'hidden',
                 },
                 body: {
                     display: 'flex',
@@ -131,7 +130,6 @@ export function createComponents(config) {
                     flexDirection: 'column',
                     minHeight: '100vh',
                     width: '100%',
-                    overflow: 'hidden',
                 },
                 '#__next': {
                     display: 'flex',

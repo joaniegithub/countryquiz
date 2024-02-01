@@ -67,7 +67,7 @@ const Wiki = (props) => {
 			>
 					<Autocomplete
 						id="country-select"
-						sx={{ width: "300px" }}
+						sx={{ width: "300px", mt: 2 }}
 						options={countriesData}
 						// autoHighlight
 						blurOnSelect
