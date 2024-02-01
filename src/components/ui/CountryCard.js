@@ -10,7 +10,7 @@ import countriesData from 'data/countries.json';
 import regionsData from 'data/regions.json';
 
 const CountryCard = (props) => {
-    const { country, onNext, onPrevious } = props;
+    const { country, onNext, onPrevious, onClickCountry } = props;
 	const { i18n, t } = useTranslation();
     const theme = useTheme();
 
@@ -23,21 +23,39 @@ const CountryCard = (props) => {
 
 	const borders = country.borders && country.borders.length 
 		? country.borders.map((border, index) => {
+			const cBorder = countriesData.find(c => c.cca3 === border);
+
 			return (
 				<>
-					{index > 0 ? ", " : ""}
-					{countriesData.find(c => c.cca3 === border).name.common}
-					<GameFlag
-						border={false} 
-						country={border.toLowerCase()}
-						sxOverrides={{
-							maxWidth: "20px",
-							maxHeight: "none",
-							width: 'auto',
-							height: '12px',
-							marginLeft: '2px',
+					<Typography
+						component="button"
+						display="inline-block"
+						fontSize="14px"
+						onClick={()=>{onClickCountry(cBorder)}}
+						key={cBorder.name.common}
+						sx={{
+							background: 'transparent',
+							border: 'none',
+							padding: 0,
+							cursor: 'pointer',
 						}}
-					/>
+					>
+						{cBorder.name.common}
+						<GameFlag
+							border={false} 
+							country={border.toLowerCase()}
+							sxOverrides={{
+								maxWidth: "20px",
+								maxHeight: "none",
+								width: 'auto',
+								height: '16px',
+								marginLeft: '2px',
+								boxShadow: 'none',
+								verticalAlign: 'middle',
+							}}
+						/>
+					</Typography>
+					{index < country.borders.length-1 ? ", " : ""}
 				</>
 			);
 		})//.join(", ") 
@@ -62,7 +80,8 @@ const CountryCard = (props) => {
 			<IconButton
 				onClick={onPrevious}
 				sx={{
-					backgroundColor: theme.palette.secondary.main,
+					backgroundColor: theme.palette.primary.alpha12,
+					color: theme.palette.text.primary,
 					position: 'absolute',
 					left: '-20px',
 					top: '50%',
@@ -81,7 +100,7 @@ const CountryCard = (props) => {
 				lineHeight="28px"
 				pt="12px"
 			>
-				{country.name.common}
+				{i18n.language === "fra" ? country.translations[i18n.language]["common"] : country.name.common}
 			</Typography>
 			<Table
 				size="small"
@@ -95,7 +114,7 @@ const CountryCard = (props) => {
 				<TableBody>
 					<Row>
 						<CellProp><TypographyTable>{t("Official Name")}</TypographyTable></CellProp>
-						<CellValue><TypographyTable>{country.name.official}</TypographyTable></CellValue>
+						<CellValue><TypographyTable>{i18n.language === "fra" ? country.translations[i18n.language]["official"] : country.name.official}</TypographyTable></CellValue>
 					</Row>
 					<Row>
 						<CellProp><TypographyTable>{t("ISO codes")}</TypographyTable></CellProp>
@@ -134,7 +153,8 @@ const CountryCard = (props) => {
 			<IconButton
 				onClick={onNext}
 				sx={{
-					backgroundColor: theme.palette.secondary.main,
+					backgroundColor: theme.palette.primary.alpha12,
+					color: theme.palette.text.primary,
 					position: 'absolute',
 					right: '-20px',
 					top: '50%',
@@ -168,7 +188,7 @@ const CellProp = (props) => {
 			sx={{
 				color: (theme) => theme.palette.text.secondary,
 				paddingLeft: "10px",
-				verticalAlign: 'middle',
+				verticalAlign: 'baseline',
 				width: '125px',
 			}}
 		>

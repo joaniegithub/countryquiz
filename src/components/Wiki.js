@@ -44,6 +44,11 @@ const Wiki = (props) => {
 		setCountryIndex(newIndex);
     };
 
+	const handleClickCountry = (country) => {
+		setCountry(country);
+		setCountryIndex(countriesData.indexOf(country));
+	};
+
     return (
         <>
 			<Box
@@ -92,7 +97,12 @@ const Wiki = (props) => {
 						value={country}
 						onChange={handleChangeCountry}
 					/>
-				<CountryCard country={country} onNext={handleClickNext} onPrevious={handleClickPrevious} />
+				<CountryCard
+					country={country}
+					onNext={handleClickNext}
+					onClickCountry={handleClickCountry}
+					onPrevious={handleClickPrevious}
+				/>
 				<Box
 					my={2}
 					sx={{

@@ -20,12 +20,16 @@
 
   "Choose a country": "Choose a country",
   "Name": "Name",
+  "Official Name": "Official Name",
+  "ISO codes": "ISO Codes",
   "Status": "Status",
   "independent": "independent",
   "dependent": "dependent",
   "Capital": "Capital",
   "Other Cities": "Other Cities",
   "Borders": "Borders",
+  "Languages": "Languages",
+  "Currencies": "Currencies",
 
   "Game Options": "Game Options",
   "Mode": "Mode",

@@ -129,7 +129,7 @@ export function createComponents(config) {
                     display: 'flex',
                     flex: '1 1 auto',
                     flexDirection: 'column',
-                    minHeight: '100%',
+                    minHeight: '100vh',
                     width: '100%',
                     overflow: 'hidden',
                 },
