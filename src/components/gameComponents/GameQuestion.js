@@ -66,7 +66,7 @@ const GameQuestion = (props) => {
 				}}
 			>
 				<FunTypo
-					text={gameMode.questionPhrase[i18n.language]}
+					text={gameMode.questionType.questionPhrase[i18n.language]}
 					color={theme.palette.primary.contrast.replace(
 						'#',
 						''

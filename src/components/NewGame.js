@@ -115,7 +115,7 @@ const NewGame = (props) => {
                                 }}
                             />
                         </Typography>
-                        <ToggleButtonGroup
+                        {/*<ToggleButtonGroup
                             color="primary"
                             value={difficultyLevel}
                             exclusive
@@ -139,7 +139,7 @@ const NewGame = (props) => {
 							>
 								{t("Long")}
 							</ToggleButton>
-                        </ToggleButtonGroup>
+                        </ToggleButtonGroup>*/}
                         <FormControlLabel
                             control={<Checkbox defaultChecked={independantOnly} />}
                             onChange={handleChangeIndependant}

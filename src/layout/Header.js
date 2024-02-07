@@ -15,7 +15,6 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';
 import {
     Box,
-    Button,
     Dialog,
     DialogActions,
     DialogTitle,
@@ -23,7 +22,6 @@ import {
     Stack,
     Typography,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 
 export const TOP_NAV_HEIGHT = 64;
 

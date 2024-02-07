@@ -25,6 +25,7 @@
   "Status": "Status",
   "independent": "independent",
   "dependent": "dependent",
+  "Sovereign State": "Sovereign State",
   "Capital": "Capital",
   "Other Cities": "Other Cities",
   "Borders": "Borders",
@@ -32,6 +33,7 @@
   "Currencies": "Currencies",
 
   "Game Options": "Game Options",
+  "Independent countries only": "Independent countries only",
   "Mode": "Mode",
   "Region": "Region",
   "World": "World",

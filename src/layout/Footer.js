@@ -1,8 +1,8 @@
-import * as React from 'react';
+// import * as React from 'react';
 
-import { Box, Typography } from '@mui/material';
+// import { Box, Typography } from '@mui/material';
 
-const HEIGHT = 24;
+// const HEIGHT = 24;
 
 const Footer = (props) => {
     // const dispatch = useDispatch();
@@ -11,10 +11,10 @@ const Footer = (props) => {
     // 	dispatch(openRules(true));
     // };
 
-    return (
+    return null; /*(
         <Box component="footer">
         </Box>
-    );
+    );*/
 };
 
 export default Footer;

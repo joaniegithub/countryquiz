@@ -59,6 +59,7 @@ const BG = (props) => {
                                 position: 'absolute',
                                 left: Math.random() * 100 + 'vw',
                                 top: Math.random() * 100 + 'vh',
+								transform: `translate(-${size}, -${size})`,
                                 width: size,
                                 height: size,
                                 // transform: "rotate("+rotate+")",

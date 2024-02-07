@@ -18,48 +18,60 @@ const CountryCard = (props) => {
 		return null;
 	}
 
+	const getCountryLabelWithFlag = (country) => {
+		console.log(country);
+		return (
+			<Typography
+				component="button"
+				display="inline-block"
+				fontSize="14px"
+				lineHeight="16px"
+				onClick={()=>{onClickCountry(country)}}
+				key={country.cca3}
+				sx={{
+					background: 'transparent',
+					color: theme.palette.text.main,
+					border: 'none',
+					padding: 0,
+					cursor: 'pointer',
+				}}
+			>
+				{i18n.language === "eng" ? country.name.common : country.translations[i18n.language]["common"]}
+				<GameFlag
+					border={false} 
+					country={country.cca3}
+					sxOverrides={{
+						maxWidth: "20px",
+						maxHeight: "none",
+						width: 'auto',
+						height: '16px',
+						marginLeft: '3px',
+						marginRight: '1px',
+						boxShadow: 'none',
+						verticalAlign: 'middle',
+					}}
+				/>
+			</Typography>
+		);
+	};
+
 	const region = regionsData.find(r => r.eng === country.region);
 	const subregion = region.subregions ? region.subregions.find(sr => sr.eng === country.subregion) : undefined;
+
+	const hasSovereignState = !country.independent && country.sovereignState;
+	const sovereignStateCountry = hasSovereignState ? countriesData.find(c => c.cca3 === country.sovereignState) : undefined;
 
 	const borders = country.borders && country.borders.length 
 		? country.borders.map((border, index) => {
 			const cBorder = countriesData.find(c => c.cca3 === border);
 
 			return (
-				<>
-					<Typography
-						component="button"
-						display="inline-block"
-						fontSize="14px"
-						onClick={()=>{onClickCountry(cBorder)}}
-						key={cBorder.name.common}
-						sx={{
-							background: 'transparent',
-							color: theme.palette.text.main,
-							border: 'none',
-							padding: 0,
-							cursor: 'pointer',
-						}}
-					>
-						{cBorder.name.common}
-						<GameFlag
-							border={false} 
-							country={border.toLowerCase()}
-							sxOverrides={{
-								maxWidth: "20px",
-								maxHeight: "none",
-								width: 'auto',
-								height: '16px',
-								marginLeft: '2px',
-								boxShadow: 'none',
-								verticalAlign: 'middle',
-							}}
-						/>
-					</Typography>
+				<React.Fragment key={border}>
+					{getCountryLabelWithFlag(cBorder)}
 					{index < country.borders.length-1 ? ", " : ""}
-				</>
+				</React.Fragment>
 			);
-		})//.join(", ") 
+		}) 
 		: "";
 	const languages = (country.languages ? Object.values(country.languages).join(", ") : "");
 	const currencies = (country.currencies ? Object.keys(country.currencies).map(key => country.currencies[key].name).join(", ") : "");
@@ -69,7 +81,7 @@ const CountryCard = (props) => {
 			position="relative"
 			sx={{
 				px: 2,
-				py: 2,
+				py: 3,
 				mt: 2,
 				textAlign: 'center',
 				width: '100%',
@@ -107,7 +119,7 @@ const CountryCard = (props) => {
 					lineHeight="28px"
 					mx="36px"
 				>
-					{i18n.language === "fra" ? country.translations[i18n.language]["common"] : country.name.common}
+					{i18n.language === "eng" ? country.name.common : country.translations[i18n.language]["common"]}
 				</Typography>
 				<IconButton
 					onClick={onNext}
@@ -135,7 +147,7 @@ const CountryCard = (props) => {
 				<TableBody>
 					<Row>
 						<CellProp><TypographyTable>{t("Official Name")}</TypographyTable></CellProp>
-						<CellValue><TypographyTable>{i18n.language === "fra" ? country.translations[i18n.language]["official"] : country.name.official}</TypographyTable></CellValue>
+						<CellValue><TypographyTable>{i18n.language === "eng" ? country.name.official : country.translations[i18n.language]["official"]}</TypographyTable></CellValue>
 					</Row>
 					<Row>
 						<CellProp><TypographyTable>{t("ISO codes")}</TypographyTable></CellProp>
@@ -145,6 +157,12 @@ const CountryCard = (props) => {
 						<CellProp><TypographyTable>{t("Status")}</TypographyTable></CellProp>
 						<CellValue><TypographyTable>{country.independent ? t("independent") : t("dependent")}</TypographyTable></CellValue>
 					</Row>
+					{hasSovereignState && (
+					<Row>
+						<CellProp><TypographyTable>{t("Sovereign State")}</TypographyTable></CellProp>
+						<CellValue><TypographyTable>{getCountryLabelWithFlag(sovereignStateCountry)}</TypographyTable></CellValue>
+					</Row>
+					)}
 					<Row>
 						<CellProp><TypographyTable>{t("Capital")}</TypographyTable></CellProp>
 						<CellValue><TypographyTable>{country.capital && country.capital.join(", ")}</TypographyTable></CellValue>
@@ -197,7 +215,7 @@ const CellProp = (props) => {
 				color: (theme) => theme.palette.text.secondary,
 				paddingLeft: "10px",
 				verticalAlign: 'baseline',
-				width: '125px',
+				width: '140px',
 			}}
 		>
 			{props.children}
