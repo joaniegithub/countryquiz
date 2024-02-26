@@ -40,6 +40,7 @@ const GameQuestion = (props) => {
             dispatch(gameAnswer(_chosenAnswer));
         }
     };
+	// console.log(question);
 	
     const phase = game.currentPhase;
 
@@ -66,7 +67,7 @@ const GameQuestion = (props) => {
 				}}
 			>
 				<FunTypo
-					text={gameMode.questionType.questionPhrase[i18n.language]}
+					text={question.questionType.questionPhrase[i18n.language]}
 					color={theme.palette.primary.contrast.replace(
 						'#',
 						''
@@ -81,7 +82,7 @@ const GameQuestion = (props) => {
 						mb: '16px',
 					}}
 				/>
-				{gameMode.key === COUNTRY_BY_FLAG ? (
+				{question.questionType.key === "country_flag" ? (
 					<React.Fragment>
 						<GameFlag country={question.country.toLowerCase()} />
 					</React.Fragment>
@@ -108,7 +109,7 @@ const GameQuestion = (props) => {
 									'#',
 									''
 								)}
-								key={choice}
+								key={choice+index}
 								phase={phase}
 								choice={choice}
 								rightAnswer={rightAnswer}

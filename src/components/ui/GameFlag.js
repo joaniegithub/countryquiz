@@ -13,9 +13,9 @@ const GameFlag = (props) => {
               height: "auto",
               maxWidth: "60%",
               maxHeight: "15vh",
-			  border: border ? "2px solid #fff" : "none",
-              boxShadow:
-                  '0px 5px 22px rgba(0, 0, 0, 0.4), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.3)',
+			//   border: border ? "2px solid #fff" : "none",
+            //   boxShadow:
+            //       '0px 5px 22px rgba(0, 0, 0, 0.4), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.3)',
             //   maxHeight: { xs: 233, md: 167 },
             //   maxWidth: { xs: 350, md: 250 },
                 ...sxOverrides,

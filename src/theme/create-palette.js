@@ -16,6 +16,7 @@ export function createPalette() {
         action: {
             active: neutral[500],
             disabled: alpha(neutral[900], 0.38),
+            disabledSelected: alpha(neutral[900], 0.56),
             disabledBackground: alpha(neutral[900], 0.12),
             focus: alpha(neutral[900], 0.16),
             hover: alpha(neutral[900], 0.04),

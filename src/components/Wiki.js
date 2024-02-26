@@ -79,7 +79,9 @@ const Wiki = (props) => {
 										width: '36px',
 									}}
 								>
-									<GameFlag border={false} country={option.cca3.toLowerCase()} />
+									<GameFlag
+										country={option.cca3.toLowerCase()}
+									/>
 								</Box>
 								{option.name.common}
 							</Box>

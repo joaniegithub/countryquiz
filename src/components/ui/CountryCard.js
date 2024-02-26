@@ -19,7 +19,7 @@ const CountryCard = (props) => {
 	}
 
 	const getCountryLabelWithFlag = (country) => {
-		console.log(country);
+		// console.log(country);
 		return (
 			<Typography
 				component="button"
@@ -37,8 +37,7 @@ const CountryCard = (props) => {
 				}}
 			>
 				{i18n.language === "eng" ? country.name.common : country.translations[i18n.language]["common"]}
-				<GameFlag
-					border={false} 
+				<GameFlag 
 					country={country.cca3}
 					sxOverrides={{
 						maxWidth: "20px",
@@ -47,7 +46,6 @@ const CountryCard = (props) => {
 						height: '16px',
 						marginLeft: '3px',
 						marginRight: '1px',
-						boxShadow: 'none',
 						verticalAlign: 'middle',
 					}}
 				/>
@@ -91,7 +89,6 @@ const CountryCard = (props) => {
 			}}
         >
 			<GameFlag
-				border={false} 
 				country={country.cca3.toLowerCase()}
 			/>
 			<Box

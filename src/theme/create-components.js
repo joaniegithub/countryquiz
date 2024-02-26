@@ -393,6 +393,14 @@ export function createComponents(config) {
                             borderTopRightRadius: '8px',
                             borderBottomRightRadius: '8px',
                         },
+                    [`& .${toggleButtonClasses.disabled}`]:
+                        {
+                            color: palette.action.disabled,
+                        },
+                    [`& .${toggleButtonClasses.selected}`]:
+                        {
+                            color: palette.action.disabledSelected,
+                        },
                 },
             },
         },

@@ -37,6 +37,7 @@ export const difficultyLevels = [
 ];
 
 export const questionTypes = [
+	// CAPITALS
 	{
 		key: 'capital',
 		questionPhrase: {
@@ -45,16 +46,6 @@ export const questionTypes = [
 		},
 		questionProperty: 'name-common',
 		answerProperty: 'capital',
-		disabled: false,
-	},
-	{
-		key: 'not_capital',
-		questionPhrase: {
-			fra: "Laquelle de ces villes n'est pas la capitale d'un pays?",
-			eng: "Wich of theses cities is not a capital?",
-		},
-		questionProperty: 'name-common', // wrong
-		answerProperty: 'capital', // wrong
 		disabled: false,
 	},
 	{
@@ -68,6 +59,28 @@ export const questionTypes = [
         disabled: false,
 	},
 	{
+		key: 'is_capital',
+		questionPhrase: {
+			fra: "Laquelle de ces villes est la capitale d'un pays?",
+			eng: "Wich of theses cities is a capital?",
+		},
+		questionProperty: undefined,
+		answerProperty: 'capital',
+		disabled: false,
+	},
+	{
+		key: 'not_capital',
+		questionPhrase: {
+			fra: "Laquelle de ces villes N'est PAS la capitale d'un pays?",
+			eng: "Wich of theses cities is NOT a capital?",
+		},
+		questionProperty: undefined,
+		answerProperty: 'capital',
+		disabled: false,
+	},
+
+	// FLAGS
+	{
 		key: 'flag',
         questionPhrase: {
             fra: "Quel est le drapeau de ce pays?",
@@ -75,7 +88,7 @@ export const questionTypes = [
         },
 		questionProperty: 'name-common',
         answerProperty: 'cca3',
-        disabled: false,
+        disabled: true,
 	},
 	{
 		key: 'country_flag',
@@ -87,6 +100,8 @@ export const questionTypes = [
         answerProperty: 'name-common',
         disabled: false,
 	},
+
+	// OFFICIAL NAME
 	{
 		key: 'name_official',
         questionPhrase: {
@@ -95,17 +110,7 @@ export const questionTypes = [
         },
         questionProperty: 'name-common',
         answerProperty: 'name-official',
-        disabled: true,
-	},
-	{
-		key: 'name_official_wrong',
-        questionPhrase: {
-            fra: "Lequel de ces pays n'existe pas?",
-            eng: "Which of these countries does not exist?",
-        },
-        questionProperty: undefined,
-        answerProperty: 'name-official',
-        disabled: true,
+        disabled: false,
 	},
 	{
 		key: 'name_official_good',
@@ -115,8 +120,77 @@ export const questionTypes = [
         },
         questionProperty: undefined,
         answerProperty: 'name-official',
-        disabled: true,
+        disabled: false,
 	},
+	{
+		key: 'name_official_wrong',
+        questionPhrase: {
+            fra: "Lequel de ces pays N'existe PAS?",
+            eng: "Which of these countries DOES NOT exist?",
+        },
+        questionProperty: undefined,
+        answerProperty: 'name-official',
+        disabled: false,
+	},
+
+	// BORDERS
+	{
+		key: 'share_border',
+        questionPhrase: {
+            fra: "Lequel partage une frontière avec ce pays?",
+            eng: "Which of these share a border with this country?",
+        },
+        questionProperty: 'name-common',
+        answerProperty: undefined,
+        disabled: false,
+	},
+	{
+		key: 'share_no_border',
+        questionPhrase: {
+            fra: "Lequel NE partage PAS une frontière avec ce pays?",
+            eng: "Which of these DOES NOT share a border with this country?",
+        },
+        questionProperty: 'name-common',
+        answerProperty: undefined,
+        disabled: false,
+	},
+
+
+	/*
+	Borders:
+	Which of these countries...
+		does not share a border with <COUNTRY>
+		shares a border with COUNTRY
+		has a common border with COUNTRY
+		has the more land borders (similar -+3)
+		has the less land borders (similar -+2 but all >= 2)
+		has no land borders (choices from thoses who only have one)
+
+	Dependance:
+	Which of these countries...
+		has COUNTRY as Sovereign State (choices from dependant states)
+		is the Sovereign State of COUNTRY (choices from countries who are sovereign states)
+		is not independent
+
+	Languages:
+
+	Currencies:
+
+	Area:
+	Water %:
+	https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area
+	Which has the highest
+	which has the lowest
+	what is this country's area
+
+	Population:
+	Which has the highest
+	which has the lowest
+	what is this country's population
+
+	Timezones:
+
+	*/
 ];
 
 export const questionTypeIndex = {};
@@ -160,6 +234,17 @@ export const gameModes = [
             eng: "Flags",
         },
 		questionType: questionTypeIndex.country_flag,
+    },
+    {
+        key: TRIVIA,
+        name: {
+            fra: "Trivia",
+            eng: "Trivia",
+        },
+        shortName: {
+            fra: "Trivia",
+            eng: "Trivia",
+        },
     },
     // {
     //     key: FLAG,
@@ -230,56 +315,3 @@ export const officials = {
 		"Oriental Republic of ___", // South America. Include also in:
 	],
 };
-
-/*
-
-Capitals:
-Wich of theses cities is not a capital
-What is this capital's country
-What is this coutry's capital
-
-Flags:
-What is this flag's country
-What is this coutry's flag
-
-
-Official Name:
-What is the official name of COUNTRY
-*/
-
-/*
-Borders:
-Which of these countries...
-	does not share a border with <COUNTRY>
-	shares a border with COUNTRY
-	has a common border with COUNTRY
-	has the more land borders (similar -+3)
-	has the less land borders (similar -+2 but all >= 2)
-	has no land borders (choices from thoses who only have one)
-
-Dependance:
-Which of these countries...
-	has COUNTRY as Sovereign State (choices from dependant states)
-	is the Sovereign State of COUNTRY (choices from countries who are sovereign states)
-	is not independent
-
-Languages:
-
-Currencies:
-
-Area:
-Water %:
-https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area
-Which has the highest
-which has the lowest
-what is this country's area
-
-Population:
-Which has the highest
-which has the lowest
-what is this country's population
-
-Timezones:
-
-
-*/

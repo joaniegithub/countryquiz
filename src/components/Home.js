@@ -176,14 +176,6 @@ const Home = () => {
                     )}
                 </Box>
             </Stack>
-			{/*Object.values(countriesData).map(c => {
-				return (
-					<>
-						<Typography><br/>{c.cca3} {c.name.common}</Typography>
-						<GameFlag country={c.cca3.toLowerCase()} />
-					</>
-				);
-			})*/}
         </>
     );
 };

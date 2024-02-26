@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useTheme } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
 
-import { CAPITAL, DIFFICULTY_NORMAL, difficultyLevels, gameModes } from 'data/config';
+import { CAPITAL, DIFFICULTY_NORMAL, TRIVIA, difficultyLevels, gameModes } from 'data/config';
 import regionsData from 'data/regions.json';
 import { startGame } from 'store/actions';
 import { useGameOptions } from 'store/selector';
@@ -35,7 +35,7 @@ const NewGame = (props) => {
         (gameOptions && gameOptions.independantOnly)
     );
     const [gameMode, setGameMode] = useState(
-        (gameOptions && gameOptions.gameMode) || CAPITAL
+        (gameOptions && gameOptions.gameMode) || TRIVIA
     );
     const [region, setRegion] = useState(
         (gameOptions && gameOptions.region) || 'all'
@@ -140,14 +140,6 @@ const NewGame = (props) => {
 								{t("Long")}
 							</ToggleButton>
                         </ToggleButtonGroup>*/}
-                        <FormControlLabel
-                            control={<Checkbox defaultChecked={independantOnly} />}
-                            onChange={handleChangeIndependant}
-                            label={<Typography fontSize="12px" color="textSecondary">{t("Independent countries only")}</Typography>}
-                            sx={{
-                                mt: '0 !important',
-                            }}
-                        />
                         <TextField
                             fullWidth
                             label={t("Mode")}
@@ -156,7 +148,7 @@ const NewGame = (props) => {
                             required
                             select
                             SelectProps={{ native: true }}
-                            value={gameMode || CAPITAL}
+                            value={gameMode || TRIVIA}
                         >
                             {gameModes.map((option) => (
                                 <option
@@ -168,7 +160,17 @@ const NewGame = (props) => {
                                 </option>
                             ))}
                         </TextField>
+                        <FormControlLabel
+							disabled={gameMode === TRIVIA}
+                            control={<Checkbox defaultChecked={independantOnly} />}
+                            onChange={handleChangeIndependant}
+                            label={<Typography fontSize="12px" color="textSecondary">{t("Independent countries only")}</Typography>}
+							sx={{
+                                mt: '0 !important',
+                            }}
+                        />
                         <TextField
+							disabled={gameMode === TRIVIA}
                             fullWidth
                             label={t("Region")}
                             name="Region"
@@ -193,6 +195,7 @@ const NewGame = (props) => {
                             )}
                         </TextField>
                         <ToggleButtonGroup
+							disabled={gameMode === TRIVIA}
                             color="primary"
                             value={difficultyLevel}
                             exclusive
