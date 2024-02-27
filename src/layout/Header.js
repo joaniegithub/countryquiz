@@ -1,13 +1,14 @@
 import { useTheme } from '@emotion/react';
-import Settings from 'components/Settings';
-import FunTypo from 'components/ui/FunTypo';
-import MainButton from 'components/ui/MainButton';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
+
+import Settings from 'components/Settings';
+import FunTypo from 'components/ui/FunTypo';
+import MainButton from 'components/ui/MainButton';
+
 import { newGame } from 'store/actions';
-import { useInGame } from 'store/selector';
-import { useInWiki } from 'store/selector';
+import { useInGame, useCurrentGame, useInWiki } from 'store/selector';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -18,6 +19,7 @@ export const TOP_NAV_HEIGHT = 64;
 const Header = (props) => {
     const { deferredPrompt } = props;
     const inGame = useInGame();
+    const game = useCurrentGame();
     const inWiki = useInWiki();
     const theme = useTheme();
     const dispatch = useDispatch();
@@ -52,6 +54,7 @@ const Header = (props) => {
             closeRef.current.focus();
         }
     };
+    const isEnd = game.currentTurn >= game.questions.length;
 
     return (
         <React.Fragment>
@@ -116,9 +119,13 @@ const Header = (props) => {
                     }}
                 >
                     {inGame ? (
-                        <IconButton aria-label={t('Close')} onClick={handleClickCloseGame} size="large" color="text">
-                            <CancelIcon />
-                        </IconButton>
+                        <>
+                            {isEnd && (
+                                <IconButton aria-label={t('Close')} onClick={handleClickCloseGame} size="large" color="text">
+                                    <CancelIcon />
+                                </IconButton>
+                            )}
+                        </>
                     ) : (
                         <React.Fragment>
                             <IconButton
