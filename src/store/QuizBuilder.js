@@ -55,24 +55,32 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
     let subsetCountries;
 
     const questions = allCountries.map((c) => {
-        question = undefined;
-        answer = undefined;
-        choices = undefined;
-        questionPhraseValues = [];
-        answerAdditionnalText = undefined;
+		question = undefined;
+		answer = undefined;
+		choices = undefined;
+		questionPhraseValues = [];
+		answerAdditionnalText = undefined;
 
-        subsetCountries = undefined;
+		subsetCountries = undefined;
 
         let nbTry = 0;
 
         while (!answer || !choices) {
+			question = undefined;
+			answer = undefined;
+			choices = undefined;
+			questionPhraseValues = [];
+			answerAdditionnalText = undefined;
+
+			subsetCountries = undefined;
+			
             if (mode.key === TRIVIA) {
-                if (nbTry > 0) {
-                    // for test purpose
+                // if (nbTry > 0) {
+                //     // for test purpose
                     questionType = getOneRandom(availableQuestionTypes);
-                } else {
-                    questionType = availableQuestionTypes.find((qt) => qt.key === 'has_n_border');
-                }
+                // } else {
+                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'has_n_border');
+                // }
             }
 
             switch (questionType.key) {
@@ -91,12 +99,10 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         : undefined;
                     break;
                 case 'is_capital':
-                    // question = questionType.questionProperty;
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer ? getChoices(c, answer, cityChoices, questionType, DIFFICULTY_NORMAL) : undefined;
                     break;
                 case 'not_capital':
-                    // question = questionType.questionProperty;
                     answer = getCountryValue(c, language, 'city', 1);
                     choices = answer
                         ? getChoices(c, answer, capitalChoices, questionType, DIFFICULTY_NORMAL)
@@ -118,12 +124,10 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     choices = getNameOfficialChoices(c, undefined, language);
                     break;
                 case 'name_official_good':
-                    // question = questionType.questionProperty;
                     answer = c.name.official;
                     choices = getNameOfficialChoices(c, allCountries, language, answer);
                     break;
                 case 'name_official_wrong':
-                    // question = questionType.questionProperty;
                     answer = getNameOfficialAnswer(c, language);
                     choices = answer
                         ? getChoices(c, answer, countryOfficialChoices, questionType, chosenDifficultyLevel)
@@ -156,7 +160,6 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                                     'name-common'
                                 )
                             );
-                        console.log(choices);
                         choices.splice(((choices.length + 1) * Math.random()) | 0, 0, answer);
                     }
                     break;
@@ -187,7 +190,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     }
                     break;
             }
-            console.log(answer, choices, questionType.key, c.borders);
+            // console.log(answer, choices, questionType.key, c.borders);
 
             if (!answer || !choices) {
                 nbTry++;
@@ -205,11 +208,9 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             answerAdditionnalText,
         };
     });
-    console.log(questions);
+
     return questions;
 };
-
-const getCountriesMoreLessBorder = (country, answer, allCountries, language) => {};
 
 const getCountriesNotBorder = (country, answer, allCountries, language) => {
     const choices = [];
@@ -222,11 +223,9 @@ const getCountriesNotBorder = (country, answer, allCountries, language) => {
     let i = 0;
 
     const allBorders = shuffle([...new Set([...country.borders, ...answer.borders])]);
-    console.log(allBorders, country.cca3, answer.cca3);
 
     while (nbChoices < NB_CHOICES - 1 && i < allBorders.length) {
         countryBorder = allCountries.find((c) => c.cca3 === allBorders[i]);
-        // console.log(allBorders[i], countryBorder);
         countryWithoutBorder = shuffle(countryBorder.borders).find(
             (b) => !country.borders.includes(b) && !choices_cca3.includes(b) && b !== country.cca3
         );
@@ -250,8 +249,6 @@ const getCountriesNotBorder = (country, answer, allCountries, language) => {
 
     // ajouter la bonne réponse parmis les choix
     choices.splice(((choices.length + 1) * Math.random()) | 0, 0, getCountryValue(answer, language, 'name-common'));
-    console.log(country.name.common, answer.name.common, choices);
-    console.log('---');
     return choices;
 };
 
@@ -357,32 +354,6 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
     return choices;
 };
 
-// const getNonTriviaQuestions = (mode, allCountries, language, chosenDifficultyLevel) => {
-// 	const questionType = mode.questionType;
-// 	const allAnswers = getAllAnswers(allCountries, questionType.answerProperty, language);
-// 	const questions = allCountries.map((c) => {
-// 		const question = getCountryValue(c, language, questionType.questionProperty);
-// 		const answer = getCountryValue(c, language, questionType.answerProperty);
-
-// 		const choices = getChoices(
-// 			c,
-// 			answer,
-// 			allAnswers,
-// 			questionType,
-// 			chosenDifficultyLevel
-// 		);
-
-// 		return {
-// 			country: c.cca3,
-// 			question,
-// 			answer,
-// 			choices,
-// 			result: undefined,
-// 		};
-// 	});
-// 	return questions;
-// };
-
 const getAllAnswers = (allCountries, answerProperty, language) => {
     return allCountries.reduceRight((cAnswers, c) => cAnswers.concat(getCountryValue(c, language, answerProperty)), []);
 };
@@ -422,7 +393,6 @@ const getCountryOfficial = (c, lang) => {
 };
 
 const getChoices = (country, answer, answersFrom, questionType, difficultyLevel) => {
-    // 	console.log(answer);
     const choices = [];
     const hardChoices = difficultyLevel === DIFFICULTY_EXPERT ? [getHardAnswer(answer)] : [];
     const indexUsed = [];
