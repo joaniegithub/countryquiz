@@ -6,14 +6,14 @@ export const useDynamicSVGImport = (path, options = {}) => {
     const [error, setError] = useState();
 
     const { onCompleted, onError } = options;
-    
+
     useEffect(() => {
-        if (path && path !== "") {
+        if (path && path !== '') {
             setLoading(true);
 
             const importIcon = async () => {
                 try {
-                    ImportedIconRef.current = ( await import(`${path}` ) ).ReactComponent;
+                    ImportedIconRef.current = (await import(`${path}`)).ReactComponent;
                     if (onCompleted) {
                         onCompleted(path, ImportedIconRef.current);
                     }
@@ -31,4 +31,4 @@ export const useDynamicSVGImport = (path, options = {}) => {
     }, [path, onCompleted, onError]);
 
     return { error, loading, SvgIcon: ImportedIconRef.current };
-}
+};

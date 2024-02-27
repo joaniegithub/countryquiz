@@ -6,9 +6,8 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import './App.css';
 import Game from './components/Game';
 import Home from './components/Home';
-import Layout from './layout/Layout';
 import Wiki from './components/Wiki';
-
+import Layout from './layout/Layout';
 import { useInGame, useInWiki, useIsDarkMode } from './store/selector';
 import { createTheme as createMyTheme } from './theme';
 import { createTheme as createMyThemeDark } from './theme/dark';
@@ -19,18 +18,16 @@ const darkTheme = createMyThemeDark();
 const CountryQuizApp = (props) => {
     const [deferredPrompt, setDeferredPrompt] = useState(undefined);
 
-	const { i18n } = useTranslation();
-	// console.log(i18n);
-    
+    const { i18n } = useTranslation();
+    // console.log(i18n);
+
     const inGame = useInGame();
     const inWiki = useInWiki();
     const isDarkMode = useIsDarkMode();
 
     const selectedTheme =
         isDarkMode ||
-        (isDarkMode === undefined &&
-            window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        (isDarkMode === undefined && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
             ? darkTheme
             : theme;
 

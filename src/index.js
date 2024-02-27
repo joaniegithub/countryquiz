@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import store from 'store/';
 
 import App from './App';
-import './index.css';
 import './i18n';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 

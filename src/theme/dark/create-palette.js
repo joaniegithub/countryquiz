@@ -1,16 +1,7 @@
 import { common } from '@mui/material/colors';
 import { alpha } from '@mui/material/styles';
 
-import {
-    error,
-    indigoDarkMode,
-    info,
-    neutral,
-    purpleDarkMode,
-    success,
-    warning,
-} from '../colors';
-
+import { error, indigoDarkMode, info, neutral, purpleDarkMode, success, warning } from '../colors';
 
 const neutralConversion = {
     50: 1000,
@@ -25,11 +16,11 @@ const neutralConversion = {
     800: 200,
     900: 100,
     1000: 50,
-}
+};
 
 const neutralDark = {};
 Object.keys(neutral).forEach((key) => {
-	neutralDark[key] = neutral[neutralConversion[key]];
+    neutralDark[key] = neutral[neutralConversion[key]];
 });
 
 export function createPalette() {
@@ -62,6 +53,6 @@ export function createPalette() {
             disabled: alpha(neutralDark[1000], 0.38),
         },
         warning,
-		shadow: neutral[1000],
+        shadow: neutral[1000],
     };
 }

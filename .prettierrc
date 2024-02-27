@@ -4,13 +4,8 @@
     "singleQuote": true,
     "jsxBracketSameLine": true,
     "semi": true,
-    "importOrder": [
-        "^@core/(.*)$",
-        "^@server/(.*)$",
-        "^@ui/(.*)$",
-        "^@mui/(.*)$",
-        "^[./]"
-    ],
+    "printWidth": 120,
+    "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^@mui/(.*)$", "^[./]"],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true,
     "plugins": ["@trivago/prettier-plugin-sort-imports"]

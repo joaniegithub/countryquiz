@@ -1,6 +1,6 @@
+import { ReactComponent as GlobeIcon } from 'assets/images/globe.svg';
 import * as React from 'react';
-import { purple, indigo, neutral } from 'theme/colors';
-import  { ReactComponent as GlobeIcon } from 'assets/images/globe.svg';
+import { indigo, neutral, purple } from 'theme/colors';
 
 import { Box, SvgIcon } from '@mui/material';
 
@@ -46,9 +46,7 @@ const BG = (props) => {
                 const patternZoom = Math.random() + 3;
                 // const color = colors[Math.floor(Math.random() * colors.length)];
                 return (
-                    <React.Fragment
-						key={"bg"+i}
-					>
+                    <React.Fragment key={'bg' + i}>
                         <Box
                             component="span"
                             sx={{
@@ -59,7 +57,7 @@ const BG = (props) => {
                                 position: 'absolute',
                                 left: Math.random() * 100 + 'vw',
                                 top: Math.random() * 100 + 'vh',
-								transform: `translate(-${size}, -${size})`,
+                                transform: `translate(-${size}, -${size})`,
                                 width: size,
                                 height: size,
                                 // transform: "rotate("+rotate+")",

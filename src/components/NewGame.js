@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { useTheme } from '@emotion/react';
-import { useTranslation } from 'react-i18next';
-
 import { CAPITAL, DIFFICULTY_NORMAL, TRIVIA, difficultyLevels, gameModes } from 'data/config';
 import regionsData from 'data/regions.json';
+import * as React from 'react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 import { startGame } from 'store/actions';
 import { useGameOptions } from 'store/selector';
 
@@ -27,19 +26,13 @@ import FunTypo from './ui/FunTypo';
 const NewGame = (props) => {
     const dispatch = useDispatch();
     const theme = useTheme();
-	const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const gameOptions = useGameOptions();
 
-    const [independantOnly, setIndependantOnly] = useState(
-        (gameOptions && gameOptions.independantOnly)
-    );
-    const [gameMode, setGameMode] = useState(
-        (gameOptions && gameOptions.gameMode) || TRIVIA
-    );
-    const [region, setRegion] = useState(
-        (gameOptions && gameOptions.region) || 'all'
-    );
+    const [independantOnly, setIndependantOnly] = useState(gameOptions && gameOptions.independantOnly);
+    const [gameMode, setGameMode] = useState((gameOptions && gameOptions.gameMode) || TRIVIA);
+    const [region, setRegion] = useState((gameOptions && gameOptions.region) || 'all');
     const [difficultyLevel, setDifficultyLevel] = useState(
         (gameOptions && gameOptions.difficultyLevel) || DIFFICULTY_NORMAL
     );
@@ -51,7 +44,7 @@ const NewGame = (props) => {
     const handleChangeIndependant = (event) => {
         setIndependantOnly(event.target.checked);
     };
-    
+
     const handleChangeMode = (event) => {
         setGameMode(event.target.value);
     };
@@ -70,13 +63,7 @@ const NewGame = (props) => {
 
     return (
         <React.Fragment>
-            <Stack
-                alignItems="center"
-                direction="column"
-                justifyContent="center"
-                height="100%"
-                flexGrow={1}
-            >
+            <Stack alignItems="center" direction="column" justifyContent="center" height="100%" flexGrow={1}>
                 <Card
                     sx={{
                         px: 4,
@@ -99,11 +86,8 @@ const NewGame = (props) => {
                             }
                         >
                             <FunTypo
-                                text={t("Game Options")}
-                                color={theme.palette.primary.contrast.replace(
-                                    '#',
-                                    ''
-                                )}
+                                text={t('Game Options')}
+                                color={theme.palette.primary.contrast.replace('#', '')}
                                 stroke={false}
                                 strokeWidth="2px"
                                 distance="3px"
@@ -142,7 +126,7 @@ const NewGame = (props) => {
                         </ToggleButtonGroup>*/}
                         <TextField
                             fullWidth
-                            label={t("Mode")}
+                            label={t('Mode')}
                             name="Mode"
                             onChange={handleChangeMode}
                             required
@@ -151,28 +135,28 @@ const NewGame = (props) => {
                             value={gameMode || TRIVIA}
                         >
                             {gameModes.map((option) => (
-                                <option
-                                    key={option.key}
-                                    value={option.key}
-                                    disabled={option.disabled}
-                                >
+                                <option key={option.key} value={option.key} disabled={option.disabled}>
                                     {option.name[i18n.language]}
                                 </option>
                             ))}
                         </TextField>
                         <FormControlLabel
-							disabled={gameMode === TRIVIA}
+                            disabled={gameMode === TRIVIA}
                             control={<Checkbox defaultChecked={independantOnly} />}
                             onChange={handleChangeIndependant}
-                            label={<Typography fontSize="12px" color="textSecondary">{t("Independent countries only")}</Typography>}
-							sx={{
+                            label={
+                                <Typography fontSize="12px" color="textSecondary">
+                                    {t('Independent countries only')}
+                                </Typography>
+                            }
+                            sx={{
                                 mt: '0 !important',
                             }}
                         />
                         <TextField
-							disabled={gameMode === TRIVIA}
+                            disabled={gameMode === TRIVIA}
                             fullWidth
-                            label={t("Region")}
+                            label={t('Region')}
                             name="Region"
                             onChange={handleChangeRegion}
                             required
@@ -181,39 +165,32 @@ const NewGame = (props) => {
                             value={region}
                         >
                             <option key="all" value="all">
-								{t("World")}
+                                {t('World')}
                             </option>
                             {regionsData.map((option) =>
                                 option.eng === 'Antarctic' ? null : (
-                                    <option
-                                        key={option.eng}
-                                        value={option.eng}
-                                    >
+                                    <option key={option.eng} value={option.eng}>
                                         {option[i18n.language]}
                                     </option>
                                 )
                             )}
                         </TextField>
                         <ToggleButtonGroup
-							disabled={gameMode === TRIVIA}
+                            disabled={gameMode === TRIVIA}
                             color="primary"
                             value={difficultyLevel}
                             exclusive
                             onChange={handleChangeDifficultyLevel}
-                            aria-label={t("Difficulty")}
-                            label={t("Difficulty")}
+                            aria-label={t('Difficulty')}
+                            label={t('Difficulty')}
                             name="Difficulty"
                             size="small"
-							sx={{
-								justifyContent: 'center',
-							}}
+                            sx={{
+                                justifyContent: 'center',
+                            }}
                         >
                             {difficultyLevels.map((option) => (
-                                <ToggleButton
-                                    key={option.key}
-                                    value={option.key}
-                                    disabled={option.disabled}
-                                >
+                                <ToggleButton key={option.key} value={option.key} disabled={option.disabled}>
                                     {t(option.name)}
                                 </ToggleButton>
                             ))}
@@ -224,15 +201,15 @@ const NewGame = (props) => {
                             // endIcon={<PlayCircleFilledIcon />}
                             onClick={handleClickStart}
                         >
-							<Typography
-								fontSize="20px"
-								fontWeight="700"
-								sx={{
-									textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
-								}}
-							>
-								{t("Start Game")}
-							</Typography>
+                            <Typography
+                                fontSize="20px"
+                                fontWeight="700"
+                                sx={{
+                                    textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
+                                }}
+                            >
+                                {t('Start Game')}
+                            </Typography>
                         </Button>
                     </Stack>
                 </Card>

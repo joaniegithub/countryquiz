@@ -57,32 +57,31 @@ export function createComponents(config) {
                     backgroundColor: palette.background,
                     borderRadius: 20,
                     [`&.${paperClasses.elevation1}`]: {
-                        boxShadow:
-                            '0px 5px 22px rgba(0, 0, 0, 0.04), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.03)',
+                        boxShadow: '0px 5px 22px rgba(0, 0, 0, 0.04), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.03)',
                     },
-					"&::-webkit-scrollbar, & *::-webkit-scrollbar": {
-						borderRadius: 8,
+                    '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
+                        borderRadius: 8,
                         backgroundColor: palette.background,
-					},
-					"&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
-						borderRadius: 8,
-						backgroundColor: palette.neutral[400],
-						minHeight: 30,
-                        width: "5px",
-						border: "3px solid "+palette.neutral[200],
-					},
-					"&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus": {
-						backgroundColor: palette.neutral[400],
-					},
-					"&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active": {
-						backgroundColor: palette.neutral[400],
-					},
-					"&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover": {
-						backgroundColor: palette.neutral[400],
-					},
-					"&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
+                    },
+                    '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
+                        borderRadius: 8,
+                        backgroundColor: palette.neutral[400],
+                        minHeight: 30,
+                        width: '5px',
+                        border: '3px solid ' + palette.neutral[200],
+                    },
+                    '&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus': {
+                        backgroundColor: palette.neutral[400],
+                    },
+                    '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
+                        backgroundColor: palette.neutral[400],
+                    },
+                    '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover': {
+                        backgroundColor: palette.neutral[400],
+                    },
+                    '&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner': {
                         backgroundColor: palette.background,
-					},
+                    },
                 },
             },
         },
@@ -182,10 +181,7 @@ export function createComponents(config) {
                     borderWidth: 1,
                     overflow: 'hidden',
                     borderColor: palette.neutral[200],
-                    transition: muiTheme.transitions.create([
-                        'border-color',
-                        'box-shadow',
-                    ]),
+                    transition: muiTheme.transitions.create(['border-color', 'box-shadow']),
                     '&:hover': {
                         // backgroundColor: palette.action.hover,
                         [`& .${outlinedInputClasses.notchedOutline}`]: {
@@ -229,30 +225,30 @@ export function createComponents(config) {
             // },
             styleOverrides: {
                 root: {
-					// // scrollbarColor: "#6b6b6b #2b2b2b",
-					// scrollbarColor: "#6b6b6b #2b2b2b",
-					"&::-webkit-scrollbar, & *::-webkit-scrollbar": {
-						borderRadius: 8,
-						backgroundColor: palette.neutral[100],
-					},
-					"&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
-						borderRadius: 8,
-						backgroundColor: palette.neutral[400],
-						minHeight: 30,
-						border: "3px solid "+palette.neutral[100],
-					},
-					"&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus": {
-						backgroundColor: palette.neutral[400],
-					},
-					"&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active": {
-						backgroundColor: palette.neutral[400],
-					},
-					"&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover": {
-						backgroundColor: palette.neutral[400],
-					},
-					"&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
-						backgroundColor: palette.neutral[100],
-					},
+                    // // scrollbarColor: "#6b6b6b #2b2b2b",
+                    // scrollbarColor: "#6b6b6b #2b2b2b",
+                    '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
+                        borderRadius: 8,
+                        backgroundColor: palette.neutral[100],
+                    },
+                    '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
+                        borderRadius: 8,
+                        backgroundColor: palette.neutral[400],
+                        minHeight: 30,
+                        border: '3px solid ' + palette.neutral[100],
+                    },
+                    '&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus': {
+                        backgroundColor: palette.neutral[400],
+                    },
+                    '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
+                        backgroundColor: palette.neutral[400],
+                    },
+                    '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover': {
+                        backgroundColor: palette.neutral[400],
+                    },
+                    '&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner': {
+                        backgroundColor: palette.neutral[100],
+                    },
                 },
             },
         },
@@ -380,27 +376,23 @@ export function createComponents(config) {
         MuiToggleButtonGroup: {
             styleOverrides: {
                 root: {
-                    [`& .${toggleButtonGroupClasses.grouped}:not(:first-of-type)`]:
-                        {
-                            margin: '0 2px',
-                            borderLeft: 'none',
-                            borderTopLeftRadius: '8px',
-                            borderBottomLeftRadius: '8px',
-                        },
-                    [`& .${toggleButtonGroupClasses.grouped}:not(:last-of-type)`]:
-                        {
-                            borderRight: 'none',
-                            borderTopRightRadius: '8px',
-                            borderBottomRightRadius: '8px',
-                        },
-                    [`& .${toggleButtonClasses.disabled}`]:
-                        {
-                            color: palette.action.disabled,
-                        },
-                    [`& .${toggleButtonClasses.selected}`]:
-                        {
-                            color: palette.action.disabledSelected,
-                        },
+                    [`& .${toggleButtonGroupClasses.grouped}:not(:first-of-type)`]: {
+                        margin: '0 2px',
+                        borderLeft: 'none',
+                        borderTopLeftRadius: '8px',
+                        borderBottomLeftRadius: '8px',
+                    },
+                    [`& .${toggleButtonGroupClasses.grouped}:not(:last-of-type)`]: {
+                        borderRight: 'none',
+                        borderTopRightRadius: '8px',
+                        borderBottomRightRadius: '8px',
+                    },
+                    [`& .${toggleButtonClasses.disabled}`]: {
+                        color: palette.action.disabled,
+                    },
+                    [`& .${toggleButtonClasses.selected}`]: {
+                        color: palette.action.disabledSelected,
+                    },
                 },
             },
         },

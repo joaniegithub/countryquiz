@@ -1,10 +1,9 @@
+import eng from 'assets/locales/eng/translation.json';
+import fra from 'assets/locales/fra/translation.json';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 // import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
-
-import eng from 'assets/locales/eng/translation.json';
-import fra from 'assets/locales/fra/translation.json';
 
 // don't want to use this?
 // have a look at the Quick start guide
@@ -22,39 +21,42 @@ i18n
     .use(initReactI18next)
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
-    .init({
-        fallbackLng: 'eng',
-        debug: true,
-        // ns: [
-        //   "translation"
-        // ],
-        resources: {
-            eng: {
-                translation: eng,
+    .init(
+        {
+            fallbackLng: 'eng',
+            debug: true,
+            // ns: [
+            //   "translation"
+            // ],
+            resources: {
+                eng: {
+                    translation: eng,
+                },
+                fra: {
+                    translation: fra,
+                },
+                // backend: {
+                //     loadPath: "locales/{{lng}}/{{ns}}.json",
+                //     parse: function (data) {
+                //         console.log(data);
+                //         return data;
+                //     },
+                // }
             },
-            fra: {
-                translation: fra,
-            },
-            // backend: {
-            //     loadPath: "locales/{{lng}}/{{ns}}.json",
-            //     parse: function (data) {
-            //         console.log(data);
-            //         return data;
-            //     },
-            // }
-        },
 
-        // interpolation: {
-        //     escapeValue: false, // not needed for react as it escapes by default
-        // },
-	}, (err, t) => {
-		if (err) return console.log('something went wrong loading', err);
-        console.log("i18n ready", i18n);
-		if (i18n.language === "en" || i18n.language.indexOf("en-") > -1) {
-			i18n.changeLanguage("eng");
-		} else if (i18n.language === "fr" || i18n.language.indexOf("fr-") > -1) {
-			i18n.changeLanguage("fra");
-		}
-	});
+            // interpolation: {
+            //     escapeValue: false, // not needed for react as it escapes by default
+            // },
+        },
+        (err, t) => {
+            if (err) return console.log('something went wrong loading', err);
+            console.log('i18n ready', i18n);
+            if (i18n.language === 'en' || i18n.language.indexOf('en-') > -1) {
+                i18n.changeLanguage('eng');
+            } else if (i18n.language === 'fr' || i18n.language.indexOf('fr-') > -1) {
+                i18n.changeLanguage('fra');
+            }
+        }
+    );
 
 export default i18n;

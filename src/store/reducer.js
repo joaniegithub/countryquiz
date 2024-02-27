@@ -1,12 +1,8 @@
-import {
-    CAPITAL,
-    DIFFICULTY_NORMAL,
-    GAME_VERSION,
-    gameModes,
-} from 'data/config';
+import { CAPITAL, DIFFICULTY_NORMAL, GAME_VERSION, gameModes } from 'data/config';
 import countriesData from 'data/countries.json';
 import * as constants from 'store/constants';
 import { shuffle } from 'util/util';
+
 import { getQuestions } from './QuizBuilder';
 
 export const defaultSettings = {
@@ -29,7 +25,7 @@ const gameDefaultState = {
     currentScore: 0,
     currentTurn: 0,
     currentPhase: 0,
-	// Used
+    // Used
     gameMode: CAPITAL,
     region: 'all',
     independantOnly: false,
@@ -39,8 +35,8 @@ const gameDefaultState = {
 };
 
 export const getAllCountriesCodes = () => {
-	return countriesData;
-}
+    return countriesData;
+};
 
 const reducer = (state = defaultState, { type, ...payload }) => {
     // console.log(state, type, payload);
@@ -82,7 +78,13 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenIndependantOnly = payload.chosenIndependantOnly;
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
-			const questions = getQuestions(settings.language, mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly);
+            const questions = getQuestions(
+                settings.language,
+                mode,
+                chosenRegion,
+                chosenDifficultyLevel,
+                chosenIndependantOnly
+            );
 
             return {
                 ...state,
@@ -103,9 +105,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const question = { ...allQuestions[game.currentTurn] };
             const result = chosenAnswer === question.answer;
 
-            const currentScore = result
-                ? game.currentScore + 1
-                : game.currentScore;
+            const currentScore = result ? game.currentScore + 1 : game.currentScore;
 
             return {
                 ...state,

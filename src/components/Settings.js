@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 import CloseIcon from '@mui/icons-material/Close';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -28,7 +28,7 @@ const Settings = (props) => {
     const dispatch = useDispatch();
     const isDarkMode = useIsDarkMode();
     const language = useLanguage();
-	const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const handleClickLightMode = () => {
         dispatch(editSettings({ isDarkMode: !isDarkMode }));
@@ -38,10 +38,7 @@ const Settings = (props) => {
         i18n.changeLanguage(event.target.value);
     };
 
-    const isMobile =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-        );
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     // Installation must be done by a user gesture! Here, the button click
     const handleClickInstall = (e) => {
         // hide our user interface that shows our A2HS button
@@ -59,14 +56,10 @@ const Settings = (props) => {
     };
 
     return (
-        <Dialog
-            open={settingsDialogOpen}
-            onClose={handleClose}
-            aria-labelledby="settings-dialog-title"
-        >
-            <DialogTitle id="settings-dialog-title">{t("Settings")}</DialogTitle>
+        <Dialog open={settingsDialogOpen} onClose={handleClose} aria-labelledby="settings-dialog-title">
+            <DialogTitle id="settings-dialog-title">{t('Settings')}</DialogTitle>
             <IconButton
-                aria-label={t("Close")}
+                aria-label={t('Close')}
                 onClick={handleClose}
                 color="text"
                 sx={{
@@ -84,8 +77,8 @@ const Settings = (props) => {
                         value={language}
                         exclusive
                         onChange={handleClickLanguage}
-                        aria-label={t("Language")}
-                        label={t("Language")}
+                        aria-label={t('Language')}
+                        label={t('Language')}
                         name="Language"
                         size="small"
                         variant="text"
@@ -102,25 +95,17 @@ const Settings = (props) => {
                     <Button
                         onClick={handleClickLightMode}
                         value={isDarkMode}
-                        endIcon={
-                            isDarkMode ? <LightModeIcon /> : <DarkModeIcon />
-                        }
+                        endIcon={isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
                     >
-                        {t(isDarkMode ? "Light Mode" : "Dark Mode")}
+                        {t(isDarkMode ? 'Light Mode' : 'Dark Mode')}
                     </Button>
                     {deferredPrompt && showInstallButton && (
                         <Button
                             variant="outlined"
                             onClick={handleClickInstall}
-                            endIcon={
-                                isMobile ? (
-                                    <InstallMobileIcon />
-                                ) : (
-                                    <InstallDesktopIcon />
-                                )
-                            }
+                            endIcon={isMobile ? <InstallMobileIcon /> : <InstallDesktopIcon />}
                         >
-                            {t("Install")} Country Quiz
+                            {t('Install')} Country Quiz
                         </Button>
                     )}
                     <Typography

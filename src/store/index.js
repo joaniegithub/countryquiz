@@ -30,8 +30,7 @@ function loadFromLocalStorage() {
         let resetCurrentGame = false;
         if (
             parsedState.currentGame &&
-            (!parsedState.currentGame.version ||
-                parsedState.currentGame.version !== GAME_VERSION)
+            (!parsedState.currentGame.version || parsedState.currentGame.version !== GAME_VERSION)
         ) {
             resetCurrentGame = true;
         }
@@ -58,8 +57,6 @@ const storeCountryQuiz = configureStore({
 
 // listen for store changes and use saveToLocalStorage to
 // save them to localStorage
-storeCountryQuiz.subscribe(() =>
-    saveToLocalStorage(storeCountryQuiz.getState())
-);
+storeCountryQuiz.subscribe(() => saveToLocalStorage(storeCountryQuiz.getState()));
 
 export default storeCountryQuiz;

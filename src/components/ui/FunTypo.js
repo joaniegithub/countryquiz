@@ -3,15 +3,7 @@ import * as React from 'react';
 import { Typography } from '@mui/material';
 
 const FunTypo = (props) => {
-    const {
-        text,
-        color = '000',
-        stroke = false,
-        strokeWidth = '2px',
-        distance = '3px',
-        patternZoom = 1,
-        sx,
-    } = props;
+    const { text, color = '000', stroke = false, strokeWidth = '2px', distance = '3px', patternZoom = 1, sx } = props;
 
     return (
         <Typography
@@ -24,7 +16,7 @@ const FunTypo = (props) => {
                 zIndex: 2,
                 ...(stroke
                     ? {
-                         WebkitTextStrokeWidth: strokeWidth,
+                          WebkitTextStrokeWidth: strokeWidth,
                           MozTextStrokeWidth: strokeWidth,
                           WebkitTextStrokeColor: '#' + color,
                           MozTextStrokeColor: '#' + color,

@@ -1,27 +1,17 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { useTheme } from '@emotion/react';
-import { useTranslation } from 'react-i18next';
-
 import Settings from 'components/Settings';
 import FunTypo from 'components/ui/FunTypo';
+import MainButton from 'components/ui/MainButton';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 import { newGame } from 'store/actions';
 import { useInGame } from 'store/selector';
 import { useInWiki } from 'store/selector';
 
-import MainButton from 'components/ui/MainButton';
-
 import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';
-import {
-    Box,
-    Dialog,
-    DialogActions,
-    DialogTitle,
-    IconButton,
-    Stack,
-    Typography,
-} from '@mui/material';
+import { Box, Dialog, DialogActions, DialogTitle, IconButton, Stack, Typography } from '@mui/material';
 
 export const TOP_NAV_HEIGHT = 64;
 
@@ -31,7 +21,7 @@ const Header = (props) => {
     const inWiki = useInWiki();
     const theme = useTheme();
     const dispatch = useDispatch();
-	const { t } = useTranslation();
+    const { t } = useTranslation();
 
     // const mdgUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
@@ -56,12 +46,12 @@ const Header = (props) => {
     const handleConfirmCancelGameDisagree = () => {
         setConfirmCancelGameOpen(false);
     };
-  	const closeRef = React.useRef<HTMLElement>(null);
-	const handleEntering = () => {
-		if (closeRef.current != null) {
-			closeRef.current.focus();
-		}
-	};
+    const closeRef = React.useRef < HTMLElement > null;
+    const handleEntering = () => {
+        if (closeRef.current != null) {
+            closeRef.current.focus();
+        }
+    };
 
     return (
         <React.Fragment>
@@ -87,7 +77,7 @@ const Header = (props) => {
                         }}
                     >
                         <FunTypo
-                            text={t("Country")}
+                            text={t('Country')}
                             color={theme.palette.text.title.replace('#', '')}
                             stroke={true}
                             strokeWidth="1px"
@@ -101,7 +91,7 @@ const Header = (props) => {
                         />
                         &nbsp;
                         <FunTypo
-                            text={t("Quiz")}
+                            text={t('Quiz')}
                             color={theme.palette.text.title.replace('#', '')}
                             stroke={false}
                             strokeWidth="1px"
@@ -126,18 +116,13 @@ const Header = (props) => {
                     }}
                 >
                     {inGame ? (
-                        <IconButton
-                            aria-label={t("Close")}
-                            onClick={handleClickCloseGame}
-                            size="large"
-                            color="text"
-                        >
+                        <IconButton aria-label={t('Close')} onClick={handleClickCloseGame} size="large" color="text">
                             <CancelIcon />
                         </IconButton>
                     ) : (
                         <React.Fragment>
                             <IconButton
-                                aria-label={t("Settings")}
+                                aria-label={t('Settings')}
                                 onClick={handleClickSettings}
                                 size="large"
                                 color="text"
@@ -150,38 +135,39 @@ const Header = (props) => {
             </Box>
             <Dialog
                 open={confirmCancelGameOpen}
-      			TransitionProps={{ onEntering: handleEntering }}
+                TransitionProps={{ onEntering: handleEntering }}
                 // onClose={handleConfirmCancelGameClose}
                 aria-labelledby="quit-dialog-title"
-			>
-                <DialogTitle id="quit-dialog-title">{t("Quit the game?")}</DialogTitle>
+            >
+                <DialogTitle id="quit-dialog-title">{t('Quit the game?')}</DialogTitle>
                 <DialogActions
-					sx={{
-						p: '12px',
-						justifyContent: 'center'
-					}}>
+                    sx={{
+                        p: '12px',
+                        justifyContent: 'center',
+                    }}
+                >
                     <MainButton
-						buttonP={{
-							variant: 'outlined',
-							onClick: handleConfirmCancelGameDisagree
-						}}
-						typoP={{
-							fontSize: '16px',
-							fontWeight: '600'
-						}}
+                        buttonP={{
+                            variant: 'outlined',
+                            onClick: handleConfirmCancelGameDisagree,
+                        }}
+                        typoP={{
+                            fontSize: '16px',
+                            fontWeight: '600',
+                        }}
                     >
-                        {t("No")}
+                        {t('No')}
                     </MainButton>
                     <MainButton
-						buttonP={{
-							onClick: handleConfirmCancelGameClose
-						}}
-						typoP={{
-							fontSize: '16px',
-							fontWeight: '600'
-						}}
+                        buttonP={{
+                            onClick: handleConfirmCancelGameClose,
+                        }}
+                        typoP={{
+                            fontSize: '16px',
+                            fontWeight: '600',
+                        }}
                     >
-                        {t("Yes")}
+                        {t('Yes')}
                     </MainButton>
                 </DialogActions>
             </Dialog>
