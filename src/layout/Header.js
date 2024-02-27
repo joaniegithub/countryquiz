@@ -54,7 +54,7 @@ const Header = (props) => {
             closeRef.current.focus();
         }
     };
-    const isEnd = game.currentTurn >= game.questions.length;
+    const isEnd = game && game.currentTurn >= game.questions.length;
 
     return (
         <React.Fragment>
@@ -120,7 +120,7 @@ const Header = (props) => {
                 >
                     {inGame ? (
                         <>
-                            {isEnd && (
+                            {!isEnd && (
                                 <IconButton aria-label={t('Close')} onClick={handleClickCloseGame} size="large" color="text">
                                     <CancelIcon />
                                 </IconButton>
