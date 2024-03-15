@@ -37,8 +37,8 @@ const GameEnd = (props) => {
                 textAlign="center"
                 mb={-1}
             >
-                {gameMode.shortName[i18n.language]} {region.article[i18n.language]}
-                {region[i18n.language]}
+                {gameMode.shortName[i18n.language]} {region?.article[i18n.language]}
+                {region ? region[i18n.language] : t('World')}
             </Typography>
             <Typography display="block" color="secondary" fontSize="32px" fontWeight={800} mb={2}>
                 {t(game.difficultyLevel)}
