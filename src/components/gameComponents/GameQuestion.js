@@ -67,7 +67,19 @@ const GameQuestion = (props) => {
                               answerAdditionnalText={question.answerAdditionnalText}
                           >
 							{question.questionType.key === 'flag' ? (
-								<GameFlag country={choice} />
+								<GameFlag
+									country={choice.toLowerCase()}
+									sxOverrides={{
+										width: '85%',
+										maxWidth: '150px',
+										maxHeight: '25vw',
+										// width: 'auto',
+										// height: '16px',
+										// marginLeft: '3px',
+										// marginRight: '1px',
+										// verticalAlign: 'middle',
+									}}
+								/>
 							) : (
 								<>
 									{difficultyLevel === DIFFICULTY_EXPERT && phase === 0

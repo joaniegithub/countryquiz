@@ -142,7 +142,7 @@ const NewGame = (props) => {
                         </TextField>
                         <FormControlLabel
                             disabled={gameMode === TRIVIA}
-                            control={<Checkbox defaultChecked={independantOnly} />}
+                            control={<Checkbox checked={independantOnly} />}
                             onChange={handleChangeIndependant}
                             label={
                                 <Typography fontSize="12px" color="textSecondary">

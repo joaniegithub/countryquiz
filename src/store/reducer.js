@@ -57,13 +57,14 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             };
 
         case constants.NEW_GAME:
+			console.log(game.gameMode);
             return {
                 ...state,
                 currentGame: undefined,
                 inGame: false,
                 gameOptions: game
                     ? {
-                          gameMode: game.gameMode.key,
+                          gameMode: game.gameMode,
                           region: game.region,
                           independantOnly: game.independantOnly,
                           difficultyLevel: game.difficultyLevel,
