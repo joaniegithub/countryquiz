@@ -18,7 +18,9 @@ const GameButton = (props) => {
         choice,
         rightAnswer,
         chosenAnswer,
+		isFlag,
         answerAdditionnalText,
+		
     } = props;
     const theme = useTheme();
 
@@ -41,9 +43,9 @@ const GameButton = (props) => {
             buttonP={{
                 color: color,
                 onClick: onClick,
-                variant: 'contained',
+                variant: isFlag ? 'outlined' : 'contained',
                 sx: {
-                    // position: "relative",
+                    position: "relative",
                     ...(color === 'secondary' || color === 'success'
                         ? {
                               outlineOffset: '3px',
@@ -51,7 +53,8 @@ const GameButton = (props) => {
                           }
                         : {}),
                     textAlign: 'center',
-                    width: '100%',
+                    width: isFlag ? 'calc(50% - 8px)' : '100%',
+					...(isFlag ? {minHeight: '100px'} : {}),
                     p: 1.6,
 
                     // boxShadow: `2px 6px #${colorEffect}`,
@@ -72,7 +75,7 @@ const GameButton = (props) => {
 						zIndex: -1,
 					} */
                 },
-                ...(icon
+                ...(!isFlag && icon
                     ? {
                           endIcon: <SvgIcon fontSize="small">{icon}</SvgIcon>,
                       }
@@ -82,6 +85,7 @@ const GameButton = (props) => {
                 fontSize: '18px',
                 fontWeight: '600',
             }}
+			isFlag={isFlag}
         >
             {props.children}
             {choice === rightAnswer && phase === 1 && answerAdditionnalText ? (
@@ -90,6 +94,17 @@ const GameButton = (props) => {
                     <sub>{answerAdditionnalText}</sub>
                 </>
             ) : null}
+			{isFlag && icon && (
+				<SvgIcon
+					fontSize="large"
+					sx={{
+						position: 'absolute',
+						right: '10px',
+					}}
+				>
+					{icon}
+				</SvgIcon>
+			)}
         </MainButton>
     );
 };

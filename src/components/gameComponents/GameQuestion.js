@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { gameAnswer } from 'store/actions';
 import { useGameMode } from 'store/selector';
 
-import { Card, Stack, Typography } from '@mui/material';
+import { Box, Card, Stack, Typography } from '@mui/material';
 
 import FunTypo from '../ui/FunTypo';
 import GameFlag from '../ui/GameFlag';
@@ -48,6 +48,38 @@ const GameQuestion = (props) => {
         }
         return text;
     };
+
+	const choiceButtons = <>
+            {question && question.choices
+                ? question.choices.map((choice, index) => {
+                      return (
+                          <GameButton
+                              onClick={() => {
+                                  handleChoiceClick(choice);
+                              }}
+                              colorEffect={theme.palette.primary.main.replace('#', '')}
+                              key={choice + index}
+                              phase={phase}
+                              choice={choice}
+                              rightAnswer={rightAnswer}
+                              chosenAnswer={chosenAnswer}
+							  isFlag={question.questionType.key === 'flag'}
+                              answerAdditionnalText={question.answerAdditionnalText}
+                          >
+							{question.questionType.key === 'flag' ? (
+								<GameFlag country={choice} />
+							) : (
+								<>
+									{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
+										? choice[0] + ' * * * ' + choice[choice.length - 1]
+										: choice}
+								</>
+							)}
+                          </GameButton>
+                      );
+                  })
+                : null}
+			</>;
 
     return (
         <Stack
@@ -97,28 +129,21 @@ const GameQuestion = (props) => {
                     </Typography>
                 )}
             </Card>
-            {question && question.choices
-                ? question.choices.map((choice, index) => {
-                      return (
-                          <GameButton
-                              onClick={() => {
-                                  handleChoiceClick(choice);
-                              }}
-                              colorEffect={theme.palette.primary.main.replace('#', '')}
-                              key={choice + index}
-                              phase={phase}
-                              choice={choice}
-                              rightAnswer={rightAnswer}
-                              chosenAnswer={chosenAnswer}
-                              answerAdditionnalText={question.answerAdditionnalText}
-                          >
-                              {difficultyLevel === DIFFICULTY_EXPERT && phase === 0
-                                  ? choice[0] + ' * * * ' + choice[choice.length - 1]
-                                  : choice}
-                          </GameButton>
-                      );
-                  })
-                : null}
+			{question.questionType.key === 'flag' ? (
+				<Stack 
+					direction="row"
+					flexWrap="wrap"
+            		spacing={2}
+					useFlexGap
+					sx={{
+						width: '100%',
+					}}
+				>
+					{choiceButtons}
+				</Stack>
+			) : (
+				<>{choiceButtons}</>
+			)}
         </Stack>
     );
 };

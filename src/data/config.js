@@ -88,7 +88,7 @@ export const questionTypes = [
         },
         questionProperty: 'name-common',
         answerProperty: 'cca3',
-        disabled: true,
+        disabled: false,
     },
     {
         key: 'country_flag',
@@ -209,8 +209,8 @@ export const gameModes = [
     {
         key: CAPITAL,
         name: {
-            fra: 'Pays - Capitale',
-            eng: "Country's Capital",
+            fra: 'Capitales',
+            eng: "Capitals",
         },
         shortName: {
             fra: 'Capitales',
@@ -229,6 +229,18 @@ export const gameModes = [
             eng: 'Capitals',
         },
         questionType: questionTypeIndex.country_capital,
+    },
+    {
+        key: FLAG,
+        name: {
+            fra: "Drapeaux",
+            eng: "Flags",
+        },
+        shortName: {
+            fra: "Drapeaux",
+            eng: "Flags",
+        },
+    	questionType: questionTypeIndex.flag,
     },
     {
         key: COUNTRY_BY_FLAG,
@@ -253,18 +265,6 @@ export const gameModes = [
             eng: 'Trivia',
         },
     },
-    // {
-    //     key: FLAG,
-    //     name: {
-    //         fra: "Pays - Drapeau",
-    //         eng: "Country's Flag's",
-    //     },
-    //     shortName: {
-    //         fra: "Drapeaux",
-    //         eng: "Flags",
-    //     },
-    // 	questionType: questionTypeIndex.flag,
-    // },
 ];
 
 export const officials = {
@@ -295,7 +295,6 @@ export const officials = {
         'United States of ___',
         'Collectivity of ___',
         'Plurinational State of ___',
-        'Bolivarian Republic of ___',
         'United Republic of ___',
         'Nation of ___',
         'Most Serene Republic of ___',
@@ -317,6 +316,7 @@ export const officials = {
         'Islamic Republic of ___', // Southern Asia, Western Africa. Include also in: Northern Africa, Western Asia
     ],
     regionBoundUnique: [
+        'Bolivarian Republic of ___', // South America. Also include Central America.
         'Arab Republic of ___', // Northern Africa, Western Asia. Include also in: Southern Asia, Western Africa.
         '___ Arab Republic', // Western Asia. Include also in:
         'Oriental Republic of ___', // South America. Include also in:

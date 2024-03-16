@@ -5,6 +5,7 @@ import {
     DIFFICULTY_EXPERT,
     DIFFICULTY_HARD,
     DIFFICULTY_NORMAL,
+    FLAG,
     NB_CHOICES,
     TRIVIA,
     officials,
@@ -41,6 +42,8 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             capitalChoices = getAllAnswers(allCountries, 'capital', language);
         } else if (mode.key === COUNTRY_BY_CAPITAL || mode.key === COUNTRY_BY_FLAG) {
             countryChoices = getAllAnswers(allCountries, 'name-common', language);
+        } else if (mode.key === FLAG) {
+        	flagChoices = getAllAnswers(allCountries, 'cca3', language);
         }
     }
 
@@ -109,7 +112,13 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         : undefined;
                     break;
 
-                // case 'flag':
+                case 'flag':
+                    question = getCountryValue(c, language, questionType.questionProperty);
+                    answer = getCountryValue(c, language, questionType.answerProperty);
+                    choices = answer
+                        ? getChoices(c, answer, flagChoices, questionType, chosenDifficultyLevel)
+                        : undefined;
+                    break;
                 case 'country_flag':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
