@@ -30,11 +30,11 @@ const NewGame = (props) => {
 
     const gameOptions = useGameOptions();
 
-    const [independantOnly, setIndependantOnly] = useState(gameOptions && gameOptions.independantOnly);
-    const [gameMode, setGameMode] = useState((gameOptions && gameOptions.gameMode) || TRIVIA);
+    const [independantOnly, setIndependantOnly] = useState((gameOptions && gameOptions.independantOnly) ?? true);
+    const [gameMode, setGameMode] = useState((gameOptions && gameOptions.gameMode) || CAPITAL);
     const [region, setRegion] = useState((gameOptions && gameOptions.region) || 'all');
     const [difficultyLevel, setDifficultyLevel] = useState(
-        (gameOptions && gameOptions.difficultyLevel) || DIFFICULTY_NORMAL
+        (gameOptions && gameOptions.difficultyLevel) ?? DIFFICULTY_NORMAL
     );
 
     const handleChangeLength = (event) => {
@@ -132,7 +132,7 @@ const NewGame = (props) => {
                             required
                             select
                             SelectProps={{ native: true }}
-                            value={gameMode || TRIVIA}
+                            value={gameMode}
                         >
                             {gameModes.map((option) => (
                                 <option key={option.key} value={option.key} disabled={option.disabled}>
