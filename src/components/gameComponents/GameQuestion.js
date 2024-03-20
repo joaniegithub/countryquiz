@@ -125,7 +125,7 @@ const GameQuestion = (props) => {
 						country={question.country}
 					/>
 				) : (
-                    <Typography color="secondary" fontSize="24px" fontWeight="800" lineHeight="28px">
+                    <Typography color="success.main" fontSize="24px" fontWeight="800" lineHeight="28px">
                         {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
                     </Typography>
                 )}
