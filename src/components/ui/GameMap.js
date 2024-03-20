@@ -1,14 +1,14 @@
 import { useTheme } from '@emotion/react';
 import * as React from 'react';
 import { useState } from 'react';
-import 'leaflet/dist/leaflet.css';
-import { geo_config } from 'data/flagsAndGeo/geoConfig';
-// import countriesData from 'data/countries.json';
 import hash from 'object-hash';
-
-import { Box } from '@mui/material';
-import { GeoJSON, MapContainer, Polygon, TileLayer, useMap } from 'react-leaflet';
 import geojsonBbox from 'geojson-bbox';
+
+import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet';
+
+import 'leaflet/dist/leaflet.css';
+
+import { geo_config } from 'data/flagsAndGeo/geoConfig';
 
 const GameMap = (props) => {
     const { country, border, sxOverrides } = props;
@@ -19,7 +19,6 @@ const GameMap = (props) => {
 	const setColor = ({ properties }) => {
 		return { weight: 1, color: theme.palette.secondary.main };
 	};
-	console.log(theme.palette.text.main);
 
 	const extent = geojsonBbox(geo_config[country]);
 

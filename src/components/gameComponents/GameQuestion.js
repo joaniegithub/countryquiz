@@ -35,7 +35,6 @@ const GameQuestion = (props) => {
             dispatch(gameAnswer(_chosenAnswer));
         }
     };
-    // console.log(question);
 
     const phase = game.currentPhase;
 
@@ -49,7 +48,6 @@ const GameQuestion = (props) => {
         }
         return text;
     };
-	console.log(question.questionType.key);
 
 	const choiceButtons = <>
 		{question && question.choices

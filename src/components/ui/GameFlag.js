@@ -2,9 +2,14 @@ import * as React from 'react';
 
 import { Box } from '@mui/material';
 
+// import { svg_config } from 'data/flagsAndGeo/svgConfig';
+
 const GameFlag = (props) => {
     const { country, border, sxOverrides } = props;
 
+	// const svg = svg_config[country];
+	// console.log(svg);
+			// <svg/>
     return (
         <Box
             component="img"
