@@ -1,5 +1,4 @@
 import { useTheme } from '@emotion/react';
-import { difficultyLevels } from 'data/config';
 import regionsData from 'data/regions.json';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -101,7 +100,7 @@ const GameEnd = (props) => {
                 />
                 <FunTypo
                     text={'/' + game.questions.length}
-                    color={theme.palette.secondary.main.replace('#', '')}
+                    color={theme.palette.success.main.replace('#', '')}
                     stroke={false}
                     distance="7px"
                     flexGrow={0}

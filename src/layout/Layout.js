@@ -4,7 +4,6 @@ import { useMemo } from 'react';
 
 import { Box, Container } from '@mui/material';
 
-import Footer from './Footer';
 import Header, { TOP_NAV_HEIGHT } from './Header';
 
 const images = [

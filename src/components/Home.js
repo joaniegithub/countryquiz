@@ -123,7 +123,7 @@ const Home = () => {
                                 // color: purple.darkest,
                                 height: '240px',
                                 width: '240px',
-                                opacity: 0.5,
+                                opacity: theme.palette.mode === 'dark' ? 0.5 : 1,
                             }}
                         >
                             <GlobeIcon />
@@ -152,6 +152,7 @@ const Home = () => {
                             </MainButton>
                             <MainButton
                                 buttonP={{
+                                	color: 'success',
                                     onClick: handleClickWiki,
                                 }}
                             >
@@ -161,7 +162,7 @@ const Home = () => {
                     ) : (
                         <MainButton
                             buttonP={{
-                                color: 'secondary',
+                                color: 'success',
                                 onClick: handleClickHome,
                                 startIcon: <ArrowCircleLeftIcon />,
                             }}

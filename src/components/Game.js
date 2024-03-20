@@ -1,4 +1,4 @@
-import { useTheme } from '@emotion/react';
+// import { useTheme } from '@emotion/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
@@ -7,16 +7,16 @@ import { useCurrentGame } from 'store/selector';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import { Box, Button, Stack, Typography } from '@mui/material';
-import { alpha } from '@mui/material/styles';
+import { Box, Stack } from '@mui/material';
 
 import GameEnd from './gameComponents/GameEnd';
 import GameProgress from './gameComponents/GameProgress';
 import GameQuestion from './gameComponents/GameQuestion';
+import MainButton from './ui/MainButton';
 
 const Game = () => {
     const dispatch = useDispatch();
-    const theme = useTheme();
+    // const theme = useTheme();
     const { t } = useTranslation();
 
     const game = useCurrentGame();
@@ -66,36 +66,32 @@ const Game = () => {
                 }}
             >
                 {isEnd ? (
-                    <Button
-                        color="secondary"
-                        size="large"
-                        variant="contained"
-                        onClick={handleClickHome}
-                        startIcon={<ArrowCircleLeftIcon />}
+                    <MainButton
+                        buttonP={{
+							color: "success",
+							size: "large",
+							onClick: handleClickHome,
+							startIcon: <ArrowCircleLeftIcon />,
+                        }}
                     >
-                        <Typography fontSize="18px" fontWeight="600">
-                            {t('Home')}
-                        </Typography>
-                    </Button>
+                        {t('Home')}
+                    </MainButton>
                 ) : (
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        size="large"
-                        disabled={phase === 0}
-                        onClick={handleNext}
-                        endIcon={<ArrowCircleRightIcon />}
+                    <MainButton
+                        buttonP={{
+							color: "success",
+							size: "large",
+                        	disabled: (phase === 0),
+							onClick: handleNext,
+							endIcon: <ArrowCircleRightIcon />,
+                        }}
+						typoP={{
+							fontSize: "20px",
+							fontWeight: "700",
+						}}
                     >
-                        <Typography
-                            fontSize="20px"
-                            fontWeight="700"
-                            sx={{
-                                textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
-                            }}
-                        >
                             {t('Next')}
-                        </Typography>
-                    </Button>
+                    </MainButton>
                 )}
             </Stack>
         </Box>

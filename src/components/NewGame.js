@@ -14,7 +14,7 @@ import { ReactComponent as Flag } from 'assets/images/flag.svg';
 import { ReactComponent as Brain } from 'assets/images/brain.svg';
 
 import {
-    Button,
+	Button,
     Card,
     Checkbox,
     FormControlLabel,
@@ -24,9 +24,9 @@ import {
     ToggleButtonGroup,
     Typography,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 
 import FunTypo from './ui/FunTypo';
+import MainButton from './ui/MainButton';
 
 const NewGame = (props) => {
     const dispatch = useDispatch();
@@ -44,9 +44,9 @@ const NewGame = (props) => {
         (gameOptions && gameOptions.difficultyLevel) ?? DIFFICULTY_NORMAL
     );
 
-    const handleChangeLength = (event) => {
-        // setGameMode(event.target.value);
-    };
+    // const handleChangeLength = (event) => {
+    //     // setGameMode(event.target.value);
+    // };
 
     const handleChangeIndependant = (event) => {
         setIndependantOnly(event.target.checked);
@@ -97,13 +97,14 @@ const NewGame = (props) => {
 						spacing={2}
 						useFlexGap
 						sx={{
-							width: '100%',
+							maxWidth: '100%',
+							width: '360px',
 						}}
 					>
 							{gameModes.filter((option) => option.isMain).map((option) => {
 								return (
 									<Button
-										variant="outlined"
+										variant="mode"
 										size="large"
 										sx={{
 											width: 'calc(50% - 8px)',
@@ -133,9 +134,8 @@ const NewGame = (props) => {
 						<Stack spacing={2}>
 							<Typography
 								variant="h2"
-								color="secondary"
 								display="block"
-								mt="-20px"
+								mt="-20px !important"
 								sx={
 									{
 										// fontSize: 20,
@@ -145,7 +145,7 @@ const NewGame = (props) => {
 							>
 								<FunTypo
 									text={t('Game Options')}
-									color={theme.palette.primary.contrast.replace('#', '')}
+									color={theme.palette.text.main.replace('#', '')}
 									stroke={false}
 									strokeWidth="2px"
 									distance="3px"
@@ -253,25 +253,113 @@ const NewGame = (props) => {
 									</ToggleButton>
 								))}
 							</ToggleButtonGroup>
-							<Button
-								variant="contained"
-								size="large"
-								// endIcon={<PlayCircleFilledIcon />}
-								onClick={handleClickStart}
+							<MainButton
+								buttonP={{
+									color: "primary",
+									size: "large",
+									onClick: handleClickStart,
+								}}
+								typoP={{
+									fontSize: "20px",
+									fontWeight: "700",
+								}}
 							>
-								<Typography
-									fontSize="20px"
-									fontWeight="700"
-									sx={{
-										textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
-									}}
-								>
-									{t('Start Game')}
-								</Typography>
-							</Button>
+								{t('Start Game')}
+							</MainButton>
 						</Stack>
                 	</Card>
 				)}
+{/*}=======
+								{t("Long")}
+							</ToggleButton>
+                        </ToggleButtonGroup>* /}
+                        <TextField
+                            fullWidth
+                            label={t('Mode')}
+                            name="Mode"
+                            onChange={handleChangeMode}
+                            required
+                            select
+                            SelectProps={{ native: true }}
+                            value={gameMode}
+                        >
+                            {gameModes.map((option) => (
+                                <option key={option.key} value={option.key} disabled={option.disabled}>
+                                    {option.name[i18n.language]}
+                                </option>
+                            ))}
+                        </TextField>
+                        <FormControlLabel
+                            disabled={gameMode === TRIVIA}
+                            control={<Checkbox checked={independantOnly} />}
+                            onChange={handleChangeIndependant}
+                            label={
+                                <Typography fontSize="12px" color="textSecondary">
+                                    {t('Independent countries only')}
+                                </Typography>
+                            }
+                            sx={{
+                                mt: '0 !important',
+                            }}
+                        />
+                        <TextField
+                            disabled={gameMode === TRIVIA}
+                            fullWidth
+                            label={t('Region')}
+                            name="Region"
+                            onChange={handleChangeRegion}
+                            required
+                            select
+                            SelectProps={{ native: true }}
+                            value={region}
+                        >
+                            <option key="all" value="all">
+                                {t('World')}
+                            </option>
+                            {regionsData.map((option) =>
+                                option.eng === 'Antarctic' ? null : (
+                                    <option key={option.eng} value={option.eng}>
+                                        {option[i18n.language]}
+                                    </option>
+                                )
+                            )}
+                        </TextField>
+                        <ToggleButtonGroup
+                            disabled={gameMode === TRIVIA}
+                            color="primary"
+                            value={difficultyLevel}
+                            exclusive
+                            onChange={handleChangeDifficultyLevel}
+                            aria-label={t('Difficulty')}
+                            label={t('Difficulty')}
+                            name="Difficulty"
+                            size="small"
+                            sx={{
+                                justifyContent: 'center',
+                            }}
+                        >
+                            {difficultyLevels.map((option) => (
+                                <ToggleButton key={option.key} value={option.key} disabled={option.disabled}>
+                                    {t(option.name)}
+                                </ToggleButton>
+                            ))}
+                        </ToggleButtonGroup>
+						<MainButton
+							buttonP={{
+								color: "primary",
+								size: "large",
+								onClick: handleClickStart,
+							}}
+							typoP={{
+                                fontSize: "20px",
+                                fontWeight: "700",
+							}}
+						>
+                            {t('Start Game')}
+						</MainButton>
+                    </Stack>
+                </Card>
+						>>>>>>> main*/}
             </Stack>
         </React.Fragment>
     );

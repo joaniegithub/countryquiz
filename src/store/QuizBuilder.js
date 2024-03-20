@@ -157,10 +157,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         answer = getOneRandom(c.borders);
                     }
                     if (answer) {
-                        answer = allCountries.find((c) => c.cca3 === answer);
+                        const newAnswer = allCountries.find((c) => c.cca3 === answer);
+						answer = newAnswer;
                     }
-                    choices = answer ? getCountriesNotBorder(c, answer, allCountries, language) : undefined;
                     if (answer) {
+                    	choices = getCountriesNotBorder(c, answer, allCountries, language);
                         answer = getCountryValue(answer, language, 'name-common');
                     }
                     break;
@@ -209,9 +210,9 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             }
             console.log(answer, choices, questionType.key, c.borders);
 
-            if (!answer || !choices) {
-                nbTry++;
-            }
+            // if (!answer || !choices) {
+            //     nbTry++;
+            // }
         }
 
         return {

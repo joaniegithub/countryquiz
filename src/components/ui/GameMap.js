@@ -4,20 +4,20 @@ import { useState } from 'react';
 import hash from 'object-hash';
 import geojsonBbox from 'geojson-bbox';
 
-import { GeoJSON, MapContainer, TileLayer, useMap } from 'react-leaflet';
+import { GeoJSON, MapContainer, TileLayer } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
 import { geo_config } from 'data/flagsAndGeo/geoConfig';
 
 const GameMap = (props) => {
-    const { country, border, sxOverrides } = props;
+    const { country } = props;
     const theme = useTheme();
 	const [mapRef, setMapRef] = useState(undefined);
 
     const center = [51.505, -0.09];
 	const setColor = ({ properties }) => {
-		return { weight: 1, color: theme.palette.secondary.main };
+		return { weight: 1, color: theme.palette.success.main };
 	};
 
 	const extent = geojsonBbox(geo_config[country]);

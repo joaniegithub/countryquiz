@@ -29,12 +29,12 @@ const GameProgress = (props) => {
                     width: 'auto',
                 }}
             >
-                <Typography color="secondary.contrast" fontSize="18px" textAlign="right" fontWeight="800">
+                <Typography fontSize="18px" textAlign="right" fontWeight="700">
                     {game.currentTurn + ' / ' + game.questions.length}
                 </Typography>
             </Stack>
             <LinearProgress
-                color="secondary"
+                color="success"
                 variant="determinate"
                 value={(game.currentTurn / game.questions.length) * 100}
                 sx={{
@@ -53,7 +53,7 @@ const GameProgress = (props) => {
             >
                 <FunTypo
                     text={game.currentScore}
-                    color={theme.palette.secondary.contrast.replace('#', '')}
+                    color={theme.palette.text.main.replace('#', '')}
                     stroke={false}
                     distance="2px"
                     flexGrow={0}
