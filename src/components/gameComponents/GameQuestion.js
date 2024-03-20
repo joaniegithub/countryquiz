@@ -1,15 +1,14 @@
 import { useTheme } from '@emotion/react';
-import { COUNTRY_BY_FLAG, DIFFICULTY_EXPERT, DIFFICULTY_HARD } from 'data/config';
+import { DIFFICULTY_EXPERT } from 'data/config';
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { gameAnswer } from 'store/actions';
-import { useGameMode } from 'store/selector';
+// import { useGameMode } from 'store/selector';
 
-import { Box, Card, Stack, Typography } from '@mui/material';
+import { Card, Stack, Typography } from '@mui/material';
 
-import FunTypo from '../ui/FunTypo';
 import GameFlag from '../ui/GameFlag';
 import GameButton from './GameButton';
 import GameMap from 'components/ui/GameMap';
@@ -27,7 +26,7 @@ const GameQuestion = (props) => {
     const question = game.questions && game.questions[turn];
     const difficultyLevel = game.difficultyLevel;
     const rightAnswer = question ? question.answer : undefined;
-    const gameMode = useGameMode();
+    // const gameMode = useGameMode();
 
     const handleChoiceClick = (_chosenAnswer) => {
         if (phase === 0) {
@@ -73,11 +72,6 @@ const GameQuestion = (props) => {
 									width: '85%',
 									maxWidth: '150px',
 									maxHeight: '25vw',
-									// width: 'auto',
-									// height: '16px',
-									// marginLeft: '3px',
-									// marginRight: '1px',
-									// verticalAlign: 'middle',
 								}}
 							/>
 						) : (
@@ -108,29 +102,20 @@ const GameQuestion = (props) => {
             <Card
                 sx={{
                     px: 2,
-                    py: 4,
+                    pt: question.questionType.key === 'country_map' ? 3 : 4,
+                    pb: question.questionType.key === 'country_map' ? 2 : 4,
                     mt: 1,
                     textAlign: 'center',
                     width: '100%',
                     boxSizing: 'border-box',
                 }}
             >
-                <FunTypo
-                    text={textReplace(
-                        question.questionType.questionPhrase[i18n.language],
-                        question.questionPhraseValues
-                    )}
-                    color={theme.palette.primary.contrast.replace('#', '')}
-                    stroke={false}
-                    distance="2px"
-                    sx={{
-                        display: 'block',
-                        fontSize: '24px',
-                        lineHeight: '24px',
-                        fontWeight: 600,
-                        mb: '16px',
-                    }}
-                />
+				<Typography fontSize="20px" fontWeight="600" lineHeight="24px" mb="16px">
+					{textReplace(
+						question.questionType.questionPhrase[i18n.language],
+						question.questionPhraseValues
+					)}
+				</Typography>
                 {question.questionType.key === 'country_flag' ? (
                     <React.Fragment>
                         <GameFlag country={question.country.toLowerCase()} />
@@ -140,7 +125,7 @@ const GameQuestion = (props) => {
 						country={question.country}
 					/>
 				) : (
-                    <Typography fontSize="24px" fontWeight="800" lineHeight="28px">
+                    <Typography color="secondary" fontSize="24px" fontWeight="800" lineHeight="28px">
                         {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
                     </Typography>
                 )}

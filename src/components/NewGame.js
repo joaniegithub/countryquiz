@@ -9,7 +9,6 @@ import { startGame } from 'store/actions';
 import { useGameOptions } from 'store/selector';
 
 import {
-    Button,
     Card,
     Checkbox,
     FormControlLabel,
@@ -19,9 +18,9 @@ import {
     ToggleButtonGroup,
     Typography,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 
 import FunTypo from './ui/FunTypo';
+import MainButton from './ui/MainButton';
 
 const NewGame = (props) => {
     const dispatch = useDispatch();
@@ -37,9 +36,9 @@ const NewGame = (props) => {
         (gameOptions && gameOptions.difficultyLevel) ?? DIFFICULTY_NORMAL
     );
 
-    const handleChangeLength = (event) => {
-        // setGameMode(event.target.value);
-    };
+    // const handleChangeLength = (event) => {
+    //     // setGameMode(event.target.value);
+    // };
 
     const handleChangeIndependant = (event) => {
         setIndependantOnly(event.target.checked);
@@ -75,9 +74,8 @@ const NewGame = (props) => {
                     <Stack spacing={2}>
                         <Typography
                             variant="h2"
-                            color="secondary"
                             display="block"
-                            mt="-20px"
+                            mt="-20px !important"
                             sx={
                                 {
                                     // fontSize: 20,
@@ -87,7 +85,7 @@ const NewGame = (props) => {
                         >
                             <FunTypo
                                 text={t('Game Options')}
-                                color={theme.palette.primary.contrast.replace('#', '')}
+                                color={theme.palette.text.main.replace('#', '')}
                                 stroke={false}
                                 strokeWidth="2px"
                                 distance="3px"
@@ -195,22 +193,19 @@ const NewGame = (props) => {
                                 </ToggleButton>
                             ))}
                         </ToggleButtonGroup>
-                        <Button
-                            variant="contained"
-                            size="large"
-                            // endIcon={<PlayCircleFilledIcon />}
-                            onClick={handleClickStart}
-                        >
-                            <Typography
-                                fontSize="20px"
-                                fontWeight="700"
-                                sx={{
-                                    textShadow: `2px 2px 0px ${alpha(theme.palette.background.default, 0.3)}`,
-                                }}
-                            >
-                                {t('Start Game')}
-                            </Typography>
-                        </Button>
+						<MainButton
+							buttonP={{
+								color: "primary",
+								size: "large",
+								onClick: handleClickStart,
+							}}
+							typoP={{
+                                fontSize: "20px",
+                                fontWeight: "700",
+							}}
+						>
+                            {t('Start Game')}
+						</MainButton>
                     </Stack>
                 </Card>
             </Stack>

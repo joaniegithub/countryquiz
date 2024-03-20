@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setInWiki } from 'store/actions';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import { Autocomplete, Box, Card, TextField } from '@mui/material';
+import { Autocomplete, Box, TextField } from '@mui/material';
 
 import CountryCard from './ui/CountryCard';
 import GameFlag from './ui/GameFlag';
@@ -105,7 +105,7 @@ const Wiki = (props) => {
                 >
                     <MainButton
                         buttonP={{
-                            color: 'secondary',
+                            color: 'success',
                             onClick: handleClickHome,
                             startIcon: <ArrowCircleLeftIcon />,
                         }}

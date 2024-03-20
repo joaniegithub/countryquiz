@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 // import { svg_config } from 'data/flagsAndGeo/svgConfig';
 
 const GameFlag = (props) => {
-    const { country, border, sxOverrides } = props;
+    const { country, sxOverrides } = props;
 
 	// const svg = svg_config[country];
 	// console.log(svg);

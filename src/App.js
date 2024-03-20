@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
@@ -11,7 +11,6 @@ import Layout from './layout/Layout';
 import { useInGame, useInWiki, useIsDarkMode } from './store/selector';
 import { createTheme as createMyTheme } from './theme';
 import { createTheme as createMyThemeDark } from './theme/dark';
-import GameMap from 'components/ui/GameMap';
 
 const theme = createMyTheme();
 const darkTheme = createMyThemeDark();
@@ -19,7 +18,7 @@ const darkTheme = createMyThemeDark();
 const CountryQuizApp = (props) => {
     const [deferredPrompt, setDeferredPrompt] = useState(undefined);
 
-    const { i18n } = useTranslation();
+    // const { i18n } = useTranslation();
     // console.log(i18n);
 
     const inGame = useInGame();

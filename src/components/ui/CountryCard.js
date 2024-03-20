@@ -41,7 +41,7 @@ const CountryCard = (props) => {
             >
                 {i18n.language === 'eng' ? country.name.common : country.translations[i18n.language]['common']}
                 <GameFlag
-                    country={country.cca3}
+                    country={country.cca3.toLowerCase()}
                     sxOverrides={{
                         maxWidth: '20px',
                         maxHeight: 'none',
@@ -108,8 +108,8 @@ const CountryCard = (props) => {
                 <IconButton
                     onClick={onPrevious}
                     sx={{
-                        backgroundColor: theme.palette.primary.alpha12,
-                        color: theme.palette.text.primary,
+                        // backgroundColor: theme.palette.primary.main,
+                        // // color: theme.palette.text.primary,
                         position: 'absolute',
                         left: '0px',
                         top: '50%',
@@ -124,8 +124,8 @@ const CountryCard = (props) => {
                 <IconButton
                     onClick={onNext}
                     sx={{
-                        backgroundColor: theme.palette.primary.alpha12,
-                        color: theme.palette.text.primary,
+                        // backgroundColor: theme.palette.primary.main,
+                        // color: theme.palette.,
                         position: 'absolute',
                         right: '0px',
                         top: '50%',

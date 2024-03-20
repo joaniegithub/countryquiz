@@ -6,7 +6,7 @@ import {
     paperClasses,
     tableCellClasses,
     toggleButtonClasses,
-    toggleButtonGroupClasses,
+    toggleButtonGroupClasses
 } from '@mui/material';
 
 // Used only to create transitions
@@ -27,10 +27,15 @@ export function createComponents(config) {
         },
         MuiButton: {
             styleOverrides: {
-                root: {
+				root: ({ ownerState }) => ({
                     borderRadius: '12px',
                     textTransform: 'none',
-                },
+                    boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.075)',
+					// ...(ownerState.variant === 'outlined' &&
+					// 	/*ownerState.color === 'primary' &&*/ {
+					// 		borderWidth: '2px',
+					// 	}),
+					}),
                 sizeSmall: {
                     padding: '6px 16px',
                 },
@@ -49,7 +54,24 @@ export function createComponents(config) {
                 textSizeLarge: {
                     padding: '12px 16px',
                 },
+				// outlined: {
+				// 	borderWidth: '2px',
+				// },
             },
+			// variants: [
+			// 	{
+			// 		props: { variant: 'choice' },
+			// 		style: {
+			// 			border: `3px solid ${palette.text.main}`,
+			// 		},
+			// 	},
+			// 	{
+			// 		props: { variant: 'dashed', color: 'secondary' },
+			// 		style: {
+			// 			border: `4px dashed rgba(0, 200, 0, 0.2)`,
+			// 		},
+			// 	},
+			// ],
         },
         MuiCard: {
             styleOverrides: {
@@ -314,10 +336,12 @@ export function createComponents(config) {
         MuiLinearProgress: {
             styleOverrides: {
                 root: {
-                    borderColor: palette.primary.alpha4,
+                    backgroundColor: palette.neutral[300],
+                    borderColor: palette.neutral[300],
                     borderStyle: 'solid',
-                    borderWidth: 3,
-                    height: '12px',
+                    borderWidth: 0,
+                    borderRadius: 8,
+                    height: '14px',
                 },
             },
         },

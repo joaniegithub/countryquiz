@@ -1,8 +1,7 @@
-import { ReactComponent as GlobeIcon } from 'assets/images/globe.svg';
 import * as React from 'react';
-import { indigo, neutral, purple } from 'theme/colors';
+import { secondary, neutral, purple } from 'theme/colors';
 
-import { Box, SvgIcon } from '@mui/material';
+import { Box } from '@mui/material';
 
 const BG = (props) => {
     const colors = [
@@ -12,9 +11,9 @@ const BG = (props) => {
         purple.main,
         purple.light,
         purple.dark,
-        indigo.main,
-        indigo.light,
-        indigo.dark,
+        secondary.main,
+        secondary.light,
+        secondary.dark,
         neutral[400],
         neutral[500],
         neutral[600],
@@ -51,7 +50,7 @@ const BG = (props) => {
                             component="span"
                             sx={{
                                 pointerEvents: 'none',
-                                opacity: Math.random() * 0.025 + 0.025,
+                                opacity: Math.random() * 0.0125 + 0.0125,
                                 display: 'block',
                                 backgroundColor: color,
                                 position: 'absolute',
@@ -68,7 +67,7 @@ const BG = (props) => {
                             component="span"
                             sx={{
                                 pointerEvents: 'none',
-                                opacity: Math.random() * 0.025 + 0.025,
+                                opacity: Math.random() * 0.0125 + 0.0125,
                                 display: 'block',
                                 background:
                                     'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg" width="' +

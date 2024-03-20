@@ -1,7 +1,7 @@
 import { common } from '@mui/material/colors';
 import { alpha } from '@mui/material/styles';
 
-import { error, indigoDarkMode, info, neutral, purpleDarkMode, success, warning } from '../colors';
+import { error, info, neutral, purple, secondary, success, warning } from '../colors';
 
 const neutralConversion = {
     50: 1000,
@@ -35,15 +35,15 @@ export function createPalette() {
         },
         background: {
             default: neutralDark[50],
-            paper: neutralDark[50],
+            paper: neutralDark[100],
         },
         divider: neutralDark[300],
         error,
         info,
         mode: 'dark',
         neutral: neutralDark,
-        primary: purpleDarkMode,
-        secondary: indigoDarkMode,
+        primary: purple,
+        secondary: secondary,
         success,
         text: {
             title: common.white,

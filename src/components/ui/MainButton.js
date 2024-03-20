@@ -13,11 +13,11 @@ const MainButton = (props) => {
 			{isFlag ? <>{children}</> : (
 				<Typography
 					component="span"
-					fontSize="20px"
-					fontWeight="700"
+					fontSize="24px"
+					fontWeight="800"
 					{...typoP}
 					sx={{
-						textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.3)}`,
+						textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.2)}`,
 					}}
 				>
 					{children}
