@@ -229,6 +229,7 @@ export const gameModes = [
             eng: 'Capitals',
         },
         questionType: questionTypeIndex.capital,
+		isMain: true,
     },
     {
         key: COUNTRY_BY_CAPITAL,
@@ -241,6 +242,7 @@ export const gameModes = [
             eng: 'Capitals',
         },
         questionType: questionTypeIndex.country_capital,
+		isMain: false,
     },
     {
         key: FLAG,
@@ -253,6 +255,7 @@ export const gameModes = [
             eng: "Flags",
         },
     	questionType: questionTypeIndex.flag,
+		isMain: true,
     },
     {
         key: COUNTRY_BY_FLAG,
@@ -265,6 +268,7 @@ export const gameModes = [
             eng: 'Flags',
         },
         questionType: questionTypeIndex.country_flag,
+		isMain: false,
     },
     {
         key: COUNTRY_BY_MAP,
@@ -277,6 +281,7 @@ export const gameModes = [
             eng: 'Location',
         },
         questionType: questionTypeIndex.country_map,
+		isMain: true,
     },
     {
         key: TRIVIA,
@@ -288,6 +293,7 @@ export const gameModes = [
             fra: 'Trivia',
             eng: 'Trivia',
         },
+		isMain: true,
     },
 ];
 
