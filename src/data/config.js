@@ -9,6 +9,7 @@ export const CAPITAL = 'capital';
 export const COUNTRY_BY_CAPITAL = 'country_capital';
 export const FLAG = 'flag';
 export const COUNTRY_BY_FLAG = 'country_flag';
+export const COUNTRY_BY_MAP = 'country_map';
 export const TRIVIA = 'trivia';
 
 export const NB_CHOICES = 4;
@@ -95,6 +96,17 @@ export const questionTypes = [
         questionPhrase: {
             fra: 'À quel pays appartient ce drapeau?',
             eng: 'Which country does this flag belong to?',
+        },
+        questionProperty: 'cca3',
+        answerProperty: 'name-common',
+        disabled: false,
+    },
+	// MAP
+    {
+        key: 'country_map',
+        questionPhrase: {
+            fra: 'Quel est ce pays?',
+            eng: 'What is this country?',
         },
         questionProperty: 'cca3',
         answerProperty: 'name-common',
@@ -253,6 +265,18 @@ export const gameModes = [
             eng: 'Flags',
         },
         questionType: questionTypeIndex.country_flag,
+    },
+    {
+        key: COUNTRY_BY_MAP,
+        name: {
+            fra: 'Carte',
+            eng: "Location",
+        },
+        shortName: {
+            fra: 'Carte',
+            eng: 'Location',
+        },
+        questionType: questionTypeIndex.country_map,
     },
     {
         key: TRIVIA,

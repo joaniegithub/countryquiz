@@ -11,6 +11,7 @@ import Layout from './layout/Layout';
 import { useInGame, useInWiki, useIsDarkMode } from './store/selector';
 import { createTheme as createMyTheme } from './theme';
 import { createTheme as createMyThemeDark } from './theme/dark';
+import GameMap from 'components/ui/GameMap';
 
 const theme = createMyTheme();
 const darkTheme = createMyThemeDark();

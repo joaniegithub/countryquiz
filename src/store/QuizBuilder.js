@@ -1,7 +1,7 @@
 import {
     CAPITAL,
     COUNTRY_BY_CAPITAL,
-    COUNTRY_BY_FLAG, // gameModes,
+    COUNTRY_BY_FLAG, COUNTRY_BY_MAP, // gameModes,
     DIFFICULTY_EXPERT,
     DIFFICULTY_HARD,
     DIFFICULTY_NORMAL,
@@ -21,14 +21,14 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
     let cityChoices = [];
     let countryChoices = [];
     let countryOfficialChoices = [];
-    let flagChoices = [];
+    let cca3Choices = [];
 
     if (mode.key === TRIVIA) {
         capitalChoices = getAllAnswers(allCountries, 'capital', language);
         cityChoices = getAllAnswers(allCountries, 'cities', language);
         countryChoices = getAllAnswers(allCountries, 'name-common', language);
         countryOfficialChoices = getAllAnswers(allCountries, 'name-official', 'eng'); // todo langue officiels
-        flagChoices = getAllAnswers(allCountries, 'cca3', language);
+        cca3Choices = getAllAnswers(allCountries, 'cca3', language);
     } else {
         if (chosenIndependantOnly) {
             allCountries = Object.values(countriesData).filter((c) => c.independent === true);
@@ -40,10 +40,10 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 
         if (mode.key === CAPITAL) {
             capitalChoices = getAllAnswers(allCountries, 'capital', language);
-        } else if (mode.key === COUNTRY_BY_CAPITAL || mode.key === COUNTRY_BY_FLAG) {
+        } else if (mode.key === COUNTRY_BY_CAPITAL || mode.key === COUNTRY_BY_FLAG || mode.key === COUNTRY_BY_MAP) {
             countryChoices = getAllAnswers(allCountries, 'name-common', language);
         } else if (mode.key === FLAG) {
-        	flagChoices = getAllAnswers(allCountries, 'cca3', language);
+        	cca3Choices = getAllAnswers(allCountries, 'cca3', language);
         }
     }
 
@@ -116,10 +116,18 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
-                        ? getChoices(c, answer, flagChoices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, answer, cca3Choices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
                 case 'country_flag':
+                    question = getCountryValue(c, language, questionType.questionProperty);
+                    answer = getCountryValue(c, language, questionType.answerProperty);
+                    choices = answer
+                        ? getChoices(c, answer, countryChoices, questionType, chosenDifficultyLevel)
+                        : undefined;
+                    break;
+					
+                case 'country_map':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
@@ -199,7 +207,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     }
                     break;
             }
-            // console.log(answer, choices, questionType.key, c.borders);
+            console.log(answer, choices, questionType.key, c.borders);
 
             if (!answer || !choices) {
                 nbTry++;

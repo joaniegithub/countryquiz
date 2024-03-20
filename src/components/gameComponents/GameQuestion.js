@@ -12,6 +12,7 @@ import { Box, Card, Stack, Typography } from '@mui/material';
 import FunTypo from '../ui/FunTypo';
 import GameFlag from '../ui/GameFlag';
 import GameButton from './GameButton';
+import GameMap from 'components/ui/GameMap';
 
 const GameQuestion = (props) => {
     const { game } = props;
@@ -48,50 +49,51 @@ const GameQuestion = (props) => {
         }
         return text;
     };
+	console.log(question.questionType.key);
 
 	const choiceButtons = <>
-            {question && question.choices
-                ? question.choices.map((choice, index) => {
-                      return (
-                          <GameButton
-                              onClick={() => {
-                                  handleChoiceClick(choice);
-                              }}
-                              colorEffect={theme.palette.primary.main.replace('#', '')}
-                              key={choice + index}
-                              phase={phase}
-                              choice={choice}
-                              rightAnswer={rightAnswer}
-                              chosenAnswer={chosenAnswer}
-							  isFlag={question.questionType.key === 'flag'}
-                              answerAdditionnalText={question.answerAdditionnalText}
-                          >
-							{question.questionType.key === 'flag' ? (
-								<GameFlag
-									country={choice.toLowerCase()}
-									sxOverrides={{
-										width: '85%',
-										maxWidth: '150px',
-										maxHeight: '25vw',
-										// width: 'auto',
-										// height: '16px',
-										// marginLeft: '3px',
-										// marginRight: '1px',
-										// verticalAlign: 'middle',
-									}}
-								/>
-							) : (
-								<>
-									{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
-										? choice[0] + ' * * * ' + choice[choice.length - 1]
-										: choice}
-								</>
-							)}
-                          </GameButton>
-                      );
-                  })
-                : null}
-			</>;
+		{question && question.choices
+			? question.choices.map((choice, index) => {
+					return (
+						<GameButton
+							onClick={() => {
+								handleChoiceClick(choice);
+							}}
+							colorEffect={theme.palette.primary.main.replace('#', '')}
+							key={choice + index}
+							phase={phase}
+							choice={choice}
+							rightAnswer={rightAnswer}
+							chosenAnswer={chosenAnswer}
+							isFlag={question.questionType.key === 'flag'}
+							answerAdditionnalText={question.answerAdditionnalText}
+						>
+						{question.questionType.key === 'flag' ? (
+							<GameFlag
+								country={choice.toLowerCase()}
+								sxOverrides={{
+									width: '85%',
+									maxWidth: '150px',
+									maxHeight: '25vw',
+									// width: 'auto',
+									// height: '16px',
+									// marginLeft: '3px',
+									// marginRight: '1px',
+									// verticalAlign: 'middle',
+								}}
+							/>
+						) : (
+							<>
+								{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
+									? choice[0] + ' * * * ' + choice[choice.length - 1]
+									: choice}
+							</>
+						)}
+						</GameButton>
+					);
+				})
+			: null}
+		</>;
 
     return (
         <Stack
@@ -135,7 +137,11 @@ const GameQuestion = (props) => {
                     <React.Fragment>
                         <GameFlag country={question.country.toLowerCase()} />
                     </React.Fragment>
-                ) : (
+                ) : question.questionType.key === 'country_map' ? (
+					<GameMap
+						country={question.country}
+					/>
+				) : (
                     <Typography fontSize="24px" fontWeight="800" lineHeight="28px">
                         {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
                     </Typography>
