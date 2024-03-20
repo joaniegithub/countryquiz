@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
-<rect width="1200" height="600"/>
-<rect width="1200" height="200" y="200" style="fill:#fff"/>
-<rect width="1200" height="200" y="400" style="fill:#007a3d"/>
-<polygon points="600,300 0,600 0,0 " style="fill:#ce1126"/>
-<polygon points="225.411,310.363 199.843,312.75 203.212,338.289 185.411,319.723 167.609,338.289 170.979,312.75 145.41,310.363 167.414,297.083 153.332,275.539 177.402,284.518 185.411,260.041 193.42,284.518 217.489,275.539 203.407,297.083" id="path14" style="fill:#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+    <path d="M0 0h1200v600H0z"/>
+    <path style="fill:#fff" d="M0 200h1200v200H0z"/>
+    <path style="fill:#007a3d" d="M0 400h1200v200H0z"/>
+    <path style="fill:#ce1126" d="M600 300 0 600V0z"/>
+    <path style="fill:#fff" d="m225.411 310.363-25.568 2.387 3.369 25.539-17.801-18.566-17.802 18.566 3.37-25.539-25.569-2.387 22.004-13.28-14.082-21.544 24.07 8.979 8.009-24.477 8.009 24.477 24.069-8.979-14.082 21.544z"/>
 </svg>
