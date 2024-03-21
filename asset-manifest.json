@@ -1,17 +1,21 @@
 {
   "files": {
     "main.css": "/countryquiz/static/css/main.00551ccd.css",
-    "main.js": "/countryquiz/static/js/main.b773dcc3.js",
+    "main.js": "/countryquiz/static/js/main.d3bfbe85.js",
     "static/js/787.e70eccd5.chunk.js": "/countryquiz/static/js/787.e70eccd5.chunk.js",
     "service-worker.js": "/countryquiz/service-worker.js",
     "index.html": "/countryquiz/index.html",
+    "static/media/brain.svg": "/countryquiz/static/media/brain.8f085308e3fa00a672d36676e23909a2.svg",
     "static/media/globe.svg": "/countryquiz/static/media/globe.2f187de4a083005c33355bb5fdcc389e.svg",
+    "static/media/map.svg": "/countryquiz/static/media/map.8a1392fd79bbf2edc5ea1aca14facc4c.svg",
+    "static/media/flag1.svg": "/countryquiz/static/media/flag1.3620ab00a2a7e647d581e92b4b3a5ae8.svg",
+    "static/media/location.svg": "/countryquiz/static/media/location.0629572ca0fd276dd329ba274168f453.svg",
     "main.00551ccd.css.map": "/countryquiz/static/css/main.00551ccd.css.map",
-    "main.b773dcc3.js.map": "/countryquiz/static/js/main.b773dcc3.js.map",
+    "main.d3bfbe85.js.map": "/countryquiz/static/js/main.d3bfbe85.js.map",
     "787.e70eccd5.chunk.js.map": "/countryquiz/static/js/787.e70eccd5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.00551ccd.css",
-    "static/js/main.b773dcc3.js"
+    "static/js/main.d3bfbe85.js"
   ]
 }
