@@ -7,9 +7,9 @@ import { Box } from '@mui/material';
 const GameFlag = (props) => {
     const { country, sxOverrides } = props;
 
-	// const svg = svg_config[country];
-	// console.log(svg);
-			// <svg/>
+    // const svg = svg_config[country];
+    // console.log(svg);
+    // <svg/>
     return (
         <Box
             component="img"

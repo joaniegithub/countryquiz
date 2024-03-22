@@ -4,10 +4,10 @@ import {
     inputLabelClasses,
     outlinedInputClasses,
     paperClasses,
+    switchClasses,
     tableCellClasses,
     toggleButtonClasses,
     toggleButtonGroupClasses,
-	switchClasses
 } from '@mui/material';
 
 // Used only to create transitions
@@ -35,15 +35,15 @@ export function createComponents(config) {
         },
         MuiButton: {
             styleOverrides: {
-				root: ({ ownerState }) => ({
+                root: ({ ownerState }) => ({
                     borderRadius: '12px',
                     textTransform: 'none',
                     boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.2), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.075)',
-					// ...(ownerState.variant === 'outlined' &&
-					// 	/*ownerState.color === 'primary' &&*/ {
-					// 		borderWidth: '2px',
-					// 	}),
-					}),
+                    // ...(ownerState.variant === 'outlined' &&
+                    // 	/*ownerState.color === 'primary' &&*/ {
+                    // 		borderWidth: '2px',
+                    // 	}),
+                }),
                 sizeSmall: {
                     padding: '6px 16px',
                 },
@@ -62,25 +62,25 @@ export function createComponents(config) {
                 textSizeLarge: {
                     padding: '12px 16px',
                 },
-				// outlined: {
-				// 	borderWidth: '2px',
-				// },
+                // outlined: {
+                // 	borderWidth: '2px',
+                // },
             },
-			variants: [
-				{
-					props: { variant: 'mode' },
-					style: {
-						border: 0,
-						backgroundColor: palette.background.paper,
-					},
-				},
-				// {
-				// 	props: { variant: 'dashed', color: 'secondary' },
-				// 	style: {
-				// 		border: `4px dashed rgba(0, 200, 0, 0.2)`,
-				// 	},
-				// },
-			],
+            variants: [
+                {
+                    props: { variant: 'mode' },
+                    style: {
+                        border: 0,
+                        backgroundColor: palette.background.paper,
+                    },
+                },
+                // {
+                // 	props: { variant: 'dashed', color: 'secondary' },
+                // 	style: {
+                // 		border: `4px dashed rgba(0, 200, 0, 0.2)`,
+                // 	},
+                // },
+            ],
         },
         MuiCard: {
             styleOverrides: {
@@ -363,43 +363,45 @@ export function createComponents(config) {
         },
         MuiSwitch: {
             styleOverrides: {
-                root: ({ theme }) => { return {
-					width,
-					height,
-					padding: 0,
-					margin: theme.spacing(1),
-					overflow: "unset",
-					[`& .${switchClasses.switchBase}`]: {
-						padding: pxToRem(gap),
-						[`&.${switchClasses.checked}`]: {
-							color: "#fff",
-							transform: `translateX(calc(${width} - ${size} - ${pxToRem(2 * gap)}))`,
-							[`& + .${switchClasses.track}`]: {
-								backgroundColor: theme.palette.primary.main,
-								opacity: 1,
-								border: "none",
-							},
-							[`& .${switchClasses.thumb}`]: {
-								backgroundColor: "#fff",
-							},
-						},
-					},
-					[`& .${switchClasses.thumb}`]: {
-						boxShadow: "none",
-						backgroundColor: theme.palette.grey[400],
-						width: size,
-						height: size,
-					},
-					[`& .${switchClasses.track}`]: {
-						borderRadius: 40,
-						border: `solid ${theme.palette.grey[400]}`,
-						borderWidth,
-						backgroundColor: theme.palette.grey[200],
-						opacity: 1,
-						transition: theme.transitions.create(["background-color", "border"]),
-						boxSizing: "border-box",
-					},
-                };},
+                root: ({ theme }) => {
+                    return {
+                        width,
+                        height,
+                        padding: 0,
+                        margin: theme.spacing(1),
+                        overflow: 'unset',
+                        [`& .${switchClasses.switchBase}`]: {
+                            padding: pxToRem(gap),
+                            [`&.${switchClasses.checked}`]: {
+                                color: '#fff',
+                                transform: `translateX(calc(${width} - ${size} - ${pxToRem(2 * gap)}))`,
+                                [`& + .${switchClasses.track}`]: {
+                                    backgroundColor: theme.palette.primary.main,
+                                    opacity: 1,
+                                    border: 'none',
+                                },
+                                [`& .${switchClasses.thumb}`]: {
+                                    backgroundColor: '#fff',
+                                },
+                            },
+                        },
+                        [`& .${switchClasses.thumb}`]: {
+                            boxShadow: 'none',
+                            backgroundColor: theme.palette.grey[400],
+                            width: size,
+                            height: size,
+                        },
+                        [`& .${switchClasses.track}`]: {
+                            borderRadius: 40,
+                            border: `solid ${theme.palette.grey[400]}`,
+                            borderWidth,
+                            backgroundColor: theme.palette.grey[200],
+                            opacity: 1,
+                            transition: theme.transitions.create(['background-color', 'border']),
+                            boxSizing: 'border-box',
+                        },
+                    };
+                },
             },
         },
         MuiTab: {

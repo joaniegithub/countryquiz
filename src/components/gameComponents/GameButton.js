@@ -18,9 +18,8 @@ const GameButton = (props) => {
         choice,
         rightAnswer,
         chosenAnswer,
-		isFlag,
+        isFlag,
         answerAdditionnalText,
-		
     } = props;
     const theme = useTheme();
 
@@ -43,26 +42,26 @@ const GameButton = (props) => {
             buttonP={{
                 color: color,
                 onClick: onClick,
-				variant: isFlag ? 'outlined' : 'contained',
-				// variant: 'outlined',
-				// variant: isFlag || (phase === 1 && choice !== rightAnswer && chosenAnswer !== choice) ? 'outlined' : 'contained',
+                variant: isFlag ? 'outlined' : 'contained',
+                // variant: 'outlined',
+                // variant: isFlag || (phase === 1 && choice !== rightAnswer && chosenAnswer !== choice) ? 'outlined' : 'contained',
                 sx: {
-                    position: "relative",
+                    position: 'relative',
                     ...(color === 'secondary' || color === 'success'
                         ? {
                               outlineOffset: '3px',
                               outline: `2px solid ${theme.palette[color].main}`,
                           }
                         : {}),
-					// ...(phase === 0 ? {
-						// backgroundColor: "#fff",
-						// '&:hover': {
-						// 	backgroundColor: "rgba(255,255,255,0.5)",
-						// },
-					// } : {}),
+                    // ...(phase === 0 ? {
+                    // backgroundColor: "#fff",
+                    // '&:hover': {
+                    // 	backgroundColor: "rgba(255,255,255,0.5)",
+                    // },
+                    // } : {}),
                     textAlign: 'center',
                     width: isFlag ? 'calc(50% - 8px)' : '100%',
-					...(isFlag ? {minHeight: '100px'} : {}),
+                    ...(isFlag ? { minHeight: '100px' } : {}),
                     p: '11px',
 
                     // boxShadow: `2px 6px #${colorEffect}`,
@@ -92,9 +91,9 @@ const GameButton = (props) => {
             typoP={{
                 fontSize: '20px',
                 fontWeight: '700',
-				lineHeight: '22px',
+                lineHeight: '22px',
             }}
-			isFlag={isFlag}
+            isFlag={isFlag}
         >
             {props.children}
             {choice === rightAnswer && phase === 1 && answerAdditionnalText ? (
@@ -103,17 +102,17 @@ const GameButton = (props) => {
                     <sub>{answerAdditionnalText}</sub>
                 </>
             ) : null}
-			{isFlag && icon && (
-				<SvgIcon
-					fontSize="large"
-					sx={{
-						position: 'absolute',
-						right: '8px',
-					}}
-				>
-					{icon}
-				</SvgIcon>
-			)}
+            {isFlag && icon && (
+                <SvgIcon
+                    fontSize="large"
+                    sx={{
+                        position: 'absolute',
+                        right: '8px',
+                    }}
+                >
+                    {icon}
+                </SvgIcon>
+            )}
         </MainButton>
     );
 };

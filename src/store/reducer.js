@@ -57,7 +57,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             };
 
         case constants.NEW_GAME:
-			console.log(game.gameMode);
+            console.log(game.gameMode);
             return {
                 ...state,
                 currentGame: undefined,

@@ -1,7 +1,8 @@
 import {
     CAPITAL,
     COUNTRY_BY_CAPITAL,
-    COUNTRY_BY_FLAG, COUNTRY_BY_MAP, // gameModes,
+    COUNTRY_BY_FLAG,
+    COUNTRY_BY_MAP, // gameModes,
     DIFFICULTY_EXPERT,
     DIFFICULTY_HARD,
     DIFFICULTY_NORMAL,
@@ -43,7 +44,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         } else if (mode.key === COUNTRY_BY_CAPITAL || mode.key === COUNTRY_BY_FLAG || mode.key === COUNTRY_BY_MAP) {
             countryChoices = getAllAnswers(allCountries, 'name-common', language);
         } else if (mode.key === FLAG) {
-        	cca3Choices = getAllAnswers(allCountries, 'cca3', language);
+            cca3Choices = getAllAnswers(allCountries, 'cca3', language);
         }
     }
 
@@ -58,29 +59,29 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
     let subsetCountries;
 
     const questions = allCountries.map((c) => {
-		question = undefined;
-		answer = undefined;
-		choices = undefined;
-		questionPhraseValues = [];
-		answerAdditionnalText = undefined;
+        question = undefined;
+        answer = undefined;
+        choices = undefined;
+        questionPhraseValues = [];
+        answerAdditionnalText = undefined;
 
-		subsetCountries = undefined;
+        subsetCountries = undefined;
 
         let nbTry = 0;
 
         while (!answer || !choices) {
-			question = undefined;
-			answer = undefined;
-			choices = undefined;
-			questionPhraseValues = [];
-			answerAdditionnalText = undefined;
+            question = undefined;
+            answer = undefined;
+            choices = undefined;
+            questionPhraseValues = [];
+            answerAdditionnalText = undefined;
 
-			subsetCountries = undefined;
-			
+            subsetCountries = undefined;
+
             if (mode.key === TRIVIA) {
                 // if (nbTry > 0) {
                 //     // for test purpose
-                    questionType = getOneRandom(availableQuestionTypes);
+                questionType = getOneRandom(availableQuestionTypes);
                 // } else {
                 //     questionType = availableQuestionTypes.find((qt) => qt.key === 'has_n_border');
                 // }
@@ -126,7 +127,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         ? getChoices(c, answer, countryChoices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
-					
+
                 case 'country_map':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
@@ -158,10 +159,10 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     }
                     if (answer) {
                         const newAnswer = allCountries.find((c) => c.cca3 === answer);
-						answer = newAnswer;
+                        answer = newAnswer;
                     }
                     if (answer) {
-                    	choices = getCountriesNotBorder(c, answer, allCountries, language);
+                        choices = getCountriesNotBorder(c, answer, allCountries, language);
                         answer = getCountryValue(answer, language, 'name-common');
                     }
                     break;
@@ -307,7 +308,7 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
     let safeIndex = 100;
     let nbChoices = 0;
     let term;
-	let usuals = allCountries ? officials.usuals.filter(u => u !== '___') : officials.usuals;
+    let usuals = allCountries ? officials.usuals.filter((u) => u !== '___') : officials.usuals;
 
     while (nbChoices < NB_CHOICES - 1 && safeIndex > 0) {
         if (allCountries) {

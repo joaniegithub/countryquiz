@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { secondary, neutral, purple, success } from 'theme/colors';
+import { neutral, purple, secondary, success } from 'theme/colors';
 
 import { Box } from '@mui/material';
 
@@ -77,17 +77,17 @@ const BG = (props) => {
                                 display: 'block',
                                 background:
                                     'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"' +
-									' width="' +
+                                    ' width="' +
                                     2 * patternZoom +
                                     'px" height="' +
                                     2 * patternZoom +
-                                    'px"'+
-									'><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23' +
+                                    'px"' +
+                                    '><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23' +
                                     color.substr(1) +
                                     '"></polygon><polygon points="0 4 2 4 0 2" fill="%23' +
                                     color.substr(1) +
                                     '"></polygon></svg>\') repeat',
-								backgroundRepeat: 'repeat',
+                                backgroundRepeat: 'repeat',
                                 position: 'absolute',
                                 left: Math.random() * 100 + 'vw',
                                 top: Math.random() * 100 + 'vh',

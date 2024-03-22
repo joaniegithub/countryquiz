@@ -1,17 +1,17 @@
 import { useTheme } from '@emotion/react';
+import GameMap from 'components/ui/GameMap';
 import { DIFFICULTY_EXPERT } from 'data/config';
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { gameAnswer } from 'store/actions';
-// import { useGameMode } from 'store/selector';
 
+// import { useGameMode } from 'store/selector';
 import { Card, Stack, Typography } from '@mui/material';
 
 import GameFlag from '../ui/GameFlag';
 import GameButton from './GameButton';
-import GameMap from 'components/ui/GameMap';
 
 const GameQuestion = (props) => {
     const { game } = props;
@@ -27,19 +27,22 @@ const GameQuestion = (props) => {
     const difficultyLevel = game.difficultyLevel;
     const rightAnswer = question ? question.answer : undefined;
 
-	// preload images for next Question
-	const nextQuestionImages = () => {
-		const nextQuestion = game.questions && game.questions.length >= turn && game.questions[turn+1];
-		const nextQuestionKey = nextQuestion?.questionType.key;
-		if (nextQuestionKey === 'flag' || nextQuestionKey === 'country_flag') {
-			const countries = nextQuestionKey === 'flag' ? nextQuestion.choices.map(choice => choice.toLowerCase()) : [nextQuestion.country.toLowerCase()];
-			countries.forEach(c => {
-				var img = new Image();
-				img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${c}.svg`;
-			});
-		}
-		return null;
-	}
+    // preload images for next Question
+    const nextQuestionImages = () => {
+        const nextQuestion = game.questions && game.questions.length >= turn && game.questions[turn + 1];
+        const nextQuestionKey = nextQuestion?.questionType.key;
+        if (nextQuestionKey === 'flag' || nextQuestionKey === 'country_flag') {
+            const countries =
+                nextQuestionKey === 'flag'
+                    ? nextQuestion.choices.map((choice) => choice.toLowerCase())
+                    : [nextQuestion.country.toLowerCase()];
+            countries.forEach((c) => {
+                var img = new Image();
+                img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${c}.svg`;
+            });
+        }
+        return null;
+    };
 
     const handleChoiceClick = (_chosenAnswer) => {
         if (phase === 0) {
@@ -60,47 +63,50 @@ const GameQuestion = (props) => {
         return text;
     };
 
-	const choiceButtons = <>
-		{question && question.choices
-			? question.choices.map((choice, index) => {
-				if (question.questionType.key === 'flag') {
-					var img = new Image();
-					img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
-				}
-				return (
-					<GameButton
-						onClick={() => {
-							handleChoiceClick(choice);
-						}}
-						colorEffect={theme.palette.primary.main.replace('#', '')}
-						key={choice + index}
-						phase={phase}
-						choice={choice}
-						rightAnswer={rightAnswer}
-						chosenAnswer={chosenAnswer}
-						isFlag={question.questionType.key === 'flag'}
-						answerAdditionnalText={question.answerAdditionnalText}
-					>
-					{question.questionType.key === 'flag' ? (
-						<GameFlag
-							country={choice.toLowerCase()}
-							sxOverrides={{
-								width: '85%',
-								maxWidth: '150px',
-								maxHeight: '25vw',
-							}}
-						/>
-					) : (
-						<>
-							{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
-								? choice[0] + ' * * * ' + choice[choice.length - 1]
-								: choice}
-						</>
-					)}
-					</GameButton>
-				);})
-			: null}
-		</>;
+    const choiceButtons = (
+        <>
+            {question && question.choices
+                ? question.choices.map((choice, index) => {
+                      if (question.questionType.key === 'flag') {
+                          var img = new Image();
+                          img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
+                      }
+                      return (
+                          <GameButton
+                              onClick={() => {
+                                  handleChoiceClick(choice);
+                              }}
+                              colorEffect={theme.palette.primary.main.replace('#', '')}
+                              key={choice + index}
+                              phase={phase}
+                              choice={choice}
+                              rightAnswer={rightAnswer}
+                              chosenAnswer={chosenAnswer}
+                              isFlag={question.questionType.key === 'flag'}
+                              answerAdditionnalText={question.answerAdditionnalText}
+                          >
+                              {question.questionType.key === 'flag' ? (
+                                  <GameFlag
+                                      country={choice.toLowerCase()}
+                                      sxOverrides={{
+                                          width: '85%',
+                                          maxWidth: '150px',
+                                          maxHeight: '25vw',
+                                      }}
+                                  />
+                              ) : (
+                                  <>
+                                      {difficultyLevel === DIFFICULTY_EXPERT && phase === 0
+                                          ? choice[0] + ' * * * ' + choice[choice.length - 1]
+                                          : choice}
+                                  </>
+                              )}
+                          </GameButton>
+                      );
+                  })
+                : null}
+        </>
+    );
 
     return (
         <Stack
@@ -125,42 +131,37 @@ const GameQuestion = (props) => {
                     boxSizing: 'border-box',
                 }}
             >
-				<Typography fontSize="20px" fontWeight="600" lineHeight="24px" mb="16px">
-					{textReplace(
-						question.questionType.questionPhrase[i18n.language],
-						question.questionPhraseValues
-					)}
-				</Typography>
+                <Typography fontSize="20px" fontWeight="600" lineHeight="24px" mb="16px">
+                    {textReplace(question.questionType.questionPhrase[i18n.language], question.questionPhraseValues)}
+                </Typography>
                 {question.questionType.key === 'country_flag' ? (
                     <React.Fragment>
                         <GameFlag country={question.country.toLowerCase()} />
                     </React.Fragment>
                 ) : question.questionType.key === 'country_map' ? (
-					<GameMap
-						country={question.country}
-					/>
-				) : (
+                    <GameMap country={question.country} />
+                ) : (
                     <Typography color="success.main" fontSize="24px" fontWeight="800" lineHeight="28px">
                         {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
                     </Typography>
                 )}
             </Card>
-			{question.questionType.key === 'flag' ? (
-				<Stack 
-					direction="row"
-					flexWrap="wrap"
-            		spacing={2}
-					useFlexGap
-					sx={{
-						width: '100%',
-					}}
-				>
-					{choiceButtons}
-				</Stack>
-			) : (
-				<>{choiceButtons}</>
-			)}
-			{nextQuestionImages()}
+            {question.questionType.key === 'flag' ? (
+                <Stack
+                    direction="row"
+                    flexWrap="wrap"
+                    spacing={2}
+                    useFlexGap
+                    sx={{
+                        width: '100%',
+                    }}
+                >
+                    {choiceButtons}
+                </Stack>
+            ) : (
+                <>{choiceButtons}</>
+            )}
+            {nextQuestionImages()}
         </Stack>
     );
 };

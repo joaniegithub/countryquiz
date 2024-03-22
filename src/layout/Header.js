@@ -1,14 +1,12 @@
 import { useTheme } from '@emotion/react';
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
-
 import Settings from 'components/Settings';
 import FunTypo from 'components/ui/FunTypo';
 import MainButton from 'components/ui/MainButton';
-
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 import { newGame } from 'store/actions';
-import { useInGame, useCurrentGame, useInWiki } from 'store/selector';
+import { useCurrentGame, useInGame, useInWiki } from 'store/selector';
 
 import CancelIcon from '@mui/icons-material/Cancel';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -48,7 +46,7 @@ const Header = (props) => {
     const handleConfirmCancelGameDisagree = () => {
         setConfirmCancelGameOpen(false);
     };
-    const closeRef = React.useRef<HTMLElement> null;
+    const closeRef = React.useRef < HTMLElement > null;
     const handleEntering = () => {
         if (closeRef.current != null) {
             closeRef.current.focus();
@@ -121,7 +119,12 @@ const Header = (props) => {
                     {inGame ? (
                         <>
                             {!isEnd && (
-                                <IconButton aria-label={t('Close')} onClick={handleClickCloseGame} size="large" color="text">
+                                <IconButton
+                                    aria-label={t('Close')}
+                                    onClick={handleClickCloseGame}
+                                    size="large"
+                                    color="text"
+                                >
                                     <CancelIcon />
                                 </IconButton>
                             )}

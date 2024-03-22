@@ -68,10 +68,10 @@ const Game = () => {
                 {isEnd ? (
                     <MainButton
                         buttonP={{
-							color: "success",
-							size: "large",
-							onClick: handleClickHome,
-							startIcon: <ArrowCircleLeftIcon />,
+                            color: 'success',
+                            size: 'large',
+                            onClick: handleClickHome,
+                            startIcon: <ArrowCircleLeftIcon />,
                         }}
                     >
                         {t('Home')}
@@ -79,18 +79,18 @@ const Game = () => {
                 ) : (
                     <MainButton
                         buttonP={{
-							color: "success",
-							size: "large",
-                        	disabled: (phase === 0),
-							onClick: handleNext,
-							endIcon: <ArrowCircleRightIcon />,
+                            color: 'success',
+                            size: 'large',
+                            disabled: phase === 0,
+                            onClick: handleNext,
+                            endIcon: <ArrowCircleRightIcon />,
                         }}
-						typoP={{
-							fontSize: "20px",
-							fontWeight: "700",
-						}}
+                        typoP={{
+                            fontSize: '20px',
+                            fontWeight: '700',
+                        }}
                     >
-                            {t('Next')}
+                        {t('Next')}
                     </MainButton>
                 )}
             </Stack>

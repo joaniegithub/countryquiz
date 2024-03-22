@@ -101,7 +101,7 @@ export const questionTypes = [
         answerProperty: 'name-common',
         disabled: false,
     },
-	// MAP
+    // MAP
     {
         key: 'country_map',
         questionPhrase: {
@@ -224,7 +224,7 @@ export const gameModes = [
         key: CAPITAL,
         name: {
             fra: 'Capitales',
-            eng: "Capitals",
+            eng: 'Capitals',
         },
         shortName: {
             fra: 'Capitales',
@@ -235,7 +235,7 @@ export const gameModes = [
             eng: 'Capital',
         },
         questionType: questionTypeIndex.capital,
-		isMain: true,
+        isMain: true,
     },
     {
         key: COUNTRY_BY_CAPITAL,
@@ -252,24 +252,24 @@ export const gameModes = [
             eng: 'Country',
         },
         questionType: questionTypeIndex.country_capital,
-		isMain: false,
+        isMain: false,
     },
     {
         key: FLAG,
         name: {
-            fra: "Drapeaux",
-            eng: "Flags",
+            fra: 'Drapeaux',
+            eng: 'Flags',
         },
         shortName: {
-            fra: "Drapeaux",
-            eng: "Flags",
+            fra: 'Drapeaux',
+            eng: 'Flags',
         },
         subModeLabel: {
-            fra: "Drapeau",
-            eng: "Flag",
+            fra: 'Drapeau',
+            eng: 'Flag',
         },
-    	questionType: questionTypeIndex.flag,
-		isMain: true,
+        questionType: questionTypeIndex.flag,
+        isMain: true,
     },
     {
         key: COUNTRY_BY_FLAG,
@@ -286,20 +286,20 @@ export const gameModes = [
             eng: 'Country',
         },
         questionType: questionTypeIndex.country_flag,
-		isMain: false,
+        isMain: false,
     },
     {
         key: COUNTRY_BY_MAP,
         name: {
             fra: 'Carte',
-            eng: "Location",
+            eng: 'Location',
         },
         shortName: {
             fra: 'Carte',
             eng: 'Location',
         },
         questionType: questionTypeIndex.country_map,
-		isMain: true,
+        isMain: true,
     },
     {
         key: TRIVIA,
@@ -311,7 +311,7 @@ export const gameModes = [
             fra: 'Trivia',
             eng: 'Trivia',
         },
-		isMain: true,
+        isMain: true,
     },
 ];
 
