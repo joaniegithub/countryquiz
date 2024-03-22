@@ -30,7 +30,7 @@ const GameProgress = (props) => {
                 }}
             >
                 <Typography fontSize="18px" textAlign="right" fontWeight="700">
-                    {game.currentTurn + ' / ' + game.questions.length}
+                    {(game.currentTurn+1) + ' / ' + game.questions.length}
                 </Typography>
             </Stack>
             <LinearProgress

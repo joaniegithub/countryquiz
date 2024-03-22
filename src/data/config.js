@@ -209,6 +209,8 @@ export const questionTypes = [
 
 	Timezones:
 
+	continets/régions
+
 	*/
 ];
 
@@ -228,6 +230,10 @@ export const gameModes = [
             fra: 'Capitales',
             eng: 'Capitals',
         },
+        subModeLabel: {
+            fra: 'Capitale',
+            eng: 'Capital',
+        },
         questionType: questionTypeIndex.capital,
 		isMain: true,
     },
@@ -240,6 +246,10 @@ export const gameModes = [
         shortName: {
             fra: 'Capitales',
             eng: 'Capitals',
+        },
+        subModeLabel: {
+            fra: 'Pays',
+            eng: 'Country',
         },
         questionType: questionTypeIndex.country_capital,
 		isMain: false,
@@ -254,6 +264,10 @@ export const gameModes = [
             fra: "Drapeaux",
             eng: "Flags",
         },
+        subModeLabel: {
+            fra: "Drapeau",
+            eng: "Flag",
+        },
     	questionType: questionTypeIndex.flag,
 		isMain: true,
     },
@@ -266,6 +280,10 @@ export const gameModes = [
         shortName: {
             fra: 'Drapeaux',
             eng: 'Flags',
+        },
+        subModeLabel: {
+            fra: 'Pays',
+            eng: 'Country',
         },
         questionType: questionTypeIndex.country_flag,
 		isMain: false,

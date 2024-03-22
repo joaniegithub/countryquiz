@@ -307,6 +307,7 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
     let safeIndex = 100;
     let nbChoices = 0;
     let term;
+	let usuals = allCountries ? officials.usuals.filter(u => u !== '___') : officials.usuals;
 
     while (nbChoices < NB_CHOICES - 1 && safeIndex > 0) {
         if (allCountries) {
@@ -336,11 +337,11 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
                 }
                 continue;
             } else {
-                term = officials.usuals;
+                term = usuals;
             }
         } else if (nbChoices === 1) {
             if (Math.random() * 5 < 4) {
-                term = officials.usuals;
+                term = usuals;
             } else {
                 term = officials.rare;
             }
@@ -354,7 +355,7 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
                 term = officials.unique;
             }
         } else {
-            term = officials.usuals;
+            term = usuals;
         }
 
         const choice = getOneRandom(term).replace('___', commonName);

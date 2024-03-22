@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { secondary, neutral, purple } from 'theme/colors';
+import { secondary, neutral, purple, success } from 'theme/colors';
 
 import { Box } from '@mui/material';
 
@@ -11,15 +11,21 @@ const BG = (props) => {
         purple.main,
         purple.light,
         purple.dark,
+        purple.main,
+        purple.light,
+        purple.dark,
         secondary.main,
         secondary.light,
         secondary.dark,
-        neutral[400],
+        success.main,
+        success.light,
+        success.dark,
+        // neutral[400],
         neutral[500],
         neutral[600],
         neutral[700],
         neutral[800],
-        neutral[900],
+        // neutral[900],
     ];
     // console.log(colors);
 
@@ -42,7 +48,7 @@ const BG = (props) => {
             {colors.map((color, i) => {
                 const size = (Math.random() * 0.5 + 0.1) * 600 + 'px';
                 // const rotate = (i / colors.length)*90+"deg";
-                const patternZoom = Math.random() + 3;
+                const patternZoom = 4;
                 // const color = colors[Math.floor(Math.random() * colors.length)];
                 return (
                     <React.Fragment key={'bg' + i}>
@@ -70,15 +76,18 @@ const BG = (props) => {
                                 opacity: Math.random() * 0.0125 + 0.0125,
                                 display: 'block',
                                 background:
-                                    'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg" width="' +
-                                    4 * patternZoom +
+                                    'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"' +
+									' width="' +
+                                    2 * patternZoom +
                                     'px" height="' +
-                                    4 * patternZoom +
-                                    'px"><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23' +
+                                    2 * patternZoom +
+                                    'px"'+
+									'><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23' +
                                     color.substr(1) +
                                     '"></polygon><polygon points="0 4 2 4 0 2" fill="%23' +
                                     color.substr(1) +
                                     '"></polygon></svg>\') repeat',
+								backgroundRepeat: 'repeat',
                                 position: 'absolute',
                                 left: Math.random() * 100 + 'vw',
                                 top: Math.random() * 100 + 'vh',

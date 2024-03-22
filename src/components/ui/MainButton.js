@@ -9,7 +9,18 @@ const MainButton = (props) => {
     const { buttonP, typoP, isFlag, children } = props;
 	
     return (
-        <Button color="primary" size="large" variant={isFlag ? "outlined" : "contained"} {...buttonP}>
+        <Button
+			color="primary"
+			size="large"
+			variant={isFlag ? "outlined" : "contained"}
+			{...buttonP}
+			sx={{
+				...buttonP?.sx,
+				'svg': {
+                    filter: `drop-shadow(2px 2px 0px ${alpha(theme.palette.shadow, 0.2)})`,
+				}
+			}}
+		>
 			{isFlag ? <>{children}</> : (
 				<Typography
 					component="span"

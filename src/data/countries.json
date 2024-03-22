@@ -1941,7 +1941,7 @@
         "capital": ["Canberra"],
         "altSpellings": ["AU"],
         "region": "Oceania",
-        "subregion": "Australia and New Zealand",
+        "subregion": "Australasia",
         "languages": {
             "eng": "English"
         },
@@ -5788,7 +5788,7 @@
         "capital": ["West Island"],
         "altSpellings": ["CC", "Keeling Islands", "Cocos Islands"],
         "region": "Oceania",
-        "subregion": "Australia and New Zealand",
+        "subregion": "Australasia",
         "languages": {
             "eng": "English"
         },
@@ -7943,7 +7943,7 @@
         "capital": ["Flying Fish Cove"],
         "altSpellings": ["CX", "Territory of Christmas Island"],
         "region": "Oceania",
-        "subregion": "Australia and New Zealand",
+        "subregion": "Australasia",
         "languages": {
             "eng": "English"
         },
@@ -22971,7 +22971,7 @@
         "capital": ["Kingston"],
         "altSpellings": ["NF", "Territory of Norfolk Island", "Teratri of Norf'k Ailen"],
         "region": "Oceania",
-        "subregion": "Australia and New Zealand",
+        "subregion": "Australasia",
         "languages": {
             "eng": "English",
             "pih": "Norfuk"
@@ -24081,7 +24081,7 @@
         "capital": ["Wellington"],
         "altSpellings": ["NZ", "Aotearoa"],
         "region": "Oceania",
-        "subregion": "Australia and New Zealand",
+        "subregion": "Australasia",
         "languages": {
             "eng": "English",
             "mri": "M\u0101ori",

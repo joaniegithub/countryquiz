@@ -71,7 +71,7 @@ const Settings = (props) => {
                 <CloseIcon />
             </IconButton>
             <DialogContent>
-                <Stack justifyItems="center" spacing={2}>
+                <Stack justifyItems="center" spacing={3}>
                     <ToggleButtonGroup
                         color="primary"
                         value={language}
@@ -105,7 +105,7 @@ const Settings = (props) => {
                             onClick={handleClickInstall}
                             endIcon={isMobile ? <InstallMobileIcon /> : <InstallDesktopIcon />}
                         >
-                            {t('Install')} Country Quiz
+                            {`${t('Install')} ${t('Country')} ${t('Quiz')}`}
                         </Button>
                     )}
                     <Typography
@@ -114,7 +114,7 @@ const Settings = (props) => {
                         textAlign="center"
                         // lineHeight={`${HEIGHT}px`}
                     >
-                        Country Quiz @2024 Joanie Lessnick
+                        {`${t('Country')} ${t('Quiz')}`} @2024 Joanie Lessnick
                     </Typography>
                 </Stack>
             </DialogContent>

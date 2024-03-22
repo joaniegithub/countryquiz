@@ -26,7 +26,20 @@ const GameQuestion = (props) => {
     const question = game.questions && game.questions[turn];
     const difficultyLevel = game.difficultyLevel;
     const rightAnswer = question ? question.answer : undefined;
-    // const gameMode = useGameMode();
+
+	// preload images for next Question
+	const nextQuestionImages = () => {
+		const nextQuestion = game.questions && game.questions.length >= turn && game.questions[turn+1];
+		const nextQuestionKey = nextQuestion?.questionType.key;
+		if (nextQuestionKey === 'flag' || nextQuestionKey === 'country_flag') {
+			const countries = nextQuestionKey === 'flag' ? nextQuestion.choices.map(choice => choice.toLowerCase()) : [nextQuestion.country.toLowerCase()];
+			countries.forEach(c => {
+				var img = new Image();
+				img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${c}.svg`;
+			});
+		}
+		return null;
+	}
 
     const handleChoiceClick = (_chosenAnswer) => {
         if (phase === 0) {
@@ -42,7 +55,6 @@ const GameQuestion = (props) => {
             return text;
         }
         for (var i = 0; i < replacements.length; i++) {
-            // text = text.replace(new RegExp('{{'+i+'}}', 'g'), replacements[i]);
             text = text.split('{' + i + '}').join(replacements[i]);
         }
         return text;
@@ -51,39 +63,42 @@ const GameQuestion = (props) => {
 	const choiceButtons = <>
 		{question && question.choices
 			? question.choices.map((choice, index) => {
-					return (
-						<GameButton
-							onClick={() => {
-								handleChoiceClick(choice);
+				if (question.questionType.key === 'flag') {
+					var img = new Image();
+					img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
+				}
+				return (
+					<GameButton
+						onClick={() => {
+							handleChoiceClick(choice);
+						}}
+						colorEffect={theme.palette.primary.main.replace('#', '')}
+						key={choice + index}
+						phase={phase}
+						choice={choice}
+						rightAnswer={rightAnswer}
+						chosenAnswer={chosenAnswer}
+						isFlag={question.questionType.key === 'flag'}
+						answerAdditionnalText={question.answerAdditionnalText}
+					>
+					{question.questionType.key === 'flag' ? (
+						<GameFlag
+							country={choice.toLowerCase()}
+							sxOverrides={{
+								width: '85%',
+								maxWidth: '150px',
+								maxHeight: '25vw',
 							}}
-							colorEffect={theme.palette.primary.main.replace('#', '')}
-							key={choice + index}
-							phase={phase}
-							choice={choice}
-							rightAnswer={rightAnswer}
-							chosenAnswer={chosenAnswer}
-							isFlag={question.questionType.key === 'flag'}
-							answerAdditionnalText={question.answerAdditionnalText}
-						>
-						{question.questionType.key === 'flag' ? (
-							<GameFlag
-								country={choice.toLowerCase()}
-								sxOverrides={{
-									width: '85%',
-									maxWidth: '150px',
-									maxHeight: '25vw',
-								}}
-							/>
-						) : (
-							<>
-								{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
-									? choice[0] + ' * * * ' + choice[choice.length - 1]
-									: choice}
-							</>
-						)}
-						</GameButton>
-					);
-				})
+						/>
+					) : (
+						<>
+							{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
+								? choice[0] + ' * * * ' + choice[choice.length - 1]
+								: choice}
+						</>
+					)}
+					</GameButton>
+				);})
 			: null}
 		</>;
 
@@ -145,6 +160,7 @@ const GameQuestion = (props) => {
 			) : (
 				<>{choiceButtons}</>
 			)}
+			{nextQuestionImages()}
         </Stack>
     );
 };

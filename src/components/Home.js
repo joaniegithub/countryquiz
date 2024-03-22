@@ -135,7 +135,7 @@ const Home = () => {
                     alignItems="center"
                     flexDirection="column"
                     justifyContent="flex-start"
-                    my={2}
+                    my={4}
                     sx={{
                         height: showHome ? '25vh' : '6vh',
                         transition: 'height 0.25s ease',
