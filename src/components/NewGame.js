@@ -173,7 +173,7 @@ const NewGame = (props) => {
 												py: '32px',
 
 												svg: {
-													color: theme.palette.secondary.main,
+													color: theme.palette.secondary.contrast,
 													height: '64px',
 													width: '64px',
 													fill: 'currentColor',
@@ -188,7 +188,7 @@ const NewGame = (props) => {
 												fontSize="20px"
 												fontWeight="700"
 												mt="8px"
-												color="secondary"
+												color="secondary.contrast"
 												sx={{
 													textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.1)}`,
 												}}
@@ -242,7 +242,7 @@ const NewGame = (props) => {
 										py="12px"
 										sx={{
 											svg: {
-												color: theme.palette.secondary.main,
+												color: theme.palette.secondary.contrast,
 												height: '36px',
 												width: '36px',
 												fill: 'currentColor',
@@ -257,7 +257,7 @@ const NewGame = (props) => {
 										<Typography
 											variant="h2"
 											display="block"
-											color="secondary"
+											color="secondary.contrast"
 											fontSize="24px"
 											lineHeight="40px"
 											mr="12px"
@@ -358,7 +358,7 @@ const NewGame = (props) => {
                                                     </Typography>
                                                 }
                                                 sx={{
-                                                    margin: '-10px 0 -10px -10px',
+                                                    margin: '-10px 0 -10px -7px',
                                                 }}
                                             />
                                         </div>

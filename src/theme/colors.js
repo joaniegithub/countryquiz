@@ -8,6 +8,7 @@ const withAlphas = (color) => {
         alpha12: alpha(color.main, 0.12),
         alpha30: alpha(color.main, 0.3),
         alpha50: alpha(color.main, 0.5),
+        alpha75: alpha(color.main, 0.75),
     };
 };
 
@@ -16,10 +17,10 @@ export const neutral = {
     100: '#f5f7fa',
     200: '#E5E7EB',
     300: '#d7dbe2', //#d3dde7
-    400: '#9DA4AE',
-    450: '#7e8a9a',
+    400: '#9CA0AE',
+    450: '#7e879a',
     500: '#5c6977',
-    600: '#4D5761',
+    600: '#9CA0AE',
     700: '#354356',
     800: '#3b3860',
     900: '#232148',
@@ -33,46 +34,19 @@ export const purple = withAlphas({
     dark: '#3d49f0',
     darkest: '#312E81',
     contrast: '#5968ff',
+    lightContrast: '#5968ff',
     contrastText: '#FFFFFF',
 });
-// export const purpleDarkMode = withAlphas({
-//     lightest: '# F5F7FF',
-//     light: '# b5b7ff',
-//     main: '# 6366F1',
-//     dark: '# 4338CA',
-//     darkest: '# 312E81',
-//     contrast: '# 6366F1',
-//     contrastText: '# FFFFFF',
-// });
-
-// export const indigo = withAlphas({
-//     lightest: '# F5F7FF',
-//     light: '# EBEEFE',
-//     main: '# 312E81',
-//     dark: '# 282574',
-//     darkest: '# 282574',
-//     contrast: '# 282574',
-//     contrastText: '# FFFFFF',
-// });
 export const secondary = withAlphas({
     lightest: '#F5F7FF',
     light: '#EBEEFE',
     main: '#312E81',
     dark: '#282574',
     darkest: '#282574',
-    contrast: '#282574',
+    contrast: '#312E81',
+    lightContrast: '#312E81',
     contrastText: '#FFFFFF',
 });
-// export const indigoDarkMode = withAlphas({
-//     lightest: '# F5F7FF',
-//     light: '# EBEEFE',
-//     main: '# 312E81',
-//     dark: '# 282574',
-//     darkest: '# 282574',
-//     contrast: '# 6366F1',
-//     contrastText: '# FFFFFF',
-// });
-
 export const success = withAlphas({
     lightest: '#F0FDF9',
     light: '#b0f4f0',

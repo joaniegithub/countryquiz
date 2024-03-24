@@ -454,10 +454,10 @@ export function createComponents(config) {
                 root: ({ theme }) => {
                     return {
 						[`& .${toggleButtonGroupClasses.grouped}.${toggleButtonClasses.selected}:not(:first-of-type)`]: {
-							borderLeftColor: theme.palette.secondary.alpha50,
+							borderLeftColor: theme.palette.secondary.contrast,
 						},
 						[`& .${toggleButtonGroupClasses.grouped}.${toggleButtonClasses.selected}:not(:last-of-type)`]: {
-							borderRightColor: theme.palette.secondary.alpha50,
+							borderRightColor: theme.palette.secondary.contrast,
 						},
 						// [`& .${toggleButtonClasses.disabled}`]: {
 						// 	color: theme.palette.neutral[100],
@@ -483,8 +483,11 @@ export function createComponents(config) {
 						// 	color: theme.palette.neutral[400],
 						// },
 			            [`&.${toggleButtonClasses.selected}`]: {
-							borderColor: theme.palette.secondary.alpha50,
-							// color: theme.palette.secondary.main,
+							borderColor: theme.palette.secondary.contrast,
+							color: theme.palette.secondary.contrast,
+							// backgroundColor: theme.palette.secondary.lightContrast,
+			            	// backgroundColor: theme.palette.primary.contrast,
+							// color: theme.palette.secondary.contrast,
 			            },
 					};
 				},

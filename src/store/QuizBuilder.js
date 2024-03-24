@@ -38,19 +38,19 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
     } else {
         if (chosenIndependantOnly) {
-            questionCountries = Object.values(countriesData).filter((c) => c.independent === true);
+            questionCountries = Object.values(questionCountries).filter((c) => c.independent === true);
         }
 
         if (chosenRegion !== 'all') {
-            questionCountries = allCountries.filter((c) => c.region === chosenRegion);
+            questionCountries = questionCountries.filter((c) => c.region === chosenRegion);
         }
 
         if (mode.key === CAPITAL) {
-            capitalChoices = getAllAnswers(allCountries, 'capital', language, chosenDifficultyLevel);
+            capitalChoices = getAllAnswers(questionCountries, 'capital', language, chosenDifficultyLevel);
         } else if (mode.key === COUNTRY_BY_CAPITAL || mode.key === COUNTRY_BY_FLAG || mode.key === COUNTRY_BY_MAP) {
-            countryChoices = getAllAnswers(allCountries, 'name-common', language, chosenDifficultyLevel);
+            countryChoices = getAllAnswers(questionCountries, 'name-common', language, chosenDifficultyLevel);
         } else if (mode.key === FLAG) {
-            cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
+            cca3Choices = getAllAnswers(questionCountries, 'cca3', language, chosenDifficultyLevel);
         }
     }
 
@@ -65,7 +65,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
     let subsetCountries;
 
 	if (chosenGameLength === SHORT) {
-		questionCountries = shuffle(allCountries).slice(0, mode.key === TRIVIA ? NB_QUESTIONS_SHORT_TRIVIA : NB_QUESTIONS_SHORT);
+		questionCountries = shuffle(questionCountries).slice(0, mode.key === TRIVIA ? NB_QUESTIONS_SHORT_TRIVIA : NB_QUESTIONS_SHORT);
 	}
 
     const questions = questionCountries.map((c) => {
@@ -103,24 +103,24 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
-                        ? getChoices(c, answer, capitalChoices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, language, answer, capitalChoices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
                 case 'country_capital':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
-                        ? getChoices(c, answer, countryChoices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, language, answer, countryChoices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
                 case 'is_capital':
                     answer = getCountryValue(c, language, questionType.answerProperty);
-                    choices = answer ? getChoices(c, answer, cityChoicesFlat, questionType, DIFFICULTY_NORMAL) : undefined;
+                    choices = answer ? getChoices(c, language, answer, cityChoicesFlat, questionType, DIFFICULTY_NORMAL) : undefined;
                     break;
                 case 'not_capital':
                     answer = getCountryValue(c, language, 'cities', 1);
                     choices = answer
-                        ? getChoices(c, answer, capitalChoicesFlat, questionType, DIFFICULTY_NORMAL)
+                        ? getChoices(c, language, answer, capitalChoicesFlat, questionType, DIFFICULTY_NORMAL)
                         : undefined;
                     break;
 
@@ -128,14 +128,14 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
-                        ? getChoices(c, answer, cca3Choices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, language, answer, cca3Choices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
                 case 'country_flag':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
-                        ? getChoices(c, answer, countryChoices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, language, answer, countryChoices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
 
@@ -143,7 +143,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = answer
-                        ? getChoices(c, answer, countryChoices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, language, answer, countryChoices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
 
@@ -159,7 +159,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                 case 'name_official_wrong':
                     answer = getNameOfficialAnswer(c, language);
                     choices = answer
-                        ? getChoices(c, answer, countryOfficialChoices, questionType, chosenDifficultyLevel)
+                        ? getChoices(c, language, answer, countryOfficialChoices, questionType, chosenDifficultyLevel)
                         : undefined;
 					answerAdditionnalText = getCountryValue(c, language, 'name-official');
                     break;
@@ -206,7 +206,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     if (subsetCountries.length >= 3) {
                         answer = getCountryValue(c, language, questionType.answerProperty);
                         choices = answer
-                            ? getChoices(c, answer, subsetCountries, questionType, DIFFICULTY_NORMAL)
+                            ? getChoices(c, language, answer, subsetCountries, questionType, DIFFICULTY_NORMAL)
                             : undefined;
                         questionPhraseValues = [c.borders.length, c.borders.length >= 2 ? 's' : ''];
                         answerAdditionnalText = c.borders
@@ -487,7 +487,7 @@ const getCountryOfficial = (c, lang) => {
     return lang === 'eng' ? c.name.official : c.translations[lang]['official'];
 };
 
-const getChoices = (country, answer, answersPerRegions, questionType, difficultyLevel) => {
+const getChoices = (country, language, answer, answersPerRegions, questionType, difficultyLevel) => {
     const choices = [];
     const hardChoices = difficultyLevel === DIFFICULTY_EXPERT ? [getHardAnswer(answer)] : [];
     const indexUsed = [];
@@ -540,7 +540,7 @@ const getChoices = (country, answer, answersPerRegions, questionType, difficulty
         if (difficultyLevel === DIFFICULTY_HARD) {
             // on inclut aussi des villes non capitales de temps en temps
             if (country.cities && country.cities.length && Math.random() * 2 < 1) {
-                const otherCity = getOneRandom(country.cities);
+                const otherCity = getCountryValue(country, language, 'cities', 1);
 				if (otherCity && otherCity !== "") {
                 	choices[Math.floor(Math.random() * choices.length)] = otherCity;
 				}

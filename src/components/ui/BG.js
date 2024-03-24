@@ -22,7 +22,7 @@ const BG = (props) => {
         success.dark,
         // neutral[400],
         neutral[500],
-        neutral[600],
+        // neutral[600],
         neutral[700],
         neutral[800],
         // neutral[900],

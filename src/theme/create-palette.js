@@ -23,8 +23,8 @@ export function createPalette() {
         info,
         mode: 'light',
         neutral,
-        primary: purple,
-        secondary: secondary,
+        primary: {...purple, lightContrast: common.white},
+        secondary: {...secondary, lightContrast: common.white},
         success,
         text: {
             title: common.black,

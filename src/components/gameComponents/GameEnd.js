@@ -38,7 +38,7 @@ const GameEnd = (props) => {
                 textAlign="center"
                 mb={-1}
             >
-                {gameMode.shortName[i18n.language]} {region?.article[i18n.language]}
+                {gameMode.shortName[i18n.language]} {/*region?.article[i18n.language]*/}
             </Typography>
             <Typography
 				component="span"
@@ -99,7 +99,7 @@ const GameEnd = (props) => {
             >
                 <FunTypo
                     text={game.currentScore}
-                    color={theme.palette.primary.contrast.replace('#', '')}
+                    color={theme.palette.primary.main.replace('#', '')}
                     stroke={false}
                     distance="7px"
                     flexGrow={0}
