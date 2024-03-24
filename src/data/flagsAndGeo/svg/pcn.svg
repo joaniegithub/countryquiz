@@ -1,11 +1,11 @@
 <svg width="1200" height="600" viewBox="0 0 1200 600" viewBox="-15 -7.5 30 15">
     <defs>
-        <clipPath id="a">
+        <clipPath id="pcn_a">
             <path d="M-15-7.5h30v15h-30z"/>
         </clipPath>
     </defs>
     <path fill="#00247D" d="M-15-7.5h30v15h-30z"/>
-    <g clip-path="url(#a)" transform="matrix(.5 0 0 .5 -7.5 -3.75)">
+    <g clip-path="url(#pcn_a)" transform="matrix(.5 0 0 .5 -7.5 -3.75)">
         <circle r="20" fill="#00247D"/>
         <path d="m-20-10 40 20m-40 0 40-20" stroke-width="3" stroke="#fff"/>
         <path d="m-20-10 40 20m-40 0 40-20" stroke-width="2" stroke="#CF142B"/>

@@ -7,22 +7,22 @@
     <path d="m0 0 84 63-84 63" fill="#FFF"/>
     <g fill="#DE2010">
         <g transform="matrix(32 0 0 32 34 63)">
-            <path id="a" transform="rotate(26.268 2.143 -.5)" d="M0 0v1h.75z"/>
-            <use id="c" xlink:href="#a" transform="scale(-1 1)"/>
-            <path id="b" transform="rotate(19.58 2.898 -.5)" d="M0 0v1h.75z"/>
-            <use id="d" xlink:href="#b" transform="scale(-1 1)"/>
-            <use xlink:href="#a" transform="rotate(72)"/>
-            <use xlink:href="#c" transform="rotate(-72)"/>
-            <use xlink:href="#b" transform="rotate(72)"/>
-            <use xlink:href="#d" transform="rotate(-72)"/>
+            <path id="zwe_a" transform="rotate(26.268 2.143 -.5)" d="M0 0v1h.75z"/>
+            <use id="zwe_c" xlink:href="#zwe_a" transform="scale(-1 1)"/>
+            <path id="zwe_b" transform="rotate(19.58 2.898 -.5)" d="M0 0v1h.75z"/>
+            <use id="zwe_d" xlink:href="#zwe_b" transform="scale(-1 1)"/>
+            <use xlink:href="#zwe_a" transform="rotate(72)"/>
+            <use xlink:href="#zwe_c" transform="rotate(-72)"/>
+            <use xlink:href="#zwe_b" transform="rotate(72)"/>
+            <use xlink:href="#zwe_d" transform="rotate(-72)"/>
         </g>
         <g transform="matrix(27.5 0 0 27.5 34 63)">
-            <g id="f">
-                <path id="e" transform="rotate(24.225 2.33 -.5)" d="M0 0v1h.5z"/>
-                <use xlink:href="#e" transform="scale(-1 1)"/>
+            <g id="zwe_f">
+                <path id="zwe_e" transform="rotate(24.225 2.33 -.5)" d="M0 0v1h.5z"/>
+                <use xlink:href="#zwe_e" transform="scale(-1 1)"/>
             </g>
-            <use xlink:href="#f" transform="rotate(144)"/>
-            <use xlink:href="#f" transform="rotate(-144)"/>
+            <use xlink:href="#zwe_f" transform="rotate(144)"/>
+            <use xlink:href="#zwe_f" transform="rotate(-144)"/>
         </g>
     </g>
     <path d="M28.635 55.11c1.977 4.305 2.47 4.587 7.411 6.28 4.94 1.695 18.898 3.3 20.274 3.46-.9-.9-16.621-12.546-19.85-14.875-3.23-2.33-4.13-3.388-4.13-3.388s-2.91-5.24-3.916-6.776c-1.006-1.535-2.859-3.705-5.294-3.705-2.435 0-3.917 1.43-4.623 3.97-.388.106-2.47 1.376-2.4 2.682.6-.07 4.377-1.13 5.682 3.14 1.306 4.27 1.377 11.258.036 14.717-1.341 3.458-3.424 6.07-3.424 9.104 0 .424.283 1.27.989 1.27.247 1.342 2.223 10.905 2.223 10.905h28.161l4.473-17.292" style="fill:#ffc618;overflow:visible"/>

@@ -16,7 +16,7 @@ const MainButton = (props) => {
             {...buttonP}
             sx={{
                 ...buttonP?.sx,
-                svg: {
+                '& > svg': {
                     filter: `drop-shadow(2px 2px 0px ${alpha(theme.palette.shadow, 0.2)})`,
                 },
             }}

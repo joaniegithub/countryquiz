@@ -67,10 +67,10 @@ const GameQuestion = (props) => {
         <>
             {question && question.choices
                 ? question.choices.map((choice, index) => {
-						if (question.questionType.key === 'flag') {
-							var img = new Image();
-							img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
-						}
+						// if (question.questionType.key === 'flag') {
+						// 	var img = new Image();
+						// 	img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
+						// }
 						return (
 							<GameButton
 								onClick={() => {
@@ -89,9 +89,10 @@ const GameQuestion = (props) => {
 									<GameFlag
 										country={choice}
 										svgOverrides={{
-											width: '85%',
-											maxWidth: '150px',
-											maxHeight: '25vw',
+											mt: '5px',
+											width: '90%',
+											maxWidth: '180px',
+											maxHeight: '100px',
 											filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3))',
 										}}
 									/>
@@ -163,7 +164,7 @@ const GameQuestion = (props) => {
             ) : (
                 <>{choiceButtons}</>
             )}
-            {nextQuestionImages()}
+            {/*nextQuestionImages()*/}
         </Stack>
     );
 };

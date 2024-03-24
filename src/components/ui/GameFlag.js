@@ -8,7 +8,7 @@ const GameFlag = (props) => {
     const { country, svgOverrides } = props;
 
     const SvgCountry = svg_config[country];
-    console.log(country);
+    // console.log(country);
     return (
 		<Box
 			component="span"

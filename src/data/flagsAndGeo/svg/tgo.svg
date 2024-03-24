@@ -3,13 +3,13 @@
     <path fill="#ffce00" d="M0 100h809v100H0zM0 300h809v100H0z"/>
     <path fill="#d21034" d="M0 0h300v300H0z"/>
     <g transform="translate(150 150)" fill="#fff">
-        <g id="b">
-            <path id="a" d="M0-95V0h50" transform="rotate(18 0 -95)"/>
-            <use xlink:href="#a" transform="scale(-1 1)"/>
+        <g id="tgo_b">
+            <path id="tgo_a" d="M0-95V0h50" transform="rotate(18 0 -95)"/>
+            <use xlink:href="#tgo_a" transform="scale(-1 1)"/>
         </g>
-        <use xlink:href="#b" transform="rotate(72)"/>
-        <use xlink:href="#b" transform="rotate(144)"/>
-        <use xlink:href="#b" transform="rotate(216)"/>
-        <use xlink:href="#b" transform="rotate(288)"/>
+        <use xlink:href="#tgo_b" transform="rotate(72)"/>
+        <use xlink:href="#tgo_b" transform="rotate(144)"/>
+        <use xlink:href="#tgo_b" transform="rotate(216)"/>
+        <use xlink:href="#tgo_b" transform="rotate(288)"/>
     </g>
 </svg>

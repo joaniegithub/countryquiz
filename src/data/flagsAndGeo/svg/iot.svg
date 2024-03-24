@@ -1,25 +1,25 @@
 <svg width="600" height="300" viewBox="0 0 600 300">
     <path style="font-size:12px;fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:.991189pt" d="M0 0h600v300H0z"/>
-    <path d="M600 260.881c-6.723 4.045-12.5 13.498-30.36 13.498-35.71 0-44.641-19.902-71.427-19.902-17.856 0-26.785 19.902-44.641 19.902-35.715 0-44.643-19.902-71.429-19.902-17.857 0-26.786 19.902-44.643 19.902-35.714 0-44.643-19.902-71.428-19.902-17.858 0-26.786 19.902-44.643 19.902-35.714 0-44.643-19.902-71.429-19.902-17.858 0-26.786 19.902-44.643 19.902-35.714 0-44.643-19.902-71.428-19.902-17.858 0-23.215 14.182-33.929 14.182v25.621c10.714 0 16.071-14.181 33.929-14.181 26.785 0 35.714 19.901 71.428 19.901C123.214 300 132.142 280.1 150 280.1c26.785 0 35.715 19.901 71.429 19.901 17.857 0 26.785-19.901 44.643-19.901 26.785 0 35.714 19.901 71.428 19.901 17.857 0 26.786-19.901 44.643-19.901 26.786 0 35.714 19.901 71.429 19.901 17.856 0 26.785-19.901 44.64-19.901C525 280.099 533.93 300 569.64 300c17.86 0 23.637-5.64 30.36-9.684V260.88z" id="b" style="font-size:12px;fill:#002b7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:1"/>
-    <use transform="translate(0 49.753)" width="600" height="300" xlink:href="#a"/>
-    <use transform="translate(0 -99.507)" id="a" x="0" y="0" width="600" height="300" xlink:href="#b"/>
-    <path d="M266.072 130.838c26.785 0 35.714 19.902 71.428 19.902 17.857 0 26.786-19.902 44.643-19.902 26.786 0 35.714 19.902 71.429 19.902 17.856 0 26.785-19.902 44.64-19.902 26.787 0 35.717 19.902 71.428 19.902 17.86 0 23.637-5.64 30.36-9.685v-29.434c-6.723 4.045-12.5 13.497-30.36 13.497-35.71 0-44.641-19.901-71.427-19.901-17.856 0-26.785 19.901-44.641 19.901-35.715 0-44.643-19.901-71.429-19.901-17.857 0-26.786 19.901-44.643 19.901-35.714 0-44.643-19.901-71.428-19.901" id="c" style="font-size:12px;fill:#002b7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:1"/>
-    <use transform="translate(0 -49.754)" width="600" height="300" xlink:href="#c"/>
-    <use transform="translate(0 -99.507)" width="600" height="300" xlink:href="#c"/>
+    <path d="M600 260.881c-6.723 4.045-12.5 13.498-30.36 13.498-35.71 0-44.641-19.902-71.427-19.902-17.856 0-26.785 19.902-44.641 19.902-35.715 0-44.643-19.902-71.429-19.902-17.857 0-26.786 19.902-44.643 19.902-35.714 0-44.643-19.902-71.428-19.902-17.858 0-26.786 19.902-44.643 19.902-35.714 0-44.643-19.902-71.429-19.902-17.858 0-26.786 19.902-44.643 19.902-35.714 0-44.643-19.902-71.428-19.902-17.858 0-23.215 14.182-33.929 14.182v25.621c10.714 0 16.071-14.181 33.929-14.181 26.785 0 35.714 19.901 71.428 19.901C123.214 300 132.142 280.1 150 280.1c26.785 0 35.715 19.901 71.429 19.901 17.857 0 26.785-19.901 44.643-19.901 26.785 0 35.714 19.901 71.428 19.901 17.857 0 26.786-19.901 44.643-19.901 26.786 0 35.714 19.901 71.429 19.901 17.856 0 26.785-19.901 44.64-19.901C525 280.099 533.93 300 569.64 300c17.86 0 23.637-5.64 30.36-9.684V260.88z" id="iot_b" style="font-size:12px;fill:#002b7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:1"/>
+    <use transform="translate(0 49.753)" width="600" height="300" xlink:href="#iot_a"/>
+    <use transform="translate(0 -99.507)" id="iot_a" x="0" y="0" width="600" height="300" xlink:href="#iot_b"/>
+    <path d="M266.072 130.838c26.785 0 35.714 19.902 71.428 19.902 17.857 0 26.786-19.902 44.643-19.902 26.786 0 35.714 19.902 71.429 19.902 17.856 0 26.785-19.902 44.64-19.902 26.787 0 35.717 19.902 71.428 19.902 17.86 0 23.637-5.64 30.36-9.685v-29.434c-6.723 4.045-12.5 13.497-30.36 13.497-35.71 0-44.641-19.901-71.427-19.901-17.856 0-26.785 19.901-44.641 19.901-35.715 0-44.643-19.901-71.429-19.901-17.857 0-26.786 19.901-44.643 19.901-35.714 0-44.643-19.901-71.428-19.901" id="iot_c" style="font-size:12px;fill:#002b7f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:1"/>
+    <use transform="translate(0 -49.754)" width="600" height="300" xlink:href="#iot_c"/>
+    <use transform="translate(0 -99.507)" width="600" height="300" xlink:href="#iot_c"/>
     <g transform="matrix(.5 0 0 .5 0 154.722)">
-        <path id="f" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-opacity:1" d="M0-309.444h600v300H0z"/>
-        <path d="m-238.29 473.04-.214-94.3 81.772 46.965-81.558 47.335z" transform="matrix(2.84937 0 0 2.44966 679.586 -1202.729)" id="d" style="fill:#002b7f;fill-opacity:1;fill-rule:evenodd;stroke-opacity:1"/>
-        <use transform="matrix(-1 0 0 1 600 0)" width="600" height="600" xlink:href="#d"/>
-        <use transform="matrix(0 -.50215 2.01732 0 621.65 -9.444)" id="e" x="0" y="0" width="600" height="600" xlink:href="#d"/>
-        <use transform="matrix(1 0 0 -1 0 -318.889)" width="600" height="600" xlink:href="#e"/>
+        <path id="iot_f" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-opacity:1" d="M0-309.444h600v300H0z"/>
+        <path d="m-238.29 473.04-.214-94.3 81.772 46.965-81.558 47.335z" transform="matrix(2.84937 0 0 2.44966 679.586 -1202.729)" id="iot_d" style="fill:#002b7f;fill-opacity:1;fill-rule:evenodd;stroke-opacity:1"/>
+        <use transform="matrix(-1 0 0 1 600 0)" width="600" height="600" xlink:href="#iot_d"/>
+        <use transform="matrix(0 -.50215 2.01732 0 621.65 -9.444)" id="iot_e" x="0" y="0" width="600" height="600" xlink:href="#iot_d"/>
+        <use transform="matrix(1 0 0 -1 0 -318.889)" width="600" height="600" xlink:href="#iot_e"/>
     </g>
     <path d="M177.64 50H200L300 0h-22.36l-100 50zM0 0v11.18L77.64 50H100L0 0zM300 150v-11.18L222.36 100H200l100 50zM0 150h22.36l100-50H100L0 150z" style="fill:#ce1126;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
     <g transform="matrix(.5 0 0 .5 0 0)">
-        <use transform="matrix(1 0 0 .33333 0 203.148)" id="g" x="0" y="0" width="600" height="300" xlink:href="#f"/>
-        <use transform="matrix(0 .5 -1 0 450 0)" width="600" height="300" xlink:href="#g"/>
+        <use transform="matrix(1 0 0 .33333 0 203.148)" id="iot_g" x="0" y="0" width="600" height="300" xlink:href="#iot_f"/>
+        <use transform="matrix(0 .5 -1 0 450 0)" width="600" height="300" xlink:href="#iot_g"/>
     </g>
-    <rect width="300" height="30" rx="0" ry="0" x="0" y="60" id="h" style="fill:#ce1124;fill-opacity:1;fill-rule:evenodd;stroke-opacity:1"/>
-    <use transform="matrix(0 .5 -1 0 225 0)" width="600" height="300" xlink:href="#h"/>
+    <rect width="300" height="30" rx="0" ry="0" x="0" y="60" id="iot_h" style="fill:#ce1124;fill-opacity:1;fill-rule:evenodd;stroke-opacity:1"/>
+    <use transform="matrix(0 .5 -1 0 225 0)" width="600" height="300" xlink:href="#iot_h"/>
     <path d="M814.961-301.181 797.244 407.48c0 37.298 80.097 37.298 88.583 0L868.11-301.181h-53.149z" transform="matrix(.12095 0 0 .28726 347.839 166.046)" style="fill:#a24300;fill-opacity:1;fill-rule:evenodd;stroke:#fff;stroke-width:6.93489981;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"/>
     <path d="m496.063 549.213 17.717 70.866 35.433-53.15-17.717 88.583 35.433-35.433-35.433 88.582 35.433-35.433-35.433 88.583 35.433-35.433-35.433 106.299 35.433-35.433-35.433 106.299 35.433-35.433-35.433 106.299-17.716 53.151-17.717 17.72-17.717-17.72-17.716-53.151-35.433-106.299 35.433 35.433-35.433-106.299 35.433 35.433-35.433-106.299 35.433 35.433-35.433-88.583 35.433 35.433-35.433-88.582 35.433 35.433-17.717-88.583 35.433 53.15 17.717-70.866z" transform="matrix(-.13794 .03951 -.06065 -.11427 570.303 198.336)" style="font-size:12px;fill:#006d00;fill-rule:evenodd;stroke:#fff;stroke-width:8.25;stroke-dasharray:none"/>
     <path d="M496.063 549.213v496.067M425.197 868.11l70.866 106.299 70.866-106.299" transform="matrix(-.13794 .03951 -.06065 -.11427 570.303 198.336)" style="font-size:12px;fill:none;fill-rule:evenodd;stroke:#000;stroke-width:1pt"/>

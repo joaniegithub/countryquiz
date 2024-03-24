@@ -38,11 +38,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
     } else {
         if (chosenIndependantOnly) {
-            allCountries = Object.values(countriesData).filter((c) => c.independent === true);
+            questionCountries = Object.values(countriesData).filter((c) => c.independent === true);
         }
 
         if (chosenRegion !== 'all') {
-            allCountries = allCountries.filter((c) => c.region === chosenRegion);
+            questionCountries = allCountries.filter((c) => c.region === chosenRegion);
         }
 
         if (mode.key === CAPITAL) {

@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setInWiki } from 'store/actions';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import { Autocomplete, Box, TextField } from '@mui/material';
+import { Autocomplete, Box, TextField, Typography } from '@mui/material';
 
 import CountryCard from './ui/CountryCard';
 import GameFlag from './ui/GameFlag';
@@ -33,7 +33,7 @@ const Wiki = (props) => {
         setCountryIndex(newIndex);
     };
     const handleClickNext = () => {
-        const newIndex = countryIndex + 1 > countriesData.length ? 0 : countryIndex + 1;
+        const newIndex = countryIndex + 1 >= countriesData.length ? 0 : countryIndex + 1;
         setCountry(countriesData[newIndex]);
         setCountryIndex(newIndex);
     };
@@ -67,26 +67,29 @@ const Wiki = (props) => {
                     blurOnSelect
                     getOptionLabel={(option) => option.name.common}
                     renderOption={(props, option) => (
-                        <Box component="li" sx={{ '& > img': { mr: 1 } }} {...props}>
+                        <Box
+							component="li"
+							{...props}
+						>
                             <Box
-                                sx={{
-                                    width: '36px',
-                                }}
+								display="block"
+								flexShrink={0}
+                                width="36px"
                             >
                                 <GameFlag country={option.cca3}
 									svgOverrides={{
-										// maxWidth: '20px',
-										// maxHeight: 'none',
-										// width: 'auto',
-										// height: '16px',
-										// marginLeft: '3px',
-										// marginRight: '1px',
-										// verticalAlign: 'middle',
+										width: '100%',
 										filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3))',
 									}}
 								/>
                             </Box>
-                            {option.name.common}
+                            <Typography
+								component="span"
+								lineHeight="20px"
+								flexShrink={1}
+							>
+								{option.name.common}
+							</Typography>
                         </Box>
                     )}
                     renderInput={(params) => (
