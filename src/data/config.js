@@ -319,7 +319,7 @@ export const gameModes = [
     },
 ];
 
-export const officials = {
+const officials_eng = {
     usuals: [
         'Republic of ___',
         'Commonwealth of ___',
@@ -351,13 +351,14 @@ export const officials = {
         'Nation of ___',
         'Most Serene Republic of ___',
         "Democratic People's Republic of ___",
+        "Department of ___",
         '___ Confederation',
         '___ State',
         '___ Federation',
     ],
-    noBorders: [
-        '___ Island', // (when no borders)
-    ],
+    // noBorders: [
+    //     '___ Island', // (when no borders)
+    // ],
     noBordersMany: [
         '___ Islands', // (when no borders and name with ' and ' and no island)
     ],
@@ -373,4 +374,69 @@ export const officials = {
         '___ Arab Republic', // Western Asia. Include also in:
         'Oriental Republic of ___', // South America. Include also in:
     ],
+};
+
+
+const officials_fra = {
+    usuals: [
+        'R\u00e9publique <adv>',
+        'R\u00e9publique <art>___',
+        'Commonwealth <art>___',
+        'Royaume <art>___',
+        '\u00c9tat <art>___',
+        'R\u00e9publique d\u00e9mocratique <art>___',
+        'R\u00e9publique f\u00e9d\u00e9rale <art>___',
+        '___',
+    ],
+    rare: [
+        'Principaut\u00e9 <art>___',
+        'F\u00e9d\u00e9ration de ___',
+    ],
+    unique: [
+        'Sultanate <art>___',
+        'Pays <art>___',
+        'Conf\u00e9d\u00e9ration <adv>',
+        'Collectivit\u00e9 <art>___',
+        'D\u00e9partement <art>___',
+		'La R\u00e9publique populaire <art>___',
+		"R\u00e9gion administrative sp\u00e9ciale <art>___",
+		"R\u00e9publique -Unie <art>___",
+		"R\u00e9publique coop\u00e9rative <art>___",
+        'R\u00e9publique d\u00e9mocratique et populaire <art>___',
+        'R\u00e9publique f\u00e9d\u00e9rale d\u00e9mocratique <art>___',
+		"R\u00e9publique orientale <art>___",
+        'R\u00e9publique populaire <art>___',
+        'La R\u00e9publique populaire <art>___',
+        'R\u00e9publique populaire d\u00e9mocratique <art>___',
+        'R\u00e9publique socialiste <art>___',
+        "R\u00e9publique de l'Union <art>___",
+        '\u00c9tat ind\u00e9pendant <art>___',
+        '\u00c9tat plurinational <art>___',
+		'\u00c9tats f\u00e9d\u00e9r\u00e9s <art>___',
+        'Union <art>___',
+    ],
+    // noBorders: [
+    //     '\u00cele ___', // (when no borders)
+    // ],
+    noBordersMany: [
+        '\u00cele ___', // (when no borders and name with ' and ' and no island)
+    ],
+    dependant: [
+		'Territoire <art>___', // (when dependant)
+    ],
+    regionBoundRare: [
+        'R\u00e9publique islamique <art>___', // Southern Asia, Western Africa. Include also in: Northern Africa, Western Asia
+        'R\u00e9publique arabe <art>___', // Northern Africa, Western Asia. Include also in: Southern Asia, Western Africa.
+    ],
+    regionBoundUnique: [
+		"Les ___ d'Am\u00e9rique",
+		"Bailliage <art>___",
+        'R\u00e9publique bolivarienne <art>___', // South America. Also include Central America.
+		"R\u00e9publique orientale <art>___", // South America. Include also in:
+    ],
+};
+
+export const officials = {
+	eng: officials_eng,
+	fra: officials_fra,
 };

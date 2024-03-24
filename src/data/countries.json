@@ -1,4 +1,5 @@
 
+
 [
     {
         "name": {
@@ -65,6 +66,7 @@
             },
             "fra": {
                 "official": "Aruba",
+				"pronoun": "d'",
                 "common": "Aruba"
             },
             "hrv": {
@@ -218,6 +220,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique islamique d'Afghanistan",
+                "pronoun": "d'",
                 "common": "Afghanistan"
             },
             "hrv": {
@@ -361,6 +364,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Angola",
+                "pronoun": "d'",
                 "common": "Angola"
             },
             "hrv": {
@@ -505,6 +509,7 @@
             },
             "fra": {
                 "official": "Anguilla",
+				"pronoun": "d'",
                 "common": "Anguilla"
             },
             "hrv": {
@@ -649,6 +654,7 @@
             },
             "fra": {
                 "official": "Ahvenanmaa",
+				"pronoun": "d'",
                 "common": "Ahvenanmaa"
             },
             "hrv": {
@@ -787,6 +793,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Albanie",
+                "pronoun": "d'",
                 "common": "Albanie"
             },
             "hrv": {
@@ -930,6 +937,7 @@
             },
             "fra": {
                 "official": "Principaut\u00e9 d'Andorre",
+                "pronoun": "d'",
                 "common": "Andorre"
             },
             "hrv": {
@@ -1073,6 +1081,7 @@
             },
             "fra": {
                 "official": "\u00c9mirats arabes unis",
+				"pronoun": "des ",
                 "common": "\u00c9mirats arabes unis"
             },
             "hrv": {
@@ -1221,6 +1230,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique argentine",
+				"pronoun": "d'",
                 "common": "Argentine"
             },
             "hrv": {
@@ -1369,6 +1379,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Arm\u00e9nie",
+                "pronoun": "d'",
                 "common": "Arm\u00e9nie"
             },
             "hrv": {
@@ -1518,6 +1529,7 @@
             },
             "fra": {
                 "official": "Samoa am\u00e9ricaines",
+				"pronoun": "des ",
                 "common": "Samoa am\u00e9ricaines"
             },
             "hrv": {
@@ -1649,6 +1661,7 @@
             },
             "fra": {
                 "official": "Antarctique",
+				"pronoun": "d'",
                 "common": "Antarctique"
             },
             "hrv": {
@@ -1788,6 +1801,7 @@
             },
             "fra": {
                 "official": "Territoire des Terres australes et antarctiques fran\u00e7aises",
+                "pronoun": "des ",
                 "common": "Terres australes et antarctiques fran\u00e7aises"
             },
             "hrv": {
@@ -1925,7 +1939,8 @@
                 "common": "Antigua ja Barbuda"
             },
             "fra": {
-                "official": "Antigua -et-Barbuda",
+                "official": "Antigua-et-Barbuda",
+				"pronoun": "d'",
                 "common": "Antigua-et-Barbuda"
             },
             "hrv": {
@@ -2068,7 +2083,8 @@
                 "common": "Australia"
             },
             "fra": {
-                "official": "Australie",
+                "official": "Commonwealth d'Australie",
+				"pronoun": "d'",
                 "common": "Australie"
             },
             "hrv": {
@@ -2216,6 +2232,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Autriche",
+                "pronoun": "d'",
                 "common": "Autriche"
             },
             "hrv": {
@@ -2364,6 +2381,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Azerba\u00efdjan",
+                "pronoun": "d'",
                 "common": "Azerba\u00efdjan"
             },
             "hrv": {
@@ -2512,6 +2530,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Burundi",
+                "pronoun": "du ",
                 "common": "Burundi"
             },
             "hrv": {
@@ -2679,6 +2698,7 @@
             },
             "fra": {
                 "official": "Royaume de Belgique",
+                "pronoun": "de ",
                 "common": "Belgique"
             },
             "hrv": {
@@ -2822,6 +2842,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du B\u00e9nin",
+                "pronoun": "du ",
                 "common": "B\u00e9nin"
             },
             "hrv": {
@@ -2969,6 +2990,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Burkina",
+                "pronoun": "du ",
                 "common": "Burkina Faso"
             },
             "hrv": {
@@ -3112,6 +3134,7 @@
             },
             "fra": {
                 "official": "La R\u00e9publique populaire du Bangladesh",
+                "pronoun": "du ",
                 "common": "Bangladesh"
             },
             "hrv": {
@@ -3259,6 +3282,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Bulgarie",
+                "pronoun": "de ",
                 "common": "Bulgarie"
             },
             "hrv": {
@@ -3402,6 +3426,7 @@
             },
             "fra": {
                 "official": "Royaume de Bahre\u00efn",
+                "pronoun": "de ",
                 "common": "Bahre\u00efn"
             },
             "hrv": {
@@ -3549,6 +3574,7 @@
             },
             "fra": {
                 "official": "Commonwealth des Bahamas",
+                "pronoun": "des ",
                 "common": "Bahamas"
             },
             "hrv": {
@@ -3573,7 +3599,7 @@
             },
             "nld": {
                 "official": "Gemenebest van de Bahama's",
-                "common": "Bahama\u2019s"
+                "common": "Bahama's"
             },
             "per": {
                 "official": "\u0642\u0644\u0645\u0631\u0648 \u0647\u0645\u0633\u0648\u062f \u0628\u0627\u0647\u0627\u0645\u0627",
@@ -3706,6 +3732,7 @@
             },
             "fra": {
                 "official": "Bosnie-et-Herz\u00e9govine",
+				"pronoun": "de ",
                 "common": "Bosnie-Herz\u00e9govine"
             },
             "hrv": {
@@ -3855,6 +3882,7 @@
             },
             "fra": {
                 "official": "Collectivit\u00e9 de Saint-Barth\u00e9lemy",
+                "pronoun": "de ",
                 "common": "Saint-Barth\u00e9lemy"
             },
             "hrv": {
@@ -4003,6 +4031,7 @@
             },
             "fra": {
                 "official": "Sainte-H\u00e9l\u00e8ne, Ascension et Tristan da Cunha",
+				"pronoun": "de ",
                 "common": "Sainte-H\u00e9l\u00e8ne, Ascension et Tristan da Cunha"
             },
             "hrv": {
@@ -4157,6 +4186,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Bi\u00e9lorussie",
+                "pronoun": "de ",
                 "common": "Bi\u00e9lorussie"
             },
             "hrv": {
@@ -4310,6 +4340,7 @@
             },
             "fra": {
                 "official": "Belize",
+				"pronoun": "du ",
                 "common": "Belize"
             },
             "hrv": {
@@ -4458,6 +4489,7 @@
             },
             "fra": {
                 "official": "Bermudes",
+				"pronoun": "des ",
                 "common": "Bermudes"
             },
             "hrv": {
@@ -4630,6 +4662,7 @@
             },
             "fra": {
                 "official": "\u00c9tat plurinational de Bolivie",
+                "pronoun": "de ",
                 "common": "Bolivie"
             },
             "hrv": {
@@ -4792,6 +4825,7 @@
             },
             "fra": {
                 "official": "Bonaire, Saint-Eustache et Saba",
+				"pronoun": "des ",
                 "common": "Pays-Bas carib\u00e9ens"
             },
             "hrv": {
@@ -4930,6 +4964,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique f\u00e9d\u00e9rative du Br\u00e9sil",
+                "pronoun": "du ",
                 "common": "Br\u00e9sil"
             },
             "hrv": {
@@ -5077,6 +5112,7 @@
             },
             "fra": {
                 "official": "Barbade",
+				"pronoun": "de la ",
                 "common": "Barbade"
             },
             "hrv": {
@@ -5224,6 +5260,7 @@
             },
             "fra": {
                 "official": "\u00c9tat de Brunei Darussalam",
+                "pronoun": "de ",
                 "common": "Brunei"
             },
             "hrv": {
@@ -5371,6 +5408,7 @@
             },
             "fra": {
                 "official": "Royaume du Bhoutan",
+                "pronoun": "du ",
                 "common": "Bhoutan"
             },
             "hrv": {
@@ -5497,8 +5535,8 @@
                 "common": "Bouvetinsel"
             },
             "est": {
-                "official": "Bouvet\u2019 saar",
-                "common": "Bouvet\u2019 saar"
+                "official": "Bouvet' saar",
+                "common": "Bouvet' saar"
             },
             "fin": {
                 "official": "Bouvet'nsaari",
@@ -5506,6 +5544,7 @@
             },
             "fra": {
                 "official": "\u00cele Bouvet",
+				"pronoun": "de l'",
                 "common": "\u00cele Bouvet"
             },
             "hrv": {
@@ -5649,6 +5688,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Botswana",
+                "pronoun": "du ",
                 "common": "Botswana"
             },
             "hrv": {
@@ -6012,6 +6052,7 @@
             },
             "fra": {
                 "official": "Canada",
+				"pronoun": "du ",
                 "common": "Canada"
             },
             "hrv": {
@@ -6164,6 +6205,7 @@
             },
             "fra": {
                 "official": "Territoire des \u00eeles Cocos (Keeling)",
+                "pronoun": "des ",
                 "common": "\u00celes Cocos"
             },
             "hrv": {
@@ -6322,6 +6364,7 @@
             },
             "fra": {
                 "official": "Conf\u00e9d\u00e9ration suisse",
+				"pronoun": "de ",
                 "common": "Suisse"
             },
             "hrv": {
@@ -6469,6 +6512,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Chili",
+                "pronoun": "du ",
                 "common": "Chili"
             },
             "hrv": {
@@ -6624,6 +6668,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique populaire de Chine",
+                "pronoun": "de ",
                 "common": "Chine"
             },
             "hrv": {
@@ -6781,7 +6826,7 @@
                 "common": "Elfenbeink\u00fcste"
             },
             "est": {
-                "official": "C\u00f4te d\u2019Ivoire\u2019i Vabariik",
+                "official": "C\u00f4te d'Ivoire'i Vabariik",
                 "common": "Elevandiluurannik"
             },
             "fin": {
@@ -6790,6 +6835,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de C\u00f4te d' Ivoire",
+                "pronoun": "d'",
                 "common": "C\u00f4te d'Ivoire"
             },
             "hrv": {
@@ -6830,7 +6876,7 @@
             },
             "rus": {
                 "official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u043e\u0442-\u0434'\u0418\u0432\u0443\u0430\u0440\u0435",
-                "common": "\u041a\u043e\u0442-\u0434\u2019\u0418\u0432\u0443\u0430\u0440"
+                "common": "\u041a\u043e\u0442-\u0434'\u0418\u0432\u0443\u0430\u0440"
             },
             "slk": {
                 "official": "Republika Pobre\u017eie Slonoviny",
@@ -6942,6 +6988,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Cameroun",
+                "pronoun": "du ",
                 "common": "Cameroun"
             },
             "hrv": {
@@ -7105,6 +7152,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d\u00e9mocratique du Congo",
+                "pronoun": "du ",
                 "common": "Congo (R\u00e9p. d\u00e9m.)"
             },
             "hrv": {
@@ -7258,6 +7306,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Congo",
+                "pronoun": "du ",
                 "common": "Congo"
             },
             "hrv": {
@@ -7411,6 +7460,7 @@
             },
             "fra": {
                 "official": "\u00celes Cook",
+				"pronoun": "des ",
                 "common": "\u00celes Cook"
             },
             "hrv": {
@@ -7554,6 +7604,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Colombie",
+                "pronoun": "de ",
                 "common": "Colombie"
             },
             "hrv": {
@@ -7713,6 +7764,7 @@
             },
             "fra": {
                 "official": "Union des Comores",
+                "pronoun": "des ",
                 "common": "Comores"
             },
             "hrv": {
@@ -7856,6 +7908,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Cap-Vert",
+                "pronoun": "du ",
                 "common": "\u00celes du Cap-Vert"
             },
             "hrv": {
@@ -7999,6 +8052,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Costa Rica",
+                "pronoun": "du ",
                 "common": "Costa Rica"
             },
             "hrv": {
@@ -8146,6 +8200,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Cuba",
+                "pronoun": "de ",
                 "common": "Cuba"
             },
             "hrv": {
@@ -8307,6 +8362,7 @@
             },
             "fra": {
                 "official": "Pays de Cura\u00e7ao",
+                "pronoun": "de ",
                 "common": "Cura\u00e7ao"
             },
             "hrv": {
@@ -8451,6 +8507,7 @@
             },
             "fra": {
                 "official": "Territoire de l'\u00eele Christmas",
+                "pronoun": "de l'",
                 "common": "\u00cele Christmas"
             },
             "hrv": {
@@ -8599,6 +8656,7 @@
             },
             "fra": {
                 "official": "\u00celes Ca\u00efmans",
+				"pronoun": "de ",
                 "common": "\u00celes Ca\u00efmans"
             },
             "hrv": {
@@ -8754,6 +8812,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Chypre",
+                "pronoun": "de ",
                 "common": "Chypre"
             },
             "hrv": {
@@ -8902,6 +8961,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique tch\u00e8que",
+				"pronoun": "de ",
                 "common": "Tch\u00e9quie"
             },
             "hrv": {
@@ -9049,6 +9109,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique f\u00e9d\u00e9rale d'Allemagne",
+                "pronoun": "d'",
                 "common": "Allemagne"
             },
             "hrv": {
@@ -9209,6 +9270,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Djibouti",
+                "pronoun": "de ",
                 "common": "Djibouti"
             },
             "hrv": {
@@ -9352,6 +9414,7 @@
             },
             "fra": {
                 "official": "Commonwealth de la Dominique",
+                "pronoun": "de la ",
                 "common": "Dominique"
             },
             "hrv": {
@@ -9495,6 +9558,7 @@
             },
             "fra": {
                 "official": "Royaume du Danemark",
+                "pronoun": "du ",
                 "common": "Danemark"
             },
             "hrv": {
@@ -9638,6 +9702,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique Dominicaine",
+				"pronoun": "de la ",
                 "common": "R\u00e9publique dominicaine"
             },
             "hrv": {
@@ -9781,6 +9846,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d\u00e9mocratique et populaire d'Alg\u00e9rie",
+                "pronoun": "d'",
                 "common": "Alg\u00e9rie"
             },
             "hrv": {
@@ -9924,6 +9990,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de l'\u00c9quateur",
+                "pronoun": "de l'",
                 "common": "\u00c9quateur"
             },
             "hrv": {
@@ -10067,6 +10134,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique arabe d'\u00c9gypte",
+                "pronoun": "d'",
                 "common": "\u00c9gypte"
             },
             "hrv": {
@@ -10227,6 +10295,7 @@
             },
             "fra": {
                 "official": "\u00c9tat d'\u00c9rythr\u00e9e",
+                "pronoun": "d'",
                 "common": "\u00c9rythr\u00e9e"
             },
             "hrv": {
@@ -10390,6 +10459,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique arabe sahraouie d\u00e9mocratique",
+				"pronoun": "du ",
                 "common": "Sahara Occidental"
             },
             "hrv": {
@@ -10537,6 +10607,7 @@
             },
             "fra": {
                 "official": "Royaume d'Espagne",
+                "pronoun": "d'",
                 "common": "Espagne"
             },
             "hrv": {
@@ -10680,6 +10751,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Estonie",
+                "pronoun": "d'",
                 "common": "Estonie"
             },
             "hrv": {
@@ -10828,6 +10900,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique f\u00e9d\u00e9rale d\u00e9mocratique d'\u00c9thiopie",
+                "pronoun": "d'",
                 "common": "\u00c9thiopie"
             },
             "hrv": {
@@ -10976,6 +11049,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Finlande",
+                "pronoun": "de ",
                 "common": "Finlande"
             },
             "hrv": {
@@ -11133,6 +11207,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique des Fidji",
+                "pronoun": "des ",
                 "common": "Fidji"
             },
             "hrv": {
@@ -11277,6 +11352,7 @@
             },
             "fra": {
                 "official": "\u00celes Malouines",
+				"pronoun": "des ",
                 "common": "\u00celes Malouines"
             },
             "hrv": {
@@ -11420,6 +11496,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique fran\u00e7aise",
+				"pronoun": "de ",
                 "common": "France"
             },
             "hrv": {
@@ -11577,6 +11654,7 @@
             },
             "fra": {
                 "official": "\u00celes F\u00e9ro\u00e9",
+				"pronoun": "des ",
                 "common": "\u00celes F\u00e9ro\u00e9"
             },
             "hrv": {
@@ -11715,6 +11793,7 @@
             },
             "fra": {
                 "official": "\u00c9tats f\u00e9d\u00e9r\u00e9s de Micron\u00e9sie",
+                "pronoun": "de ",
                 "common": "Micron\u00e9sie"
             },
             "hrv": {
@@ -11858,6 +11937,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique gabonaise",
+				"pronoun": "du ",
                 "common": "Gabon"
             },
             "hrv": {
@@ -12005,6 +12085,7 @@
             },
             "fra": {
                 "official": "Royaume-Uni de Grande-Bretagne et d'Irlande du Nord",
+                "pronoun": "du ",
                 "common": "Royaume-Uni"
             },
             "hrv": {
@@ -12148,6 +12229,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de G\u00e9orgie",
+                "pronoun": "de ",
                 "common": "G\u00e9orgie"
             },
             "hrv": {
@@ -12306,6 +12388,7 @@
             },
             "fra": {
                 "official": "Bailliage de Guernesey",
+                "pronoun": "de ",
                 "common": "Guernesey"
             },
             "hrv": {
@@ -12449,6 +12532,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Ghana",
+                "pronoun": "du ",
                 "common": "Ghana"
             },
             "hrv": {
@@ -12593,6 +12677,7 @@
             },
             "fra": {
                 "official": "Gibraltar",
+				"pronoun": "de ",
                 "common": "Gibraltar"
             },
             "hrv": {
@@ -12732,6 +12817,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Guin\u00e9e",
+                "pronoun": "de ",
                 "common": "Guin\u00e9e"
             },
             "hrv": {
@@ -12867,7 +12953,7 @@
                 "common": "Guadeloupe"
             },
             "est": {
-                "official": "Guadeloupe\u2019i ja s\u00f5ltkondade departemang",
+                "official": "Guadeloupe'i ja s\u00f5ltkondade departemang",
                 "common": "Guadeloupe"
             },
             "fin": {
@@ -12876,6 +12962,7 @@
             },
             "fra": {
                 "official": "Guadeloupe",
+				"pronoun": "de la ",
                 "common": "Guadeloupe"
             },
             "hrv": {
@@ -13014,6 +13101,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Gambie",
+                "pronoun": "de ",
                 "common": "Gambie"
             },
             "hrv": {
@@ -13162,6 +13250,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Guin\u00e9e-Bissau",
+                "pronoun": "de ",
                 "common": "Guin\u00e9e-Bissau"
             },
             "hrv": {
@@ -13321,6 +13410,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Guin\u00e9e \u00e9quatoriale",
+                "pronoun": "de ",
                 "common": "Guin\u00e9e \u00e9quatoriale"
             },
             "hrv": {
@@ -13469,6 +13559,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique hell\u00e9nique",
+				"pronoun": "de ",
                 "common": "Gr\u00e8ce"
             },
             "hrv": {
@@ -13612,6 +13703,7 @@
             },
             "fra": {
                 "official": "Grenade",
+				"pronoun": "de ",
                 "common": "Grenade"
             },
             "hrv": {
@@ -13756,6 +13848,7 @@
             },
             "fra": {
                 "official": "Groenland",
+				"pronoun": "du ",
                 "common": "Groenland"
             },
             "hrv": {
@@ -13899,6 +13992,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Guatemala",
+                "pronoun": "du ",
                 "common": "Guatemala"
             },
             "hrv": {
@@ -14043,6 +14137,7 @@
             },
             "fra": {
                 "official": "Guyane",
+				"pronoun": "de ",
                 "common": "Guyane"
             },
             "hrv": {
@@ -14197,6 +14292,7 @@
             },
             "fra": {
                 "official": "Guam",
+				"pronoun": "de ",
                 "common": "Guam"
             },
             "hrv": {
@@ -14344,6 +14440,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique coop\u00e9rative de Guyana",
+                "pronoun": "de ",
                 "common": "Guyana"
             },
             "hrv": {
@@ -14493,6 +14590,7 @@
             },
             "fra": {
                 "official": "R\u00e9gion administrative sp\u00e9ciale de Hong Kong de la R\u00e9publique populaire de Chine",
+                "pronoun": "de ",
                 "common": "Hong Kong"
             },
             "hrv": {
@@ -14628,6 +14726,7 @@
             },
             "fra": {
                 "official": "\u00celes Heard-et-MacDonald",
+				"pronoun": "des ",
                 "common": "\u00celes Heard-et-MacDonald"
             },
             "hrv": {
@@ -14766,6 +14865,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Honduras",
+                "pronoun": "du ",
                 "common": "Honduras"
             },
             "hrv": {
@@ -14909,6 +15009,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Croatie",
+                "pronoun": "de ",
                 "common": "Croatie"
             },
             "hrv": {
@@ -15057,6 +15158,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Ha\u00efti",
+                "pronoun": "d'",
                 "common": "Ha\u00efti"
             },
             "hrv": {
@@ -15200,6 +15302,7 @@
             },
             "fra": {
                 "official": "Hongrie",
+				"pronoun": "de ",
                 "common": "Hongrie"
             },
             "hrv": {
@@ -15343,6 +15446,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Indon\u00e9sie",
+                "pronoun": "d'",
                 "common": "Indon\u00e9sie"
             },
             "hrv": {
@@ -15495,7 +15599,8 @@
                 "common": "Mansaari"
             },
             "fra": {
-                "official": "Isle of Man",
+                "official": "\u00cele de Man",
+				"pronoun": "de l'",
                 "common": "\u00cele de Man"
             },
             "hrv": {
@@ -15655,6 +15760,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de l'Inde",
+                "pronoun": "de l'",
                 "common": "Inde"
             },
             "hrv": {
@@ -15799,6 +15905,7 @@
             },
             "fra": {
                 "official": "Territoire britannique de l' oc\u00e9an Indien",
+                "pronoun": "de l'",
                 "common": "Territoire britannique de l'oc\u00e9an Indien"
             },
             "hrv": {
@@ -15942,6 +16049,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Irlande",
+                "pronoun": "d'",
                 "common": "Irlande"
             },
             "hrv": {
@@ -16090,6 +16198,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique islamique d'Iran",
+                "pronoun": "d'",
                 "common": "Iran"
             },
             "hrv": {
@@ -16243,6 +16352,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Irak",
+                "pronoun": "d'",
                 "common": "Irak"
             },
             "hrv": {
@@ -16386,6 +16496,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Islande",
+                "pronoun": "d'",
                 "common": "Islande"
             },
             "hrv": {
@@ -16534,6 +16645,7 @@
             },
             "fra": {
                 "official": "\u00c9tat d'Isra\u00ebl",
+                "pronoun": "d'",
                 "common": "Isra\u00ebl"
             },
             "hrv": {
@@ -16677,6 +16789,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique italienne",
+				"pronoun": "d'",
                 "common": "Italie"
             },
             "hrv": {
@@ -16829,6 +16942,7 @@
             },
             "fra": {
                 "official": "Jama\u00efque",
+				"pronoun": "de ",
                 "common": "Jama\u00efque"
             },
             "hrv": {
@@ -16987,6 +17101,7 @@
             },
             "fra": {
                 "official": "Bailliage de Jersey",
+                "pronoun": "de ",
                 "common": "Jersey"
             },
             "hrv": {
@@ -17130,6 +17245,7 @@
             },
             "fra": {
                 "official": "Royaume hach\u00e9mite de Jordanie",
+                "pronoun": "de ",
                 "common": "Jordanie"
             },
             "hrv": {
@@ -17273,6 +17389,7 @@
             },
             "fra": {
                 "official": "Japon",
+				"pronoun": "du ",
                 "common": "Japon"
             },
             "hrv": {
@@ -17434,6 +17551,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Kazakhstan",
+                "pronoun": "du ",
                 "common": "Kazakhstan"
             },
             "hrv": {
@@ -17586,6 +17704,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Kenya",
+                "pronoun": "du ",
                 "common": "Kenya"
             },
             "hrv": {
@@ -17740,6 +17859,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique kirghize",
+				"pronoun": "du ",
                 "common": "Kirghizistan"
             },
             "hrv": {
@@ -17887,6 +18007,7 @@
             },
             "fra": {
                 "official": "Royaume du Cambodge",
+                "pronoun": "du ",
                 "common": "Cambodge"
             },
             "hrv": {
@@ -18039,6 +18160,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Kiribati",
+                "pronoun": "de ",
                 "common": "Kiribati"
             },
             "hrv": {
@@ -18186,6 +18308,7 @@
             },
             "fra": {
                 "official": "F\u00e9d\u00e9ration de Saint-Christophe-et-Ni\u00e9v\u00e8s",
+                "pronoun": "de ",
                 "common": "Saint-Christophe-et-Ni\u00e9v\u00e8s"
             },
             "hrv": {
@@ -18329,6 +18452,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Cor\u00e9e",
+                "pronoun": "de ",
                 "common": "Cor\u00e9e du Sud"
             },
             "hrv": {
@@ -18480,6 +18604,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Kosovo",
+                "pronoun": "du ",
                 "common": "Kosovo"
             },
             "hrv": {
@@ -18623,6 +18748,7 @@
             },
             "fra": {
                 "official": "\u00c9tat du Kowe\u00eft",
+                "pronoun": "du ",
                 "common": "Kowe\u00eft"
             },
             "hrv": {
@@ -18766,6 +18892,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d\u00e9mocratique populaire lao",
+				"pronoun": "du ",
                 "common": "Laos"
             },
             "hrv": {
@@ -18914,6 +19041,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique libanaise",
+				"pronoun": "du ",
                 "common": "Liban"
             },
             "hrv": {
@@ -19057,6 +19185,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Lib\u00e9ria",
+                "pronoun": "du ",
                 "common": "Liberia"
             },
             "hrv": {
@@ -19200,6 +19329,7 @@
             },
             "fra": {
                 "official": "Grande R\u00e9publique arabe libyenne populaire et socialiste",
+				"pronoun": "de ",
                 "common": "Libye"
             },
             "hrv": {
@@ -19343,6 +19473,7 @@
             },
             "fra": {
                 "official": "Sainte-Lucie",
+				"pronoun": "de ",
                 "common": "Sainte-Lucie"
             },
             "hrv": {
@@ -19486,6 +19617,7 @@
             },
             "fra": {
                 "official": "Principaut\u00e9 du Liechtenstein",
+                "pronoun": "du ",
                 "common": "Liechtenstein"
             },
             "hrv": {
@@ -19634,6 +19766,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d\u00e9mocratique socialiste du Sri Lanka",
+                "pronoun": "du ",
                 "common": "Sri Lanka"
             },
             "hrv": {
@@ -19794,6 +19927,7 @@
             },
             "fra": {
                 "official": "Royaume du Lesotho",
+                "pronoun": "du ",
                 "common": "Lesotho"
             },
             "hrv": {
@@ -19937,6 +20071,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Lituanie",
+                "pronoun": "de ",
                 "common": "Lituanie"
             },
             "hrv": {
@@ -20096,6 +20231,7 @@
             },
             "fra": {
                 "official": "Grand-Duch\u00e9 de Luxembourg",
+                "pronoun": "de ",
                 "common": "Luxembourg"
             },
             "hrv": {
@@ -20239,6 +20375,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Lettonie",
+                "pronoun": "de ",
                 "common": "Lettonie"
             },
             "hrv": {
@@ -20391,6 +20528,7 @@
             },
             "fra": {
                 "official": "R\u00e9gion administrative sp\u00e9ciale de Macao de la R\u00e9publique populaire de Chine",
+                "pronoun": "de ",
                 "common": "Macao"
             },
             "hrv": {
@@ -20535,6 +20673,7 @@
             },
             "fra": {
                 "official": "Saint-Martin",
+				"pronoun": "de ",
                 "common": "Saint-Martin"
             },
             "hrv": {
@@ -20683,6 +20822,7 @@
             },
             "fra": {
                 "official": "Royaume du Maroc",
+                "pronoun": "du ",
                 "common": "Maroc"
             },
             "hrv": {
@@ -20830,6 +20970,7 @@
             },
             "fra": {
                 "official": "Principaut\u00e9 de Monaco",
+                "pronoun": "de ",
                 "common": "Monaco"
             },
             "hrv": {
@@ -20976,6 +21117,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Moldavie",
+                "pronoun": "de ",
                 "common": "Moldavie"
             },
             "hrv": {
@@ -21124,6 +21266,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Madagascar",
+                "pronoun": "de ",
                 "common": "Madagascar"
             },
             "hrv": {
@@ -21267,6 +21410,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique des Maldives",
+                "pronoun": "des ",
                 "common": "Maldives"
             },
             "hrv": {
@@ -21410,6 +21554,7 @@
             },
             "fra": {
                 "official": "\u00c9tats-Unis du Mexique",
+                "pronoun": "du ",
                 "common": "Mexique"
             },
             "hrv": {
@@ -21558,6 +21703,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique des \u00celes Marshall",
+                "pronoun": "des ",
                 "common": "\u00celes Marshall"
             },
             "hrv": {
@@ -21707,6 +21853,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Mac\u00e9doine du Nord",
+                "pronoun": "du ",
                 "common": "Mac\u00e9doine du Nord"
             },
             "hrv": {
@@ -21850,6 +21997,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Mali",
+                "pronoun": "du ",
                 "common": "Mali"
             },
             "hrv": {
@@ -21998,6 +22146,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Malte",
+                "pronoun": "de ",
                 "common": "Malte"
             },
             "hrv": {
@@ -22154,6 +22303,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de l'Union du Myanmar",
+                "pronoun": "du ",
                 "common": "Birmanie"
             },
             "hrv": {
@@ -22301,6 +22451,7 @@
             },
             "fra": {
                 "official": "Mont\u00e9n\u00e9gro",
+				"pronoun": "du ",
                 "common": "Mont\u00e9n\u00e9gro"
             },
             "hrv": {
@@ -22444,6 +22595,7 @@
             },
             "fra": {
                 "official": "Mongolie",
+				"pronoun": "de ",
                 "common": "Mongolie"
             },
             "hrv": {
@@ -22602,6 +22754,7 @@
             },
             "fra": {
                 "official": "Commonwealth des \u00eeles Mariannes du Nord",
+                "pronoun": "du ",
                 "common": "\u00celes Mariannes du Nord"
             },
             "hrv": {
@@ -22749,6 +22902,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Mozambique",
+                "pronoun": "du ",
                 "common": "Mozambique"
             },
             "hrv": {
@@ -22896,6 +23050,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique islamique de Mauritanie",
+                "pronoun": "de ",
                 "common": "Mauritanie"
             },
             "hrv": {
@@ -23040,6 +23195,7 @@
             },
             "fra": {
                 "official": "Montserrat",
+				"pronoun": "de ",
                 "common": "Montserrat"
             },
             "hrv": {
@@ -23179,7 +23335,7 @@
                 "common": "Martinique"
             },
             "est": {
-                "official": "Martinique\u2019i departemang",
+                "official": "Martinique'i departemang",
                 "common": "Martinique"
             },
             "fin": {
@@ -23188,6 +23344,7 @@
             },
             "fra": {
                 "official": "Martinique",
+				"pronoun": "de la ",
                 "common": "Martinique"
             },
             "hrv": {
@@ -23336,6 +23493,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Maurice",
+                "pronoun": "de ",
                 "common": "\u00cele Maurice"
             },
             "hrv": {
@@ -23484,6 +23642,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Malawi",
+                "pronoun": "du ",
                 "common": "Malawi"
             },
             "hrv": {
@@ -23632,6 +23791,7 @@
             },
             "fra": {
                 "official": "F\u00e9d\u00e9ration de Malaisie",
+                "pronoun": "de ",
                 "common": "Malaisie"
             },
             "hrv": {
@@ -23776,6 +23936,7 @@
             },
             "fra": {
                 "official": "D\u00e9partement de Mayotte",
+                "pronoun": "de ",
                 "common": "Mayotte"
             },
             "hrv": {
@@ -23963,6 +24124,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Namibie",
+                "pronoun": "de ",
                 "common": "Namibie"
             },
             "hrv": {
@@ -24107,6 +24269,7 @@
             },
             "fra": {
                 "official": "Nouvelle-Cal\u00e9donie",
+				"pronoun": "de ",
                 "common": "Nouvelle-Cal\u00e9donie"
             },
             "hrv": {
@@ -24250,6 +24413,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Niger",
+                "pronoun": "du ",
                 "common": "Niger"
             },
             "hrv": {
@@ -24403,6 +24567,7 @@
             },
             "fra": {
                 "official": "Territoire de l'\u00eele Norfolk",
+                "pronoun": "de l'",
                 "common": "\u00cele Norfolk"
             },
             "hrv": {
@@ -24546,6 +24711,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique f\u00e9d\u00e9rale du Nigeria",
+                "pronoun": "du ",
                 "common": "Nig\u00e9ria"
             },
             "hrv": {
@@ -24693,6 +24859,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Nicaragua",
+                "pronoun": "du ",
                 "common": "Nicaragua"
             },
             "hrv": {
@@ -24842,6 +25009,7 @@
             },
             "fra": {
                 "official": "Niue",
+				"pronoun": "de ",
                 "common": "Niue"
             },
             "hrv": {
@@ -24985,6 +25153,7 @@
             },
             "fra": {
                 "official": "Pays-Bas",
+				"pronoun": "des ",
                 "common": "Pays-Bas"
             },
             "hrv": {
@@ -25138,6 +25307,7 @@
             },
             "fra": {
                 "official": "Royaume de Norv\u00e8ge",
+                "pronoun": "de ",
                 "common": "Norv\u00e8ge"
             },
             "hrv": {
@@ -25281,6 +25451,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du N\u00e9pal",
+                "pronoun": "du ",
                 "common": "N\u00e9pal"
             },
             "hrv": {
@@ -25429,6 +25600,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Nauru",
+                "pronoun": "de ",
                 "common": "Nauru"
             },
             "hrv": {
@@ -25582,6 +25754,7 @@
             },
             "fra": {
                 "official": "Nouvelle-Z\u00e9lande",
+				"pronoun": "de ",
                 "common": "Nouvelle-Z\u00e9lande"
             },
             "hrv": {
@@ -25725,6 +25898,7 @@
             },
             "fra": {
                 "official": "Sultanat d'Oman",
+                "pronoun": "d'",
                 "common": "Oman"
             },
             "hrv": {
@@ -25878,6 +26052,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique islamique du Pakistan",
+                "pronoun": "du ",
                 "common": "Pakistan"
             },
             "hrv": {
@@ -26029,6 +26204,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Panama",
+                "pronoun": "du ",
                 "common": "Panama"
             },
             "hrv": {
@@ -26173,6 +26349,7 @@
             },
             "fra": {
                 "official": "Groupe d'\u00eeles Pitcairn",
+                "pronoun": "d'",
                 "common": "\u00celes Pitcairn"
             },
             "hrv": {
@@ -26322,6 +26499,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du P\u00e9rou",
+                "pronoun": "du ",
                 "common": "P\u00e9rou"
             },
             "hrv": {
@@ -26470,6 +26648,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique des Philippines",
+                "pronoun": "des ",
                 "common": "Philippines"
             },
             "hrv": {
@@ -26622,6 +26801,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique des Palaos (Palau)",
+                "pronoun": "des ",
                 "common": "Palaos (Palau)"
             },
             "hrv": {
@@ -26779,6 +26959,7 @@
             },
             "fra": {
                 "official": "\u00c9tat ind\u00e9pendant de Papouasie-Nouvelle-Guin\u00e9e",
+                "pronoun": "de ",
                 "common": "Papouasie-Nouvelle-Guin\u00e9e"
             },
             "hrv": {
@@ -26922,6 +27103,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Pologne",
+                "pronoun": "de ",
                 "common": "Pologne"
             },
             "hrv": {
@@ -27071,6 +27253,7 @@
             },
             "fra": {
                 "official": "Porto Rico",
+				"pronoun": "de ",
                 "common": "Porto Rico"
             },
             "hrv": {
@@ -27227,6 +27410,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique populaire d\u00e9mocratique de Cor\u00e9e",
+                "pronoun": "de ",
                 "common": "Cor\u00e9e du Nord"
             },
             "hrv": {
@@ -27370,6 +27554,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique portugaise",
+				"pronoun": "du ",
                 "common": "Portugal"
             },
             "hrv": {
@@ -27518,6 +27703,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Paraguay",
+                "pronoun": "du ",
                 "common": "Paraguay"
             },
             "hrv": {
@@ -27671,6 +27857,7 @@
             },
             "fra": {
                 "official": "\u00c9tat de Palestine",
+                "pronoun": "de ",
                 "common": "Palestine"
             },
             "hrv": {
@@ -27823,6 +28010,7 @@
             },
             "fra": {
                 "official": "Polyn\u00e9sie fran\u00e7aise",
+				"pronoun": "de la ",
                 "common": "Polyn\u00e9sie fran\u00e7aise"
             },
             "hrv": {
@@ -27966,6 +28154,7 @@
             },
             "fra": {
                 "official": "\u00c9tat du Qatar",
+                "pronoun": "du ",
                 "common": "Qatar"
             },
             "hrv": {
@@ -28110,6 +28299,7 @@
             },
             "fra": {
                 "official": "Ile de la R\u00e9union",
+                "pronoun": "de la ",
                 "common": "R\u00e9union"
             },
             "hrv": {
@@ -28248,6 +28438,7 @@
             },
             "fra": {
                 "official": "Roumanie",
+				"pronoun": "de ",
                 "common": "Roumanie"
             },
             "hrv": {
@@ -28399,6 +28590,7 @@
             },
             "fra": {
                 "official": "F\u00e9d\u00e9ration de Russie",
+                "pronoun": "de ",
                 "common": "Russie"
             },
             "hrv": {
@@ -28552,6 +28744,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique rwandaise",
+				"pronoun": "du ",
                 "common": "Rwanda"
             },
             "hrv": {
@@ -28700,6 +28893,7 @@
             },
             "fra": {
                 "official": "Royaume d'Arabie Saoudite",
+                "pronoun": "d'",
                 "common": "Arabie Saoudite"
             },
             "hrv": {
@@ -28848,6 +29042,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Soudan",
+                "pronoun": "du ",
                 "common": "Soudan"
             },
             "hrv": {
@@ -28995,6 +29190,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du S\u00e9n\u00e9gal",
+                "pronoun": "du ",
                 "common": "S\u00e9n\u00e9gal"
             },
             "hrv": {
@@ -29153,6 +29349,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Singapour",
+                "pronoun": "de ",
                 "common": "Singapour"
             },
             "hrv": {
@@ -29293,6 +29490,7 @@
             },
             "fra": {
                 "official": "G\u00e9orgie du Sud et les \u00eeles Sandwich du Sud",
+                "pronoun": "du ",
                 "common": "G\u00e9orgie du Sud-et-les \u00celes Sandwich du Sud"
             },
             "hrv": {
@@ -29437,6 +29635,7 @@
             },
             "fra": {
                 "official": "Jan Mayen Svalbard",
+				"pronoun": "de ",
                 "common": "Svalbard et Jan Mayen"
             },
             "hrv": {
@@ -29580,6 +29779,7 @@
             },
             "fra": {
                 "official": "\u00celes Salomon",
+				"pronoun": "des ",
                 "common": "\u00celes Salomon"
             },
             "hrv": {
@@ -29723,6 +29923,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Sierra Leone",
+                "pronoun": "de ",
                 "common": "Sierra Leone"
             },
             "hrv": {
@@ -29866,6 +30067,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Salvador",
+                "pronoun": "du ",
                 "common": "Salvador"
             },
             "hrv": {
@@ -30009,6 +30211,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Saint-Marin",
+                "pronoun": "de ",
                 "common": "Saint-Marin"
             },
             "hrv": {
@@ -30167,6 +30370,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique f\u00e9d\u00e9rale de Somalie",
+                "pronoun": "de ",
                 "common": "Somalie"
             },
             "hrv": {
@@ -30302,7 +30506,7 @@
                 "common": "St. Pierre und Miquelon"
             },
             "est": {
-                "official": "Saint-Pierre\u2019i ja Miqueloni territoriaal\u00fchendus",
+                "official": "Saint-Pierre'i ja Miqueloni territoriaal\u00fchendus",
                 "common": "Saint-Pierre ja Miquelon"
             },
             "fin": {
@@ -30311,6 +30515,7 @@
             },
             "fra": {
                 "official": "Saint-Pierre-et-Miquelon",
+				"pronoun": "de ",
                 "common": "Saint-Pierre-et-Miquelon"
             },
             "hrv": {
@@ -30460,6 +30665,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Serbie",
+                "pronoun": "de ",
                 "common": "Serbie"
             },
             "hrv": {
@@ -30603,6 +30809,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Soudan du Sud",
+                "pronoun": "du ",
                 "common": "Soudan du Sud"
             },
             "hrv": {
@@ -30751,6 +30958,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d\u00e9mocratique de S\u00e3o Tom\u00e9 et Pr\u00edncipe",
+                "pronoun": "de ",
                 "common": "S\u00e3o Tom\u00e9 et Pr\u00edncipe"
             },
             "hrv": {
@@ -30894,6 +31102,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Suriname",
+                "pronoun": "du ",
                 "common": "Surinam"
             },
             "hrv": {
@@ -31037,6 +31246,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique slovaque",
+				"pronoun": "de la ",
                 "common": "Slovaquie"
             },
             "hrv": {
@@ -31180,6 +31390,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Slov\u00e9nie",
+                "pronoun": "de ",
                 "common": "Slov\u00e9nie"
             },
             "hrv": {
@@ -31323,6 +31534,7 @@
             },
             "fra": {
                 "official": "Royaume de Su\u00e8de",
+                "pronoun": "de ",
                 "common": "Su\u00e8de"
             },
             "hrv": {
@@ -31482,7 +31694,8 @@
                 "common": "Swazimaa"
             },
             "fra": {
-                "official": "Royaume d\u2019Eswatini",
+                "official": "Royaume d'Eswatini",
+                "pronoun": "d'",
                 "common": "Swaziland"
             },
             "hrv": {
@@ -31641,6 +31854,7 @@
             },
             "fra": {
                 "official": "Sint Maarten",
+				"pronoun": "de ",
                 "common": "Saint-Martin"
             },
             "hrv": {
@@ -31798,6 +32012,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique des Seychelles",
+                "pronoun": "des ",
                 "common": "Seychelles"
             },
             "hrv": {
@@ -31945,6 +32160,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique arabe syrienne",
+				"pronoun": "de ",
                 "common": "Syrie"
             },
             "hrv": {
@@ -32089,6 +32305,7 @@
             },
             "fra": {
                 "official": "\u00celes Turques et Ca\u00efques",
+				"pronoun": "des ",
                 "common": "\u00celes Turques-et-Ca\u00efques"
             },
             "hrv": {
@@ -32241,6 +32458,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Tchad",
+                "pronoun": "du ",
                 "common": "Tchad"
             },
             "hrv": {
@@ -32384,6 +32602,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique togolaise",
+				"pronoun": "de ",
                 "common": "Togo"
             },
             "hrv": {
@@ -32534,6 +32753,7 @@
             },
             "fra": {
                 "official": "Royaume de Tha\u00eflande",
+                "pronoun": "de ",
                 "common": "Tha\u00eflande"
             },
             "hrv": {
@@ -32692,6 +32912,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Tadjikistan",
+                "pronoun": "du ",
                 "common": "Tadjikistan"
             },
             "hrv": {
@@ -32846,6 +33067,7 @@
             },
             "fra": {
                 "official": "\u00celes Tokelau",
+				"pronoun": "de ",
                 "common": "Tokelau"
             },
             "hrv": {
@@ -32994,6 +33216,7 @@
             },
             "fra": {
                 "official": "Turkm\u00e9nistan",
+				"pronoun": "du ",
                 "common": "Turkm\u00e9nistan"
             },
             "hrv": {
@@ -33150,6 +33373,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d\u00e9mocratique du Timor oriental",
+                "pronoun": "du ",
                 "common": "Timor oriental"
             },
             "hrv": {
@@ -33298,6 +33522,7 @@
             },
             "fra": {
                 "official": "Royaume des Tonga",
+                "pronoun": "des ",
                 "common": "Tonga"
             },
             "hrv": {
@@ -33441,6 +33666,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Trinit\u00e9-et-Tobago",
+                "pronoun": "de ",
                 "common": "Trinit\u00e9-et-Tobago"
             },
             "hrv": {
@@ -33588,6 +33814,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique tunisienne",
+				"pronoun": "de la ",
                 "common": "Tunisie"
             },
             "hrv": {
@@ -33731,6 +33958,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Turquie",
+                "pronoun": "de ",
                 "common": "Turquie"
             },
             "hrv": {
@@ -33883,6 +34111,7 @@
             },
             "fra": {
                 "official": "Tuvalu",
+				"pronoun": "de ",
                 "common": "Tuvalu"
             },
             "hrv": {
@@ -34034,6 +34263,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Chine (Ta\u00efwan)",
+                "pronoun": "de ",
                 "common": "Ta\u00efwan"
             },
             "hrv": {
@@ -34191,6 +34421,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique -Unie de Tanzanie",
+                "pronoun": "de ",
                 "common": "Tanzanie"
             },
             "hrv": {
@@ -34343,6 +34574,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de l'Ouganda",
+                "pronoun": "de l'",
                 "common": "Ouganda"
             },
             "hrv": {
@@ -34486,6 +34718,7 @@
             },
             "fra": {
                 "official": "Ukraine",
+				"pronoun": "d'",
                 "common": "Ukraine"
             },
             "hrv": {
@@ -34630,6 +34863,7 @@
             },
             "fra": {
                 "official": "\u00celes mineures \u00e9loign\u00e9es des \u00c9tats-Unis",
+                "pronoun": "des ",
                 "common": "\u00celes mineures \u00e9loign\u00e9es des \u00c9tats-Unis"
             },
             "hrv": {
@@ -34768,6 +35002,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique orientale de l'Uruguay",
+                "pronoun": "de l'",
                 "common": "Uruguay"
             },
             "hrv": {
@@ -35296,6 +35531,7 @@
             },
             "fra": {
                 "official": "Les \u00e9tats-unis d'Am\u00e9rique",
+                "pronoun": "d'",
                 "common": "\u00c9tats-Unis"
             },
             "hrv": {
@@ -35457,6 +35693,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Ouzb\u00e9kistan",
+                "pronoun": "d'",
                 "common": "Ouzb\u00e9kistan"
             },
             "hrv": {
@@ -35610,6 +35847,7 @@
             },
             "fra": {
                 "official": "Cit\u00e9 du Vatican",
+                "pronoun": "du ",
                 "common": "Cit\u00e9 du Vatican"
             },
             "hrv": {
@@ -35749,6 +35987,7 @@
             },
             "fra": {
                 "official": "Saint-Vincent-et-les Grenadines",
+				"pronoun": "de ",
                 "common": "Saint-Vincent-et-les-Grenadines"
             },
             "hrv": {
@@ -35897,6 +36136,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique bolivarienne du Venezuela",
+                "pronoun": "du ",
                 "common": "Venezuela"
             },
             "hrv": {
@@ -36041,6 +36281,7 @@
             },
             "fra": {
                 "official": "\u00eeles Vierges",
+				"pronoun": "des ",
                 "common": "\u00celes Vierges britanniques"
             },
             "hrv": {
@@ -36185,6 +36426,7 @@
             },
             "fra": {
                 "official": "\u00celes Vierges des \u00c9tats-Unis",
+                "pronoun": "des ",
                 "common": "\u00celes Vierges des \u00c9tats-Unis"
             },
             "hrv": {
@@ -36333,6 +36575,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique socialiste du Vi\u00eat Nam",
+                "pronoun": "du ",
                 "common": "Vi\u00eat Nam"
             },
             "hrv": {
@@ -36486,6 +36729,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Vanuatu",
+                "pronoun": "de ",
                 "common": "Vanuatu"
             },
             "hrv": {
@@ -36634,6 +36878,7 @@
             },
             "fra": {
                 "official": "Territoire des \u00eeles Wallis et Futuna",
+                "pronoun": "des ",
                 "common": "Wallis-et-Futuna"
             },
             "hrv": {
@@ -36781,7 +37026,8 @@
                 "common": "Samoa"
             },
             "fra": {
-                "official": "Samoa",
+                "official": "\u00c9tat ind\u00e9pendant des Samoa",
+				"pronoun": "des ",
                 "common": "Samoa"
             },
             "hrv": {
@@ -36925,6 +37171,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Y\u00e9men",
+                "pronoun": "du ",
                 "common": "Y\u00e9men"
             },
             "hrv": {
@@ -37126,6 +37373,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique d'Afrique du Sud",
+                "pronoun": "du ",
                 "common": "Afrique du Sud"
             },
             "hrv": {
@@ -37273,6 +37521,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique de Zambie",
+                "pronoun": "de ",
                 "common": "Zambie"
             },
             "hrv": {
@@ -37518,6 +37767,7 @@
             },
             "fra": {
                 "official": "R\u00e9publique du Zimbabwe",
+                "pronoun": "du ",
                 "common": "Zimbabwe"
             },
             "hrv": {

@@ -63,6 +63,8 @@ const GameQuestion = (props) => {
         return text;
     };
 
+	// console.log(question);
+
     const choiceButtons = (
         <>
             {question && question.choices

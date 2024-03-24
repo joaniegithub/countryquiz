@@ -34,7 +34,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         capitalChoicesFlat = getAllAnswers(allCountries, 'capital', language);
         cityChoicesFlat = getAllAnswers(allCountries, 'cities', language);
         countryChoices = getAllAnswers(allCountries, 'name-common', language, chosenDifficultyLevel);
-        countryOfficialChoices = getAllAnswers(allCountries, 'name-official', 'eng', chosenDifficultyLevel); // todo langue officiels
+        countryOfficialChoices = getAllAnswers(allCountries, 'name-official', language, chosenDifficultyLevel); // todo langue officiels
         cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
     } else {
         if (chosenIndependantOnly) {
@@ -93,7 +93,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                 //     // for test purpose
                 // 	questionType = getOneRandom(availableQuestionTypes);
                 // } else {
-                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'not_capital');
+                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'name_official_wrong');
                 // }
                 questionType = getOneRandom(availableQuestionTypes);
             }
@@ -148,12 +148,12 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     break;
 
                 case 'name_official':
-                    question = c.name.common;
-                    answer = c.name.official;
+                    question = getCountryValue(c, language, questionType.questionProperty);
+                    answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = getNameOfficialChoices(c, undefined, language);
                     break;
                 case 'name_official_good':
-                    answer = c.name.official;
+                    answer = getCountryValue(c, language, questionType.answerProperty);
                     choices = getNameOfficialChoices(c, allCountries, language, answer);
                     break;
                 case 'name_official_wrong':
@@ -161,6 +161,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     choices = answer
                         ? getChoices(c, answer, countryOfficialChoices, questionType, chosenDifficultyLevel)
                         : undefined;
+					answerAdditionnalText = getCountryValue(c, language, 'name-official');
                     break;
 
                 case 'share_border':
@@ -298,8 +299,8 @@ const getCountriesNotBorder = (country, answer, allCountries, language) => {
 };
 
 const getNameOfficialAnswer = (country, language) => {
-    const officialName = country.name.official;
-    const commonName = country.name.common;
+    const officialName = getCountryValue(country, language, 'name-official');
+    const commonName = getCountryValue(country, language, 'name-common');
     let term;
     let choice;
     while (!choice) {
@@ -309,16 +310,21 @@ const getNameOfficialAnswer = (country, language) => {
                 if (officialName.indexOf('Island') > -1) {
                     continue; // there is already the term in the name
                 }
-                term = commonName.indexOf(' and ') > 0 ? officials.noBordersMany : officials.noBorders;
+				// term = commonName.indexOf(' and ') > 0 ? officials[language].noBordersMany : officials[language].noBorders;
+				term = officials[language].noBordersMany;
             } else if (!country.independent) {
                 // dependant
-                term = officials.dependant;
+                term = officials[language].dependant;
             }
             continue;
         } else {
-            term = officials.usuals;
+            term = officials[language].usuals;
         }
         choice = getOneRandom(term).replace('___', commonName);
+		if (language === 'fra') {
+    		const translations = getCountryValue(country, language, 'translations');
+        	choice = choice.replace('<art>', translations.pronoun || "de ").replace('<adv>', country.demonyms[language]['f'].toLowerCase());
+		}
     }
     return choice;
 };
@@ -327,14 +333,14 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
     // English only
 
     let countryUsed = country;
-    let answer = _answer ?? countryUsed.name.official;
-    let commonName = countryUsed.name.common;
+    let answer = _answer ?? getCountryValue(country, language, 'name-official');
+    let commonName = getCountryValue(country, language, 'name-common');
 
     const choices = [];
     let safeIndex = 100;
     let nbChoices = 0;
     let term;
-    let usuals = allCountries ? officials.usuals.filter((u) => u !== '___') : officials.usuals;
+    let usuals = allCountries ? officials[language].usuals.filter((u) => u !== '___') : officials[language].usuals;
 
     while (nbChoices < NB_CHOICES - 1 && safeIndex > 0) {
         if (allCountries) {
@@ -357,10 +363,11 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
                     if (answer.indexOf('Island') > -1) {
                         continue; // there is already the term in the name
                     }
-                    term = commonName.indexOf(' and ') > 0 ? officials.noBordersMany : officials.noBorders;
+                    // term = commonName.indexOf(' and ') > 0 ? officials[language].noBordersMany : officials[language].noBorders;
+                    term = officials[language].noBordersMany;
                 } else if (!country.independent) {
                     // dependant
-                    term = officials.dependant;
+                    term = officials[language].dependant;
                 }
                 continue;
             } else {
@@ -370,22 +377,26 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
             if (Math.random() * 5 < 4) {
                 term = usuals;
             } else {
-                term = officials.rare;
+                term = officials[language].rare;
             }
         } else if (nbChoices === 2) {
             if (Math.random() * 5 < 4) {
-                term = officials.rare;
+                term = officials[language].rare;
                 if (Math.random() * 2 < 1) {
                     // todo: (here 1/2 if in the rightRegion, choose region bound
                 }
             } else {
-                term = officials.unique;
+                term = officials[language].unique;
             }
         } else {
             term = usuals;
         }
 
-        const choice = getOneRandom(term).replace('___', commonName);
+        let choice = getOneRandom(term).replace('___', commonName);
+		if (language === 'fra') {
+    		const translations = getCountryValue(country, language, 'translations');
+        	choice = choice.replace('<art>', translations.pronoun || "de ").replace('<adv>', country.demonyms[language]['f'].toLowerCase());
+		}
 
         if (choice === answer || choices.indexOf(choice) > -1 || choice === "") {
             continue;
@@ -434,6 +445,9 @@ const getAllAnswers = (allCountries, answerProperty, language, difficultyLevel) 
 const getCountryValue = (c, lang, valueName, nbFromList) => {
     let value;
     switch (valueName) {
+        case 'translations':
+            value = getCountryTranslations(c, lang);
+            break;
         case 'name-official':
             value = getCountryOfficial(c, lang);
             break;
@@ -465,6 +479,9 @@ const getCountryName = (c, lang) => {
 		return;
 	}
     return lang === 'eng' ? c.name.common : c.translations[lang]['common'];
+};
+const getCountryTranslations = (c, lang) => {
+    return lang === 'eng' ? c.name : c.translations[lang];
 };
 const getCountryOfficial = (c, lang) => {
     return lang === 'eng' ? c.name.official : c.translations[lang]['official'];

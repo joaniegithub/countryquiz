@@ -24,7 +24,7 @@ i18n
     .init(
         {
             fallbackLng: 'eng',
-            debug: true,
+            debug: false,
             // ns: [
             //   "translation"
             // ],
@@ -50,7 +50,7 @@ i18n
         },
         (err, t) => {
             if (err) return console.log('something went wrong loading', err);
-            console.log('i18n ready', i18n);
+            // console.log('i18n ready', i18n);
             if (i18n.language === 'en' || i18n.language.indexOf('en-') > -1) {
                 i18n.changeLanguage('eng');
             } else if (i18n.language === 'fr' || i18n.language.indexOf('fr-') > -1) {
