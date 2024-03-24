@@ -449,43 +449,47 @@ export function createComponents(config) {
                 },
             },
         },
-        // MuiToggleButtonGroup: {
-        //     styleOverrides: {
-        //         root: {
-        //             [`& .${toggleButtonGroupClasses.grouped}:not(:first-of-type)`]: {
-        //                 margin: '0 2px',
-        //                 borderLeft: 'none',
-        //                 borderTopLeftRadius: '8px',
-        //                 borderBottomLeftRadius: '8px',
-        //             },
-        //             [`& .${toggleButtonGroupClasses.grouped}:not(:last-of-type)`]: {
-        //                 borderRight: 'none',
-        //                 borderTopRightRadius: '8px',
-        //                 borderBottomRightRadius: '8px',
-        //             },
-        //             [`& .${toggleButtonClasses.disabled}`]: {
-        //                 color: palette.action.disabled,
-        //             },
-        //             [`& .${toggleButtonClasses.selected}`]: {
-        //                 color: palette.action.disabledSelected,
-        //             },
-        //         },
-        //     },
-        // },
-        // MuiToggleButton: {
-        //     styleOverrides: {
-        //         root: {
-        //             border: 'none',
-        //             backgroundColor: 'transparent',
-        //             margin: '0 2px',
-
-        //             [`&.${toggleButtonClasses.disabled}`]: {
-        //                 border: 'none',
-        //                 backgroundColor: 'transparent',
-        //             },
-        //         },
-        //     },
-        // },
+        MuiToggleButtonGroup: {
+            styleOverrides: {
+                root: ({ theme }) => {
+                    return {
+						[`& .${toggleButtonGroupClasses.grouped}.${toggleButtonClasses.selected}:not(:first-of-type)`]: {
+							borderLeftColor: theme.palette.secondary.alpha50,
+						},
+						[`& .${toggleButtonGroupClasses.grouped}.${toggleButtonClasses.selected}:not(:last-of-type)`]: {
+							borderRightColor: theme.palette.secondary.alpha50,
+						},
+						// [`& .${toggleButtonClasses.disabled}`]: {
+						// 	color: theme.palette.neutral[100],
+						// },
+			            // [`& .${toggleButtonClasses.selected}`]: {
+			            //     color: palette.action.disabledSelected,
+			            // },
+					};
+				},
+            },
+        },
+        MuiToggleButton: {
+            styleOverrides: {
+                root: ({ theme }) => {
+                    return {
+			            // border: 'none',
+			            backgroundColor: 'transparent',
+			            // margin: '0 2px',
+						color: theme.palette.neutral[400],
+						// [`&.${toggleButtonClasses.disabled}`]: {
+						// 	border: 'none',
+						// 	backgroundColor: 'transparent',
+						// 	color: theme.palette.neutral[400],
+						// },
+			            [`&.${toggleButtonClasses.selected}`]: {
+							borderColor: theme.palette.secondary.alpha50,
+							// color: theme.palette.secondary.main,
+			            },
+					};
+				},
+            },
+        },
         // MuiTextField: {
         //     defaultProps: {
         //         variant: 'filled',

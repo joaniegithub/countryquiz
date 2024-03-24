@@ -2,12 +2,15 @@ import {
     CAPITAL,
     COUNTRY_BY_CAPITAL,
     COUNTRY_BY_FLAG,
-    COUNTRY_BY_MAP, // gameModes,
+    COUNTRY_BY_MAP,
     DIFFICULTY_EXPERT,
     DIFFICULTY_HARD,
     DIFFICULTY_NORMAL,
     FLAG,
     NB_CHOICES,
+    NB_QUESTIONS_SHORT,
+    NB_QUESTIONS_SHORT_TRIVIA,
+    SHORT,
     TRIVIA,
     officials,
     questionTypes,
@@ -15,21 +18,24 @@ import {
 import countriesData from 'data/countries.json';
 import { shuffle } from 'util/util';
 
-export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly) => {
+export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel, chosenIndependantOnly, chosenGameLength) => {
     let allCountries = countriesData;
+    let questionCountries = allCountries;
 
     let capitalChoices = [];
-    let cityChoices = [];
+    let capitalChoicesFlat = [];
+    let cityChoicesFlat = [];
     let countryChoices = [];
     let countryOfficialChoices = [];
     let cca3Choices = [];
 
     if (mode.key === TRIVIA) {
-        capitalChoices = getAllAnswers(allCountries, 'capital', language);
-        cityChoices = getAllAnswers(allCountries, 'cities', language);
-        countryChoices = getAllAnswers(allCountries, 'name-common', language);
-        countryOfficialChoices = getAllAnswers(allCountries, 'name-official', 'eng'); // todo langue officiels
-        cca3Choices = getAllAnswers(allCountries, 'cca3', language);
+        capitalChoices = getAllAnswers(allCountries, 'capital', language, chosenDifficultyLevel);
+        capitalChoicesFlat = getAllAnswers(allCountries, 'capital', language);
+        cityChoicesFlat = getAllAnswers(allCountries, 'cities', language);
+        countryChoices = getAllAnswers(allCountries, 'name-common', language, chosenDifficultyLevel);
+        countryOfficialChoices = getAllAnswers(allCountries, 'name-official', 'eng', chosenDifficultyLevel); // todo langue officiels
+        cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
     } else {
         if (chosenIndependantOnly) {
             allCountries = Object.values(countriesData).filter((c) => c.independent === true);
@@ -40,11 +46,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         }
 
         if (mode.key === CAPITAL) {
-            capitalChoices = getAllAnswers(allCountries, 'capital', language);
+            capitalChoices = getAllAnswers(allCountries, 'capital', language, chosenDifficultyLevel);
         } else if (mode.key === COUNTRY_BY_CAPITAL || mode.key === COUNTRY_BY_FLAG || mode.key === COUNTRY_BY_MAP) {
-            countryChoices = getAllAnswers(allCountries, 'name-common', language);
+            countryChoices = getAllAnswers(allCountries, 'name-common', language, chosenDifficultyLevel);
         } else if (mode.key === FLAG) {
-            cca3Choices = getAllAnswers(allCountries, 'cca3', language);
+            cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
         }
     }
 
@@ -58,7 +64,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 
     let subsetCountries;
 
-    const questions = allCountries.map((c) => {
+	if (chosenGameLength === SHORT) {
+		questionCountries = shuffle(allCountries).slice(0, mode.key === TRIVIA ? NB_QUESTIONS_SHORT_TRIVIA : NB_QUESTIONS_SHORT);
+	}
+
+    const questions = questionCountries.map((c) => {
         question = undefined;
         answer = undefined;
         choices = undefined;
@@ -81,10 +91,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             if (mode.key === TRIVIA) {
                 // if (nbTry > 0) {
                 //     // for test purpose
-                questionType = getOneRandom(availableQuestionTypes);
+                // 	questionType = getOneRandom(availableQuestionTypes);
                 // } else {
-                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'has_n_border');
+                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'not_capital');
                 // }
+                questionType = getOneRandom(availableQuestionTypes);
             }
 
             switch (questionType.key) {
@@ -104,12 +115,12 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     break;
                 case 'is_capital':
                     answer = getCountryValue(c, language, questionType.answerProperty);
-                    choices = answer ? getChoices(c, answer, cityChoices, questionType, DIFFICULTY_NORMAL) : undefined;
+                    choices = answer ? getChoices(c, answer, cityChoicesFlat, questionType, DIFFICULTY_NORMAL) : undefined;
                     break;
                 case 'not_capital':
-                    answer = getCountryValue(c, language, 'city', 1);
+                    answer = getCountryValue(c, language, 'cities', 1);
                     choices = answer
-                        ? getChoices(c, answer, capitalChoices, questionType, DIFFICULTY_NORMAL)
+                        ? getChoices(c, answer, capitalChoicesFlat, questionType, DIFFICULTY_NORMAL)
                         : undefined;
                     break;
 
@@ -161,7 +172,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         const newAnswer = allCountries.find((c) => c.cca3 === answer);
                         answer = newAnswer;
                     }
-                    if (answer) {
+                    if (answer && c) {
                         choices = getCountriesNotBorder(c, answer, allCountries, language);
                         answer = getCountryValue(answer, language, 'name-common');
                     }
@@ -209,7 +220,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                     }
                     break;
             }
-            console.log(answer, choices, questionType.key, c.borders);
+            // console.log(c.name.common, answer, choices, questionType.key, c.borders);
+
+			if (mode.key !== TRIVIA) {
+				break;
+			}
 
             // if (!answer || !choices) {
             //     nbTry++;
@@ -226,7 +241,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             questionPhraseValues,
             answerAdditionnalText,
         };
-    });
+    }).filter(q => q.answer !== undefined && q.choices !== undefined);
 
     return questions;
 };
@@ -240,11 +255,19 @@ const getCountriesNotBorder = (country, answer, allCountries, language) => {
     let countryWithoutBorder;
     let countryWithoutBorderCommonName;
     let i = 0;
+	if (!country || !answer) {
+		console.trace();
+	}
 
     const allBorders = shuffle([...new Set([...country.borders, ...answer.borders])]);
 
     while (nbChoices < NB_CHOICES - 1 && i < allBorders.length) {
         countryBorder = allCountries.find((c) => c.cca3 === allBorders[i]);
+		if (!countryBorder) {
+			console.log(country);
+			console.trace();
+			continue;
+		}
         countryWithoutBorder = shuffle(countryBorder.borders).find(
             (b) => !country.borders.includes(b) && !choices_cca3.includes(b) && b !== country.cca3
         );
@@ -255,6 +278,9 @@ const getCountriesNotBorder = (country, answer, allCountries, language) => {
             if (onlyOne) {
                 return countryWithoutBorderCommonName;
             }
+			if (countryWithoutBorderCommonName === "") {
+				continue;
+			}
             choices.push(countryWithoutBorderCommonName);
             choices_cca3.push(countryWithoutBorder.cca3);
             nbChoices = choices.length;
@@ -361,7 +387,7 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
 
         const choice = getOneRandom(term).replace('___', commonName);
 
-        if (choice === answer || choices.indexOf(choice) > -1) {
+        if (choice === answer || choices.indexOf(choice) > -1 || choice === "") {
             continue;
         }
         choices.push(choice);
@@ -374,7 +400,34 @@ const getNameOfficialChoices = (country, allCountries, language, _answer) => {
     return choices;
 };
 
-const getAllAnswers = (allCountries, answerProperty, language) => {
+const getAllAnswers = (allCountries, answerProperty, language, difficultyLevel) => {
+	if (difficultyLevel === DIFFICULTY_HARD) {
+		const answers = {};
+		let val;
+		let reg;
+		let subreg;
+		allCountries.forEach(c => {
+			reg = c.region;
+			subreg = c.subregion ?? c.region;
+			val = getCountryValue(c, language, answerProperty);
+			if (!val || val === "") {
+				return;
+			}
+			if (!answers[reg]) {
+				answers[reg] = {};
+			}
+			if (!answers[reg][subreg]) {
+				if (subreg === reg) {
+					answers[reg] = [];
+				} else {
+					answers[reg][subreg] = [];
+				}
+			}
+			answers[reg][subreg].push(...(Array.isArray(val) ? val : [val]));
+		});
+
+		return answers;
+	}
     return allCountries.reduceRight((cAnswers, c) => cAnswers.concat(getCountryValue(c, language, answerProperty)), []);
 };
 
@@ -388,10 +441,11 @@ const getCountryValue = (c, lang, valueName, nbFromList) => {
             value = getCountryName(c, lang);
             break;
         case 'capital':
-            value = c.capital.join(', ');
+            value = c.capital.map(capital => capital[lang]).join(', ');
             break;
-        case 'city':
-            value = nbFromList === 1 ? getOneRandom(c.cities) : c.cities;
+        case 'cities':
+			let cities = c.cities?.map(city => city[lang]);
+            value = nbFromList === 1 ? getOneRandom(cities) : cities;
             break;
         case 'cca3':
             value = c.cca3;
@@ -406,16 +460,41 @@ const getCountryValue = (c, lang, valueName, nbFromList) => {
     return value;
 };
 const getCountryName = (c, lang) => {
+	if (!c) {
+        console.trace();
+		return;
+	}
     return lang === 'eng' ? c.name.common : c.translations[lang]['common'];
 };
 const getCountryOfficial = (c, lang) => {
     return lang === 'eng' ? c.name.official : c.translations[lang]['official'];
 };
 
-const getChoices = (country, answer, answersFrom, questionType, difficultyLevel) => {
+const getChoices = (country, answer, answersPerRegions, questionType, difficultyLevel) => {
     const choices = [];
     const hardChoices = difficultyLevel === DIFFICULTY_EXPERT ? [getHardAnswer(answer)] : [];
     const indexUsed = [];
+	let answersFrom = answersPerRegions;
+
+	if (difficultyLevel === DIFFICULTY_HARD) {
+		let answersFromRegion = answersPerRegions[country.region][country.subregion];
+		if (answersFromRegion.length < 7) {
+			let allFromRegion = [];
+			Object.keys(answersPerRegions[country.region]).forEach((reg) => {
+				if(reg !== country.subregion) {
+					allFromRegion = allFromRegion.concat(answersPerRegions[country.region][reg]);
+				}
+			}, []);
+			if (country.region === "Antarctic") {
+				Object.keys(answersPerRegions["Oceania"]).forEach((reg) => {
+					allFromRegion = allFromRegion.concat(answersPerRegions["Oceania"][reg]);
+				}, []);
+			}
+			answersFrom = answersFromRegion.concat(shuffle(allFromRegion).slice(0, 7-answersFromRegion.length));
+		} else {
+			answersFrom = answersFromRegion;
+		}
+	}
     const max = answersFrom.length;
 
     while (choices.length < NB_CHOICES - 1) {
@@ -424,7 +503,8 @@ const getChoices = (country, answer, answersFrom, questionType, difficultyLevel)
             indexUsed.indexOf(rnd) >= 0 ||
             answersFrom[rnd] === '' ||
             answer.indexOf(answersFrom[rnd]) >= 0 ||
-            choices.indexOf(answersFrom[rnd]) >= 0
+            choices.indexOf(answersFrom[rnd]) >= 0 ||
+			answersFrom[rnd] === ""
         ) {
             continue;
         }
@@ -440,13 +520,13 @@ const getChoices = (country, answer, answersFrom, questionType, difficultyLevel)
     }
 
     if (questionType.key === CAPITAL) {
-        if (difficultyLevel === DIFFICULTY_NORMAL) {
-            // on inclut des villes pas rapport qui existent pas de temps en temps
-        } else if (difficultyLevel === DIFFICULTY_HARD) {
+        if (difficultyLevel === DIFFICULTY_HARD) {
             // on inclut aussi des villes non capitales de temps en temps
             if (country.cities && country.cities.length && Math.random() * 2 < 1) {
-                const otherCities = country.cities;
-                choices[Math.floor(Math.random() * choices.length)] = getOneRandom(otherCities);
+                const otherCity = getOneRandom(country.cities);
+				if (otherCity && otherCity !== "") {
+                	choices[Math.floor(Math.random() * choices.length)] = otherCity;
+				}
             }
         }
     }

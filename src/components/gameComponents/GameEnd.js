@@ -7,6 +7,7 @@ import { useGameMode } from 'store/selector';
 import { Stack, Typography } from '@mui/material';
 
 import FunTypo from '../ui/FunTypo';
+import { difficultyLevels } from 'data/config';
 
 const GameEnd = (props) => {
     const theme = useTheme();
@@ -28,6 +29,7 @@ const GameEnd = (props) => {
             }}
         >
             <Typography
+				component="span"
                 display="block"
                 color="primary"
                 fontSize="32px"
@@ -37,10 +39,21 @@ const GameEnd = (props) => {
                 mb={-1}
             >
                 {gameMode.shortName[i18n.language]} {region?.article[i18n.language]}
+            </Typography>
+            <Typography
+				component="span"
+                display="block"
+                color="secondary"
+                fontSize="32px"
+                lineHeight="36px"
+                fontWeight={800}
+                textAlign="center"
+                mb={-1}
+            >
                 {region ? region[i18n.language] : t('World')}
             </Typography>
-            <Typography display="block" color="secondary" fontSize="32px" fontWeight={800} mb={2}>
-                {t(game.difficultyLevel)}
+            <Typography display="block" color="success.main" fontSize="32px" fontWeight={800} mb={2}>
+                {t(difficultyLevels.find(d => d.key === game.difficultyLevel).name)}
             </Typography>
             <Typography display="block">
                 <FunTypo

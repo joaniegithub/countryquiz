@@ -12,6 +12,10 @@ export const COUNTRY_BY_FLAG = 'country_flag';
 export const COUNTRY_BY_MAP = 'country_map';
 export const TRIVIA = 'trivia';
 
+export const SHORT = 'short';
+export const FULL = 'full';
+export const NB_QUESTIONS_SHORT = 20;
+export const NB_QUESTIONS_SHORT_TRIVIA = 25;
 export const NB_CHOICES = 4;
 
 export const difficultyLevels = [

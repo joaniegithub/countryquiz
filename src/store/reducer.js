@@ -1,4 +1,4 @@
-import { CAPITAL, DIFFICULTY_NORMAL, GAME_VERSION, gameModes } from 'data/config';
+import { CAPITAL, DIFFICULTY_NORMAL, GAME_VERSION, SHORT, gameModes } from 'data/config';
 import countriesData from 'data/countries.json';
 import * as constants from 'store/constants';
 import { shuffle } from 'util/util';
@@ -30,6 +30,7 @@ const gameDefaultState = {
     region: 'all',
     independantOnly: false,
     difficultyLevel: DIFFICULTY_NORMAL,
+    gameLength: SHORT,
     questions: [],
     // mode: 0, // i think it's not used
 };
@@ -57,7 +58,6 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             };
 
         case constants.NEW_GAME:
-            console.log(game.gameMode);
             return {
                 ...state,
                 currentGame: undefined,
@@ -68,6 +68,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                           region: game.region,
                           independantOnly: game.independantOnly,
                           difficultyLevel: game.difficultyLevel,
+                          gameLength: game.gameLength,
                       }
                     : undefined,
             };
@@ -77,6 +78,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenRegion = payload.chosenRegion;
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
             const chosenIndependantOnly = payload.chosenIndependantOnly;
+            const chosenGameLength = payload.chosenGameLength;
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
             const questions = getQuestions(
@@ -84,7 +86,8 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                 mode,
                 chosenRegion,
                 chosenDifficultyLevel,
-                chosenIndependantOnly
+                chosenIndependantOnly,
+				chosenGameLength
             );
 
             return {
@@ -96,6 +99,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     region: chosenRegion,
                     independantOnly: chosenIndependantOnly,
                     difficultyLevel: chosenDifficultyLevel,
+                    gameLength: chosenGameLength,
                     questions: shuffle(questions),
                 },
             };

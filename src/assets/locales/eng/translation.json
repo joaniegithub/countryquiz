@@ -6,10 +6,10 @@
     "Yes": "Yes",
     "No": "No",
 
-    "Country": "Country",
+    "Country": "GeoGo",
     "Quiz": "Quiz",
     "Home": "Home",
-    "Play": "Play CountryQuiz",
+    "Play": "Play",
     "Wiki": "Country Wiki",
 
     "Settings": "Settings",
@@ -32,9 +32,15 @@
     "Languages": "Languages",
     "Currencies": "Currencies",
 
-    "Game Options": "Game Options",
+    "Game modes": "Choose your",
+    "Game modes2": "challenge",
+    "Options": "Options",
     "Independent countries only": "Independent countries only",
     "Mode": "Mode",
+    "Find": "Find",
+    "Length": "Length",
+    "Short": "Short",
+    "Full": "Full",
     "Region": "Region",
     "World": "World",
     "Difficulty": "Difficulty",
@@ -45,5 +51,7 @@
     "Start Game": "Start Game",
 
     "Next": "Next",
-    "Quit the game?": "Abandon the game?"
+    "Quit the game?": "Abandon the game?",
+    "Final": "Final",
+    "Score": "Score"
 }

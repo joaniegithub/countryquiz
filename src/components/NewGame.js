@@ -3,7 +3,7 @@ import { ReactComponent as Brain } from 'assets/images/brain.svg';
 import { ReactComponent as Flag } from 'assets/images/flag1.svg';
 import { ReactComponent as Location } from 'assets/images/location.svg';
 import { ReactComponent as WorldMap } from 'assets/images/map.svg';
-import { CAPITAL, DIFFICULTY_NORMAL, FLAG, TRIVIA, difficultyLevels, gameModes } from 'data/config';
+import { CAPITAL, DIFFICULTY_NORMAL, FLAG, FULL, SHORT, TRIVIA, difficultyLevels, gameModes } from 'data/config';
 import regionsData from 'data/regions.json';
 import * as React from 'react';
 import { useState } from 'react';
@@ -15,10 +15,8 @@ import { useGameOptions } from 'store/selector';
 import {
     Button,
     Card,
-    Checkbox,
     FormControlLabel,
     Stack,
-    SvgIcon,
     Switch,
     TextField,
     ToggleButton,
@@ -26,7 +24,6 @@ import {
     Typography,
     alpha,
 } from '@mui/material';
-import { Box } from '@mui/system';
 
 import FunTypo from './ui/FunTypo';
 import MainButton from './ui/MainButton';
@@ -43,6 +40,7 @@ const NewGame = (props) => {
     const [independantOnly, setIndependantOnly] = useState((gameOptions && gameOptions.independantOnly) ?? true);
     const [gameMode, setGameMode] = useState((gameOptions && gameOptions.gameMode) || CAPITAL);
     const [gameSubMode, setSubGameMode] = useState((gameOptions && gameOptions.gameMode) || CAPITAL);
+    const [gameLength, setGameLength] = useState((gameOptions && gameOptions.gameLength) || SHORT);
     const [region, setRegion] = useState((gameOptions && gameOptions.region) || 'all');
     const [difficultyLevel, setDifficultyLevel] = useState(
         (gameOptions && gameOptions.difficultyLevel) ?? DIFFICULTY_NORMAL
@@ -60,9 +58,9 @@ const NewGame = (props) => {
         setSubGameMode(event.target.value);
     };
 
-    // const handleChangeLength = (event) => {
-    //     // setGameMode(event.target.value);
-    // };
+    const handleChangeLength = (event) => {
+        setGameLength(event.target.value);
+    };
 
     const handleChangeIndependant = (event) => {
         setIndependantOnly(event.target.checked);
@@ -81,7 +79,7 @@ const NewGame = (props) => {
     };
 
     const handleClickStart = () => {
-        dispatch(startGame(gameSubMode, region, difficultyLevel, independantOnly));
+        dispatch(startGame(gameSubMode, region, difficultyLevel, independantOnly, gameLength));
     };
 
     const getSVG = (mode) => {
@@ -104,73 +102,104 @@ const NewGame = (props) => {
     };
 
     return (
-        <React.Fragment>
-            <Stack alignItems="center" direction="column" justifyContent="center" height="100%" flexGrow={1}>
+        <>
+            <Stack alignItems="center" direction="column" justifyContent="center" height="100%" flexGrow={1} gap={3}>
                 {step === 0 && (
-                    <Stack
-                        direction="row"
-                        flexWrap="wrap"
-                        spacing={3}
-                        useFlexGap
-                        sx={{
-                            maxWidth: '100%',
-                            width: '360px',
-                            px: '24px',
-                        }}
-                    >
-                        <Typography
-                            variant="h2"
-                            display="block"
-                            pb="16px"
-                            width="100%"
-                            fontSize="32px"
-                            lineHeight="32px"
-                            fontWeight="800"
-                            textAlign="center"
-                        >
-                            {t('Game modes')}
-                        </Typography>
-                        {gameModes
-                            .filter((option) => option.isMain)
-                            .map((option) => {
-                                return (
-                                    <Button
-                                        variant="mode"
-                                        size="large"
-                                        sx={{
-                                            width: 'calc(50% - 12px)',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            alignItems: 'center',
-                                            py: '32px',
+					<>
+						<Typography
+							variant="h2"
+							display="block"
+							pb="16px"
+							width="100%"
+							fontSize="32px"
+							lineHeight="32px"
+							fontWeight="800"
+							textAlign="center"
+						>
+							<FunTypo
+								text={t('Game modes')}
+								color={theme.palette.text.main.replace('#', '')}
+								stroke={false}
+								strokeWidth="2px"
+								distance="3px"
+								sx={{
+									fontSize: '40px',
+									lineHeight: '42px',
+									fontWeight: 800,
+								}}
+							/>
+							{t('Game modes2') && (
+								<>
+									<br/>
+									<FunTypo
+										text={t('Game modes2')}
+										color={theme.palette.text.main.replace('#', '')}
+										stroke={false}
+										strokeWidth="2px"
+										distance="3px"
+										sx={{
+											fontSize: '40px',
+											lineHeight: '42px',
+											fontWeight: 800,
+										}}
+									/>
+								</>
+							)}
+						</Typography>
+						<Stack
+							direction="row"
+							flexWrap="wrap"
+							spacing={3}
+							useFlexGap
+							sx={{
+								maxWidth: '100%',
+								width: '360px',
+								px: '24px',
+							}}
+						>
+							{gameModes
+								.filter((option) => option.isMain)
+								.map((option) => {
+									return (
+										<Button
+											variant="mode"
+											size="large"
+											key={option.key}
+											sx={{
+												width: 'calc(50% - 12px)',
+												display: 'flex',
+												flexDirection: 'column',
+												alignItems: 'center',
+												py: '32px',
 
-                                            svg: {
-                                                color: theme.palette.secondary.main,
-                                                height: '64px',
-                                                width: '64px',
-                                                fill: 'currentColor',
-                                                filter: `drop-shadow(2px 2px 0px ${alpha(theme.palette.shadow, 0.15)})`,
-                                            },
-                                        }}
-                                        onClick={(e) => handleClickMode(e, option.key)}
-                                    >
-                                        {getSVG(option.key)}
-                                        <Typography
-                                            component="span"
-                                            fontSize="20px"
-                                            fontWeight="700"
-                                            mt="8px"
-                                            color="secondary"
-                                            sx={{
-                                                textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.1)}`,
-                                            }}
-                                        >
-                                            {option.name[i18n.language]}
-                                        </Typography>
-                                    </Button>
-                                );
-                            })}
-                    </Stack>
+												svg: {
+													color: theme.palette.secondary.main,
+													height: '64px',
+													width: '64px',
+													fill: 'currentColor',
+													filter: `drop-shadow(2px 2px 0px ${alpha(theme.palette.shadow, 0.15)})`,
+												},
+											}}
+											onClick={(e) => handleClickMode(e, option.key)}
+										>
+											{getSVG(option.key)}
+											<Typography
+												component="span"
+												fontSize="20px"
+												fontWeight="700"
+												mt="8px"
+												color="secondary"
+												sx={{
+													textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.1)}`,
+												}}
+											>
+												{option.name[i18n.language]}
+											</Typography>
+										</Button>
+									);
+								})}
+						</Stack>
+					</>
                 )}
                 {step === 1 && (
                     <>
@@ -182,7 +211,7 @@ const NewGame = (props) => {
                                 minWidth: '240px',
                             }}
                         >
-                            <Stack spacing={3}>
+                            <Stack spacing={2}>
                                 <Typography
                                     variant="h2"
                                     display="block"
@@ -206,62 +235,40 @@ const NewGame = (props) => {
 										}}
 									/>*/}
                                 </Typography>
-                                <Button
-                                    variant="outlined"
-                                    size="medium"
-                                    py="12px"
-                                    sx={{
-                                        svg: {
-                                            color: theme.palette.secondary.main,
-                                            height: '36px',
-                                            width: '36px',
-                                            fill: 'currentColor',
-                                            mr: '12px',
-                                            filter: `drop-shadow(2px 2px 0px ${alpha(theme.palette.shadow, 0.15)})`,
-                                        },
-                                    }}
-                                    onClick={handleClickChangeMode}
-                                >
-                                    {getSVG(gameMode)}
-                                    <Typography
-                                        variant="h2"
-                                        display="block"
-                                        color="secondary"
-                                        fontSize="24px"
-                                        lineHeight="40px"
-                                        mr="12px"
-                                        sx={{
-                                            textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.1)}`,
-                                        }}
-                                    >
-                                        {gameModes.find((m) => m.key === gameMode).name[i18n.language]}
-                                    </Typography>
-                                </Button>
-                                {/*<ToggleButtonGroup
-									color="primary"
-									value={difficultyLevel}
-									exclusive
-									onChange={handleChangeLength}
-									aria-label={t("Length")}
-									label={t("Length")}
-									name="Length"
-									size="short"
-									disabled={true}
-									sx={{
-										justifyContent: 'center',
-									}}
-								>
-									<ToggleButton
-										value="short"
+								<div>
+									<Button
+										variant="outlined"
+										size="medium"
+										py="12px"
+										sx={{
+											svg: {
+												color: theme.palette.secondary.main,
+												height: '36px',
+												width: '36px',
+												fill: 'currentColor',
+												mr: '12px',
+												filter: `drop-shadow(2px 2px 0px ${alpha(theme.palette.shadow, 0.15)})`,
+											},
+											mb: '6px',
+										}}
+										onClick={handleClickChangeMode}
 									>
-										{t("Short")}
-									</ToggleButton>
-									<ToggleButton
-										value="long"
-									>
-										{t("Long")}
-									</ToggleButton>
-								</ToggleButtonGroup>*/}
+										{getSVG(gameMode)}
+										<Typography
+											variant="h2"
+											display="block"
+											color="secondary"
+											fontSize="24px"
+											lineHeight="40px"
+											mr="12px"
+											sx={{
+												textShadow: `2px 2px 0px ${alpha(theme.palette.shadow, 0.1)}`,
+											}}
+										>
+											{gameModes.find((m) => m.key === gameMode).name[i18n.language]}
+										</Typography>
+									</Button>
+								</div>
                                 {/*<TextField
 									fullWidth
 									label={t('Mode')}
@@ -279,7 +286,7 @@ const NewGame = (props) => {
 									))}
 								</TextField>*/}
                                 {(gameMode === FLAG || gameMode === CAPITAL) && (
-                                    <>
+									<>
                                         <ToggleButtonGroup
                                             // disabled={gameMode === TRIVIA}
                                             variant="outlined"
@@ -313,28 +320,33 @@ const NewGame = (props) => {
                                 )}
                                 {gameMode !== TRIVIA && (
                                     <>
-                                        <TextField
-                                            disabled={gameMode === TRIVIA}
-                                            fullWidth
-                                            label={t('Region')}
-                                            name="Region"
-                                            onChange={handleChangeRegion}
-                                            required
-                                            select
-                                            SelectProps={{ native: true }}
-                                            value={region}
-                                        >
-                                            <option key="all" value="all">
-                                                {t('World')}
-                                            </option>
-                                            {regionsData.map((option) =>
-                                                option.eng === 'Antarctic' ? null : (
-                                                    <option key={option.eng} value={option.eng}>
-                                                        {option[i18n.language]}
-                                                    </option>
-                                                )
-                                            )}
-                                        </TextField>
+                                        <div>
+											<TextField
+												disabled={gameMode === TRIVIA}
+												fullWidth
+												label={t('Region')}
+												name="Region"
+												onChange={handleChangeRegion}
+												required
+												select
+												SelectProps={{ native: true }}
+												value={region}
+                                                sx={{
+                                                    mt: '4px',
+                                                }}
+											>
+												<option key="all" value="all">
+													{t('World')}
+												</option>
+												{regionsData.map((option) =>
+													option.eng === 'Antarctic' ? null : (
+														<option key={option.eng} value={option.eng}>
+															{option[i18n.language]}
+														</option>
+													)
+												)}
+											</TextField>
+                                        </div>
                                         <div>
                                             <FormControlLabel
                                                 disabled={gameMode === TRIVIA}
@@ -352,6 +364,27 @@ const NewGame = (props) => {
                                         </div>
                                     </>
                                 )}
+                                {<ToggleButtonGroup
+									variant="outlined"
+									color="secondary"
+									value={gameLength}
+									exclusive
+									onChange={handleChangeLength}
+									aria-label={t("Length")}
+									label={t("Length")}
+									name="Length"
+									size="small"
+									sx={{
+										justifyContent: 'center',
+									}}
+								>
+									<ToggleButton value={SHORT}>
+										{t("Short")}
+									</ToggleButton>
+									<ToggleButton value={FULL}>
+										{t("Full")}
+									</ToggleButton>
+								</ToggleButtonGroup>}
                                 <ToggleButtonGroup
                                     // disabled={gameMode === TRIVIA}
                                     variant="outlined"
@@ -391,7 +424,7 @@ const NewGame = (props) => {
                     </>
                 )}
             </Stack>
-        </React.Fragment>
+        </>
     );
 };
 

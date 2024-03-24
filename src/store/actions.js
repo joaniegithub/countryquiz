@@ -21,13 +21,14 @@ export const newGame = () => {
     };
 };
 
-export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel, _choosenIndependantOnly) => {
+export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel, _chosenIndependantOnly, _chosenGameLength) => {
     return {
         type: constants.START_GAME,
         chosenGameMode: _chosenGameMode,
         chosenRegion: _chosenRegion,
         chosenDifficultyLevel: _chosenDifficultyLevel,
-        chosenIndependantOnly: _choosenIndependantOnly,
+        chosenIndependantOnly: _chosenIndependantOnly,
+        chosenGameLength: _chosenGameLength,
     };
 };
 

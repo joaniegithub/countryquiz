@@ -1,3 +1,4 @@
+
 [
     {
         "name": {
@@ -33,7 +34,11 @@
             "root": "+2",
             "suffixes": ["97"]
         },
-        "capital": ["Oranjestad"],
+        "capital": [
+		{
+			"eng": "Oranjestad",
+            "fra": "Oranjestad"
+		}],
         "altSpellings": ["AW"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -138,7 +143,11 @@
                 "m": "Arubais"
             }
         },
-        "cities": ["Sint Nicolaas"]
+        "cities": [
+		{
+			"eng": "Sint Nicolaas",
+            "fra": "Sint Nicolaas"
+		}]
     },
     {
         "name": {
@@ -177,7 +186,11 @@
             "root": "+9",
             "suffixes": ["3"]
         },
-        "capital": ["Kabul"],
+        "capital": [
+		{
+			"eng": "Kabul",
+            "fra": "Kaboul"
+		}],
         "altSpellings": ["AF", "Af\u0121\u0101nist\u0101n"],
         "region": "Asia",
         "subregion": "Southern Asia",
@@ -283,7 +296,11 @@
                 "m": "Afghan"
             }
         },
-        "cities": ["Kandahar"]
+        "cities": [
+		{
+			"eng": "Kandahar",
+            "fra": "Kandahar"
+		}]
     },
     {
         "name": {
@@ -314,7 +331,11 @@
             "root": "+2",
             "suffixes": ["44"]
         },
-        "capital": ["Luanda"],
+        "capital": [
+		{
+			"eng": "Luanda",
+            "fra": "Luanda"
+		}],
         "altSpellings": ["AO", "Rep\u00fablica de Angola", "\u0281\u025bpublika de an'\u0261\u0254la"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -418,7 +439,11 @@
                 "m": "Angolais"
             }
         },
-        "cities": ["Huambo"]
+        "cities": [
+		{
+			"eng": "Huambo",
+            "fra": "Huambo"
+		}]
     },
     {
         "name": {
@@ -450,7 +475,11 @@
             "root": "+1",
             "suffixes": ["264"]
         },
-        "capital": ["The Valley"],
+        "capital": [
+		{
+			"eng": "The Valley",
+            "fra": "The Valley"
+		}],
         "altSpellings": ["AI"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -554,7 +583,11 @@
                 "m": "Anguillan"
             }
         },
-        "cities": ["North Side"]
+        "cities": [
+		{
+			"eng": "North Side",
+            "fra": "North Side"
+		}]
     },
     {
         "name": {
@@ -586,7 +619,11 @@
             "root": "+3",
             "suffixes": ["5818"]
         },
-        "capital": ["Mariehamn"],
+        "capital": [
+		{
+			"eng": "Mariehamn",
+            "fra": "Mariehamn"
+		}],
         "altSpellings": ["AX", "Aaland", "Aland", "Ahvenanmaa"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -720,7 +757,11 @@
             "root": "+3",
             "suffixes": ["55"]
         },
-        "capital": ["Tirana"],
+        "capital": [
+		{
+			"eng": "Tirana",
+            "fra": "Tirana"
+		}],
         "altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
         "region": "Europe",
         "subregion": "Southeast Europe",
@@ -824,7 +865,11 @@
                 "m": "Albanais"
             }
         },
-        "cities": ["Durrës"]
+        "cities": [
+		{
+			"eng": "Durr\u00ebs",
+            "fra": "Durr\u00ebs"
+		}]
     },
     {
         "name": {
@@ -855,7 +900,11 @@
             "root": "+3",
             "suffixes": ["76"]
         },
-        "capital": ["Andorra la Vella"],
+        "capital": [
+		{
+			"eng": "Andorra la Vella",
+            "fra": "Andorre-la-Vieille"
+		}],
         "altSpellings": ["AD", "Principality of Andorra", "Principat d'Andorra"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -959,7 +1008,11 @@
                 "m": "Andorran"
             }
         },
-        "cities": ["Les Escaldes"]
+        "cities": [
+		{
+			"eng": "Les Escaldes",
+            "fra": "Les Escaldes"
+		}]
     },
     {
         "name": {
@@ -990,7 +1043,11 @@
             "root": "+9",
             "suffixes": ["71"]
         },
-        "capital": ["Abu Dhabi"],
+        "capital": [
+		{
+			"eng": "Abu Dhabi",
+            "fra": "Abu Dhabi"
+		}],
         "altSpellings": ["AE", "UAE", "Emirates"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -1094,7 +1151,11 @@
                 "m": "Emirien"
             }
         },
-        "cities": ["Dubai"]
+        "cities": [
+		{
+			"eng": "Dubai",
+            "fra": "Duba\u00ef"
+		}]
     },
     {
         "name": {
@@ -1129,7 +1190,11 @@
             "root": "+5",
             "suffixes": ["4"]
         },
-        "capital": ["Buenos Aires"],
+        "capital": [
+		{
+			"eng": "Buenos Aires",
+            "fra": "Buenos Aires"
+		}],
         "altSpellings": ["AR", "Argentine Republic", "Rep\u00fablica Argentina"],
         "region": "Americas",
         "subregion": "South America",
@@ -1234,7 +1299,11 @@
                 "m": "Argentin"
             }
         },
-        "cities": ["C\u00f3rdoba"]
+        "cities": [
+		{
+			"eng": "C\u00f3rdoba",
+            "fra": "C\u00f3rdoba"
+		}]
     },
     {
         "name": {
@@ -1265,7 +1334,11 @@
             "root": "+3",
             "suffixes": ["74"]
         },
-        "capital": ["Yerevan"],
+        "capital": [
+		{
+			"eng": "Yerevan",
+            "fra": "Erevan"
+		}],
         "altSpellings": [
             "AM",
             "Hayastan",
@@ -1374,7 +1447,11 @@
                 "m": "Arm\u00e9nien"
             }
         },
-        "cities": ["Gyumri"]
+        "cities": [
+		{
+			"eng": "Gyumri",
+            "fra": "Gyumri"
+		}]
     },
     {
         "name": {
@@ -1410,7 +1487,11 @@
             "root": "+1",
             "suffixes": ["684"]
         },
-        "capital": ["Pago Pago"],
+        "capital": [
+		{
+			"eng": "Pago Pago",
+            "fra": "Pago Pago"
+		}],
         "altSpellings": ["AS", "Amerika S\u0101moa", "Amelika S\u0101moa", "S\u0101moa Amelika"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -1515,7 +1596,15 @@
                 "m": "Samoan"
             }
         },
-        "cities": ["Tafuna", "Nu'uuli"]
+        "cities": [
+		{
+			"eng": "Tafuna",
+            "fra": "Tafuna"
+		}, 
+		{
+			"eng": "Nu'uuli",
+            "fra": "Nu'uuli"
+		}]
     },
     {
         "name": {
@@ -1669,7 +1758,11 @@
             "root": "+2",
             "suffixes": ["62"]
         },
-        "capital": ["Port-aux-Fran\u00e7ais"],
+        "capital": [
+		{
+			"eng": "Port-aux-Fran\u00e7ais",
+            "fra": "Port-aux-Fran\u00e7ais"
+		}],
         "altSpellings": ["TF", "French Southern Territories"],
         "region": "Antarctic",
         "subregion": "",
@@ -1803,7 +1896,11 @@
             "root": "+1",
             "suffixes": ["268"]
         },
-        "capital": ["Saint John's"],
+        "capital": [
+		{
+			"eng": "Saint John's",
+            "fra": "Saint John's"
+		}],
         "altSpellings": ["AG"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -1907,7 +2004,11 @@
                 "m": "Antiguaise et barbudien"
             }
         },
-        "cities": ["All Saints"]
+        "cities": [
+		{
+			"eng": "All Saints",
+            "fra": "All Saints"
+		}]
     },
     {
         "name": {
@@ -1938,7 +2039,11 @@
             "root": "+6",
             "suffixes": ["1"]
         },
-        "capital": ["Canberra"],
+        "capital": [
+		{
+			"eng": "Canberra",
+            "fra": "Canberra"
+		}],
         "altSpellings": ["AU"],
         "region": "Oceania",
         "subregion": "Australasia",
@@ -2042,7 +2147,15 @@
                 "m": "Australien"
             }
         },
-        "cities": ["Sydney", "Melbourne"]
+        "cities": [
+		{
+			"eng": "Sydney",
+            "fra": "Sydney"
+		}, 
+		{
+			"eng": "Melbourne",
+            "fra": "Melbourne"
+		}]
     },
     {
         "name": {
@@ -2073,7 +2186,11 @@
             "root": "+4",
             "suffixes": ["3"]
         },
-        "capital": ["Vienna"],
+        "capital": [
+		{
+			"eng": "Vienna",
+            "fra": "Vienne"
+		}],
         "altSpellings": ["AT", "Osterreich", "Oesterreich"],
         "region": "Europe",
         "subregion": "Central Europe",
@@ -2177,7 +2294,11 @@
                 "m": "Autrichien"
             }
         },
-        "cities": ["Graz"]
+        "cities": [
+		{
+			"eng": "Graz",
+            "fra": "Graz"
+		}]
     },
     {
         "name": {
@@ -2212,7 +2333,11 @@
             "root": "+9",
             "suffixes": ["94"]
         },
-        "capital": ["Baku"],
+        "capital": [
+		{
+			"eng": "Baku",
+            "fra": "Bakou"
+		}],
         "altSpellings": ["AZ", "Republic of Azerbaijan", "Az\u0259rbaycan Respublikas\u0131"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -2317,7 +2442,11 @@
                 "m": "Azerba\u00efdjanais"
             }
         },
-        "cities": ["Ganja"]
+        "cities": [
+		{
+			"eng": "Ganja",
+            "fra": "Gandja"
+		}]
     },
     {
         "name": {
@@ -2352,7 +2481,11 @@
             "root": "+2",
             "suffixes": ["57"]
         },
-        "capital": ["Gitega"],
+        "capital": [
+		{
+			"eng": "Gitega",
+            "fra": "Gitega"
+		}],
         "altSpellings": ["BI", "Republic of Burundi", "Republika y'Uburundi", "R\u00e9publique du Burundi"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -2457,7 +2590,15 @@
                 "m": "Burundais"
             }
         },
-        "cities": ["Bujumbura", "Muyinga"]
+        "cities": [
+		{
+			"eng": "Bujumbura",
+            "fra": "Bujumbura"
+		}, 
+		{
+			"eng": "Muyinga",
+            "fra": "Muyinga"
+		}]
     },
     {
         "name": {
@@ -2496,7 +2637,11 @@
             "root": "+3",
             "suffixes": ["2"]
         },
-        "capital": ["Brussels"],
+        "capital": [
+		{
+			"eng": "Brussels",
+            "fra": "Bruxelles"
+		}],
         "altSpellings": [
             "BE",
             "Belgi\u00eb",
@@ -2612,7 +2757,11 @@
                 "m": "Belge"
             }
         },
-        "cities": ["Antwerp"]
+        "cities": [
+		{
+			"eng": "Antwerp",
+            "fra": "Anvers"
+		}]
     },
     {
         "name": {
@@ -2643,7 +2792,11 @@
             "root": "+2",
             "suffixes": ["29"]
         },
-        "capital": ["Porto-Novo"],
+        "capital": [
+		{
+			"eng": "Porto-Novo",
+            "fra": "Porto-Novo"
+		}],
         "altSpellings": ["BJ", "Republic of Benin", "R\u00e9publique du B\u00e9nin"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -2747,7 +2900,15 @@
                 "m": "B\u00e9ninois"
             }
         },
-        "cities": ["Cotonou", "Abomey-Calavi"]
+        "cities": [
+		{
+			"eng": "Cotonou",
+            "fra": "Cotonou"
+		}, 
+		{
+			"eng": "Abomey-Calavi",
+            "fra": "Abomey-Calavi"
+		}]
     },
     {
         "name": {
@@ -2778,7 +2939,11 @@
             "root": "+2",
             "suffixes": ["26"]
         },
-        "capital": ["Ouagadougou"],
+        "capital": [
+		{
+			"eng": "Ouagadougou",
+            "fra": "Ouagadougou"
+		}],
         "altSpellings": ["BF"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -2882,7 +3047,11 @@
                 "m": "Burkinab\u00e9"
             }
         },
-        "cities": ["Bobo-Dioulasso"]
+        "cities": [
+		{
+			"eng": "Bobo-Dioulasso",
+            "fra": "Bobo-Dioulasso"
+		}]
     },
     {
         "name": {
@@ -2913,7 +3082,11 @@
             "root": "+8",
             "suffixes": ["80"]
         },
-        "capital": ["Dhaka"],
+        "capital": [
+		{
+			"eng": "Dhaka",
+            "fra": "Dacca"
+		}],
         "altSpellings": ["BD", "People's Republic of Bangladesh", "G\u00f4n\u00f4pr\u00f4jat\u00f4ntri Bangladesh"],
         "region": "Asia",
         "subregion": "Southern Asia",
@@ -3017,7 +3190,11 @@
                 "m": "Bangladais"
             }
         },
-        "cities": ["Chittagong"]
+        "cities": [
+		{
+			"eng": "Chittagong",
+            "fra": "Chittagong"
+		}]
     },
     {
         "name": {
@@ -3048,7 +3225,11 @@
             "root": "+3",
             "suffixes": ["59"]
         },
-        "capital": ["Sofia"],
+        "capital": [
+		{
+			"eng": "Sofia",
+            "fra": "Sofia"
+		}],
         "altSpellings": [
             "BG",
             "Republic of Bulgaria",
@@ -3156,7 +3337,11 @@
                 "m": "Bulgare"
             }
         },
-        "cities": ["Plovdiv"]
+        "cities": [
+		{
+			"eng": "Plovdiv",
+            "fra": "Plovdiv"
+		}]
     },
     {
         "name": {
@@ -3187,7 +3372,11 @@
             "root": "+9",
             "suffixes": ["73"]
         },
-        "capital": ["Manama"],
+        "capital": [
+		{
+			"eng": "Manama",
+            "fra": "Manama"
+		}],
         "altSpellings": ["BH", "Kingdom of Bahrain", "Mamlakat al-Ba\u1e25rayn"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -3291,7 +3480,11 @@
                 "m": "Bahre\u00efnien"
             }
         },
-        "cities": ["Riffa"]
+        "cities": [
+		{
+			"eng": "Riffa",
+            "fra": "Riffa"
+		}]
     },
     {
         "name": {
@@ -3326,7 +3519,11 @@
             "root": "+1",
             "suffixes": ["242"]
         },
-        "capital": ["Nassau"],
+        "capital": [
+		{
+			"eng": "Nassau",
+            "fra": "Nassau"
+		}],
         "altSpellings": ["BS", "Commonwealth of the Bahamas"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -3430,7 +3627,11 @@
                 "m": "Bahamien"
             }
         },
-        "cities": ["Freeport"]
+        "cities": [
+		{
+			"eng": "Freeport",
+            "fra": "Freeport"
+		}]
     },
     {
         "name": {
@@ -3469,7 +3670,11 @@
             "root": "+3",
             "suffixes": ["87"]
         },
-        "capital": ["Sarajevo"],
+        "capital": [
+		{
+			"eng": "Sarajevo",
+            "fra": "Sarajevo"
+		}],
         "altSpellings": [
             "BA",
             "Bosnia-Herzegovina",
@@ -3579,7 +3784,11 @@
                 "m": "Bosnien"
             }
         },
-        "cities": ["Banja Luka"]
+        "cities": [
+		{
+			"eng": "Banja Luka",
+            "fra": "Banja Luka"
+		}]
     },
     {
         "name": {
@@ -3611,7 +3820,11 @@
             "root": "+5",
             "suffixes": ["90"]
         },
-        "capital": ["Gustavia"],
+        "capital": [
+		{
+			"eng": "Gustavia",
+            "fra": "Gustavia"
+		}],
         "altSpellings": [
             "BL",
             "St. Barthelemy",
@@ -3720,7 +3933,11 @@
                 "m": "Barth\u00e9lom\u00e9en"
             }
         },
-        "cities": ["St. Jean"]
+        "cities": [
+		{
+			"eng": "St. Jean",
+            "fra": "Saint-Jean"
+		}]
     },
     {
         "name": {
@@ -3756,7 +3973,11 @@
             "root": "+2",
             "suffixes": ["90", "47"]
         },
-        "capital": ["Jamestown"],
+        "capital": [
+		{
+			"eng": "Jamestown",
+            "fra": "Jamestown"
+		}],
         "altSpellings": ["Saint Helena", "St. Helena, Ascension and Tristan da Cunha"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -3860,7 +4081,11 @@
                 "m": "Sainte-H\u00e9l\u00e8nois"
             }
         },
-        "cities": ["Half Tree Hollow"]
+        "cities": [
+		{
+			"eng": "Half Tree Hollow",
+            "fra": "Half Tree Hollow"
+		}]
     },
     {
         "name": {
@@ -3895,7 +4120,11 @@
             "root": "+3",
             "suffixes": ["75"]
         },
-        "capital": ["Minsk"],
+        "capital": [
+		{
+			"eng": "Minsk",
+            "fra": "Minsk"
+		}],
         "altSpellings": [
             "BY",
             "Bielaru\u015b",
@@ -4006,7 +4235,11 @@
                 "m": "Bi\u00e9lorusse"
             }
         },
-        "cities": ["Homel"]
+        "cities": [
+		{
+			"eng": "Homel",
+            "fra": "Homiel"
+		}]
     },
     {
         "name": {
@@ -4045,7 +4278,11 @@
             "root": "+5",
             "suffixes": ["01"]
         },
-        "capital": ["Belmopan"],
+        "capital": [
+		{
+			"eng": "Belmopan",
+            "fra": "Belmopan"
+		}],
         "altSpellings": ["BZ"],
         "region": "Americas",
         "subregion": "Central America",
@@ -4151,7 +4388,15 @@
                 "m": "B\u00e9lizien"
             }
         },
-        "cities": ["Belize City", "San Ignacio"]
+        "cities": [
+		{
+			"eng": "Belize City",
+            "fra": "Belize City"
+		}, 
+		{
+			"eng": "San Ignacio",
+            "fra": "San Ignacio"
+		}]
     },
     {
         "name": {
@@ -4183,7 +4428,11 @@
             "root": "+1",
             "suffixes": ["441"]
         },
-        "capital": ["Hamilton"],
+        "capital": [
+		{
+			"eng": "Hamilton",
+            "fra": "Hamilton"
+		}],
         "altSpellings": ["BM", "The Islands of Bermuda", "The Bermudas", "Somers Isles"],
         "region": "Americas",
         "subregion": "North America",
@@ -4287,7 +4536,11 @@
                 "m": "Bermudien"
             }
         },
-        "cities": ["St. George's"]
+        "cities": [
+		{
+			"eng": "St. George's",
+            "fra": "Saint-Georges"
+		}]
     },
     {
         "name": {
@@ -4330,7 +4583,15 @@
             "root": "+5",
             "suffixes": ["91"]
         },
-        "capital": ["Sucre", "La Paz"],
+        "capital": [
+		{
+			"eng": "Sucre",
+            "fra": "Sucre"
+		}, 
+		{
+			"eng": "La Paz",
+            "fra": "La Paz"
+		}],
         "altSpellings": [
             "BO",
             "Buliwya",
@@ -4447,7 +4708,15 @@
                 "m": "Bolivien"
             }
         },
-        "cities": ["Santa Cruz de la Sierra", "El Alto"]
+        "cities": [
+		{
+			"eng": "Santa Cruz de la Sierra",
+            "fra": "Santa Cruz de la Sierra"
+		}, 
+		{
+			"eng": "El Alto",
+            "fra": "El Alto"
+		}]
     },
     {
         "name": {
@@ -4483,7 +4752,19 @@
             "root": "+5",
             "suffixes": ["99"]
         },
-        "capital": ["Kralendijk", "Oranjestad", "The Bottom"],
+        "capital": [
+		{
+			"eng": "Kralendijk",
+            "fra": "Kralendijk"
+		}, 
+		{
+			"eng": "Oranjestad",
+            "fra": "Oranjestad"
+		}, 
+		{
+			"eng": "The Bottom",
+            "fra": "The Bottom"
+		}],
         "altSpellings": ["BES islands"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -4619,7 +4900,11 @@
             "root": "+5",
             "suffixes": ["5"]
         },
-        "capital": ["Bras\u00edlia"],
+        "capital": [
+		{
+			"eng": "Bras\u00edlia",
+            "fra": "Brasilia"
+		}],
         "altSpellings": ["BR", "Brasil", "Federative Republic of Brazil", "Rep\u00fablica Federativa do Brasil"],
         "region": "Americas",
         "subregion": "South America",
@@ -4723,7 +5008,15 @@
                 "m": "Br\u00e9silien"
             }
         },
-        "cities": ["S\u00e3o Paulo", "Rio de Janeiro"]
+        "cities": [
+		{
+			"eng": "S\u00e3o Paulo",
+            "fra": "S\u00e3o Paulo"
+		}, 
+		{
+			"eng": "Rio de Janeiro",
+            "fra": "Rio de Janeiro"
+		}]
     },
     {
         "name": {
@@ -4754,7 +5047,11 @@
             "root": "+1",
             "suffixes": ["246"]
         },
-        "capital": ["Bridgetown"],
+        "capital": [
+		{
+			"eng": "Bridgetown",
+            "fra": "Bridgetown"
+		}],
         "altSpellings": ["BB"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -4858,7 +5155,11 @@
                 "m": "Barbadien"
             }
         },
-        "cities": ["Speightstown"]
+        "cities": [
+		{
+			"eng": "Speightstown",
+            "fra": "Speightstown"
+		}]
     },
     {
         "name": {
@@ -4893,7 +5194,11 @@
             "root": "+6",
             "suffixes": ["73"]
         },
-        "capital": ["Bandar Seri Begawan"],
+        "capital": [
+		{
+			"eng": "Bandar Seri Begawan",
+            "fra": "Bandar Seri Begawan"
+		}],
         "altSpellings": ["BN", "Brunei Darussalam", "Nation of Brunei", "the Abode of Peace"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -4997,7 +5302,11 @@
                 "m": "Brun\u00e9ien"
             }
         },
-        "cities": ["Kuala Belait"]
+        "cities": [
+		{
+			"eng": "Kuala Belait",
+            "fra": "Kuala Belait"
+		}]
     },
     {
         "name": {
@@ -5032,7 +5341,11 @@
             "root": "+9",
             "suffixes": ["75"]
         },
-        "capital": ["Thimphu"],
+        "capital": [
+		{
+			"eng": "Thimphu",
+            "fra": "Thimphou"
+		}],
         "altSpellings": ["BT", "Kingdom of Bhutan"],
         "region": "Asia",
         "subregion": "Southern Asia",
@@ -5136,7 +5449,11 @@
                 "m": "Bhoutanais"
             }
         },
-        "cities": ["Phuntsholing"]
+        "cities": [
+		{
+			"eng": "Phuntsholing",
+            "fra": "Phuntsholing"
+		}]
     },
     {
         "name": {
@@ -5301,7 +5618,11 @@
             "root": "+2",
             "suffixes": ["67"]
         },
-        "capital": ["Gaborone"],
+        "capital": [
+		{
+			"eng": "Gaborone",
+            "fra": "Gaborone"
+		}],
         "altSpellings": ["BW", "Republic of Botswana", "Lefatshe la Botswana"],
         "region": "Africa",
         "subregion": "Southern Africa",
@@ -5406,7 +5727,11 @@
                 "m": "Botswanais"
             }
         },
-        "cities": ["Francistown"]
+        "cities": [
+		{
+			"eng": "Francistown",
+            "fra": "Francistown"
+		}]
     },
     {
         "name": {
@@ -5441,7 +5766,11 @@
             "root": "+2",
             "suffixes": ["36"]
         },
-        "capital": ["Bangui"],
+        "capital": [
+		{
+			"eng": "Bangui",
+            "fra": "Bangui"
+		}],
         "altSpellings": ["CF", "Central African Republic", "R\u00e9publique centrafricaine"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -5546,7 +5875,11 @@
                 "m": "Centrafricain"
             }
         },
-        "cities": ["Bimbo"]
+        "cities": [
+		{
+			"eng": "Bimbo",
+            "fra": "Bimbo"
+		}]
     },
     {
         "name": {
@@ -5648,7 +5981,11 @@
                 "942"
             ]
         },
-        "capital": ["Ottawa"],
+        "capital": [
+		{
+			"eng": "Ottawa",
+            "fra": "Ottawa"
+		}],
         "altSpellings": ["CA"],
         "region": "Americas",
         "subregion": "North America",
@@ -5753,7 +6090,19 @@
                 "m": "Canadien"
             }
         },
-        "cities": ["Toronto", "Montreal", "Vancouver"]
+        "cities": [
+		{
+			"eng": "Toronto",
+            "fra": "Toronto"
+		}, 
+		{
+			"eng": "Montreal",
+            "fra": "Montr\u00e9al"
+		}, 
+		{
+			"eng": "Vancouver",
+            "fra": "Vancouver"
+		}]
     },
     {
         "name": {
@@ -5785,7 +6134,11 @@
             "root": "+6",
             "suffixes": ["1"]
         },
-        "capital": ["West Island"],
+        "capital": [
+		{
+			"eng": "West Island",
+            "fra": "\u00cele de l'Ouest"
+		}],
         "altSpellings": ["CC", "Keeling Islands", "Cocos Islands"],
         "region": "Oceania",
         "subregion": "Australasia",
@@ -5889,7 +6242,11 @@
                 "m": ""
             }
         },
-        "cities": ["Bantam"]
+        "cities": [
+		{
+			"eng": "Bantam",
+            "fra": "Bantam"
+		}]
     },
     {
         "name": {
@@ -5932,7 +6289,11 @@
             "root": "+4",
             "suffixes": ["1"]
         },
-        "capital": ["Bern"],
+        "capital": [
+		{
+			"eng": "Bern",
+            "fra": "Berne"
+		}],
         "altSpellings": ["CH", "Swiss Confederation", "Schweiz", "Suisse", "Svizzera", "Svizra"],
         "region": "Europe",
         "subregion": "Western Europe",
@@ -6039,7 +6400,15 @@
                 "m": "Suisse"
             }
         },
-        "cities": ["Zürich", "Geneva"]
+        "cities": [
+		{
+			"eng": "Z\u00fcrich",
+            "fra": "Zurich"
+		}, 
+		{
+			"eng": "Geneva",
+            "fra": "Gen\u00e8ve"
+		}]
     },
     {
         "name": {
@@ -6070,7 +6439,11 @@
             "root": "+5",
             "suffixes": ["6"]
         },
-        "capital": ["Santiago"],
+        "capital": [
+		{
+			"eng": "Santiago",
+            "fra": "Santiago"
+		}],
         "altSpellings": ["CL", "Republic of Chile", "Rep\u00fablica de Chile"],
         "region": "Americas",
         "subregion": "South America",
@@ -6174,7 +6547,15 @@
                 "m": "Chilien"
             }
         },
-        "cities": ["Puente Alto", "Beijing"]
+        "cities": [
+		{
+			"eng": "Puente Alto",
+            "fra": "Puente Alto"
+		}, 
+		{
+			"eng": "Beijing",
+            "fra": "P\u00e9kin"
+		}]
     },
     {
         "name": {
@@ -6205,7 +6586,11 @@
             "root": "+8",
             "suffixes": ["6"]
         },
-        "capital": ["Beijing"],
+        "capital": [
+		{
+			"eng": "Beijing",
+            "fra": "P\u00e9kin"
+		}],
         "altSpellings": [
             "CN",
             "Zh\u014dnggu\u00f3",
@@ -6334,7 +6719,11 @@
                 "m": "Chinois"
             }
         },
-        "cities": ["Shanghai"]
+        "cities": [
+		{
+			"eng": "Shanghai",
+            "fra": "Shanghai"
+		}]
     },
     {
         "name": {
@@ -6365,7 +6754,11 @@
             "root": "+2",
             "suffixes": ["25"]
         },
-        "capital": ["Yamoussoukro"],
+        "capital": [
+		{
+			"eng": "Yamoussoukro",
+            "fra": "Yamoussoukro"
+		}],
         "altSpellings": [
             "CI",
             "C\u00f4te d'Ivoire",
@@ -6475,7 +6868,15 @@
                 "m": "Ivoirien"
             }
         },
-        "cities": ["Abidjan", "Bouak\u00e9"]
+        "cities": [
+		{
+			"eng": "Abidjan",
+            "fra": "Abidjan"
+		}, 
+		{
+			"eng": "Bouak\u00e9",
+            "fra": "Bouak\u00e9"
+		}]
     },
     {
         "name": {
@@ -6510,7 +6911,11 @@
             "root": "+2",
             "suffixes": ["37"]
         },
-        "capital": ["Yaound\u00e9"],
+        "capital": [
+		{
+			"eng": "Yaound\u00e9",
+            "fra": "Yaound\u00e9"
+		}],
         "altSpellings": ["CM", "Republic of Cameroon", "R\u00e9publique du Cameroun"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -6615,7 +7020,11 @@
                 "m": "Camerounais"
             }
         },
-        "cities": ["Douala"]
+        "cities": [
+		{
+			"eng": "Douala",
+            "fra": "Douala"
+		}]
     },
     {
         "name": {
@@ -6662,7 +7071,11 @@
             "root": "+2",
             "suffixes": ["43"]
         },
-        "capital": ["Kinshasa"],
+        "capital": [
+		{
+			"eng": "Kinshasa",
+            "fra": "Kinshasa"
+		}],
         "altSpellings": ["CD", "DR Congo", "Congo-Kinshasa", "Congo, the Democratic Republic of the", "DRC"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -6770,7 +7183,11 @@
                 "m": "Congolais"
             }
         },
-        "cities": ["Lubumbashi"]
+        "cities": [
+		{
+			"eng": "Lubumbashi",
+            "fra": "Lubumbashi"
+		}]
     },
     {
         "name": {
@@ -6809,7 +7226,11 @@
             "root": "+2",
             "suffixes": ["42"]
         },
-        "capital": ["Brazzaville"],
+        "capital": [
+		{
+			"eng": "Brazzaville",
+            "fra": "Brazzaville"
+		}],
         "altSpellings": ["CG", "Congo", "Congo-Brazzaville"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -6915,7 +7336,11 @@
                 "m": "Congolais"
             }
         },
-        "cities": ["Pointe-Noire"]
+        "cities": [
+		{
+			"eng": "Pointe-Noire",
+            "fra": "Pointe-Noire"
+		}]
     },
     {
         "name": {
@@ -6955,7 +7380,11 @@
             "root": "+6",
             "suffixes": ["82"]
         },
-        "capital": ["Avarua"],
+        "capital": [
+		{
+			"eng": "Avarua",
+            "fra": "Avarua"
+		}],
         "altSpellings": ["CK", "K\u016bki '\u0100irani"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -7060,7 +7489,11 @@
                 "m": "Cookien"
             }
         },
-        "cities": ["Amuri"]
+        "cities": [
+		{
+			"eng": "Amuri",
+            "fra": "Amuri"
+		}]
     },
     {
         "name": {
@@ -7091,7 +7524,11 @@
             "root": "+5",
             "suffixes": ["7"]
         },
-        "capital": ["Bogot\u00e1"],
+        "capital": [
+		{
+			"eng": "Bogot\u00e1",
+            "fra": "Bogot\u00e1"
+		}],
         "altSpellings": ["CO", "Republic of Colombia", "Rep\u00fablica de Colombia"],
         "region": "Americas",
         "subregion": "South America",
@@ -7195,7 +7632,11 @@
                 "m": "Colombien"
             }
         },
-        "cities": ["Medell\u00edn"]
+        "cities": [
+		{
+			"eng": "Medell\u00edn",
+            "fra": "Medell\u00edn"
+		}]
     },
     {
         "name": {
@@ -7234,7 +7675,11 @@
             "root": "+2",
             "suffixes": ["69"]
         },
-        "capital": ["Moroni"],
+        "capital": [
+		{
+			"eng": "Moroni",
+            "fra": "Moroni"
+		}],
         "altSpellings": [
             "KM",
             "Union of the Comoros",
@@ -7346,7 +7791,11 @@
                 "m": "Comorien"
             }
         },
-        "cities": ["Mutsamudu"]
+        "cities": [
+		{
+			"eng": "Mutsamudu",
+            "fra": "Mutsamudu"
+		}]
     },
     {
         "name": {
@@ -7377,7 +7826,11 @@
             "root": "+2",
             "suffixes": ["38"]
         },
-        "capital": ["Praia"],
+        "capital": [
+		{
+			"eng": "Praia",
+            "fra": "Praia"
+		}],
         "altSpellings": ["CV", "Republic of Cabo Verde", "Rep\u00fablica de Cabo Verde"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -7481,7 +7934,11 @@
                 "m": "Cap-verdien"
             }
         },
-        "cities": ["Mindelo"]
+        "cities": [
+		{
+			"eng": "Mindelo",
+            "fra": "Mindelo"
+		}]
     },
     {
         "name": {
@@ -7512,7 +7969,11 @@
             "root": "+5",
             "suffixes": ["06"]
         },
-        "capital": ["San Jos\u00e9"],
+        "capital": [
+		{
+			"eng": "San Jos\u00e9",
+            "fra": "San Jos\u00e9"
+		}],
         "altSpellings": ["CR", "Republic of Costa Rica", "Rep\u00fablica de Costa Rica"],
         "region": "Americas",
         "subregion": "Central America",
@@ -7616,7 +8077,11 @@
                 "m": "Costaricain"
             }
         },
-        "cities": ["Alajuela"]
+        "cities": [
+		{
+			"eng": "Alajuela",
+            "fra": "Alajuela"
+		}]
     },
     {
         "name": {
@@ -7651,7 +8116,11 @@
             "root": "+5",
             "suffixes": ["3"]
         },
-        "capital": ["Havana"],
+        "capital": [
+		{
+			"eng": "Havana",
+            "fra": "La Havane"
+		}],
         "altSpellings": ["CU", "Republic of Cuba", "Rep\u00fablica de Cuba"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -7755,7 +8224,11 @@
                 "m": "Cubain"
             }
         },
-        "cities": ["Santiago de Cuba"]
+        "cities": [
+		{
+			"eng": "Santiago de Cuba",
+            "fra": "Santiago de Cuba"
+		}]
     },
     {
         "name": {
@@ -7795,7 +8268,11 @@
             "root": "+5",
             "suffixes": ["99"]
         },
-        "capital": ["Willemstad"],
+        "capital": [
+		{
+			"eng": "Willemstad",
+            "fra": "Willemstad"
+		}],
         "altSpellings": [
             "CW",
             "Curacao",
@@ -7908,7 +8385,11 @@
                 "m": "Curacien"
             }
         },
-        "cities": ["Sint Michiel"]
+        "cities": [
+		{
+			"eng": "Sint Michiel",
+            "fra": "Sint Michiel"
+		}]
     },
     {
         "name": {
@@ -7940,7 +8421,11 @@
             "root": "+6",
             "suffixes": ["1"]
         },
-        "capital": ["Flying Fish Cove"],
+        "capital": [
+		{
+			"eng": "Flying Fish Cove",
+            "fra": "Flying Fish Cove"
+		}],
         "altSpellings": ["CX", "Territory of Christmas Island"],
         "region": "Oceania",
         "subregion": "Australasia",
@@ -8044,7 +8529,15 @@
                 "m": ""
             }
         },
-        "cities": ["Poon Saan", "West Island"]
+        "cities": [
+		{
+			"eng": "Poon Saan",
+            "fra": "Poon Saan"
+		}, 
+		{
+			"eng": "West Island",
+            "fra": "\u00cele de l'Ouest"
+		}]
     },
     {
         "name": {
@@ -8076,7 +8569,11 @@
             "root": "+1",
             "suffixes": ["345"]
         },
-        "capital": ["George Town"],
+        "capital": [
+		{
+			"eng": "George Town",
+            "fra": "George Town"
+		}],
         "altSpellings": ["KY"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -8180,7 +8677,11 @@
                 "m": "Ca\u00efmanien"
             }
         },
-        "cities": ["West Bay"]
+        "cities": [
+		{
+			"eng": "West Bay",
+            "fra": "West Bay"
+		}]
     },
     {
         "name": {
@@ -8215,7 +8716,11 @@
             "root": "+3",
             "suffixes": ["57"]
         },
-        "capital": ["Nicosia"],
+        "capital": [
+		{
+			"eng": "Nicosia",
+            "fra": "Nicosie"
+		}],
         "altSpellings": [
             "CY",
             "K\u00fdpros",
@@ -8327,7 +8832,11 @@
                 "m": "Chypriote"
             }
         },
-        "cities": ["Limassol"]
+        "cities": [
+		{
+			"eng": "Limassol",
+            "fra": "Limassol"
+		}]
     },
     {
         "name": {
@@ -8362,7 +8871,11 @@
             "root": "+4",
             "suffixes": ["20"]
         },
-        "capital": ["Prague"],
+        "capital": [
+		{
+			"eng": "Prague",
+            "fra": "Prague"
+		}],
         "altSpellings": ["CZ", "\u010cesk\u00e1 republika", "\u010cesko"],
         "region": "Europe",
         "subregion": "Central Europe",
@@ -8467,7 +8980,15 @@
                 "m": "Tch\u00e8que"
             }
         },
-        "cities": ["Brno", "Ostrava"]
+        "cities": [
+		{
+			"eng": "Brno",
+            "fra": "Brno"
+		}, 
+		{
+			"eng": "Ostrava",
+            "fra": "Ostrava"
+		}]
     },
     {
         "name": {
@@ -8498,7 +9019,11 @@
             "root": "+4",
             "suffixes": ["9"]
         },
-        "capital": ["Berlin"],
+        "capital": [
+		{
+			"eng": "Berlin",
+            "fra": "Berlin"
+		}],
         "altSpellings": ["DE", "Federal Republic of Germany", "Bundesrepublik Deutschland"],
         "region": "Europe",
         "subregion": "Western Europe",
@@ -8602,7 +9127,15 @@
                 "m": "Allemand"
             }
         },
-        "cities": ["Hamburg", "Rhine-Ruhr"]
+        "cities": [
+		{
+			"eng": "Hamburg",
+            "fra": "Hambourg"
+		}, 
+		{
+			"eng": "Rhine-Ruhr",
+            "fra": "Rhine-Ruhr"
+		}]
     },
     {
         "name": {
@@ -8637,7 +9170,11 @@
             "root": "+2",
             "suffixes": ["53"]
         },
-        "capital": ["Djibouti"],
+        "capital": [
+		{
+			"eng": "Djibouti",
+            "fra": "Djibouti"
+		}],
         "altSpellings": [
             "DJ",
             "Jabuuti",
@@ -8750,7 +9287,11 @@
                 "m": "Djiboutien"
             }
         },
-        "cities": ["Ali Sabieh"]
+        "cities": [
+		{
+			"eng": "Ali Sabieh",
+            "fra": "Ali Sabieh"
+		}]
     },
     {
         "name": {
@@ -8781,7 +9322,11 @@
             "root": "+1",
             "suffixes": ["767"]
         },
-        "capital": ["Roseau"],
+        "capital": [
+		{
+			"eng": "Roseau",
+            "fra": "Roseau"
+		}],
         "altSpellings": ["DM", "Dominique", "Wai\u2018tu kubuli", "Commonwealth of Dominica"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -8885,7 +9430,11 @@
                 "m": "Dominiquais"
             }
         },
-        "cities": ["Portsmouth"]
+        "cities": [
+		{
+			"eng": "Portsmouth",
+            "fra": "Portsmouth"
+		}]
     },
     {
         "name": {
@@ -8916,7 +9465,11 @@
             "root": "+4",
             "suffixes": ["5"]
         },
-        "capital": ["Copenhagen"],
+        "capital": [
+		{
+			"eng": "Copenhagen",
+            "fra": "Copenhague"
+		}],
         "altSpellings": ["DK", "Danmark", "Kingdom of Denmark", "Kongeriget Danmark"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -9020,7 +9573,11 @@
                 "m": "Danois"
             }
         },
-        "cities": ["Aarhus"]
+        "cities": [
+		{
+			"eng": "Aarhus",
+            "fra": "Aarhus"
+		}]
     },
     {
         "name": {
@@ -9051,7 +9608,11 @@
             "root": "+1",
             "suffixes": ["809", "829", "849"]
         },
-        "capital": ["Santo Domingo"],
+        "capital": [
+		{
+			"eng": "Santo Domingo",
+            "fra": "Saint-Domingue"
+		}],
         "altSpellings": ["DO"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -9155,7 +9716,11 @@
                 "m": "Dominicain"
             }
         },
-        "cities": ["Santiago de los Caballeros"]
+        "cities": [
+		{
+			"eng": "Santiago de los Caballeros",
+            "fra": "Santiago de los Caballeros"
+		}]
     },
     {
         "name": {
@@ -9186,7 +9751,11 @@
             "root": "+2",
             "suffixes": ["13"]
         },
-        "capital": ["Algiers"],
+        "capital": [
+		{
+			"eng": "Algiers",
+            "fra": "Alger"
+		}],
         "altSpellings": ["DZ", "Dzayer", "Alg\u00e9rie"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -9290,7 +9859,11 @@
                 "m": "Alg\u00e9rien"
             }
         },
-        "cities": ["Oran"]
+        "cities": [
+		{
+			"eng": "Oran",
+            "fra": "Oran"
+		}]
     },
     {
         "name": {
@@ -9321,7 +9894,11 @@
             "root": "+5",
             "suffixes": ["93"]
         },
-        "capital": ["Quito"],
+        "capital": [
+		{
+			"eng": "Quito",
+            "fra": "Quito"
+		}],
         "altSpellings": ["EC", "Republic of Ecuador", "Rep\u00fablica del Ecuador"],
         "region": "Americas",
         "subregion": "South America",
@@ -9425,7 +10002,11 @@
                 "m": "\u00c9quatorien"
             }
         },
-        "cities": ["Guayaquil"]
+        "cities": [
+		{
+			"eng": "Guayaquil",
+            "fra": "Guayaquil"
+		}]
     },
     {
         "name": {
@@ -9456,7 +10037,11 @@
             "root": "+2",
             "suffixes": ["0"]
         },
-        "capital": ["Cairo"],
+        "capital": [
+		{
+			"eng": "Cairo",
+            "fra": "Le Caire"
+		}],
         "altSpellings": ["EG", "Arab Republic of Egypt"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -9560,7 +10145,11 @@
                 "m": "\u00c9gyptien"
             }
         },
-        "cities": ["Alexandria"]
+        "cities": [
+		{
+			"eng": "Alexandria",
+            "fra": "Alexandrie"
+		}]
     },
     {
         "name": {
@@ -9599,7 +10188,11 @@
             "root": "+2",
             "suffixes": ["91"]
         },
-        "capital": ["Asmara"],
+        "capital": [
+		{
+			"eng": "Asmara",
+            "fra": "Asmara"
+		}],
         "altSpellings": [
             "ER",
             "State of Eritrea",
@@ -9712,7 +10305,11 @@
                 "m": "\u00c9rythr\u00e9en"
             }
         },
-        "cities": ["Keren"]
+        "cities": [
+		{
+			"eng": "Keren",
+            "fra": "Keren"
+		}]
     },
     {
         "name": {
@@ -9761,7 +10358,11 @@
             "root": "+2",
             "suffixes": ["125288", "125289"]
         },
-        "capital": ["El Aai\u00fan"],
+        "capital": [
+		{
+			"eng": "El Aai\u00fan",
+            "fra": "El Aai\u00fan"
+		}],
         "altSpellings": ["EH", "Tane\u1e93roft Tutrimt"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -9867,7 +10468,15 @@
                 "m": ""
             }
         },
-        "cities": ["Laayoune", "Dakhla"]
+        "cities": [
+		{
+			"eng": "Laayoune",
+            "fra": "La\u00e2youne"
+		}, 
+		{
+			"eng": "Dakhla",
+            "fra": "Dakhla"
+		}]
     },
     {
         "name": {
@@ -9898,7 +10507,11 @@
             "root": "+3",
             "suffixes": ["4"]
         },
-        "capital": ["Madrid"],
+        "capital": [
+		{
+			"eng": "Madrid",
+            "fra": "Madrid"
+		}],
         "altSpellings": ["ES", "Kingdom of Spain", "Reino de Espa\u00f1a"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -10002,7 +10615,11 @@
                 "m": "Espagnol"
             }
         },
-        "cities": ["Barcelona"]
+        "cities": [
+		{
+			"eng": "Barcelona",
+            "fra": "Barcelone"
+		}]
     },
     {
         "name": {
@@ -10033,7 +10650,11 @@
             "root": "+3",
             "suffixes": ["72"]
         },
-        "capital": ["Tallinn"],
+        "capital": [
+		{
+			"eng": "Tallinn",
+            "fra": "Tallinn"
+		}],
         "altSpellings": ["EE", "Eesti", "Republic of Estonia", "Eesti Vabariik"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -10137,7 +10758,11 @@
                 "m": "Estonien"
             }
         },
-        "cities": ["Tartu"]
+        "cities": [
+		{
+			"eng": "Tartu",
+            "fra": "Tartu"
+		}]
     },
     {
         "name": {
@@ -10168,7 +10793,11 @@
             "root": "+2",
             "suffixes": ["51"]
         },
-        "capital": ["Addis Ababa"],
+        "capital": [
+		{
+			"eng": "Addis Ababa",
+            "fra": "Addis-Abeba"
+		}],
         "altSpellings": [
             "ET",
             "\u02be\u012aty\u014d\u1e57\u1e57y\u0101",
@@ -10277,7 +10906,11 @@
                 "m": "\u00c9thiopien"
             }
         },
-        "cities": ["Dire Dawa"]
+        "cities": [
+		{
+			"eng": "Dire Dawa",
+            "fra": "Dire Dawa"
+		}]
     },
     {
         "name": {
@@ -10312,7 +10945,11 @@
             "root": "+3",
             "suffixes": ["58"]
         },
-        "capital": ["Helsinki"],
+        "capital": [
+		{
+			"eng": "Helsinki",
+            "fra": "Helsinki"
+		}],
         "altSpellings": ["FI", "Suomi", "Republic of Finland", "Suomen tasavalta", "Republiken Finland"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -10417,7 +11054,15 @@
                 "m": "Finlandais"
             }
         },
-        "cities": ["Espoo", "Tampere"]
+        "cities": [
+		{
+			"eng": "Espoo",
+            "fra": "Espoo"
+		}, 
+		{
+			"eng": "Tampere",
+            "fra": "Tampere"
+		}]
     },
     {
         "name": {
@@ -10456,7 +11101,11 @@
             "root": "+6",
             "suffixes": ["79"]
         },
-        "capital": ["Suva"],
+        "capital": [
+		{
+			"eng": "Suva",
+            "fra": "Suva"
+		}],
         "altSpellings": ["FJ", "Viti", "Republic of Fiji", "Matanitu ko Viti", "Fij\u012b Ga\u1e47ar\u0101jya"],
         "region": "Oceania",
         "subregion": "Melanesia",
@@ -10562,7 +11211,11 @@
                 "m": "Fidjien"
             }
         },
-        "cities": ["Nasinu"]
+        "cities": [
+		{
+			"eng": "Nasinu",
+            "fra": "Nasinu"
+		}]
     },
     {
         "name": {
@@ -10594,7 +11247,11 @@
             "root": "+5",
             "suffixes": ["00"]
         },
-        "capital": ["Stanley"],
+        "capital": [
+		{
+			"eng": "Stanley",
+            "fra": "Stanley"
+		}],
         "altSpellings": ["FK", "Islas Malvinas", "Falkland Islands (Malvinas)"],
         "region": "Americas",
         "subregion": "South America",
@@ -10698,7 +11355,11 @@
                 "m": "Malouin"
             }
         },
-        "cities": ["Goose Green"]
+        "cities": [
+		{
+			"eng": "Goose Green",
+            "fra": "Goose Green"
+		}]
     },
     {
         "name": {
@@ -10729,7 +11390,11 @@
             "root": "+3",
             "suffixes": ["3"]
         },
-        "capital": ["Paris"],
+        "capital": [
+		{
+			"eng": "Paris",
+            "fra": "Paris"
+		}],
         "altSpellings": ["FR", "French Republic", "R\u00e9publique fran\u00e7aise"],
         "region": "Europe",
         "subregion": "Western Europe",
@@ -10833,7 +11498,15 @@
                 "m": "Fran\u00e7ais"
             }
         },
-        "cities": ["Marseille", "Lyon"]
+        "cities": [
+		{
+			"eng": "Marseille",
+            "fra": "Marseille"
+		}, 
+		{
+			"eng": "Lyon",
+            "fra": "Lyon"
+		}]
     },
     {
         "name": {
@@ -10873,7 +11546,11 @@
             "root": "+2",
             "suffixes": ["98"]
         },
-        "capital": ["T\u00f3rshavn"],
+        "capital": [
+		{
+			"eng": "T\u00f3rshavn",
+            "fra": "T\u00f3rshavn"
+		}],
         "altSpellings": ["FO", "F\u00f8royar", "F\u00e6r\u00f8erne"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -10978,7 +11655,11 @@
                 "m": "F\u00e9ro\u00efen"
             }
         },
-        "cities": ["Klaksv\u00edk"]
+        "cities": [
+		{
+			"eng": "Klaksv\u00edk",
+            "fra": "Klaksv\u00edk"
+		}]
     },
     {
         "name": {
@@ -11004,7 +11685,11 @@
             "root": "+6",
             "suffixes": ["91"]
         },
-        "capital": ["Palikir"],
+        "capital": [
+		{
+			"eng": "Palikir",
+            "fra": "Palikir"
+		}],
         "altSpellings": ["FM", "Federated States of Micronesia", "Micronesia, Federated States of"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -11108,7 +11793,11 @@
                 "m": "Micron\u00e9sien"
             }
         },
-        "cities": ["Weno"]
+        "cities": [
+		{
+			"eng": "Weno",
+            "fra": "Weno"
+		}]
     },
     {
         "name": {
@@ -11139,7 +11828,11 @@
             "root": "+2",
             "suffixes": ["41"]
         },
-        "capital": ["Libreville"],
+        "capital": [
+		{
+			"eng": "Libreville",
+            "fra": "Libreville"
+		}],
         "altSpellings": ["GA", "Gabonese Republic", "R\u00e9publique Gabonaise"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -11243,7 +11936,15 @@
                 "m": "Gabonais"
             }
         },
-        "cities": ["Port-Gentil", "Brikama"]
+        "cities": [
+		{
+			"eng": "Port-Gentil",
+            "fra": "Port-Gentil"
+		}, 
+		{
+			"eng": "Brikama",
+            "fra": "Brikama"
+		}]
     },
     {
         "name": {
@@ -11274,7 +11975,11 @@
             "root": "+4",
             "suffixes": ["4"]
         },
-        "capital": ["London"],
+        "capital": [
+		{
+			"eng": "London",
+            "fra": "Londres"
+		}],
         "altSpellings": ["GB", "UK", "Great Britain"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -11378,7 +12083,11 @@
                 "m": "Britannique"
             }
         },
-        "cities": ["Birmingham"]
+        "cities": [
+		{
+			"eng": "Birmingham",
+            "fra": "Birmingham"
+		}]
     },
     {
         "name": {
@@ -11409,7 +12118,11 @@
             "root": "+9",
             "suffixes": ["95"]
         },
-        "capital": ["Tbilisi"],
+        "capital": [
+		{
+			"eng": "Tbilisi",
+            "fra": "Tbilissi"
+		}],
         "altSpellings": ["GE", "Sakartvelo"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -11513,7 +12226,11 @@
                 "m": "G\u00e9orgien"
             }
         },
-        "cities": ["Kutaisi"]
+        "cities": [
+		{
+			"eng": "Kutaisi",
+            "fra": "Kouta\u00efssi"
+		}]
     },
     {
         "name": {
@@ -11557,7 +12274,11 @@
             "root": "+4",
             "suffixes": ["4"]
         },
-        "capital": ["St. Peter Port"],
+        "capital": [
+		{
+			"eng": "St. Peter Port",
+            "fra": "Saint-Pierre-Port"
+		}],
         "altSpellings": ["GG", "Bailiwick of Guernsey", "Bailliage de Guernesey"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -11663,7 +12384,11 @@
                 "m": "Guernesiais"
             }
         },
-        "cities": ["Vale"]
+        "cities": [
+		{
+			"eng": "Vale",
+            "fra": "Vall\u00e9e"
+		}]
     },
     {
         "name": {
@@ -11694,7 +12419,11 @@
             "root": "+2",
             "suffixes": ["33"]
         },
-        "capital": ["Accra"],
+        "capital": [
+		{
+			"eng": "Accra",
+            "fra": "Accra"
+		}],
         "altSpellings": ["GH"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -11798,7 +12527,11 @@
                 "m": "Ghan\u00e9en"
             }
         },
-        "cities": ["Kumasi"]
+        "cities": [
+		{
+			"eng": "Kumasi",
+            "fra": "Kumasi"
+		}]
     },
     {
         "name": {
@@ -11830,7 +12563,11 @@
             "root": "+3",
             "suffixes": ["50"]
         },
-        "capital": ["Gibraltar"],
+        "capital": [
+		{
+			"eng": "Gibraltar",
+            "fra": "Gibraltar"
+		}],
         "altSpellings": ["GI"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -11965,7 +12702,11 @@
             "root": "+2",
             "suffixes": ["24"]
         },
-        "capital": ["Conakry"],
+        "capital": [
+		{
+			"eng": "Conakry",
+            "fra": "Conakry"
+		}],
         "altSpellings": ["GN", "Republic of Guinea", "R\u00e9publique de Guin\u00e9e"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -12069,7 +12810,11 @@
                 "m": "Guin\u00e9en"
             }
         },
-        "cities": ["Nz\u00e9r\u00e9kor\u00e9"]
+        "cities": [
+		{
+			"eng": "Nz\u00e9r\u00e9kor\u00e9",
+            "fra": "Nz\u00e9r\u00e9kor\u00e9"
+		}]
     },
     {
         "name": {
@@ -12101,7 +12846,11 @@
             "root": "+5",
             "suffixes": ["90"]
         },
-        "capital": ["Basse-Terre"],
+        "capital": [
+		{
+			"eng": "Basse-Terre",
+            "fra": "Basse-Terre"
+		}],
         "altSpellings": ["GP", "Gwadloup"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -12235,7 +12984,11 @@
             "root": "+2",
             "suffixes": ["20"]
         },
-        "capital": ["Banjul"],
+        "capital": [
+		{
+			"eng": "Banjul",
+            "fra": "Banjul"
+		}],
         "altSpellings": ["GM", "Republic of the Gambia"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -12339,7 +13092,11 @@
                 "m": "Gambien"
             }
         },
-        "cities": ["Serekunda"]
+        "cities": [
+		{
+			"eng": "Serekunda",
+            "fra": "Serekunda"
+		}]
     },
     {
         "name": {
@@ -12374,7 +13131,11 @@
             "root": "+2",
             "suffixes": ["45"]
         },
-        "capital": ["Bissau"],
+        "capital": [
+		{
+			"eng": "Bissau",
+            "fra": "Bissau"
+		}],
         "altSpellings": ["GW", "Republic of Guinea-Bissau", "Rep\u00fablica da Guin\u00e9-Bissau"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -12479,7 +13240,11 @@
                 "m": "Bissau-Guin\u00e9en"
             }
         },
-        "cities": ["Gab\u00fa"]
+        "cities": [
+		{
+			"eng": "Gab\u00fa",
+            "fra": "Gab\u00fa"
+		}]
     },
     {
         "name": {
@@ -12518,7 +13283,11 @@
             "root": "+2",
             "suffixes": ["40"]
         },
-        "capital": ["Malabo"],
+        "capital": [
+		{
+			"eng": "Malabo",
+            "fra": "Malabo"
+		}],
         "altSpellings": [
             "GQ",
             "Republic of Equatorial Guinea",
@@ -12630,7 +13399,11 @@
                 "m": "\u00c9quato-guin\u00e9en"
             }
         },
-        "cities": ["Bata"]
+        "cities": [
+		{
+			"eng": "Bata",
+            "fra": "Bata"
+		}]
     },
     {
         "name": {
@@ -12661,7 +13434,11 @@
             "root": "+3",
             "suffixes": ["0"]
         },
-        "capital": ["Athens"],
+        "capital": [
+		{
+			"eng": "Athens",
+            "fra": "Ath\u00e8nes"
+		}],
         "altSpellings": [
             "GR",
             "Ell\u00e1da",
@@ -12770,7 +13547,11 @@
                 "m": "Grec"
             }
         },
-        "cities": ["Thessaloniki"]
+        "cities": [
+		{
+			"eng": "Thessaloniki",
+            "fra": "Thessalonique"
+		}]
     },
     {
         "name": {
@@ -12801,7 +13582,11 @@
             "root": "+1",
             "suffixes": ["473"]
         },
-        "capital": ["St. George's"],
+        "capital": [
+		{
+			"eng": "St. George's",
+            "fra": "Saint-Georges"
+		}],
         "altSpellings": ["GD"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -12905,7 +13690,11 @@
                 "m": "Grenadien"
             }
         },
-        "cities": ["Gouyave"]
+        "cities": [
+		{
+			"eng": "Gouyave",
+            "fra": "Gouyave"
+		}]
     },
     {
         "name": {
@@ -12937,7 +13726,11 @@
             "root": "+2",
             "suffixes": ["99"]
         },
-        "capital": ["Nuuk"],
+        "capital": [
+		{
+			"eng": "Nuuk",
+            "fra": "Nuuk"
+		}],
         "altSpellings": ["GL", "Gr\u00f8nland"],
         "region": "Americas",
         "subregion": "North America",
@@ -13041,7 +13834,11 @@
                 "m": "Groenlandais"
             }
         },
-        "cities": ["Sisimiut"]
+        "cities": [
+		{
+			"eng": "Sisimiut",
+            "fra": "Sisimiut"
+		}]
     },
     {
         "name": {
@@ -13072,7 +13869,11 @@
             "root": "+5",
             "suffixes": ["02"]
         },
-        "capital": ["Guatemala City"],
+        "capital": [
+		{
+			"eng": "Guatemala City",
+            "fra": "Guatemala"
+		}],
         "altSpellings": ["GT"],
         "region": "Americas",
         "subregion": "Central America",
@@ -13176,7 +13977,11 @@
                 "m": "Guat\u00e9malt\u00e8que"
             }
         },
-        "cities": ["Quetzaltenango"]
+        "cities": [
+		{
+			"eng": "Quetzaltenango",
+            "fra": "Quetzaltenango"
+		}]
     },
     {
         "name": {
@@ -13208,7 +14013,11 @@
             "root": "+5",
             "suffixes": ["94"]
         },
-        "capital": ["Cayenne"],
+        "capital": [
+		{
+			"eng": "Cayenne",
+            "fra": "Cayenne"
+		}],
         "altSpellings": ["GF", "Guiana", "Guyane"],
         "region": "Americas",
         "subregion": "South America",
@@ -13312,7 +14121,11 @@
                 "m": "Guyanais"
             }
         },
-        "cities": ["Saint-Laurent-du-Maroni"]
+        "cities": [
+		{
+			"eng": "Saint-Laurent-du-Maroni",
+            "fra": "Saint-Laurent-du-Maroni"
+		}]
     },
     {
         "name": {
@@ -13352,7 +14165,11 @@
             "root": "+1",
             "suffixes": ["671"]
         },
-        "capital": ["Hag\u00e5t\u00f1a"],
+        "capital": [
+		{
+			"eng": "Hag\u00e5t\u00f1a",
+            "fra": "Hag\u00e5t\u00f1a"
+		}],
         "altSpellings": ["GU", "Gu\u00e5h\u00e5n"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -13458,7 +14275,15 @@
                 "m": ""
             }
         },
-        "cities": ["Tamuning", "Mangilao"]
+        "cities": [
+		{
+			"eng": "Tamuning",
+            "fra": "Tamuning"
+		}, 
+		{
+			"eng": "Mangilao",
+            "fra": "Mangilao"
+		}]
     },
     {
         "name": {
@@ -13489,7 +14314,11 @@
             "root": "+5",
             "suffixes": ["92"]
         },
-        "capital": ["Georgetown"],
+        "capital": [
+		{
+			"eng": "Georgetown",
+            "fra": "Georgetown"
+		}],
         "altSpellings": ["GY", "Co-operative Republic of Guyana"],
         "region": "Americas",
         "subregion": "South America",
@@ -13593,7 +14422,11 @@
                 "m": "Guyanien"
             }
         },
-        "cities": ["Linden"]
+        "cities": [
+		{
+			"eng": "Linden",
+            "fra": "Linden"
+		}]
     },
     {
         "name": {
@@ -13629,7 +14462,11 @@
             "root": "+8",
             "suffixes": ["52"]
         },
-        "capital": ["City of Victoria"],
+        "capital": [
+		{
+			"eng": "City of Victoria",
+            "fra": "Victoria"
+		}],
         "altSpellings": ["HK"],
         "region": "Asia",
         "subregion": "Eastern Asia",
@@ -13734,7 +14571,11 @@
                 "m": "Hongkongais"
             }
         },
-        "cities": ["Kowloon"]
+        "cities": [
+		{
+			"eng": "Kowloon",
+            "fra": "Kowloon"
+		}]
     },
     {
         "name": {
@@ -13895,7 +14736,11 @@
             "root": "+5",
             "suffixes": ["04"]
         },
-        "capital": ["Tegucigalpa"],
+        "capital": [
+		{
+			"eng": "Tegucigalpa",
+            "fra": "Tegucigalpa"
+		}],
         "altSpellings": ["HN", "Republic of Honduras", "Rep\u00fablica de Honduras"],
         "region": "Americas",
         "subregion": "Central America",
@@ -13999,7 +14844,11 @@
                 "m": "Hondurien"
             }
         },
-        "cities": ["San Pedro Sula"]
+        "cities": [
+		{
+			"eng": "San Pedro Sula",
+            "fra": "San Pedro Sula"
+		}]
     },
     {
         "name": {
@@ -14030,7 +14879,11 @@
             "root": "+3",
             "suffixes": ["85"]
         },
-        "capital": ["Zagreb"],
+        "capital": [
+		{
+			"eng": "Zagreb",
+            "fra": "Zagreb"
+		}],
         "altSpellings": ["HR", "Hrvatska", "Republic of Croatia", "Republika Hrvatska"],
         "region": "Europe",
         "subregion": "Southeast Europe",
@@ -14134,7 +14987,11 @@
                 "m": "Croate"
             }
         },
-        "cities": ["Split"]
+        "cities": [
+		{
+			"eng": "Split",
+            "fra": "Split"
+		}]
     },
     {
         "name": {
@@ -14169,7 +15026,11 @@
             "root": "+5",
             "suffixes": ["09"]
         },
-        "capital": ["Port-au-Prince"],
+        "capital": [
+		{
+			"eng": "Port-au-Prince",
+            "fra": "Port-au-Prince"
+		}],
         "altSpellings": ["HT", "Republic of Haiti", "R\u00e9publique d'Ha\u00efti", "Repiblik Ayiti"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -14274,7 +15135,11 @@
                 "m": "Ha\u00eftien"
             }
         },
-        "cities": ["Gonaïves"]
+        "cities": [
+		{
+			"eng": "Gona\u00efves",
+            "fra": "Gona\u00efves"
+		}]
     },
     {
         "name": {
@@ -14305,7 +15170,11 @@
             "root": "+3",
             "suffixes": ["6"]
         },
-        "capital": ["Budapest"],
+        "capital": [
+		{
+			"eng": "Budapest",
+            "fra": "Budapest"
+		}],
         "altSpellings": ["HU"],
         "region": "Europe",
         "subregion": "Central Europe",
@@ -14409,7 +15278,11 @@
                 "m": "Hongrois"
             }
         },
-        "cities": ["Debrecen"]
+        "cities": [
+		{
+			"eng": "Debrecen",
+            "fra": "Debrecen"
+		}]
     },
     {
         "name": {
@@ -14440,7 +15313,11 @@
             "root": "+6",
             "suffixes": ["2"]
         },
-        "capital": ["Jakarta"],
+        "capital": [
+		{
+			"eng": "Jakarta",
+            "fra": "Jakarta"
+		}],
         "altSpellings": ["ID", "Republic of Indonesia", "Republik Indonesia"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -14544,7 +15421,11 @@
                 "m": "Indon\u00e9sien"
             }
         },
-        "cities": ["Surabaya"]
+        "cities": [
+		{
+			"eng": "Surabaya",
+            "fra": "Surabaya"
+		}]
     },
     {
         "name": {
@@ -14584,7 +15465,11 @@
             "root": "+4",
             "suffixes": ["4"]
         },
-        "capital": ["Douglas"],
+        "capital": [
+		{
+			"eng": "Douglas",
+            "fra": "Douglas"
+		}],
         "altSpellings": ["IM", "Ellan Vannin", "Mann", "Mannin"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -14689,7 +15574,11 @@
                 "m": ""
             }
         },
-        "cities": ["Onchan"]
+        "cities": [
+		{
+			"eng": "Onchan",
+            "fra": "Onchan"
+		}]
     },
     {
         "name": {
@@ -14728,7 +15617,11 @@
             "root": "+9",
             "suffixes": ["1"]
         },
-        "capital": ["New Delhi"],
+        "capital": [
+		{
+			"eng": "New Delhi",
+            "fra": "New Delhi"
+		}],
         "altSpellings": [
             "IN",
             "Bh\u0101rat",
@@ -14840,7 +15733,11 @@
                 "m": "Indien"
             }
         },
-        "cities": ["Mumbai"]
+        "cities": [
+		{
+			"eng": "Mumbai",
+            "fra": "Mumbai"
+		}]
     },
     {
         "name": {
@@ -14872,7 +15769,11 @@
             "root": "+2",
             "suffixes": ["46"]
         },
-        "capital": ["Diego Garcia"],
+        "capital": [
+		{
+			"eng": "Diego Garcia",
+            "fra": "Diego Garcia"
+		}],
         "altSpellings": ["IO"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -15010,7 +15911,11 @@
             "root": "+3",
             "suffixes": ["53"]
         },
-        "capital": ["Dublin"],
+        "capital": [
+		{
+			"eng": "Dublin",
+            "fra": "Dublin"
+		}],
         "altSpellings": ["IE", "\u00c9ire", "Republic of Ireland", "Poblacht na h\u00c9ireann"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -15115,7 +16020,11 @@
                 "m": "Irlandais"
             }
         },
-        "cities": ["Cork"]
+        "cities": [
+		{
+			"eng": "Cork",
+            "fra": "Cork"
+		}]
     },
     {
         "name": {
@@ -15146,7 +16055,11 @@
             "root": "+9",
             "suffixes": ["8"]
         },
-        "capital": ["Tehran"],
+        "capital": [
+		{
+			"eng": "Tehran",
+            "fra": "T\u00e9h\u00e9ran"
+		}],
         "altSpellings": [
             "IR",
             "Islamic Republic of Iran",
@@ -15255,7 +16168,11 @@
                 "m": "Iranien"
             }
         },
-        "cities": ["Mashhad"]
+        "cities": [
+		{
+			"eng": "Mashhad",
+            "fra": "Machhad"
+		}]
     },
     {
         "name": {
@@ -15294,7 +16211,11 @@
             "root": "+9",
             "suffixes": ["64"]
         },
-        "capital": ["Baghdad"],
+        "capital": [
+		{
+			"eng": "Baghdad",
+            "fra": "Bagdad"
+		}],
         "altSpellings": ["IQ", "Republic of Iraq", "Jumh\u016briyyat al-\u2018Ir\u0101q"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -15400,7 +16321,11 @@
                 "m": "Irakien"
             }
         },
-        "cities": ["Basra"]
+        "cities": [
+		{
+			"eng": "Basra",
+            "fra": "Bassora"
+		}]
     },
     {
         "name": {
@@ -15431,7 +16356,11 @@
             "root": "+3",
             "suffixes": ["54"]
         },
-        "capital": ["Reykjav\u00edk"],
+        "capital": [
+		{
+			"eng": "Reykjav\u00edk",
+            "fra": "Reykjavik"
+		}],
         "altSpellings": ["IS", "Island", "Republic of Iceland", "L\u00fd\u00f0veldi\u00f0 \u00cdsland"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -15535,7 +16464,11 @@
                 "m": "Islandais"
             }
         },
-        "cities": ["K\u00f3pavogur"]
+        "cities": [
+		{
+			"eng": "K\u00f3pavogur",
+            "fra": "K\u00f3pavogur"
+		}]
     },
     {
         "name": {
@@ -15570,7 +16503,11 @@
             "root": "+9",
             "suffixes": ["72"]
         },
-        "capital": ["Jerusalem"],
+        "capital": [
+		{
+			"eng": "Jerusalem",
+            "fra": "J\u00e9rusalem"
+		}],
         "altSpellings": ["IL", "State of Israel", "Med\u012bnat Yisr\u0101'el"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -15675,7 +16612,11 @@
                 "m": "Isra\u00e9lien"
             }
         },
-        "cities": ["Tel Aviv"]
+        "cities": [
+		{
+			"eng": "Tel Aviv",
+            "fra": "Tel Aviv"
+		}]
     },
     {
         "name": {
@@ -15706,7 +16647,11 @@
             "root": "+3",
             "suffixes": ["9"]
         },
-        "capital": ["Rome"],
+        "capital": [
+		{
+			"eng": "Rome",
+            "fra": "Rome"
+		}],
         "altSpellings": ["IT", "Italian Republic", "Repubblica italiana"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -15810,7 +16755,11 @@
                 "m": "Italien"
             }
         },
-        "cities": ["Milan"]
+        "cities": [
+		{
+			"eng": "Milan",
+            "fra": "Milan"
+		}]
     },
     {
         "name": {
@@ -15845,7 +16794,15 @@
             "root": "+1",
             "suffixes": ["876"]
         },
-        "capital": ["Kingston"],
+        "capital": [
+		{
+			"eng": 
+		{
+			"eng": "Kingston",
+            "fra": "Kingston"
+		},
+            "fra": "Kingston"
+		}],
         "altSpellings": ["JM"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -15950,7 +16907,11 @@
                 "m": "Jama\u00efcain"
             }
         },
-        "cities": ["Spanish Town"]
+        "cities": [
+		{
+			"eng": "Spanish Town",
+            "fra": "Spanish Town"
+		}]
     },
     {
         "name": {
@@ -15994,7 +16955,11 @@
             "root": "+4",
             "suffixes": ["4"]
         },
-        "capital": ["Saint Helier"],
+        "capital": [
+		{
+			"eng": "Saint Helier",
+            "fra": "Saint-H\u00e9lier"
+		}],
         "altSpellings": ["JE", "Bailiwick of Jersey", "Bailliage de Jersey", "Bailliage d\u00e9 J\u00e8rri"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -16100,7 +17065,11 @@
                 "m": "Jersiais"
             }
         },
-        "cities": ["Saint Saviour"]
+        "cities": [
+		{
+			"eng": "Saint Saviour",
+            "fra": "Saint-Sauveur"
+		}]
     },
     {
         "name": {
@@ -16131,7 +17100,11 @@
             "root": "+9",
             "suffixes": ["62"]
         },
-        "capital": ["Amman"],
+        "capital": [
+		{
+			"eng": "Amman",
+            "fra": "Amman"
+		}],
         "altSpellings": ["JO", "Hashemite Kingdom of Jordan", "al-Mamlakah al-Urdun\u012byah al-H\u0101shim\u012byah"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -16235,7 +17208,11 @@
                 "m": "Jordanien"
             }
         },
-        "cities": ["Zarqa"]
+        "cities": [
+		{
+			"eng": "Zarqa",
+            "fra": "Zarqa"
+		}]
     },
     {
         "name": {
@@ -16266,7 +17243,11 @@
             "root": "+8",
             "suffixes": ["1"]
         },
-        "capital": ["Tokyo"],
+        "capital": [
+		{
+			"eng": "Tokyo",
+            "fra": "Tokyo"
+		}],
         "altSpellings": ["JP", "Nippon", "Nihon"],
         "region": "Asia",
         "subregion": "Eastern Asia",
@@ -16370,7 +17351,15 @@
                 "m": "Japonais"
             }
         },
-        "cities": ["Yokohama", "Osaka"]
+        "cities": [
+		{
+			"eng": "Yokohama",
+            "fra": "Yokohama"
+		}, 
+		{
+			"eng": "Osaka",
+            "fra": "Osaka"
+		}]
     },
     {
         "name": {
@@ -16405,7 +17394,11 @@
             "root": "+7",
             "suffixes": ["6", "7"]
         },
-        "capital": ["Nur-Sultan"],
+        "capital": [
+		{
+			"eng": "Nur-Sultan",
+            "fra": "Noursoultan"
+		}],
         "altSpellings": [
             "KZ",
             "Qazaqstan",
@@ -16519,7 +17512,15 @@
                 "m": "Kazakhstanais"
             }
         },
-        "cities": ["Astana", "Almaty"]
+        "cities": [
+		{
+			"eng": "Astana",
+            "fra": "Astana"
+		}, 
+		{
+			"eng": "Almaty",
+            "fra": "Almaty"
+		}]
     },
     {
         "name": {
@@ -16554,7 +17555,11 @@
             "root": "+2",
             "suffixes": ["54"]
         },
-        "capital": ["Nairobi"],
+        "capital": [
+		{
+			"eng": "Nairobi",
+            "fra": "Nairobi"
+		}],
         "altSpellings": ["KE", "Republic of Kenya", "Jamhuri ya Kenya"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -16659,7 +17664,11 @@
                 "m": "K\u00e9nyan"
             }
         },
-        "cities": ["Mombasa"]
+        "cities": [
+		{
+			"eng": "Mombasa",
+            "fra": "Mombasa"
+		}]
     },
     {
         "name": {
@@ -16694,7 +17703,11 @@
             "root": "+9",
             "suffixes": ["96"]
         },
-        "capital": ["Bishkek"],
+        "capital": [
+		{
+			"eng": "Bishkek",
+            "fra": "Bichkek"
+		}],
         "altSpellings": [
             "KG",
             "\u041a\u0438\u0440\u0433\u0438\u0437\u0438\u044f",
@@ -16805,7 +17818,11 @@
                 "m": "Kirghize"
             }
         },
-        "cities": ["Osh"]
+        "cities": [
+		{
+			"eng": "Osh",
+            "fra": "Osh"
+		}]
     },
     {
         "name": {
@@ -16840,7 +17857,11 @@
             "root": "+8",
             "suffixes": ["55"]
         },
-        "capital": ["Phnom Penh"],
+        "capital": [
+		{
+			"eng": "Phnom Penh",
+            "fra": "Phnom Penh"
+		}],
         "altSpellings": ["KH", "Kingdom of Cambodia"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -16944,7 +17965,11 @@
                 "m": "Cambodgien"
             }
         },
-        "cities": ["Siem Reap"]
+        "cities": [
+		{
+			"eng": "Siem Reap",
+            "fra": "Siem Reap"
+		}]
     },
     {
         "name": {
@@ -16983,7 +18008,11 @@
             "root": "+6",
             "suffixes": ["86"]
         },
-        "capital": ["South Tarawa"],
+        "capital": [
+		{
+			"eng": "South Tarawa",
+            "fra": "Tarawa Sud"
+		}],
         "altSpellings": ["KI", "Republic of Kiribati", "Ribaberiki Kiribati"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -17088,7 +18117,15 @@
                 "m": "Kiribatien"
             }
         },
-        "cities": ["Bairiki", "Betio"]
+        "cities": [
+		{
+			"eng": "Bairiki",
+            "fra": "Bairiki"
+		}, 
+		{
+			"eng": "Betio",
+            "fra": "Betio"
+		}]
     },
     {
         "name": {
@@ -17119,7 +18156,11 @@
             "root": "+1",
             "suffixes": ["869"]
         },
-        "capital": ["Basseterre"],
+        "capital": [
+		{
+			"eng": "Basseterre",
+            "fra": "Basseterre"
+		}],
         "altSpellings": ["KN", "Federation of Saint Christopher and Nevis"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -17223,7 +18264,11 @@
                 "m": "Kittitien-et-nevicien"
             }
         },
-        "cities": ["Charlestown"]
+        "cities": [
+		{
+			"eng": "Charlestown",
+            "fra": "Charlestown"
+		}]
     },
     {
         "name": {
@@ -17254,7 +18299,11 @@
             "root": "+8",
             "suffixes": ["2"]
         },
-        "capital": ["Seoul"],
+        "capital": [
+		{
+			"eng": "Seoul",
+            "fra": "S\u00e9oul"
+		}],
         "altSpellings": ["KR", "Korea, Republic of", "Republic of Korea", "\ub0a8\ud55c", "\ub0a8\uc870\uc120"],
         "region": "Asia",
         "subregion": "Eastern Asia",
@@ -17358,7 +18407,11 @@
                 "m": "Sud-cor\u00e9en"
             }
         },
-        "cities": ["Busan"]
+        "cities": [
+		{
+			"eng": "Busan",
+            "fra": "Busan"
+		}]
     },
     {
         "name": {
@@ -17393,7 +18446,11 @@
             "root": "+3",
             "suffixes": ["83"]
         },
-        "capital": ["Pristina"],
+        "capital": [
+		{
+			"eng": "Pristina",
+            "fra": "Pristina"
+		}],
         "altSpellings": [
             "XK",
             "\u0420\u0435\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u041a\u043e\u0441\u043e\u0432\u043e"
@@ -17501,7 +18558,11 @@
                 "m": "Kosovar"
             }
         },
-        "cities": ["Prizren"]
+        "cities": [
+		{
+			"eng": "Prizren",
+            "fra": "Prizren"
+		}]
     },
     {
         "name": {
@@ -17532,7 +18593,11 @@
             "root": "+9",
             "suffixes": ["65"]
         },
-        "capital": ["Kuwait City"],
+        "capital": [
+		{
+			"eng": "Kuwait City",
+            "fra": "Kowe\u00eft"
+		}],
         "altSpellings": ["KW", "State of Kuwait", "Dawlat al-Kuwait"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -17636,7 +18701,11 @@
                 "m": "Kowe\u00eftien"
             }
         },
-        "cities": ["Al Jahra"]
+        "cities": [
+		{
+			"eng": "Al Jahra",
+            "fra": "Al Jahra"
+		}]
     },
     {
         "name": {
@@ -17667,7 +18736,11 @@
             "root": "+8",
             "suffixes": ["56"]
         },
-        "capital": ["Vientiane"],
+        "capital": [
+		{
+			"eng": "Vientiane",
+            "fra": "Vientiane"
+		}],
         "altSpellings": ["LA", "Lao", "Lao People's Democratic Republic", "Sathalanalat Paxathipatai Paxaxon Lao"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -17771,7 +18844,11 @@
                 "m": "Laotien"
             }
         },
-        "cities": ["Pakxe"]
+        "cities": [
+		{
+			"eng": "Pakxe",
+            "fra": "Pakse"
+		}]
     },
     {
         "name": {
@@ -17806,7 +18883,11 @@
             "root": "+9",
             "suffixes": ["61"]
         },
-        "capital": ["Beirut"],
+        "capital": [
+		{
+			"eng": "Beirut",
+            "fra": "Beyrouth"
+		}],
         "altSpellings": ["LB", "Lebanese Republic", "Al-Jumh\u016br\u012byah Al-Libn\u0101n\u012byah"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -17911,7 +18992,11 @@
                 "m": "Libanais"
             }
         },
-        "cities": ["Tripoli"]
+        "cities": [
+		{
+			"eng": "Tripoli",
+            "fra": "Tripoli"
+		}]
     },
     {
         "name": {
@@ -17942,7 +19027,11 @@
             "root": "+2",
             "suffixes": ["31"]
         },
-        "capital": ["Monrovia"],
+        "capital": [
+		{
+			"eng": "Monrovia",
+            "fra": "Monrovia"
+		}],
         "altSpellings": ["LR", "Republic of Liberia"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -18046,7 +19135,11 @@
                 "m": "Lib\u00e9rien"
             }
         },
-        "cities": ["Gbarnga"]
+        "cities": [
+		{
+			"eng": "Gbarnga",
+            "fra": "Gbarnga"
+		}]
     },
     {
         "name": {
@@ -18077,7 +19170,11 @@
             "root": "+2",
             "suffixes": ["18"]
         },
-        "capital": ["Tripoli"],
+        "capital": [
+		{
+			"eng": "Tripoli",
+            "fra": "Tripoli"
+		}],
         "altSpellings": ["LY", "State of Libya", "Dawlat Libya"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -18181,7 +19278,11 @@
                 "m": "Libyen"
             }
         },
-        "cities": ["Benghazi"]
+        "cities": [
+		{
+			"eng": "Benghazi",
+            "fra": "Benghazi"
+		}]
     },
     {
         "name": {
@@ -18212,7 +19313,11 @@
             "root": "+1",
             "suffixes": ["758"]
         },
-        "capital": ["Castries"],
+        "capital": [
+		{
+			"eng": "Castries",
+            "fra": "Castries"
+		}],
         "altSpellings": ["LC"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -18316,7 +19421,11 @@
                 "m": "Saint-Lucien"
             }
         },
-        "cities": ["Gros Islet"]
+        "cities": [
+		{
+			"eng": "Gros Islet",
+            "fra": "Gros Islet"
+		}]
     },
     {
         "name": {
@@ -18347,7 +19456,11 @@
             "root": "+4",
             "suffixes": ["23"]
         },
-        "capital": ["Vaduz"],
+        "capital": [
+		{
+			"eng": "Vaduz",
+            "fra": "Vaduz"
+		}],
         "altSpellings": ["LI", "Principality of Liechtenstein", "F\u00fcrstentum Liechtenstein"],
         "region": "Europe",
         "subregion": "Western Europe",
@@ -18451,7 +19564,11 @@
                 "m": "Liechtensteinois"
             }
         },
-        "cities": ["Schaan"]
+        "cities": [
+		{
+			"eng": "Schaan",
+            "fra": "Schaan"
+		}]
     },
     {
         "name": {
@@ -18486,7 +19603,11 @@
             "root": "+9",
             "suffixes": ["4"]
         },
-        "capital": ["Colombo"],
+        "capital": [
+		{
+			"eng": "Colombo",
+            "fra": "Colombo"
+		}],
         "altSpellings": ["LK", "ila\u1e45kai", "Democratic Socialist Republic of Sri Lanka"],
         "region": "Asia",
         "subregion": "Southern Asia",
@@ -18591,7 +19712,19 @@
                 "m": "Sri-lankais"
             }
         },
-        "cities": ["Sri Jayawardenepura Kotte", "Dehiwala-Mount Lavinia", "Kandy"]
+        "cities": [
+		{
+			"eng": "Sri Jayawardenepura Kotte",
+            "fra": "Sri Jayawardenepura Kotte"
+		}, 
+		{
+			"eng": "Dehiwala-Mount Lavinia",
+            "fra": "Dehiwala-Mount Lavinia"
+		}, 
+		{
+			"eng": "Kandy",
+            "fra": "Kandy"
+		}]
     },
     {
         "name": {
@@ -18630,7 +19763,11 @@
             "root": "+2",
             "suffixes": ["66"]
         },
-        "capital": ["Maseru"],
+        "capital": [
+		{
+			"eng": "Maseru",
+            "fra": "Maseru"
+		}],
         "altSpellings": ["LS", "Kingdom of Lesotho", "Muso oa Lesotho"],
         "region": "Africa",
         "subregion": "Southern Africa",
@@ -18735,7 +19872,11 @@
                 "m": "L\u00e9sothien"
             }
         },
-        "cities": ["Teyateyaneng"]
+        "cities": [
+		{
+			"eng": "Teyateyaneng",
+            "fra": "Teyateyaneng"
+		}]
     },
     {
         "name": {
@@ -18766,7 +19907,11 @@
             "root": "+3",
             "suffixes": ["70"]
         },
-        "capital": ["Vilnius"],
+        "capital": [
+		{
+			"eng": "Vilnius",
+            "fra": "Vilnius"
+		}],
         "altSpellings": ["LT", "Republic of Lithuania", "Lietuvos Respublika"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -18870,7 +20015,11 @@
                 "m": "Lituanien"
             }
         },
-        "cities": ["Kaunas"]
+        "cities": [
+		{
+			"eng": "Kaunas",
+            "fra": "Kaunas"
+		}]
     },
     {
         "name": {
@@ -18909,7 +20058,11 @@
             "root": "+3",
             "suffixes": ["52"]
         },
-        "capital": ["Luxembourg"],
+        "capital": [
+		{
+			"eng": "Luxembourg",
+            "fra": "Luxembourg"
+		}],
         "altSpellings": [
             "LU",
             "Grand Duchy of Luxembourg",
@@ -19021,7 +20174,11 @@
                 "m": "Luxembourgeois"
             }
         },
-        "cities": ["Esch-sur-Alzette"]
+        "cities": [
+		{
+			"eng": "Esch-sur-Alzette",
+            "fra": "Esch-sur-Alzette"
+		}]
     },
     {
         "name": {
@@ -19052,7 +20209,11 @@
             "root": "+3",
             "suffixes": ["71"]
         },
-        "capital": ["Riga"],
+        "capital": [
+		{
+			"eng": "Riga",
+            "fra": "Riga"
+		}],
         "altSpellings": ["LV", "Republic of Latvia", "Latvijas Republika"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -19156,7 +20317,11 @@
                 "m": "Letton"
             }
         },
-        "cities": ["Daugavpils"]
+        "cities": [
+		{
+			"eng": "Daugavpils",
+            "fra": "Daugavpils"
+		}]
     },
     {
         "name": {
@@ -19335,7 +20500,11 @@
             "root": "+5",
             "suffixes": ["90"]
         },
-        "capital": ["Marigot"],
+        "capital": [
+		{
+			"eng": "Marigot",
+            "fra": "Marigot"
+		}],
         "altSpellings": [
             "MF",
             "Collectivity of Saint Martin",
@@ -19444,7 +20613,11 @@
                 "m": "Saint-Martinois"
             }
         },
-        "cities": ["Rambaud"]
+        "cities": [
+		{
+			"eng": "Rambaud",
+            "fra": "Rambaud"
+		}]
     },
     {
         "name": {
@@ -19479,7 +20652,11 @@
             "root": "+2",
             "suffixes": ["12"]
         },
-        "capital": ["Rabat"],
+        "capital": [
+		{
+			"eng": "Rabat",
+            "fra": "Rabat"
+		}],
         "altSpellings": ["MA", "Kingdom of Morocco", "Al-Mamlakah al-Ma\u0121ribiyah"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -19584,7 +20761,15 @@
                 "m": "Marocain"
             }
         },
-        "cities": ["Casablanca", "Fez"]
+        "cities": [
+		{
+			"eng": "Casablanca",
+            "fra": "Casablanca"
+		}, 
+		{
+			"eng": "Fez",
+            "fra": "F\u00e8s"
+		}]
     },
     {
         "name": {
@@ -19615,7 +20800,11 @@
             "root": "+3",
             "suffixes": ["77"]
         },
-        "capital": ["Monaco"],
+        "capital": [
+		{
+			"eng": "Monaco",
+            "fra": "Monaco"
+		}],
         "altSpellings": ["MC", "Principality of Monaco", "Principaut\u00e9 de Monaco"],
         "region": "Europe",
         "subregion": "Western Europe",
@@ -19719,7 +20908,15 @@
                 "m": "Mon\u00e9gasque"
             }
         },
-        "cities": ["Monte Carlo", "La Condamine"]
+        "cities": [
+		{
+			"eng": "Monte Carlo",
+            "fra": "Monte-Carlo"
+		}, 
+		{
+			"eng": "La Condamine",
+            "fra": "La Condamine"
+		}]
     },
     {
         "name": {
@@ -19750,7 +20947,10 @@
             "root": "+3",
             "suffixes": ["73"]
         },
-        "capital": ["Chi\u0219in\u0103u"],
+        "capital": [{
+			"eng": "Chi\u0219in\u0103u",
+			"fra": "Chi\u0219in\u0103u"
+		}],
         "altSpellings": ["MD", "Moldova, Republic of", "Republic of Moldova", "Republica Moldova"],
         "region": "Europe",
         "subregion": "Eastern Europe",
@@ -19854,7 +21054,11 @@
                 "m": "Moldave"
             }
         },
-        "cities": ["Tiraspol"]
+        "cities": [
+		{
+			"eng": "Tiraspol",
+            "fra": "Tiraspol"
+		}]
     },
     {
         "name": {
@@ -19889,7 +21093,11 @@
             "root": "+2",
             "suffixes": ["61"]
         },
-        "capital": ["Antananarivo"],
+        "capital": [
+		{
+			"eng": "Antananarivo",
+            "fra": "Antananarivo"
+		}],
         "altSpellings": ["MG", "Republic of Madagascar", "Repoblikan'i Madagasikara", "R\u00e9publique de Madagascar"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -19994,7 +21202,11 @@
                 "m": "Malgache"
             }
         },
-        "cities": ["Toamasina"]
+        "cities": [
+		{
+			"eng": "Toamasina",
+            "fra": "Toamasina"
+		}]
     },
     {
         "name": {
@@ -20025,7 +21237,11 @@
             "root": "+9",
             "suffixes": ["60"]
         },
-        "capital": ["Mal\u00e9"],
+        "capital": [
+		{
+			"eng": "Mal\u00e9",
+            "fra": "Mal\u00e9"
+		}],
         "altSpellings": ["MV", "Maldive Islands", "Republic of the Maldives", "Dhivehi Raajjeyge Jumhooriyya"],
         "region": "Asia",
         "subregion": "Southern Asia",
@@ -20129,7 +21345,11 @@
                 "m": "Maldivien"
             }
         },
-        "cities": ["Addu City"]
+        "cities": [
+		{
+			"eng": "Addu City",
+            "fra": "Addu"
+		}]
     },
     {
         "name": {
@@ -20160,7 +21380,11 @@
             "root": "+5",
             "suffixes": ["2"]
         },
-        "capital": ["Mexico City"],
+        "capital": [
+		{
+			"eng": "Mexico City",
+            "fra": "Mexico"
+		}],
         "altSpellings": ["MX", "Mexicanos", "United Mexican States", "Estados Unidos Mexicanos"],
         "region": "Americas",
         "subregion": "North America",
@@ -20264,7 +21488,11 @@
                 "m": "Mexicain"
             }
         },
-        "cities": ["Ecatepec"]
+        "cities": [
+		{
+			"eng": "Ecatepec",
+            "fra": "Ecatepec"
+		}]
     },
     {
         "name": {
@@ -20299,7 +21527,11 @@
             "root": "+6",
             "suffixes": ["92"]
         },
-        "capital": ["Majuro"],
+        "capital": [
+		{
+			"eng": "Majuro",
+            "fra": "Majuro"
+		}],
         "altSpellings": ["MH", "Republic of the Marshall Islands", "Aolep\u0101n Aor\u014dkin M\u0327aje\u013c"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -20404,7 +21636,11 @@
                 "m": "Marshallais"
             }
         },
-        "cities": ["Ebeye"]
+        "cities": [
+		{
+			"eng": "Ebeye",
+            "fra": "Ebeye"
+		}]
     },
     {
         "name": {
@@ -20435,7 +21671,11 @@
             "root": "+3",
             "suffixes": ["89"]
         },
-        "capital": ["Skopje"],
+        "capital": [
+		{
+			"eng": "Skopje",
+            "fra": "Skopje"
+		}],
         "altSpellings": [
             "MK",
             "The former Yugoslav Republic of Macedonia",
@@ -20545,7 +21785,11 @@
                 "m": "Mac\u00e9donien"
             }
         },
-        "cities": ["Bitola"]
+        "cities": [
+		{
+			"eng": "Bitola",
+            "fra": "Bitola"
+		}]
     },
     {
         "name": {
@@ -20576,7 +21820,11 @@
             "root": "+2",
             "suffixes": ["23"]
         },
-        "capital": ["Bamako"],
+        "capital": [
+		{
+			"eng": "Bamako",
+            "fra": "Bamako"
+		}],
         "altSpellings": ["ML", "Republic of Mali", "R\u00e9publique du Mali"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -20680,7 +21928,11 @@
                 "m": "Malien"
             }
         },
-        "cities": ["Sikasso"]
+        "cities": [
+		{
+			"eng": "Sikasso",
+            "fra": "Sikasso"
+		}]
     },
     {
         "name": {
@@ -20715,7 +21967,11 @@
             "root": "+3",
             "suffixes": ["56"]
         },
-        "capital": ["Valletta"],
+        "capital": [
+		{
+			"eng": "Valletta",
+            "fra": "La Valette"
+		}],
         "altSpellings": ["MT", "Republic of Malta", "Repubblika ta' Malta"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -20820,7 +22076,19 @@
                 "m": "Maltais"
             }
         },
-        "cities": ["Birkirkara", "Rita", "Mosta"]
+        "cities": [
+		{
+			"eng": "Birkirkara",
+            "fra": "Birkirkara"
+		}, 
+		{
+			"eng": "Rita",
+            "fra": "Rita"
+		}, 
+		{
+			"eng": "Mosta",
+            "fra": "Mosta"
+		}]
     },
     {
         "name": {
@@ -20851,7 +22119,11 @@
             "root": "+9",
             "suffixes": ["5"]
         },
-        "capital": ["Naypyidaw"],
+        "capital": [
+		{
+			"eng": "Naypyidaw",
+            "fra": "Naypyidaw"
+		}],
         "altSpellings": [
             "MM",
             "Burma",
@@ -20960,7 +22232,15 @@
                 "m": "Birman"
             }
         },
-        "cities": ["Yangon", "Mandalay"]
+        "cities": [
+		{
+			"eng": "Yangon",
+            "fra": "Yangon"
+		}, 
+		{
+			"eng": "Mandalay",
+            "fra": "Mandalay"
+		}]
     },
     {
         "name": {
@@ -20991,7 +22271,11 @@
             "root": "+3",
             "suffixes": ["82"]
         },
-        "capital": ["Podgorica"],
+        "capital": [
+		{
+			"eng": "Podgorica",
+            "fra": "Podgorica"
+		}],
         "altSpellings": ["ME", "Crna Gora"],
         "region": "Europe",
         "subregion": "Southeast Europe",
@@ -21095,7 +22379,11 @@
                 "m": "Mont\u00e9n\u00e9grin"
             }
         },
-        "cities": ["Nikšić"]
+        "cities": [
+		{
+			"eng": "Nik\u00161i\u00107",
+            "fra": "Nik\u00161i\u00107"
+		}]
     },
     {
         "name": {
@@ -21126,7 +22414,11 @@
             "root": "+9",
             "suffixes": ["76"]
         },
-        "capital": ["Ulan Bator"],
+        "capital": [
+		{
+			"eng": "Ulan Bator",
+            "fra": "Oulan-Bator"
+		}],
         "altSpellings": ["MN"],
         "region": "Asia",
         "subregion": "Eastern Asia",
@@ -21230,7 +22522,15 @@
                 "m": "Mongol"
             }
         },
-        "cities": ["Ulaanbaatar", "Darkhan"]
+        "cities": [
+		{
+			"eng": "Ulaanbaatar",
+            "fra": "Oulan-Bator"
+		}, 
+		{
+			"eng": "Darkhan",
+            "fra": "Darkhan"
+		}]
     },
     {
         "name": {
@@ -21270,7 +22570,11 @@
             "root": "+1",
             "suffixes": ["670"]
         },
-        "capital": ["Saipan"],
+        "capital": [
+		{
+			"eng": "Saipan",
+            "fra": "Saipan"
+		}],
         "altSpellings": ["MP", "Commonwealth of the Northern Mariana Islands", "Sankattan Siha Na Islas Mari\u00e5nas"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -21376,7 +22680,15 @@
                 "m": "Am\u00e9rican"
             }
         },
-        "cities": ["San Antonio", "Garapan"]
+        "cities": [
+		{
+			"eng": "San Antonio",
+            "fra": "San Antonio"
+		}, 
+		{
+			"eng": "Garapan",
+            "fra": "Garapan"
+		}]
     },
     {
         "name": {
@@ -21407,7 +22719,11 @@
             "root": "+2",
             "suffixes": ["58"]
         },
-        "capital": ["Maputo"],
+        "capital": [
+		{
+			"eng": "Maputo",
+            "fra": "Maputo"
+		}],
         "altSpellings": ["MZ", "Republic of Mozambique", "Rep\u00fablica de Mo\u00e7ambique"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -21511,7 +22827,11 @@
                 "m": "Mozambicain"
             }
         },
-        "cities": ["Beira"]
+        "cities": [
+		{
+			"eng": "Beira",
+            "fra": "Beira"
+		}]
     },
     {
         "name": {
@@ -21542,7 +22862,11 @@
             "root": "+2",
             "suffixes": ["22"]
         },
-        "capital": ["Nouakchott"],
+        "capital": [
+		{
+			"eng": "Nouakchott",
+            "fra": "Nouakchott"
+		}],
         "altSpellings": [
             "MR",
             "Islamic Republic of Mauritania",
@@ -21650,7 +22974,11 @@
                 "m": "Mauritanien"
             }
         },
-        "cities": ["Nouadhibou"]
+        "cities": [
+		{
+			"eng": "Nouadhibou",
+            "fra": "Nouadhibou"
+		}]
     },
     {
         "name": {
@@ -21682,7 +23010,11 @@
             "root": "+1",
             "suffixes": ["664"]
         },
-        "capital": ["Plymouth"],
+        "capital": [
+		{
+			"eng": "Plymouth",
+            "fra": "Plymouth"
+		}],
         "altSpellings": ["MS"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -21786,7 +23118,15 @@
                 "m": "Montserratien"
             }
         },
-        "cities": ["Brades", "Saint Peter's"]
+        "cities": [
+		{
+			"eng": "Brades",
+            "fra": "Brades"
+		}, 
+		{
+			"eng": "Saint Peter's",
+            "fra": "Saint Peter's"
+		}]
     },
     {
         "name": {
@@ -21818,7 +23158,11 @@
             "root": "+5",
             "suffixes": ["96"]
         },
-        "capital": ["Fort-de-France"],
+        "capital": [
+		{
+			"eng": "Fort-de-France",
+            "fra": "Fort-de-France"
+		}],
         "altSpellings": ["MQ"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -21960,7 +23304,11 @@
             "root": "+2",
             "suffixes": ["30"]
         },
-        "capital": ["Port Louis"],
+        "capital": [
+		{
+			"eng": "Port Louis",
+            "fra": "Port Louis"
+		}],
         "altSpellings": ["MU", "Republic of Mauritius", "R\u00e9publique de Maurice"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -22066,7 +23414,11 @@
                 "m": "Mauricien"
             }
         },
-        "cities": ["Beau Bassin-Rose Hill"]
+        "cities": [
+		{
+			"eng": "Beau Bassin-Rose Hill",
+            "fra": "Beau-Bassin Rose Hill"
+		}]
     },
     {
         "name": {
@@ -22101,7 +23453,11 @@
             "root": "+2",
             "suffixes": ["65"]
         },
-        "capital": ["Lilongwe"],
+        "capital": [
+		{
+			"eng": "Lilongwe",
+            "fra": "Lilongwe"
+		}],
         "altSpellings": ["MW", "Republic of Malawi"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -22206,7 +23562,11 @@
                 "m": "Malawien"
             }
         },
-        "cities": ["Blantyre"]
+        "cities": [
+		{
+			"eng": "Blantyre",
+            "fra": "Blantyre"
+		}]
     },
     {
         "name": {
@@ -22241,7 +23601,11 @@
             "root": "+6",
             "suffixes": ["0"]
         },
-        "capital": ["Kuala Lumpur"],
+        "capital": [
+		{
+			"eng": "Kuala Lumpur",
+            "fra": "Kuala Lumpur"
+		}],
         "altSpellings": ["MY"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -22346,7 +23710,11 @@
                 "m": "Malaisien"
             }
         },
-        "cities": ["George Town"]
+        "cities": [
+		{
+			"eng": "George Town",
+            "fra": "George Town"
+		}]
     },
     {
         "name": {
@@ -22378,7 +23746,11 @@
             "root": "+2",
             "suffixes": ["62"]
         },
-        "capital": ["Mamoudzou"],
+        "capital": [
+		{
+			"eng": "Mamoudzou",
+            "fra": "Mamoudzou"
+		}],
         "altSpellings": ["YT", "Department of Mayotte", "D\u00e9partement de Mayotte"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -22482,7 +23854,11 @@
                 "m": "Mahorais"
             }
         },
-        "cities": ["Dzaoudzi"]
+        "cities": [
+		{
+			"eng": "Dzaoudzi",
+            "fra": "Dzaoudzi"
+		}]
     },
     {
         "name": {
@@ -22549,7 +23925,11 @@
             "root": "+2",
             "suffixes": ["64"]
         },
-        "capital": ["Windhoek"],
+        "capital": [
+		{
+			"eng": "Windhoek",
+            "fra": "Windhoek"
+		}],
         "altSpellings": ["NA", "Namibi\u00eb", "Republic of Namibia"],
         "region": "Africa",
         "subregion": "Southern Africa",
@@ -22661,7 +24041,11 @@
                 "m": "Namibien"
             }
         },
-        "cities": ["Rundu"]
+        "cities": [
+		{
+			"eng": "Rundu",
+            "fra": "Rundu"
+		}]
     },
     {
         "name": {
@@ -22693,7 +24077,11 @@
             "root": "+6",
             "suffixes": ["87"]
         },
-        "capital": ["Noum\u00e9a"],
+        "capital": [
+		{
+			"eng": "Noum\u00e9a",
+            "fra": "Noum\u00e9a"
+		}],
         "altSpellings": ["NC"],
         "region": "Oceania",
         "subregion": "Melanesia",
@@ -22797,7 +24185,11 @@
                 "m": "N\u00e9o-Cal\u00e9donien"
             }
         },
-        "cities": ["W\u00e9"]
+        "cities": [
+		{
+			"eng": "W\u00e9",
+            "fra": "W\u00e9"
+		}]
     },
     {
         "name": {
@@ -22828,7 +24220,11 @@
             "root": "+2",
             "suffixes": ["27"]
         },
-        "capital": ["Niamey"],
+        "capital": [
+		{
+			"eng": "Niamey",
+            "fra": "Niamey"
+		}],
         "altSpellings": ["NE", "Nijar"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -22932,7 +24328,11 @@
                 "m": "Nig\u00e9rien"
             }
         },
-        "cities": ["Zinder"]
+        "cities": [
+		{
+			"eng": "Zinder",
+            "fra": "Zinder"
+		}]
     },
     {
         "name": {
@@ -22968,7 +24368,15 @@
             "root": "+6",
             "suffixes": ["72"]
         },
-        "capital": ["Kingston"],
+        "capital": [
+		{
+			"eng": 
+		{
+			"eng": "Kingston",
+            "fra": "Kingston"
+		},
+            "fra": "Kingston"
+		}],
         "altSpellings": ["NF", "Territory of Norfolk Island", "Teratri of Norf'k Ailen"],
         "region": "Oceania",
         "subregion": "Australasia",
@@ -23073,7 +24481,11 @@
                 "m": "Norfolkais"
             }
         },
-        "cities": ["Burnt Pine"]
+        "cities": [
+		{
+			"eng": "Burnt Pine",
+            "fra": "Burnt Pine"
+		}]
     },
     {
         "name": {
@@ -23104,7 +24516,11 @@
             "root": "+2",
             "suffixes": ["34"]
         },
-        "capital": ["Abuja"],
+        "capital": [
+		{
+			"eng": "Abuja",
+            "fra": "Abuja"
+		}],
         "altSpellings": ["NG", "Nijeriya", "Na\u00edj\u00edr\u00ed\u00e0", "Federal Republic of Nigeria"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -23208,7 +24624,15 @@
                 "m": "Nig\u00e9rian"
             }
         },
-        "cities": ["Lagos", "Kano"]
+        "cities": [
+		{
+			"eng": "Lagos",
+            "fra": "Lagos"
+		}, 
+		{
+			"eng": "Kano",
+            "fra": "Kano"
+		}]
     },
     {
         "name": {
@@ -23239,7 +24663,11 @@
             "root": "+5",
             "suffixes": ["05"]
         },
-        "capital": ["Managua"],
+        "capital": [
+		{
+			"eng": "Managua",
+            "fra": "Managua"
+		}],
         "altSpellings": ["NI", "Republic of Nicaragua", "Rep\u00fablica de Nicaragua"],
         "region": "Americas",
         "subregion": "Central America",
@@ -23343,7 +24771,11 @@
                 "m": "Nicaraguayen"
             }
         },
-        "cities": ["Le\u00f3n"]
+        "cities": [
+		{
+			"eng": "Le\u00f3n",
+            "fra": "Le\u00f3n"
+		}]
     },
     {
         "name": {
@@ -23379,7 +24811,11 @@
             "root": "+6",
             "suffixes": ["83"]
         },
-        "capital": ["Alofi"],
+        "capital": [
+		{
+			"eng": "Alofi",
+            "fra": "Alofi"
+		}],
         "altSpellings": ["NU"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -23484,7 +24920,11 @@
                 "m": "Niu\u00e9en"
             }
         },
-        "cities": ["Hakupu"]
+        "cities": [
+		{
+			"eng": "Hakupu",
+            "fra": "Hakupu"
+		}]
     },
     {
         "name": {
@@ -23515,7 +24955,11 @@
             "root": "+3",
             "suffixes": ["1"]
         },
-        "capital": ["Amsterdam"],
+        "capital": [
+		{
+			"eng": "Amsterdam",
+            "fra": "Amsterdam"
+		}],
         "altSpellings": ["NL", "Holland", "Nederland", "The Netherlands"],
         "region": "Europe",
         "subregion": "Western Europe",
@@ -23619,7 +25063,11 @@
                 "m": "N\u00e9erlandais"
             }
         },
-        "cities": ["Rotterdam"]
+        "cities": [
+		{
+			"eng": "Rotterdam",
+            "fra": "Rotterdam"
+		}]
     },
     {
         "name": {
@@ -23658,7 +25106,11 @@
             "root": "+4",
             "suffixes": ["7"]
         },
-        "capital": ["Oslo"],
+        "capital": [
+		{
+			"eng": "Oslo",
+            "fra": "Oslo"
+		}],
         "altSpellings": ["NO", "Norge", "Noreg", "Kingdom of Norway", "Kongeriket Norge", "Kongeriket Noreg"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -23764,7 +25216,11 @@
                 "m": "Norv\u00e9gien"
             }
         },
-        "cities": ["Bergen"]
+        "cities": [
+		{
+			"eng": "Bergen",
+            "fra": "Bergen"
+		}]
     },
     {
         "name": {
@@ -23795,7 +25251,11 @@
             "root": "+9",
             "suffixes": ["77"]
         },
-        "capital": ["Kathmandu"],
+        "capital": [
+		{
+			"eng": "Kathmandu",
+            "fra": "Katmandou"
+		}],
         "altSpellings": ["NP", "Federal Democratic Republic of Nepal", "Lokt\u0101ntrik Ganatantra Nep\u0101l"],
         "region": "Asia",
         "subregion": "Southern Asia",
@@ -23899,7 +25359,11 @@
                 "m": "N\u00e9palais"
             }
         },
-        "cities": ["Pokhara"]
+        "cities": [
+		{
+			"eng": "Pokhara",
+            "fra": "Pokhara"
+		}]
     },
     {
         "name": {
@@ -23934,7 +25398,11 @@
             "root": "+6",
             "suffixes": ["74"]
         },
-        "capital": ["Yaren"],
+        "capital": [
+		{
+			"eng": "Yaren",
+            "fra": "Yaren"
+		}],
         "altSpellings": ["NR", "Naoero", "Pleasant Island", "Republic of Nauru", "Ripublik Naoero"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -24039,7 +25507,11 @@
                 "m": "Nauruan"
             }
         },
-        "cities": ["Denigomudu"]
+        "cities": [
+		{
+			"eng": "Denigomudu",
+            "fra": "Denigomudu"
+		}]
     },
     {
         "name": {
@@ -24078,7 +25550,11 @@
             "root": "+6",
             "suffixes": ["4"]
         },
-        "capital": ["Wellington"],
+        "capital": [
+		{
+			"eng": "Wellington",
+            "fra": "Wellington"
+		}],
         "altSpellings": ["NZ", "Aotearoa"],
         "region": "Oceania",
         "subregion": "Australasia",
@@ -24184,7 +25660,11 @@
                 "m": "Neo-Z\u00e9landais"
             }
         },
-        "cities": ["Auckland"]
+        "cities": [
+		{
+			"eng": "Auckland",
+            "fra": "Auckland"
+		}]
     },
     {
         "name": {
@@ -24215,7 +25695,11 @@
             "root": "+9",
             "suffixes": ["68"]
         },
-        "capital": ["Muscat"],
+        "capital": [
+		{
+			"eng": "Muscat",
+            "fra": "Mascate"
+		}],
         "altSpellings": ["OM", "Sultanate of Oman", "Sal\u1e6danat \u02bbUm\u0101n"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -24319,7 +25803,11 @@
                 "m": "Omanais"
             }
         },
-        "cities": ["Salalah"]
+        "cities": [
+		{
+			"eng": "Salalah",
+            "fra": "Salalah"
+		}]
     },
     {
         "name": {
@@ -24354,7 +25842,11 @@
             "root": "+9",
             "suffixes": ["2"]
         },
-        "capital": ["Islamabad"],
+        "capital": [
+		{
+			"eng": "Islamabad",
+            "fra": "Islamabad"
+		}],
         "altSpellings": [
             "PK",
             "P\u0101kist\u0101n",
@@ -24464,7 +25956,15 @@
                 "m": "Pakistanais"
             }
         },
-        "cities": ["Karachi", "Lahore"]
+        "cities": [
+		{
+			"eng": "Karachi",
+            "fra": "Karachi"
+		}, 
+		{
+			"eng": "Lahore",
+            "fra": "Lahore"
+		}]
     },
     {
         "name": {
@@ -24499,7 +25999,11 @@
             "root": "+5",
             "suffixes": ["07"]
         },
-        "capital": ["Panama City"],
+        "capital": [
+		{
+			"eng": "Panama City",
+            "fra": "Panama"
+		}],
         "altSpellings": ["PA", "Republic of Panama", "Rep\u00fablica de Panam\u00e1"],
         "region": "Americas",
         "subregion": "Central America",
@@ -24603,7 +26107,11 @@
                 "m": "Panam\u00e9en"
             }
         },
-        "cities": ["Col\u00f3n"]
+        "cities": [
+		{
+			"eng": "Col\u00f3n",
+            "fra": "Col\u00f3n"
+		}]
     },
     {
         "name": {
@@ -24635,7 +26143,11 @@
             "root": "+6",
             "suffixes": ["4"]
         },
-        "capital": ["Adamstown"],
+        "capital": [
+		{
+			"eng": "Adamstown",
+            "fra": "Adamstown"
+		}],
         "altSpellings": ["PN", "Pitcairn", "Pitcairn Henderson Ducie and Oeno Islands"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -24778,7 +26290,11 @@
             "root": "+5",
             "suffixes": ["1"]
         },
-        "capital": ["Lima"],
+        "capital": [
+		{
+			"eng": "Lima",
+            "fra": "Lima"
+		}],
         "altSpellings": ["PE", "Republic of Peru", "Rep\u00fablica del Per\u00fa"],
         "region": "Americas",
         "subregion": "South America",
@@ -24884,7 +26400,11 @@
                 "m": "P\u00e9ruvien"
             }
         },
-        "cities": ["Arequipa"]
+        "cities": [
+		{
+			"eng": "Arequipa",
+            "fra": "Arequipa"
+		}]
     },
     {
         "name": {
@@ -24919,7 +26439,11 @@
             "root": "+6",
             "suffixes": ["3"]
         },
-        "capital": ["Manila"],
+        "capital": [
+		{
+			"eng": "Manila",
+            "fra": "Manille"
+		}],
         "altSpellings": ["PH", "Republic of the Philippines", "Rep\u00fablika ng Pilipinas"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -25024,7 +26548,15 @@
                 "m": "Philippin"
             }
         },
-        "cities": ["Quezon City", "Cebu City"]
+        "cities": [
+		{
+			"eng": "Quezon City",
+            "fra": "Quezon City"
+		}, 
+		{
+			"eng": "Cebu City",
+            "fra": "Cebu City"
+		}]
     },
     {
         "name": {
@@ -25059,7 +26591,11 @@
             "root": "+6",
             "suffixes": ["80"]
         },
-        "capital": ["Ngerulmud"],
+        "capital": [
+		{
+			"eng": "Ngerulmud",
+            "fra": "Ngerulmud"
+		}],
         "altSpellings": ["PW", "Republic of Palau", "Beluu er a Belau"],
         "region": "Oceania",
         "subregion": "Micronesia",
@@ -25164,7 +26700,15 @@
                 "m": "Paluan"
             }
         },
-        "cities": ["Koror", "Airai"]
+        "cities": [
+		{
+			"eng": "Koror",
+            "fra": "Koror"
+		}, 
+		{
+			"eng": "Airai",
+            "fra": "Airai"
+		}]
     },
     {
         "name": {
@@ -25203,7 +26747,11 @@
             "root": "+6",
             "suffixes": ["75"]
         },
-        "capital": ["Port Moresby"],
+        "capital": [
+		{
+			"eng": "Port Moresby",
+            "fra": "Port Moresby"
+		}],
         "altSpellings": ["PG", "Independent State of Papua New Guinea", "Independen Stet bilong Papua Niugini"],
         "region": "Oceania",
         "subregion": "Melanesia",
@@ -25309,7 +26857,11 @@
                 "m": "Papouasien"
             }
         },
-        "cities": ["Lae"]
+        "cities": [
+		{
+			"eng": "Lae",
+            "fra": "Lae"
+		}]
     },
     {
         "name": {
@@ -25340,7 +26892,11 @@
             "root": "+4",
             "suffixes": ["8"]
         },
-        "capital": ["Warsaw"],
+        "capital": [
+		{
+			"eng": "Warsaw",
+            "fra": "Varsovie"
+		}],
         "altSpellings": ["PL", "Republic of Poland", "Rzeczpospolita Polska"],
         "region": "Europe",
         "subregion": "Central Europe",
@@ -25444,7 +27000,11 @@
                 "m": "Polonais"
             }
         },
-        "cities": ["Krak\u00f3w"]
+        "cities": [
+		{
+			"eng": "Krak\u00f3w",
+            "fra": "Cracovie"
+		}]
     },
     {
         "name": {
@@ -25480,7 +27040,11 @@
             "root": "+1",
             "suffixes": ["787", "939"]
         },
-        "capital": ["San Juan"],
+        "capital": [
+		{
+			"eng": "San Juan",
+            "fra": "San Juan"
+		}],
         "altSpellings": ["PR", "Commonwealth of Puerto Rico", "Estado Libre Asociado de Puerto Rico"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -25585,7 +27149,15 @@
                 "m": "Portoricain"
             }
         },
-        "cities": ["Bayam\u00f3n", "Ponce"]
+        "cities": [
+		{
+			"eng": "Bayam\u00f3n",
+            "fra": "Bayam\u00f3n"
+		}, 
+		{
+			"eng": "Ponce",
+            "fra": "Ponce"
+		}]
     },
     {
         "name": {
@@ -25616,7 +27188,11 @@
             "root": "+8",
             "suffixes": ["50"]
         },
-        "capital": ["Pyongyang"],
+        "capital": [
+		{
+			"eng": "Pyongyang",
+            "fra": "Pyongyang"
+		}],
         "altSpellings": [
             "KP",
             "Democratic People's Republic of Korea",
@@ -25729,7 +27305,11 @@
                 "m": "Nord-cor\u00e9en"
             }
         },
-        "cities": ["Hamhung"]
+        "cities": [
+		{
+			"eng": "Hamhung",
+            "fra": "Hamhung"
+		}]
     },
     {
         "name": {
@@ -25760,7 +27340,11 @@
             "root": "+3",
             "suffixes": ["51"]
         },
-        "capital": ["Lisbon"],
+        "capital": [
+		{
+			"eng": "Lisbon",
+            "fra": "Lisbonne"
+		}],
         "altSpellings": ["PT", "Portuguesa", "Portuguese Republic", "Rep\u00fablica Portuguesa"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -25864,7 +27448,11 @@
                 "m": "Portugais"
             }
         },
-        "cities": ["Porto"]
+        "cities": [
+		{
+			"eng": "Porto",
+            "fra": "Porto"
+		}]
     },
     {
         "name": {
@@ -25899,7 +27487,11 @@
             "root": "+5",
             "suffixes": ["95"]
         },
-        "capital": ["Asunci\u00f3n"],
+        "capital": [
+		{
+			"eng": "Asunci\u00f3n",
+            "fra": "Asunci\u00f3n"
+		}],
         "altSpellings": ["PY", "Republic of Paraguay", "Rep\u00fablica del Paraguay", "Tet\u00e3 Paragu\u00e1i"],
         "region": "Americas",
         "subregion": "South America",
@@ -26004,7 +27596,11 @@
                 "m": "Paraguayen"
             }
         },
-        "cities": ["Ciudad del Este"]
+        "cities": [
+		{
+			"eng": "Ciudad del Este",
+            "fra": "Ciudad del Este"
+		}]
     },
     {
         "name": {
@@ -26045,7 +27641,11 @@
             "root": "+9",
             "suffixes": ["70"]
         },
-        "capital": ["Ramallah"],
+        "capital": [
+		{
+			"eng": "Ramallah",
+            "fra": "Ramallah"
+		}],
         "altSpellings": ["PS", "Palestine, State of", "State of Palestine", "Dawlat Filas\u1e6din"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -26149,7 +27749,19 @@
                 "m": "Palestinien"
             }
         },
-        "cities": ["East Jerusalem", "Gaza City", "Hebron"]
+        "cities": [
+		{
+			"eng": "East Jerusalem",
+            "fra": "J\u00e9rusalem-Est"
+		}, 
+		{
+			"eng": "Gaza City",
+            "fra": "Gaza"
+		}, 
+		{
+			"eng": "Hebron",
+            "fra": "H\u00e9bron"
+		}]
     },
     {
         "name": {
@@ -26181,7 +27793,11 @@
             "root": "+6",
             "suffixes": ["89"]
         },
-        "capital": ["Papeet\u0113"],
+        "capital": [
+			{
+				"eng": "Papeet\u0113",
+				"fra": "Papeete"
+		}],
         "altSpellings": ["PF", "Polyn\u00e9sie fran\u00e7aise", "French Polynesia", "P\u014dr\u012bnetia Far\u0101ni"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -26285,7 +27901,11 @@
                 "m": "Polyn\u00e9sien"
             }
         },
-        "cities": ["Mahina"]
+        "cities": [
+		{
+			"eng": "Mahina",
+            "fra": "Mahina"
+		}]
     },
     {
         "name": {
@@ -26316,7 +27936,11 @@
             "root": "+9",
             "suffixes": ["74"]
         },
-        "capital": ["Doha"],
+        "capital": [
+		{
+			"eng": "Doha",
+            "fra": "Doha"
+		}],
         "altSpellings": ["QA", "State of Qatar", "Dawlat Qa\u1e6dar"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -26420,7 +28044,11 @@
                 "m": "Qatarien"
             }
         },
-        "cities": ["Al Rayyan"]
+        "cities": [
+		{
+			"eng": "Al Rayyan",
+            "fra": "Al Rayyan"
+		}]
     },
     {
         "name": {
@@ -26452,7 +28080,11 @@
             "root": "+2",
             "suffixes": ["62"]
         },
-        "capital": ["Saint-Denis"],
+        "capital": [
+		{
+			"eng": "Saint-Denis",
+            "fra": "Saint-Denis"
+		}],
         "altSpellings": ["RE", "Reunion"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -26586,7 +28218,11 @@
             "root": "+4",
             "suffixes": ["0"]
         },
-        "capital": ["Bucharest"],
+        "capital": [
+		{
+			"eng": "Bucharest",
+            "fra": "Bucarest"
+		}],
         "altSpellings": ["RO", "Rumania", "Roumania", "Rom\u00e2nia"],
         "region": "Europe",
         "subregion": "Southeast Europe",
@@ -26690,7 +28326,15 @@
                 "m": "Roumain"
             }
         },
-        "cities": ["Cluj-Napoca", "Constanța"]
+        "cities": [
+		{
+			"eng": "Cluj-Napoca",
+            "fra": "Cluj-Napoca"
+		}, 
+		{
+			"eng": "Constan\u0021ba",
+            "fra": "Constan\u0021ba"
+		}]
     },
     {
         "name": {
@@ -26721,7 +28365,11 @@
             "root": "+7",
             "suffixes": ["3", "4", "5", "8", "9"]
         },
-        "capital": ["Moscow"],
+        "capital": [
+		{
+			"eng": "Moscow",
+            "fra": "Moscou"
+		}],
         "altSpellings": [
             "RU",
             "Russian Federation",
@@ -26829,7 +28477,11 @@
                 "m": "Russe"
             }
         },
-        "cities": ["Saint Petersburg"]
+        "cities": [
+		{
+			"eng": "Saint Petersburg",
+            "fra": "Saint-P\u00e9tersbourg"
+		}]
     },
     {
         "name": {
@@ -26868,7 +28520,11 @@
             "root": "+2",
             "suffixes": ["50"]
         },
-        "capital": ["Kigali"],
+        "capital": [
+		{
+			"eng": "Kigali",
+            "fra": "Kigali"
+		}],
         "altSpellings": ["RW", "Republic of Rwanda", "Repubulika y'u Rwanda", "R\u00e9publique du Rwanda"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -26974,7 +28630,11 @@
                 "m": "Rwandais"
             }
         },
-        "cities": ["Muhanga"]
+        "cities": [
+		{
+			"eng": "Muhanga",
+            "fra": "Muhanga"
+		}]
     },
     {
         "name": {
@@ -27005,7 +28665,11 @@
             "root": "+9",
             "suffixes": ["66"]
         },
-        "capital": ["Riyadh"],
+        "capital": [
+		{
+			"eng": "Riyadh",
+            "fra": "Riyad"
+		}],
         "altSpellings": [
             "Saudi",
             "SA",
@@ -27114,7 +28778,11 @@
                 "m": "Saoudien"
             }
         },
-        "cities": ["Jeddah"]
+        "cities": [
+		{
+			"eng": "Jeddah",
+            "fra": "Djeddah"
+		}]
     },
     {
         "name": {
@@ -27149,7 +28817,11 @@
             "root": "+2",
             "suffixes": ["49"]
         },
-        "capital": ["Khartoum"],
+        "capital": [
+		{
+			"eng": "Khartoum",
+            "fra": "Khartoum"
+		}],
         "altSpellings": ["SD", "Republic of the Sudan", "Jumh\u016br\u012byat as-S\u016bd\u0101n"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -27254,7 +28926,15 @@
                 "m": "Soudanais"
             }
         },
-        "cities": ["Omdurman", "Port Sudan"]
+        "cities": [
+		{
+			"eng": "Omdurman",
+            "fra": "Omdourman"
+		}, 
+		{
+			"eng": "Port Sudan",
+            "fra": "Port-Soudan"
+		}]
     },
     {
         "name": {
@@ -27285,7 +28965,11 @@
             "root": "+2",
             "suffixes": ["21"]
         },
-        "capital": ["Dakar"],
+        "capital": [
+		{
+			"eng": "Dakar",
+            "fra": "Dakar"
+		}],
         "altSpellings": ["SN", "Republic of Senegal", "R\u00e9publique du S\u00e9n\u00e9gal"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -27389,7 +29073,11 @@
                 "m": "S\u00e9n\u00e9galais"
             }
         },
-        "cities": ["Touba"]
+        "cities": [
+		{
+			"eng": "Touba",
+            "fra": "Touba"
+		}]
     },
     {
         "name": {
@@ -27432,7 +29120,11 @@
             "root": "+6",
             "suffixes": ["5"]
         },
-        "capital": ["Singapore"],
+        "capital": [
+		{
+			"eng": "Singapore",
+            "fra": "Singapour"
+		}],
         "altSpellings": ["SG", "Singapura", "Republik Singapura", "\u65b0\u52a0\u5761\u5171\u548c\u56fd"],
         "region": "Asia",
         "subregion": "South-Eastern Asia",
@@ -27571,7 +29263,11 @@
             "root": "+5",
             "suffixes": ["00"]
         },
-        "capital": ["King Edward Point"],
+        "capital": [
+		{
+			"eng": "King Edward Point",
+            "fra": "King Edward Point"
+		}],
         "altSpellings": ["GS", "South Georgia and the South Sandwich Islands"],
         "region": "Antarctic",
         "subregion": "",
@@ -27675,7 +29371,11 @@
                 "m": ""
             }
         },
-        "cities": ["Grytviken"]
+        "cities": [
+		{
+			"eng": "Grytviken",
+            "fra": "Grytviken"
+		}]
     },
     {
         "name": {
@@ -27707,7 +29407,11 @@
             "root": "+4",
             "suffixes": ["779"]
         },
-        "capital": ["Longyearbyen"],
+        "capital": [
+		{
+			"eng": "Longyearbyen",
+            "fra": "Longyearbyen"
+		}],
         "altSpellings": ["SJ", "Svalbard and Jan Mayen Islands"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -27811,7 +29515,11 @@
                 "m": ""
             }
         },
-        "cities": ["Barentsburg"]
+        "cities": [
+		{
+			"eng": "Barentsburg",
+            "fra": "Barentsburg"
+		}]
     },
     {
         "name": {
@@ -27842,7 +29550,11 @@
             "root": "+6",
             "suffixes": ["77"]
         },
-        "capital": ["Honiara"],
+        "capital": [
+		{
+			"eng": "Honiara",
+            "fra": "Honiara"
+		}],
         "altSpellings": ["SB"],
         "region": "Oceania",
         "subregion": "Melanesia",
@@ -27946,7 +29658,11 @@
                 "m": "Salomonien"
             }
         },
-        "cities": ["Gizo"]
+        "cities": [
+		{
+			"eng": "Gizo",
+            "fra": "Gizo"
+		}]
     },
     {
         "name": {
@@ -27977,7 +29693,11 @@
             "root": "+2",
             "suffixes": ["32"]
         },
-        "capital": ["Freetown"],
+        "capital": [
+		{
+			"eng": "Freetown",
+            "fra": "Freetown"
+		}],
         "altSpellings": ["SL", "Republic of Sierra Leone"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -28081,7 +29801,11 @@
                 "m": "Sierra-leonais"
             }
         },
-        "cities": ["Bo"]
+        "cities": [
+		{
+			"eng": "Bo",
+            "fra": "Bo"
+		}]
     },
     {
         "name": {
@@ -28112,7 +29836,11 @@
             "root": "+5",
             "suffixes": ["03"]
         },
-        "capital": ["San Salvador"],
+        "capital": [
+		{
+			"eng": "San Salvador",
+            "fra": "San Salvador"
+		}],
         "altSpellings": ["SV", "Republic of El Salvador", "Rep\u00fablica de El Salvador"],
         "region": "Americas",
         "subregion": "Central America",
@@ -28216,7 +29944,11 @@
                 "m": "Salvadorien"
             }
         },
-        "cities": ["Santa Ana"]
+        "cities": [
+		{
+			"eng": "Santa Ana",
+            "fra": "Santa Ana"
+		}]
     },
     {
         "name": {
@@ -28247,7 +29979,11 @@
             "root": "+3",
             "suffixes": ["78"]
         },
-        "capital": ["City of San Marino"],
+        "capital": [
+		{
+			"eng": "City of San Marino",
+            "fra": "Ville de Saint-Marin"
+		}],
         "altSpellings": ["SM", "Republic of San Marino", "Repubblica di San Marino"],
         "region": "Europe",
         "subregion": "Southern Europe",
@@ -28351,7 +30087,15 @@
                 "m": "Saint-Marinais"
             }
         },
-        "cities": ["Dogana", "Borgo Maggiore"]
+        "cities": [
+		{
+			"eng": "Dogana",
+            "fra": "Dogana"
+		}, 
+		{
+			"eng": "Borgo Maggiore",
+            "fra": "Borgo Maggiore"
+		}]
     },
     {
         "name": {
@@ -28386,7 +30130,11 @@
             "root": "+2",
             "suffixes": ["52"]
         },
-        "capital": ["Mogadishu"],
+        "capital": [
+		{
+			"eng": "Mogadishu",
+            "fra": "Mogadiscio"
+		}],
         "altSpellings": [
             "SO",
             "a\u1e63-\u1e62\u016bm\u0101l",
@@ -28497,7 +30245,11 @@
                 "m": "Somalien"
             }
         },
-        "cities": ["Hargeisa"]
+        "cities": [
+		{
+			"eng": "Hargeisa",
+            "fra": "Hargeisa"
+		}]
     },
     {
         "name": {
@@ -28529,7 +30281,11 @@
             "root": "+5",
             "suffixes": ["08"]
         },
-        "capital": ["Saint-Pierre"],
+        "capital": [
+		{
+			"eng": "Saint-Pierre",
+            "fra": "Saint-Pierre"
+		}],
         "altSpellings": ["PM", "Collectivit\u00e9 territoriale de Saint-Pierre-et-Miquelon"],
         "region": "Americas",
         "subregion": "North America",
@@ -28633,7 +30389,11 @@
                 "m": "Saint-Pierrais, Miquelonais"
             }
         },
-        "cities": ["Miquelon"]
+        "cities": [
+		{
+			"eng": "Miquelon",
+            "fra": "Miquelon"
+		}]
     },
     {
         "name": {
@@ -28664,7 +30424,11 @@
             "root": "+3",
             "suffixes": ["81"]
         },
-        "capital": ["Belgrade"],
+        "capital": [
+		{
+			"eng": "Belgrade",
+            "fra": "Belgrade"
+		}],
         "altSpellings": [
             "RS",
             "Srbija",
@@ -28774,7 +30538,11 @@
                 "m": "Serbe"
             }
         },
-        "cities": ["Novi Sad"]
+        "cities": [
+		{
+			"eng": "Novi Sad",
+            "fra": "Novi Sad"
+		}]
     },
     {
         "name": {
@@ -28805,7 +30573,11 @@
             "root": "+2",
             "suffixes": ["11"]
         },
-        "capital": ["Juba"],
+        "capital": [
+		{
+			"eng": "Juba",
+            "fra": "Djouba"
+		}],
         "altSpellings": ["SS"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -28909,7 +30681,11 @@
                 "m": "Sud-Soudanais"
             }
         },
-        "cities": ["Yei"]
+        "cities": [
+		{
+			"eng": "Yei",
+            "fra": "Yei"
+		}]
     },
     {
         "name": {
@@ -28940,7 +30716,11 @@
             "root": "+2",
             "suffixes": ["39"]
         },
-        "capital": ["S\u00e3o Tom\u00e9"],
+        "capital": [
+		{
+			"eng": "S\u00e3o Tom\u00e9",
+            "fra": "S\u00e3o Tom\u00e9"
+		}],
         "altSpellings": [
             "ST",
             "Democratic Republic of S\u00e3o Tom\u00e9 and Pr\u00edncipe",
@@ -29049,7 +30829,11 @@
                 "m": "Santom\u00e9en"
             }
         },
-        "cities": ["Trindade"]
+        "cities": [
+		{
+			"eng": "Trindade",
+            "fra": "Trindade"
+		}]
     },
     {
         "name": {
@@ -29080,7 +30864,11 @@
             "root": "+5",
             "suffixes": ["97"]
         },
-        "capital": ["Paramaribo"],
+        "capital": [
+		{
+			"eng": "Paramaribo",
+            "fra": "Paramaribo"
+		}],
         "altSpellings": ["SR", "Sarnam", "Sranangron", "Republic of Suriname", "Republiek Suriname"],
         "region": "Americas",
         "subregion": "South America",
@@ -29184,7 +30972,11 @@
                 "m": "Surinamais"
             }
         },
-        "cities": ["Lelydorp"]
+        "cities": [
+		{
+			"eng": "Lelydorp",
+            "fra": "Lelydorp"
+		}]
     },
     {
         "name": {
@@ -29215,7 +31007,11 @@
             "root": "+4",
             "suffixes": ["21"]
         },
-        "capital": ["Bratislava"],
+        "capital": [
+		{
+			"eng": "Bratislava",
+            "fra": "Bratislava"
+		}],
         "altSpellings": ["SK", "Slovak Republic", "Slovensk\u00e1 republika"],
         "region": "Europe",
         "subregion": "Central Europe",
@@ -29319,7 +31115,11 @@
                 "m": "Slovaque"
             }
         },
-        "cities": ["Košice"]
+        "cities": [
+		{
+			"eng": "Ko\u00161ice",
+            "fra": "Ko\u00161ice"
+		}]
     },
     {
         "name": {
@@ -29350,7 +31150,11 @@
             "root": "+3",
             "suffixes": ["86"]
         },
-        "capital": ["Ljubljana"],
+        "capital": [
+		{
+			"eng": "Ljubljana",
+            "fra": "Ljubljana"
+		}],
         "altSpellings": ["SI", "Republic of Slovenia", "Republika Slovenija"],
         "region": "Europe",
         "subregion": "Central Europe",
@@ -29454,7 +31258,11 @@
                 "m": "Slov\u00e8ne"
             }
         },
-        "cities": ["Maribor"]
+        "cities": [
+		{
+			"eng": "Maribor",
+            "fra": "Maribor"
+		}]
     },
     {
         "name": {
@@ -29485,7 +31293,11 @@
             "root": "+4",
             "suffixes": ["6"]
         },
-        "capital": ["Stockholm"],
+        "capital": [
+		{
+			"eng": "Stockholm",
+            "fra": "Stockholm"
+		}],
         "altSpellings": ["SE", "Kingdom of Sweden", "Konungariket Sverige"],
         "region": "Europe",
         "subregion": "Northern Europe",
@@ -29589,7 +31401,11 @@
                 "m": "Su\u00e9dois"
             }
         },
-        "cities": ["Gothenburg"]
+        "cities": [
+		{
+			"eng": "Gothenburg",
+            "fra": "G\u00f6teborg"
+		}]
     },
     {
         "name": {
@@ -29628,7 +31444,11 @@
             "root": "+2",
             "suffixes": ["68"]
         },
-        "capital": ["Lobamba"],
+        "capital": [
+		{
+			"eng": "Lobamba",
+            "fra": "Lobamba"
+		}],
         "altSpellings": [
             "SZ",
             "Swaziland",
@@ -29741,7 +31561,15 @@
                 "m": "Swazie"
             }
         },
-        "cities": ["Mbabane", "Manzini"]
+        "cities": [
+		{
+			"eng": "Mbabane",
+            "fra": "Mbabane"
+		}, 
+		{
+			"eng": "Manzini",
+            "fra": "Manzini"
+		}]
     },
     {
         "name": {
@@ -29781,7 +31609,11 @@
             "root": "+1",
             "suffixes": ["721"]
         },
-        "capital": ["Philipsburg"],
+        "capital": [
+		{
+			"eng": "Philipsburg",
+            "fra": "Philipsburg"
+		}],
         "altSpellings": ["SX", "Sint Maarten (Dutch part)"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -29887,7 +31719,15 @@
                 "m": "Saint-Martinois"
             }
         },
-        "cities": ["Lower Prince's Quarter", "Cul De Sac"]
+        "cities": [
+		{
+			"eng": "Lower Prince's Quarter",
+            "fra": "Quartier du Bas-Prince"
+		}, 
+		{
+			"eng": "Cul De Sac",
+            "fra": "Cul De Sac"
+		}]
     },
     {
         "name": {
@@ -29926,7 +31766,11 @@
             "root": "+2",
             "suffixes": ["48"]
         },
-        "capital": ["Victoria"],
+        "capital": [
+		{
+			"eng": "Victoria",
+            "fra": "Victoria"
+		}],
         "altSpellings": ["SC", "Republic of Seychelles", "Repiblik Sesel", "R\u00e9publique des Seychelles"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -30032,7 +31876,11 @@
                 "m": "Seychellois"
             }
         },
-        "cities": ["Anse Etoile"]
+        "cities": [
+		{
+			"eng": "Anse Etoile",
+            "fra": "Anse Etoile"
+		}]
     },
     {
         "name": {
@@ -30063,7 +31911,11 @@
             "root": "+9",
             "suffixes": ["63"]
         },
-        "capital": ["Damascus"],
+        "capital": [
+		{
+			"eng": "Damascus",
+            "fra": "Damas"
+		}],
         "altSpellings": [
             "SY",
             "Syrian Arab Republic",
@@ -30171,7 +32023,11 @@
                 "m": "Syrien"
             }
         },
-        "cities": ["Aleppo"]
+        "cities": [
+		{
+			"eng": "Aleppo",
+            "fra": "Alep"
+		}]
     },
     {
         "name": {
@@ -30203,7 +32059,11 @@
             "root": "+1",
             "suffixes": ["649"]
         },
-        "capital": ["Cockburn Town"],
+        "capital": [
+		{
+			"eng": "Cockburn Town",
+            "fra": "Cockburn Town"
+		}],
         "altSpellings": ["TC"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -30307,7 +32167,15 @@
                 "m": ""
             }
         },
-        "cities": ["Five Cays", "Honda Road"]
+        "cities": [
+		{
+			"eng": "Five Cays",
+            "fra": "Five Cays"
+		}, 
+		{
+			"eng": "Honda Road",
+            "fra": "Honda Road"
+		}]
     },
     {
         "name": {
@@ -30342,7 +32210,11 @@
             "root": "+2",
             "suffixes": ["35"]
         },
-        "capital": ["N'Djamena"],
+        "capital": [
+		{
+			"eng": "N'Djamena",
+            "fra": "N'Djamena"
+		}],
         "altSpellings": ["TD", "Tchad", "Republic of Chad", "R\u00e9publique du Tchad"],
         "region": "Africa",
         "subregion": "Middle Africa",
@@ -30447,7 +32319,11 @@
                 "m": "Tchadien"
             }
         },
-        "cities": ["Moundou"]
+        "cities": [
+		{
+			"eng": "Moundou",
+            "fra": "Moundou"
+		}]
     },
     {
         "name": {
@@ -30478,7 +32354,11 @@
             "root": "+2",
             "suffixes": ["28"]
         },
-        "capital": ["Lom\u00e9"],
+        "capital": [
+		{
+			"eng": "Lom\u00e9",
+            "fra": "Lom\u00e9"
+		}],
         "altSpellings": ["TG", "Togolese", "Togolese Republic", "R\u00e9publique Togolaise"],
         "region": "Africa",
         "subregion": "Western Africa",
@@ -30582,7 +32462,11 @@
                 "m": "Togolais"
             }
         },
-        "cities": ["Sokod\u00e9"]
+        "cities": [
+		{
+			"eng": "Sokod\u00e9",
+            "fra": "Sokod\u00e9"
+		}]
     },
     {
         "name": {
@@ -30613,7 +32497,11 @@
             "root": "+6",
             "suffixes": ["6"]
         },
-        "capital": ["Bangkok"],
+        "capital": [
+		{
+			"eng": "Bangkok",
+            "fra": "Bangkok"
+		}],
         "altSpellings": [
             "TH",
             "Prathet",
@@ -30724,7 +32612,15 @@
                 "m": "Tha\u00eflandais"
             }
         },
-        "cities": ["Nonthaburi", "Pak Kret"]
+        "cities": [
+		{
+			"eng": "Nonthaburi",
+            "fra": "Nonthaburi"
+		}, 
+		{
+			"eng": "Pak Kret",
+            "fra": "Pak Kret"
+		}]
     },
     {
         "name": {
@@ -30759,7 +32655,11 @@
             "root": "+9",
             "suffixes": ["92"]
         },
-        "capital": ["Dushanbe"],
+        "capital": [
+		{
+			"eng": "Dushanbe",
+            "fra": "Douchanb\u00e9"
+		}],
         "altSpellings": [
             "TJ",
             "To\u00e7ikiston",
@@ -30870,7 +32770,11 @@
                 "m": "Tadjike"
             }
         },
-        "cities": ["Khujand"]
+        "cities": [
+		{
+			"eng": "Khujand",
+            "fra": "Khujand"
+		}]
     },
     {
         "name": {
@@ -30910,7 +32814,11 @@
             "root": "+6",
             "suffixes": ["90"]
         },
-        "capital": ["Fakaofo"],
+        "capital": [
+		{
+			"eng": "Fakaofo",
+            "fra": "Fakaofo"
+		}],
         "altSpellings": ["TK"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -31016,7 +32924,11 @@
                 "m": ""
             }
         },
-        "cities": ["Atafu"]
+        "cities": [
+		{
+			"eng": "Atafu",
+            "fra": "Atafu"
+		}]
     },
     {
         "name": {
@@ -31051,7 +32963,11 @@
             "root": "+9",
             "suffixes": ["93"]
         },
-        "capital": ["Ashgabat"],
+        "capital": [
+		{
+			"eng": "Ashgabat",
+            "fra": "Achgabat"
+		}],
         "altSpellings": ["TM"],
         "region": "Asia",
         "subregion": "Central Asia",
@@ -31156,7 +33072,11 @@
                 "m": "Turkm\u00e8ne"
             }
         },
-        "cities": ["Türkmenabat"]
+        "cities": [
+		{
+			"eng": "T\u00fcrkmenabat",
+            "fra": "T\u00fcrkmenabat"
+		}]
     },
     {
         "name": {
@@ -31191,7 +33111,11 @@
             "root": "+6",
             "suffixes": ["70"]
         },
-        "capital": ["Dili"],
+        "capital": [
+		{
+			"eng": "Dili",
+            "fra": "Dili"
+		}],
         "altSpellings": [
             "TL",
             "East Timor",
@@ -31304,7 +33228,11 @@
                 "m": "Est-timorais"
             }
         },
-        "cities": ["Dare"]
+        "cities": [
+		{
+			"eng": "Dare",
+            "fra": "Dare"
+		}]
     },
     {
         "name": {
@@ -31339,7 +33267,11 @@
             "root": "+6",
             "suffixes": ["76"]
         },
-        "capital": ["Nuku'alofa"],
+        "capital": [
+		{
+			"eng": "Nuku'alofa",
+            "fra": "Nuku'alofa"
+		}],
         "altSpellings": ["TO"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -31444,7 +33376,11 @@
                 "m": "Tonguien"
             }
         },
-        "cities": ["Neiafu"]
+        "cities": [
+		{
+			"eng": "Neiafu",
+            "fra": "Neiafu"
+		}]
     },
     {
         "name": {
@@ -31475,7 +33411,11 @@
             "root": "+1",
             "suffixes": ["868"]
         },
-        "capital": ["Port of Spain"],
+        "capital": [
+		{
+			"eng": "Port of Spain",
+            "fra": "Port of Spain"
+		}],
         "altSpellings": ["TT", "Republic of Trinidad and Tobago"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -31579,7 +33519,15 @@
                 "m": "Trinidadien"
             }
         },
-        "cities": ["Chaguanas", "San Fernando"]
+        "cities": [
+		{
+			"eng": "Chaguanas",
+            "fra": "Chaguanas"
+		}, 
+		{
+			"eng": "San Fernando",
+            "fra": "San Fernando"
+		}]
     },
     {
         "name": {
@@ -31610,7 +33558,11 @@
             "root": "+2",
             "suffixes": ["16"]
         },
-        "capital": ["Tunis"],
+        "capital": [
+		{
+			"eng": "Tunis",
+            "fra": "Tunis"
+		}],
         "altSpellings": ["TN", "Republic of Tunisia", "al-Jumh\u016briyyah at-T\u016bnisiyyah"],
         "region": "Africa",
         "subregion": "Northern Africa",
@@ -31714,7 +33666,11 @@
                 "m": "Tunisien"
             }
         },
-        "cities": ["Sfax"]
+        "cities": [
+		{
+			"eng": "Sfax",
+            "fra": "Sfax"
+		}]
     },
     {
         "name": {
@@ -31745,7 +33701,11 @@
             "root": "+9",
             "suffixes": ["0"]
         },
-        "capital": ["Ankara"],
+        "capital": [
+		{
+			"eng": "Ankara",
+            "fra": "Ankara"
+		}],
         "altSpellings": ["TR", "Turkiye", "Republic of Turkey", "T\u00fcrkiye Cumhuriyeti"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -31849,7 +33809,11 @@
                 "m": "Turc"
             }
         },
-        "cities": ["Istanbul"]
+        "cities": [
+		{
+			"eng": "Istanbul",
+            "fra": "Istanbul"
+		}]
     },
     {
         "name": {
@@ -31888,7 +33852,11 @@
             "root": "+6",
             "suffixes": ["88"]
         },
-        "capital": ["Funafuti"],
+        "capital": [
+		{
+			"eng": "Funafuti",
+            "fra": "Funafuti"
+		}],
         "altSpellings": ["TV"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -31993,7 +33961,11 @@
                 "m": "Tuvaluan"
             }
         },
-        "cities": ["Asau"]
+        "cities": [
+		{
+			"eng": "Asau",
+            "fra": "Asau"
+		}]
     },
     {
         "name": {
@@ -32025,7 +33997,11 @@
             "root": "+8",
             "suffixes": ["86"]
         },
-        "capital": ["Taipei"],
+        "capital": [
+		{
+			"eng": "Taipei",
+            "fra": "Taipei"
+		}],
         "altSpellings": [
             "TW",
             "T\u00e1iw\u0101n",
@@ -32136,7 +34112,15 @@
                 "m": "Ta\u00efwanais"
             }
         },
-        "cities": ["New Taipei", "Taichung"]
+        "cities": [
+		{
+			"eng": "New Taipei",
+            "fra": "Nouveau Taipei"
+		}, 
+		{
+			"eng": "Taichung",
+            "fra": "Taichung"
+		}]
     },
     {
         "name": {
@@ -32171,7 +34155,11 @@
             "root": "+2",
             "suffixes": ["55"]
         },
-        "capital": ["Dodoma"],
+        "capital": [
+		{
+			"eng": "Dodoma",
+            "fra": "Dodoma"
+		}],
         "altSpellings": [
             "TZ",
             "Tanzania, United Republic of",
@@ -32281,7 +34269,15 @@
                 "m": "Tanzanien"
             }
         },
-        "cities": ["Dar es Salaam", "Mwanza"]
+        "cities": [
+		{
+			"eng": "Dar es Salaam",
+            "fra": "Dar es Salaam"
+		}, 
+		{
+			"eng": "Mwanza",
+            "fra": "Mwanza"
+		}]
     },
     {
         "name": {
@@ -32316,7 +34312,11 @@
             "root": "+2",
             "suffixes": ["56"]
         },
-        "capital": ["Kampala"],
+        "capital": [
+		{
+			"eng": "Kampala",
+            "fra": "Kampala"
+		}],
         "altSpellings": ["UG", "Republic of Uganda", "Jamhuri ya Uganda"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -32421,7 +34421,11 @@
                 "m": "Ougandais"
             }
         },
-        "cities": ["Gulu"]
+        "cities": [
+		{
+			"eng": "Gulu",
+            "fra": "Gulu"
+		}]
     },
     {
         "name": {
@@ -32452,7 +34456,11 @@
             "root": "+3",
             "suffixes": ["80"]
         },
-        "capital": ["Kyiv"],
+        "capital": [
+		{
+			"eng": "Kyiv",
+            "fra": "Kiev"
+		}],
         "altSpellings": ["UA", "Ukrayina"],
         "region": "Europe",
         "subregion": "Eastern Europe",
@@ -32556,7 +34564,15 @@
                 "m": "Ukrainien"
             }
         },
-        "cities": ["Kharkiv", "Donetsk"]
+        "cities": [
+		{
+			"eng": "Kharkiv",
+            "fra": "Kharkiv"
+		}, 
+		{
+			"eng": "Donetsk",
+            "fra": "Donetsk"
+		}]
     },
     {
         "name": {
@@ -32722,7 +34738,11 @@
             "root": "+5",
             "suffixes": ["98"]
         },
-        "capital": ["Montevideo"],
+        "capital": [
+		{
+			"eng": "Montevideo",
+            "fra": "Montevideo"
+		}],
         "altSpellings": ["UY", "Oriental Republic of Uruguay", "Rep\u00fablica Oriental del Uruguay"],
         "region": "Americas",
         "subregion": "South America",
@@ -32826,7 +34846,15 @@
                 "m": "Uruguayen"
             }
         },
-        "cities": ["Ciudad de la Costa", "Maldonado"]
+        "cities": [
+		{
+			"eng": "Ciudad de la Costa",
+            "fra": "Ciudad de la Costa"
+		}, 
+		{
+			"eng": "Maldonado",
+            "fra": "Maldonado"
+		}]
     },
     {
         "name": {
@@ -33238,7 +35266,11 @@
                 "989"
             ]
         },
-        "capital": ["Washington D.C."],
+        "capital": [
+		{
+			"eng": "Washington D.C.",
+            "fra": "Washington D.C."
+		}],
         "altSpellings": ["US", "USA", "United States of America"],
         "region": "Americas",
         "subregion": "North America",
@@ -33342,7 +35374,19 @@
                 "m": "Am\u00e9ricain"
             }
         },
-        "cities": ["New York City", "Los Angeles", "Chicago"]
+        "cities": [
+		{
+			"eng": "New York City",
+            "fra": "New York"
+		}, 
+		{
+			"eng": "Los Angeles",
+            "fra": "Los Angeles"
+		}, 
+		{
+			"eng": "Chicago",
+            "fra": "Chicago"
+		}]
     },
     {
         "name": {
@@ -33377,7 +35421,11 @@
             "root": "+9",
             "suffixes": ["98"]
         },
-        "capital": ["Tashkent"],
+        "capital": [
+		{
+			"eng": "Tashkent",
+            "fra": "Tachkent"
+		}],
         "altSpellings": [
             "UZ",
             "Republic of Uzbekistan",
@@ -33487,7 +35535,11 @@
                 "m": "Ouzb\u00e8ke"
             }
         },
-        "cities": ["Namangan"]
+        "cities": [
+		{
+			"eng": "Namangan",
+            "fra": "Namangan"
+		}]
     },
     {
         "name": {
@@ -33522,7 +35574,11 @@
             "root": "+3",
             "suffixes": ["906698", "79"]
         },
-        "capital": ["Vatican City"],
+        "capital": [
+		{
+			"eng": "Vatican City",
+            "fra": "Cit\u00e9 du Vatican"
+		}],
         "altSpellings": [
             "VA",
             "Holy See (Vatican City State)",
@@ -33663,7 +35719,11 @@
             "root": "+1",
             "suffixes": ["784"]
         },
-        "capital": ["Kingstown"],
+        "capital": [
+		{
+			"eng": "Kingstown",
+            "fra": "Kingstown"
+		}],
         "altSpellings": ["VC"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -33767,7 +35827,11 @@
                 "m": "Vincentais"
             }
         },
-        "cities": ["Georgetown"]
+        "cities": [
+		{
+			"eng": "Georgetown",
+            "fra": "Georgetown"
+		}]
     },
     {
         "name": {
@@ -33798,7 +35862,11 @@
             "root": "+5",
             "suffixes": ["8"]
         },
-        "capital": ["Caracas"],
+        "capital": [
+		{
+			"eng": "Caracas",
+            "fra": "Caracas"
+		}],
         "altSpellings": [
             "VE",
             "Bolivarian Republic of Venezuela",
@@ -33907,7 +35975,11 @@
                 "m": "V\u00e9n\u00e9zu\u00e9lien"
             }
         },
-        "cities": ["Maracaibo"]
+        "cities": [
+		{
+			"eng": "Maracaibo",
+            "fra": "Maraca\u00efbo"
+		}]
     },
     {
         "name": {
@@ -33939,7 +36011,11 @@
             "root": "+1",
             "suffixes": ["284"]
         },
-        "capital": ["Road Town"],
+        "capital": [
+		{
+			"eng": "Road Town",
+            "fra": "Road Town"
+		}],
         "altSpellings": ["VG", "Virgin Islands, British"],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -34043,7 +36119,11 @@
                 "m": ""
             }
         },
-        "cities": ["Spanish Town"]
+        "cities": [
+		{
+			"eng": "Spanish Town",
+            "fra": "Spanish Town"
+		}]
     },
     {
         "name": {
@@ -34075,7 +36155,11 @@
             "root": "+1",
             "suffixes": ["340"]
         },
-        "capital": ["Charlotte Amalie"],
+        "capital": [
+		{
+			"eng": "Charlotte Amalie",
+            "fra": "Charlotte Amalie"
+		}],
         "altSpellings": ["VI", "Virgin Islands, U.S."],
         "region": "Americas",
         "subregion": "Caribbean",
@@ -34179,7 +36263,11 @@
                 "m": ""
             }
         },
-        "cities": ["Anna's Retreat"]
+        "cities": [
+		{
+			"eng": "Anna's Retreat",
+            "fra": "Anna's Retreat"
+		}]
     },
     {
         "name": {
@@ -34210,7 +36298,11 @@
             "root": "+8",
             "suffixes": ["4"]
         },
-        "capital": ["Hanoi"],
+        "capital": [
+		{
+			"eng": "Hanoi",
+            "fra": "Hano\u00ef"
+		}],
         "altSpellings": [
             "VN",
             "Socialist Republic of Vietnam",
@@ -34319,7 +36411,11 @@
                 "m": "Vietnamien"
             }
         },
-        "cities": ["Ho Chi Minh City"]
+        "cities": [
+		{
+			"eng": "Ho Chi Minh City",
+            "fra": "H\u00f4-Chi-Minh-Ville"
+		}]
     },
     {
         "name": {
@@ -34358,7 +36454,11 @@
             "root": "+6",
             "suffixes": ["78"]
         },
-        "capital": ["Port Vila"],
+        "capital": [
+		{
+			"eng": "Port Vila",
+            "fra": "Port Vila"
+		}],
         "altSpellings": ["VU", "Republic of Vanuatu", "Ripablik blong Vanuatu", "R\u00e9publique de Vanuatu"],
         "region": "Oceania",
         "subregion": "Melanesia",
@@ -34464,7 +36564,11 @@
                 "m": "Vanuatuan"
             }
         },
-        "cities": ["Luganville"]
+        "cities": [
+		{
+			"eng": "Luganville",
+            "fra": "Luganville"
+		}]
     },
     {
         "name": {
@@ -34496,7 +36600,11 @@
             "root": "+6",
             "suffixes": ["81"]
         },
-        "capital": ["Mata-Utu"],
+        "capital": [
+		{
+			"eng": "Mata-Utu",
+            "fra": "Mata-Utu"
+		}],
         "altSpellings": [
             "WF",
             "Territory of the Wallis and Futuna Islands",
@@ -34604,7 +36712,11 @@
                 "m": ""
             }
         },
-        "cities": ["Alele"]
+        "cities": [
+		{
+			"eng": "Alele",
+            "fra": "Alele"
+		}]
     },
     {
         "name": {
@@ -34639,7 +36751,11 @@
             "root": "+6",
             "suffixes": ["85"]
         },
-        "capital": ["Apia"],
+        "capital": [
+		{
+			"eng": "Apia",
+            "fra": "Apia"
+		}],
         "altSpellings": ["WS", "Independent State of Samoa", "Malo Sa\u02bboloto Tuto\u02bbatasi o S\u0101moa"],
         "region": "Oceania",
         "subregion": "Polynesia",
@@ -34744,7 +36860,11 @@
                 "m": "Samoan"
             }
         },
-        "cities": ["Vaitele"]
+        "cities": [
+		{
+			"eng": "Vaitele",
+            "fra": "Vaitele"
+		}]
     },
     {
         "name": {
@@ -34775,7 +36895,11 @@
             "root": "+9",
             "suffixes": ["67"]
         },
-        "capital": ["Sana'a"],
+        "capital": [
+		{
+			"eng": "Sana'a",
+            "fra": "Sanaa"
+		}],
         "altSpellings": ["YE", "Yemeni Republic", "al-Jumh\u016briyyah al-Yamaniyyah"],
         "region": "Asia",
         "subregion": "Western Asia",
@@ -34879,7 +37003,11 @@
                 "m": "Y\u00e9m\u00e9nite"
             }
         },
-        "cities": ["Aden"]
+        "cities": [
+		{
+			"eng": "Aden",
+            "fra": "Aden"
+		}]
     },
     {
         "name": {
@@ -34950,7 +37078,19 @@
             "root": "+2",
             "suffixes": ["7"]
         },
-        "capital": ["Pretoria", "Bloemfontein", "Cape Town"],
+        "capital": [
+		{
+			"eng": "Pretoria",
+            "fra": "Pretoria"
+		}, 
+		{
+			"eng": "Bloemfontein",
+            "fra": "Bloemfontein"
+		}, 
+		{
+			"eng": "Cape Town",
+            "fra": "Le Cap"
+		}],
         "altSpellings": ["ZA", "RSA", "Suid-Afrika", "Republic of South Africa"],
         "region": "Africa",
         "subregion": "Southern Africa",
@@ -35064,7 +37204,15 @@
                 "m": "Sud-africain"
             }
         },
-        "cities": ["Durban", "Johannesburg"]
+        "cities": [
+		{
+			"eng": "Durban",
+            "fra": "Durban"
+		}, 
+		{
+			"eng": "Johannesburg",
+            "fra": "Johannesburg"
+		}]
     },
     {
         "name": {
@@ -35095,7 +37243,11 @@
             "root": "+2",
             "suffixes": ["60"]
         },
-        "capital": ["Lusaka"],
+        "capital": [
+		{
+			"eng": "Lusaka",
+            "fra": "Lusaka"
+		}],
         "altSpellings": ["ZM", "Republic of Zambia"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -35199,7 +37351,11 @@
                 "m": "Zambien"
             }
         },
-        "cities": ["Kitwe"]
+        "cities": [
+		{
+			"eng": "Kitwe",
+            "fra": "Kitwe"
+		}]
     },
     {
         "name": {
@@ -35318,7 +37474,11 @@
             "root": "+2",
             "suffixes": ["63"]
         },
-        "capital": ["Harare"],
+        "capital": [
+		{
+			"eng": "Harare",
+            "fra": "Harare"
+		}],
         "altSpellings": ["ZW", "Republic of Zimbabwe"],
         "region": "Africa",
         "subregion": "Eastern Africa",
@@ -35436,6 +37596,10 @@
                 "m": "Zimbabw\u00e9en"
             }
         },
-        "cities": ["Bulawayo"]
+        "cities": [
+		{
+			"eng": "Bulawayo",
+            "fra": "Bulawayo"
+		}]
     }
 ]

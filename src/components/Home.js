@@ -75,7 +75,7 @@ const Home = () => {
                             distance={6 * (showHome ? 1 : 0.75) + 'px'}
                             sx={{
                                 display: 'block',
-                                fontSize: 84 * (showHome ? 1 : 0.75) + 'px',
+                                fontSize: 108 * (showHome ? 1 : 0.75) + 'px',
                                 lineHeight: 110 * (showHome ? 1 : 0.75) + 'px',
                                 fontWeight: 800,
                                 textAlign: 'center',
@@ -91,7 +91,7 @@ const Home = () => {
                             distance={7 * (showHome ? 1 : 0.75) + 'px'}
                             sx={{
                                 display: 'block',
-                                fontSize: 120 * (showHome ? 1 : 0.75) + 'px',
+                                fontSize: 124 * (showHome ? 1 : 0.75) + 'px',
                                 lineHeight: 132 * (showHome ? 1 : 0.75) + 'px',
                                 fontWeight: 800,
                                 textAlign: 'center',
@@ -152,7 +152,7 @@ const Home = () => {
                             </MainButton>
                             <MainButton
                                 buttonP={{
-                                	color: 'success',
+                                    color: 'success',
                                     onClick: handleClickWiki,
                                 }}
                             >
