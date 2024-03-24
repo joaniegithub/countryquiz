@@ -76,7 +76,7 @@ const BG = (props) => {
                                 opacity: Math.random() * 0.0125 + 0.0125,
                                 display: 'block',
                                 background:
-                                    'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4"' +
+                                    'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"' +
                                     ' width="' +
                                     2 * patternZoom +
                                     'px" height="' +

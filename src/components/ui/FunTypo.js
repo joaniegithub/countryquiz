@@ -30,7 +30,7 @@ const FunTypo = (props) => {
                     pointerEvents: 'none',
                     content: '"' + text + '"',
                     background:
-                        'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 6 4" width="' +
+                        'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" width="' +
                         6 * patternZoom +
                         'px" height="' +
                         4 * patternZoom +
