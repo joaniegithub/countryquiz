@@ -73,7 +73,18 @@ const Wiki = (props) => {
                                     width: '36px',
                                 }}
                             >
-                                <GameFlag country={option.cca3.toLowerCase()} />
+                                <GameFlag country={option.cca3}
+									svgOverrides={{
+										// maxWidth: '20px',
+										// maxHeight: 'none',
+										// width: 'auto',
+										// height: '16px',
+										// marginLeft: '3px',
+										// marginRight: '1px',
+										// verticalAlign: 'middle',
+										filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3))',
+									}}
+								/>
                             </Box>
                             {option.name.common}
                         </Box>

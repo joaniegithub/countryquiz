@@ -41,8 +41,8 @@ const CountryCard = (props) => {
             >
                 {i18n.language === 'eng' ? country.name.common : country.translations[i18n.language]['common']}
                 <GameFlag
-                    country={country.cca3.toLowerCase()}
-                    sxOverrides={{
+                    country={country.cca3}
+                    svgOverrides={{
                         maxWidth: '20px',
                         maxHeight: 'none',
                         width: 'auto',
@@ -50,6 +50,7 @@ const CountryCard = (props) => {
                         marginLeft: '3px',
                         marginRight: '1px',
                         verticalAlign: 'middle',
+						filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3))',
                     }}
                 />
             </Typography>
@@ -98,7 +99,7 @@ const CountryCard = (props) => {
                 flexGrow: 1,
             }}
         >
-            <GameFlag country={country.cca3.toLowerCase()} />
+            <GameFlag country={country.cca3} />
             <Box
                 mt="12px"
                 sx={{
@@ -190,7 +191,7 @@ const CountryCard = (props) => {
                             <TypographyTable>{t('Capital')}</TypographyTable>
                         </CellProp>
                         <CellValue>
-                            <TypographyTable>{country.capital && country.capital.join(', ')}</TypographyTable>
+                            <TypographyTable>{country.capital && country.capital.map(cap => cap[i18n.language]).join(', ')}</TypographyTable>
                         </CellValue>
                     </Row>
                     <Row>
@@ -199,7 +200,7 @@ const CountryCard = (props) => {
                         </CellProp>
                         <CellValue>
                             <TypographyTable>
-                                {country.cities && country.cities.length && country.cities.join(', ')}
+                                {country.cities && country.cities.length && country.cities.map(city => city[i18n.language]).join(', ')}
                             </TypographyTable>
                         </CellValue>
                     </Row>

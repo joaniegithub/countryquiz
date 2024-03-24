@@ -1,4 +1,4 @@
-<svg height="600" width="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="600" width="900" viewBox="0 0 900 600">
     <path d="M0 0h900v600H0z" fill="#d91023"/>
     <path d="M300 0h300v600H300z" fill="#fff"/>
     <g stroke="#d4af37">

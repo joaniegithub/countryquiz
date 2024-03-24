@@ -67,44 +67,46 @@ const GameQuestion = (props) => {
         <>
             {question && question.choices
                 ? question.choices.map((choice, index) => {
-                      if (question.questionType.key === 'flag') {
-                          var img = new Image();
-                          img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
-                      }
-                      return (
-                          <GameButton
-                              onClick={() => {
-                                  handleChoiceClick(choice);
-                              }}
-                              colorEffect={theme.palette.primary.main.replace('#', '')}
-                              key={choice + index}
-                              phase={phase}
-                              choice={choice}
-                              rightAnswer={rightAnswer}
-                              chosenAnswer={chosenAnswer}
-                              isFlag={question.questionType.key === 'flag'}
-                              answerAdditionnalText={question.answerAdditionnalText}
-                          >
-                              {question.questionType.key === 'flag' ? (
-                                  <GameFlag
-                                      country={choice.toLowerCase()}
-                                      sxOverrides={{
-                                          width: '85%',
-                                          maxWidth: '150px',
-                                          maxHeight: '25vw',
-                                      }}
-                                  />
-                              ) : (
-                                  <>
-                                      {difficultyLevel === DIFFICULTY_EXPERT && phase === 0
-                                          ? choice[0] + ' * * * ' + choice[choice.length - 1]
-                                          : choice}
-                                  </>
-                              )}
-                          </GameButton>
-                      );
-                  })
-                : null}
+						if (question.questionType.key === 'flag') {
+							var img = new Image();
+							img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
+						}
+						return (
+							<GameButton
+								onClick={() => {
+									handleChoiceClick(choice);
+								}}
+								colorEffect={theme.palette.primary.main.replace('#', '')}
+								key={choice + index}
+								phase={phase}
+								choice={choice}
+								rightAnswer={rightAnswer}
+								chosenAnswer={chosenAnswer}
+								isFlag={question.questionType.key === 'flag'}
+								answerAdditionnalText={question.answerAdditionnalText}
+							>
+								{question.questionType.key === 'flag' ? (
+									<GameFlag
+										country={choice}
+										svgOverrides={{
+											width: '85%',
+											maxWidth: '150px',
+											maxHeight: '25vw',
+											filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3))',
+										}}
+									/>
+								) : (
+									<>
+										{difficultyLevel === DIFFICULTY_EXPERT && phase === 0
+											? choice[0] + ' * * * ' + choice[choice.length - 1]
+											: choice}
+									</>
+								)}
+							</GameButton>
+						);
+					})
+				: null
+			}
         </>
     );
 
@@ -136,7 +138,7 @@ const GameQuestion = (props) => {
                 </Typography>
                 {question.questionType.key === 'country_flag' ? (
                     <React.Fragment>
-                        <GameFlag country={question.country.toLowerCase()} />
+                        <GameFlag country={question.country} />
                     </React.Fragment>
                 ) : question.questionType.key === 'country_map' ? (
                     <GameMap country={question.country} />

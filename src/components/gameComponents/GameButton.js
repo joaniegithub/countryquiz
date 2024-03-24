@@ -69,8 +69,8 @@ const GameButton = (props) => {
                     /* '&:after': {
 						pointerEvents: "none",
 						content: '""',
-						background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg" width="'+(4*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 2 4 0 2" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
-						// background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" width="'+(6*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 6 4 6 3 1.5 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 1.5 4 0 3" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
+						background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 4 4" width="'+(4*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 4 4 4 2 2 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 2 4 0 2" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
+						// background: 'url(\'data:image/svg+xml;utf8,<svg viewBox="0 0 6 4" width="'+(6*patternZoom)+'px" height="'+(4*patternZoom)+'px"><defs></defs><polygon points="0 0 6 4 6 3 1.5 0" fill="%23'+colorEffect+'"></polygon><polygon points="0 4 1.5 4 0 3" fill="%23'+colorEffect+'"></polygon></svg>\') repeat',
 						display: "block",
 						height: "100%",
 						width: "100%",
