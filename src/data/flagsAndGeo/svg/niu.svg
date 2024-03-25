@@ -2,9 +2,12 @@
     <clipPath id="niu_a">
         <path d="M0 0v15h70v15H60zm0 30v10h30V0h30z"/>
     </clipPath>
+    <clipPath id="niu_b">
+        <path d="M0 0v300h600V0z"/>
+    </clipPath>
     <path fill="#002868" d="M0 0h120v60H0z"/>
     <g stroke="#cf142b" stroke-width="6">
-        <path d="m0 0 60 30m0-30L0 30" stroke="#fff"/>
+        <path d="m0 0 60 30m0-30L0 30" clip-path="url(#niu_b)" stroke="#fff"/>
         <path d="m0 0 60 30m0-30L0 30" clip-path="url(#niu_a)" stroke-width="4"/>
         <path d="M30 0v40M0 15h70" stroke="#fff" stroke-width="10"/>
         <path d="M30 0v40M0 15h70"/>

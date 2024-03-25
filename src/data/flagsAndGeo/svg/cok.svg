@@ -2,8 +2,11 @@
     <clipPath id="cok_a">
         <path d="M0 0v75h350v75h-50zm300 0H150v200H0v-50z"/>
     </clipPath>
+    <clipPath id="cok_b">
+        <path d="M0 0v300h600V0z"/>
+    </clipPath>
     <path fill="#00247d" d="M0 0h600v300H0z"/>
-    <path d="m0 0 300 150m0-150L0 150" stroke="#fff" stroke-width="30"/>
+    <path d="m0 0 300 150m0-150L0 150" stroke="#fff" stroke-width="30" clip-path="url(#cok_b)"/>
     <path d="m0 0 300 150m0-150L0 150" stroke="#cf142b" stroke-width="20" clip-path="url(#cok_a)"/>
     <path d="M150 0v200M0 75h350" stroke="#fff" stroke-width="50"/>
     <path d="M150 0v200M0 75h350" stroke="#cf142b" stroke-width="30"/>

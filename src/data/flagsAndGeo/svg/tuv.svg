@@ -3,11 +3,14 @@
         <clipPath id="tuv_b">
             <path d="M0 0v150h700v150H600zm0 300v100h300V0h300z"/>
         </clipPath>
+		<clipPath id="tuv_d">
+			<path d="M0 0v600h1200V0z"/>
+		</clipPath>
         <path id="tuv_a" fill="#ffce00" d="m0-50.08 29.437 90.596-77.067-55.992h95.26l-77.067 55.993z"/>
         <use id="tuv_c" xlink:href="#tuv_a" transform="rotate(36)"/>
     </defs>
     <path fill="#00247d" d="M0 0h1200v600H0z"/>
-    <path d="m0 0 600 300M0 300 600 0" stroke="#fff" stroke-width="60"/>
+    <path d="m0 0 600 300M0 300 600 0" stroke="#fff" stroke-width="60" clip-path="url(#tuv_d)"/>
     <path d="m0 0 600 300M0 300 600 0" stroke="#cf142b" stroke-width="40" clip-path="url(#tuv_b)"/>
     <path d="M300 0v400M0 150h700" stroke="#fff" stroke-width="100"/>
     <path d="M300 0v400M0 150h700" stroke="#cf142b" stroke-width="60"/>

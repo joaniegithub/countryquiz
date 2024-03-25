@@ -1,10 +1,13 @@
 <svg width="1200" height="600" viewBox="0 0 1200 600">
-    <clipPath id="aia-a">
+    <clipPath id="aia_a">
         <path d="M0 0v150h700v150H600zm600 0H300v350H0v-50z"/>
     </clipPath>
+    <clipPath id="aia_b">
+        <path d="M0 0v600h1200V0z"/>
+    </clipPath>
     <path fill="#00247d" d="M0 0h1200v600H0z"/>
-    <path d="m0 0 600 300m0-300L0 300" stroke="#fff" stroke-width="60"/>
-    <path d="m0 0 600 300m0-300L0 300" stroke="#cf142b" stroke-width="40" clip-path="url(#aia-a)"/>
+    <path d="m0 0 600 300m0-300L0 300" stroke="#fff" stroke-width="60" clip-path="url(#aia_b)"/>
+    <path d="m0 0 600 300m0-300L0 300" stroke="#cf142b" stroke-width="40" clip-path="url(#aia_a)"/>
     <path d="M300 0v350M0 150h700" stroke="#fff" stroke-width="100"/>
     <path d="M300 0v350M0 150h700" stroke="#cf142b" stroke-width="60"/>
     <path d="M0 300h600V0h200v400H0z" fill="#00247d"/>

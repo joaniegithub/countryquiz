@@ -12,8 +12,8 @@
             <use xlink:href="#ven_c" transform="rotate(144)"/>
         </g>
     </defs>
-    <path d="M0 0h180v120H0z" fill="#cf142b"/>
-    <path d="M0 0h180v80H0z" fill="#00247d"/>
+    <path d="M0 80h180v40H0z" fill="#cf142b"/>
+    <path d="M0 40h180v40H0z" fill="#00247d"/>
     <path d="M0 0h180v40H0z" fill="#fc0"/>
     <g transform="translate(90 84)">
         <g id="ven_f">

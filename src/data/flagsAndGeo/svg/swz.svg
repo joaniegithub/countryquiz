@@ -1,7 +1,8 @@
 <svg width="600" height="400" viewBox="0 0 600 400">
     <path fill="#3e5eb9" d="M0 0h600v400H0z"/>
-    <path fill="#ffd900" d="M0 75h600v250H0z"/>
+    <path fill="#ffd900" d="M0 75h600v25H0z"/>
     <path fill="#b10c0c" d="M0 100h600v200H0z"/>
+    <path fill="#ffd900" d="M0 300h600v25H0z"/>
     <g fill="#ffd900" stroke="#000" stroke-width="1.008">
         <rect stroke-width="1.08" width="485.7" height="8.571" x="59.812" y="195.72" rx="4.223" ry="4.286"/>
         <path fill="#fff" d="m492.85 154.28-24.285 8.571 24.285 8.572 24.285-8.572-24.285-8.571z"/>

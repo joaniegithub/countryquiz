@@ -1,5 +1,5 @@
 <svg width="1000" height="500" viewBox="0 0 512 256">
-    <path fill="#da000c" d="M0 0h512v256H0z"/>
+    <path fill="#da000c" d="M0 171.5h512v84.5H0z"/>
     <path fill="#fff" d="M0 0h512v171.5H0z"/>
     <g stroke="#000">
         <g id="gib_a" fill="#da000c" stroke-linecap="square">

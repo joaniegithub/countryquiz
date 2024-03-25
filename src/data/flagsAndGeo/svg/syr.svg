@@ -1,6 +1,6 @@
 <svg width="900" height="600" viewBox="0 0 180 120">
-    <path d="M0 0h180v120H0z"/>
-    <path fill="#fff" d="M0 0h180v80H0z"/>
+    <path d="M0 80h180v400H0z" fill="#000"/>
+    <path fill="#fff" d="M0 40h180v40H0z"/>
     <path fill="#ce1126" d="M0 0h180v40H0z"/>
     <g id="syr_d" fill="#007a3d">
         <g id="syr_c">

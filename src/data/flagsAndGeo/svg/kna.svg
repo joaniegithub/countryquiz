@@ -1,8 +1,11 @@
 <svg width="750" height="500" viewBox="0 0 750 500">
+    <clipPath id="kna_a">
+        <path d="M0 0v500h750V0z"/>
+    </clipPath>
     <path d="M750 0H0v500" fill="#009e49"/>
     <path d="M0 500h750V0" fill="#ce1126"/>
-    <path d="M0 500 750 0" stroke="#fcd116" stroke-width="210"/>
-    <path d="M0 500 750 0" stroke="#000" stroke-width="150"/>
+    <path d="M0 500 750 0" stroke="#fcd116" stroke-width="210" clip-path="url(#kna_a)"/>
+    <path d="M0 500 750 0" stroke="#000" stroke-width="150" clip-path="url(#kna_a)"/>
     <g id="kna_c" transform="rotate(-33.69 514.716 -777.095)" fill="#fff">
         <g id="kna_b">
             <path id="kna_a" d="M0-70V0h35" transform="rotate(18 0 -70)"/>

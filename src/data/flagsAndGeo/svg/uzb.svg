@@ -1,8 +1,9 @@
 <svg width="500" height="250" viewBox="0 0 500 250">
-    <path fill="#1eb53a" d="M0 0h500v250H0z"/>
-    <path fill="#0099b5" d="M0 0h500v125H0z"/>
-    <path fill="#ce1126" d="M0 80h500v90H0z"/>
+    <path fill="#1eb53a" d="M0 170h500v80H0z"/>
+    <path fill="#0099b5" d="M0 0h500v80H0z"/>
+    <path fill="#ce1126" d="M0 80h500v5H0z"/>
     <path fill="#fff" d="M0 85h500v80H0z"/>
+    <path fill="#ce1126" d="M0 165h500v5H0z"/>
     <circle cx="70" cy="40" r="30" fill="#fff"/>
     <circle cx="80" cy="40" r="30" fill="#0099b5"/>
     <g fill="#fff" transform="translate(136 64)">

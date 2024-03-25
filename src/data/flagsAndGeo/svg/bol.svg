@@ -1,6 +1,6 @@
 <svg width="1100" height="750" viewBox="0 0 1100 750">
-    <path fill="#007934" d="M0 0h1100v750H0z"/>
-    <path fill="#F9E300" d="M0 0h1100v500H0z"/>
+    <path fill="#007934" d="M0 500h1100v250H0z"/>
+    <path fill="#F9E300" d="M0 250h1100v250H0z"/>
     <path fill="#D52B1E" d="M0 0h1100v250H0z"/>
     <g stroke="#000" stroke-width="1.5">
         <g stroke-width=".217">

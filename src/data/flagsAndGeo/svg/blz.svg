@@ -9,8 +9,9 @@
             <stop stop-color="#570a00" offset="1"/>
         </radialGradient>
     </defs>
-    <path fill="#ce1126" d="M0 0h750v500H0z"/>
+    <path fill="#ce1126" d="M0 0h750v35.714H0z"/>
     <path fill="#003f87" d="M0 35.714h750v428.57H0z"/>
+    <path fill="#ce1126" d="M0 464.286h750v35.714H0z"/>
     <circle cx="375" cy="250" r="196.429" fill="#fff"/>
     <circle cx="375" cy="249" r="162.812" fill="none" stroke="#552300" stroke-width="4.103"/>
     <g fill="#007f00">

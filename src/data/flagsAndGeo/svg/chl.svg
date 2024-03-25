@@ -1,6 +1,6 @@
 <svg width="1500" height="1000" viewBox="-4 -4 24 16">
-    <path d="M20 12H-4V-4h24z" fill="#d52b1e"/>
-    <path d="M4 4h16v-8H-4z" fill="#fff"/>
+    <path d="M20 12H-4V4h24z" fill="#d52b1e"/>
+    <path d="M4 4h16v-8H4z" fill="#fff"/>
     <path d="M4 4h-8v-8h8z" fill="#0039a6"/>
     <g id="chl_c">
         <g id="chl_b">
