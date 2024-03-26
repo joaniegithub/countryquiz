@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 import GameMap from 'components/ui/GameMap';
-import { DIFFICULTY_EXPERT } from 'data/config';
+import { DIFFICULTY_EXPERT, questionTypes } from 'data/config';
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -26,11 +26,12 @@ const GameQuestion = (props) => {
     const question = game.questions && game.questions[turn];
     const difficultyLevel = game.difficultyLevel;
     const rightAnswer = question ? question.answer : undefined;
+	const questionType = questionTypes.find(qt => qt.key === question.questionTypeKey);
 
     // preload images for next Question
     const nextQuestionImages = () => {
         const nextQuestion = game.questions && game.questions.length >= turn && game.questions[turn + 1];
-        const nextQuestionKey = nextQuestion?.questionType.key;
+        const nextQuestionKey = nextQuestion?.questionTypeKey;
         if (nextQuestionKey === 'flag' || nextQuestionKey === 'country_flag') {
             const countries =
                 nextQuestionKey === 'flag'
@@ -69,7 +70,7 @@ const GameQuestion = (props) => {
         <>
             {question && question.choices
                 ? question.choices.map((choice, index) => {
-						// if (question.questionType.key === 'flag') {
+						// if (question.questionTypeKey === 'flag') {
 						// 	var img = new Image();
 						// 	img.src = `${process.env.PUBLIC_URL}/assets/flagsAndGeo/${choice.toLowerCase()}.svg`;
 						// }
@@ -84,10 +85,10 @@ const GameQuestion = (props) => {
 								choice={choice}
 								rightAnswer={rightAnswer}
 								chosenAnswer={chosenAnswer}
-								isFlag={question.questionType.key === 'flag'}
+								isFlag={question.questionTypeKey === 'flag'}
 								answerAdditionnalText={question.answerAdditionnalText}
 							>
-								{question.questionType.key === 'flag' ? (
+								{question.questionTypeKey === 'flag' ? (
 									<GameFlag
 										country={choice}
 										svgOverrides={{
@@ -128,8 +129,8 @@ const GameQuestion = (props) => {
             <Card
                 sx={{
                     px: 2,
-                    pt: question.questionType.key === 'country_map' ? 3 : 4,
-                    pb: question.questionType.key === 'country_map' ? 2 : 4,
+                    pt: question.questionTypeKey === 'country_map' ? 3 : 4,
+                    pb: question.questionTypeKey === 'country_map' ? 2 : 4,
                     mt: 1,
                     textAlign: 'center',
                     width: '100%',
@@ -137,13 +138,18 @@ const GameQuestion = (props) => {
                 }}
             >
                 <Typography fontSize="20px" fontWeight="600" lineHeight="24px" mb="16px">
-                    {textReplace(question.questionType.questionPhrase[i18n.language], question.questionPhraseValues)}
+                    {textReplace(questionType.questionPhrase[i18n.language], question.questionPhraseValues)}
                 </Typography>
-                {question.questionType.key === 'country_flag' ? (
+				{questionType.questionSubPhrase && (
+					<Typography fontSize="12px" fontWeight="400" lineHeight="12px" mt="-12px" mb="0">
+						{questionType.questionSubPhrase[i18n.language]}
+					</Typography>
+				)}
+                {question.questionTypeKey === 'country_flag' ? (
                     <React.Fragment>
                         <GameFlag country={question.country} />
                     </React.Fragment>
-                ) : question.questionType.key === 'country_map' ? (
+                ) : question.questionTypeKey === 'country_map' ? (
                     <GameMap country={question.country} />
                 ) : (
                     <Typography color="success.main" fontSize="24px" fontWeight="800" lineHeight="28px">
@@ -151,7 +157,7 @@ const GameQuestion = (props) => {
                     </Typography>
                 )}
             </Card>
-            {question.questionType.key === 'flag' ? (
+            {question.questionTypeKey === 'flag' ? (
                 <Stack
                     direction="row"
                     flexWrap="wrap"

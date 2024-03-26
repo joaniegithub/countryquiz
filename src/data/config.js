@@ -1,4 +1,4 @@
-export const GAME_VERSION = '1.09';
+export const GAME_VERSION = '1.11';
 
 export const DIFFICULTY_FLASHCARD = 'flashCard';
 export const DIFFICULTY_NORMAL = 'normal';
@@ -171,7 +171,7 @@ export const questionTypes = [
         disabled: false,
     },
     {
-        key: 'has_n_border',
+        key: 'has_n_border', // has the most/least borders
         questionPhrase: {
             fra: 'Lequel de ces pays a exactement {0} frontière{1} terrestre{1}?',
             eng: 'Which of these countries has exactly {0} land border{1}?',
@@ -180,6 +180,37 @@ export const questionTypes = [
         answerProperty: 'name-common',
         disabled: false,
     },
+
+    // landlocked
+    {
+        key: 'is_landlocked',
+        questionPhrase: {
+            fra: 'Lequel de ces pays est enclavé?',
+            eng: 'Which of these country is landlocked?',
+        },
+        questionSubPhrase: {
+            fra: '(n\'a aucun accès navigable à l\'océan)',
+            eng: '(no water acces to the ocean)',
+        },
+        questionProperty: undefined,
+        answerProperty: 'name-common',
+        disabled: false,
+    },
+    {
+        key: 'is_not_landlocked',
+        questionPhrase: {
+            fra: 'Lequel de ces pays N\'est PAS enclavé?',
+            eng: 'Which of these country is NOT landlocked?',
+        },
+        questionSubPhrase: {
+            fra: '(a un accès navigable à l\'océan)',
+            eng: '(has water acces to the ocean)',
+        },
+        questionProperty: undefined,
+        answerProperty: 'name-common',
+        disabled: false,
+    },
+	
 
     /*
 	Borders:

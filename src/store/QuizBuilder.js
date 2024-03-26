@@ -28,6 +28,11 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
     let countryChoices = [];
     let countryOfficialChoices = [];
     let cca3Choices = [];
+	
+    let landlockCountries = [];
+    let notLandlockCountries = [];
+    let countriesPerNbOfBorders = [];
+    let dependentCountries = [];
 
     if (mode.key === TRIVIA) {
         capitalChoices = getAllAnswers(allCountries, 'capital', language, chosenDifficultyLevel);
@@ -36,6 +41,25 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         countryChoices = getAllAnswers(allCountries, 'name-common', language, chosenDifficultyLevel);
         countryOfficialChoices = getAllAnswers(allCountries, 'name-official', language, chosenDifficultyLevel); // todo langue officiels
         cca3Choices = getAllAnswers(allCountries, 'cca3', language, chosenDifficultyLevel);
+		allCountries.forEach(c => {
+			if (c.landlocked) {
+				landlockCountries.push(c);
+			} else {
+				notLandlockCountries.push(c);
+			}
+			if (c.borders) {
+				if (!countriesPerNbOfBorders[c.borders.length]) {
+					countriesPerNbOfBorders[c.borders.length] = [];
+				}
+				countriesPerNbOfBorders[c.borders.length].push(c);
+			}
+			if (!c.independent) {
+				dependentCountries.push(c);
+			}
+		});
+		landlockCountries = getAllAnswers(landlockCountries, 'name-common', language);
+		notLandlockCountries = getAllAnswers(notLandlockCountries, 'name-common', language);
+		dependentCountries = getAllAnswers(dependentCountries, 'name-common', language);
     } else {
         if (chosenIndependantOnly) {
             questionCountries = Object.values(questionCountries).filter((c) => c.independent === true);
@@ -93,7 +117,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                 //     // for test purpose
                 // 	questionType = getOneRandom(availableQuestionTypes);
                 // } else {
-                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'name_official_wrong');
+                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'is_landlocked');
                 // }
                 questionType = getOneRandom(availableQuestionTypes);
             }
@@ -220,6 +244,15 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                             .join(', ');
                     }
                     break;
+                case 'is_landlocked':
+                case 'is_not_landlocked':
+					questionType = questionTypes.find(qt => qt.key === (c.landlocked ? 'is_landlocked' : 'is_not_landlocked'));
+                    const answersFrom = c.landlocked ? notLandlockCountries : landlockCountries;
+					answer = getCountryValue(c, language, questionType.answerProperty);
+					choices = answer
+						? getChoices(c, language, answer, answersFrom, questionType, DIFFICULTY_NORMAL)
+						: undefined;
+                    break;
             }
             // console.log(c.name.common, answer, choices, questionType.key, c.borders);
 
@@ -227,15 +260,15 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 				break;
 			}
 
-            // if (!answer || !choices) {
-            //     nbTry++;
-            // }
+            if (!answer || !choices) {
+                nbTry++;
+            }
         }
 
         return {
             result: undefined,
             country: c.cca3,
-            questionType,
+            questionTypeKey: questionType.key,
             question,
             answer,
             choices,
