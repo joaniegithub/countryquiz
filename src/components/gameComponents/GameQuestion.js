@@ -114,6 +114,25 @@ const GameQuestion = (props) => {
         </>
     );
 
+	const questionPhrase = (
+		<>
+			<Typography
+				fontSize="20px"
+				fontWeight="600"
+				lineHeight="24px"
+				mb={questionType.questionPhraseInverted ? 0 : "16px"}
+				mt={questionType.questionPhraseInverted ? "16px" : 0}
+			>
+				{textReplace(questionType.questionPhrase[i18n.language], question.questionPhraseValues)}
+			</Typography>
+			{questionType.questionSubPhrase && (
+				<Typography fontSize="12px" fontWeight="400" lineHeight="12px" mt="-12px" mb="0">
+					{questionType.questionSubPhrase[i18n.language]}
+				</Typography>
+			)}
+		</>
+	);
+
     return (
         <Stack
             alignItems="center"
@@ -137,14 +156,7 @@ const GameQuestion = (props) => {
                     boxSizing: 'border-box',
                 }}
             >
-                <Typography fontSize="20px" fontWeight="600" lineHeight="24px" mb="16px">
-                    {textReplace(questionType.questionPhrase[i18n.language], question.questionPhraseValues)}
-                </Typography>
-				{questionType.questionSubPhrase && (
-					<Typography fontSize="12px" fontWeight="400" lineHeight="12px" mt="-12px" mb="0">
-						{questionType.questionSubPhrase[i18n.language]}
-					</Typography>
-				)}
+				{!questionType.questionPhraseInverted && (<>{questionPhrase}</>)}
                 {question.questionTypeKey === 'country_flag' ? (
                     <React.Fragment>
                         <GameFlag country={question.country} />
@@ -156,6 +168,7 @@ const GameQuestion = (props) => {
                         {question ? question.question /*+(question.flag ? " "+question.flag : '')*/ : ''}
                     </Typography>
                 )}
+				{questionType.questionPhraseInverted && (<>{questionPhrase}</>)}
             </Card>
             {question.questionTypeKey === 'flag' ? (
                 <Stack

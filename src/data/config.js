@@ -115,6 +115,7 @@ export const questionTypes = [
         questionProperty: 'cca3',
         answerProperty: 'name-common',
         disabled: false,
+		disabledOffline: true,
     },
 
     // OFFICIAL NAME
@@ -206,6 +207,21 @@ export const questionTypes = [
             fra: '(a un accès navigable à l\'océan)',
             eng: '(has water acces to the ocean)',
         },
+        questionProperty: undefined,
+        answerProperty: 'name-common',
+        disabled: false,
+    },
+	
+	// Languages
+    {
+        key: 'language',
+        questionPhrase: {
+            fra: 'est une langue officielle dans lequel de ces pays?',
+            eng: 'is an official language in wich one of these countries?',
+            // fra: 'Quel lequel de ces pays cette langue est une des langues officielles?',
+            // eng: 'In wich of these countries is this language one of its official languages?',
+        },
+		questionPhraseInverted: true,
         questionProperty: undefined,
         answerProperty: 'name-common',
         disabled: false,

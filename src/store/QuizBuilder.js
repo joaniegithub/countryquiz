@@ -31,8 +31,9 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 	
     let landlockCountries = [];
     let notLandlockCountries = [];
-    let countriesPerNbOfBorders = [];
-    let dependentCountries = [];
+    let countriesPerLanguages = [];
+    // let countriesPerNbOfBorders = [];
+    // let dependentCountries = [];
 
     if (mode.key === TRIVIA) {
         capitalChoices = getAllAnswers(allCountries, 'capital', language, chosenDifficultyLevel);
@@ -47,19 +48,31 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 			} else {
 				notLandlockCountries.push(c);
 			}
-			if (c.borders) {
-				if (!countriesPerNbOfBorders[c.borders.length]) {
-					countriesPerNbOfBorders[c.borders.length] = [];
-				}
-				countriesPerNbOfBorders[c.borders.length].push(c);
-			}
-			if (!c.independent) {
-				dependentCountries.push(c);
+			// console.log(Object.values(c.languages).join(", "));
+			// if (c.borders) {
+			// 	if (!countriesPerNbOfBorders[c.borders.length]) {
+			// 		countriesPerNbOfBorders[c.borders.length] = [];
+			// 	}
+			// 	countriesPerNbOfBorders[c.borders.length].push(c);
+			// }
+			// if (!c.independent) {
+			// 	dependentCountries.push(c);
+			// }
+			// console.log(c.peak);
+			if (c.languages) {
+				Object.keys(c.languages).forEach(l => {
+					if (!countriesPerLanguages[l]) {
+						countriesPerLanguages[l] = [];
+					}
+					countriesPerLanguages[l].push(c);
+				});
 			}
 		});
 		landlockCountries = getAllAnswers(landlockCountries, 'name-common', language);
 		notLandlockCountries = getAllAnswers(notLandlockCountries, 'name-common', language);
-		dependentCountries = getAllAnswers(dependentCountries, 'name-common', language);
+		// dependentCountries = getAllAnswers(dependentCountries, 'name-common', language);
+
+		// console.log(countriesPerLanguages);
     } else {
         if (chosenIndependantOnly) {
             questionCountries = Object.values(questionCountries).filter((c) => c.independent === true);
@@ -78,7 +91,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         }
     }
 
-    const availableQuestionTypes = questionTypes.filter((qt) => !qt.disabled);
+    const availableQuestionTypes = questionTypes.filter((qt) => !qt.disabled && (navigator.onLine || qt.disabledOffline));
     let questionType = mode.questionType;
     let question;
     let answer;
@@ -102,6 +115,8 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
         subsetCountries = undefined;
 
         let nbTry = 0;
+		let testQuestion = undefined;
+		// testQuestion = 'language'
 
         while (!answer || !choices) {
             question = undefined;
@@ -113,13 +128,16 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             subsetCountries = undefined;
 
             if (mode.key === TRIVIA) {
-                // if (nbTry > 0) {
-                //     // for test purpose
-                // 	questionType = getOneRandom(availableQuestionTypes);
-                // } else {
-                //     questionType = availableQuestionTypes.find((qt) => qt.key === 'is_landlocked');
-                // }
-                questionType = getOneRandom(availableQuestionTypes);
+				if (testQuestion) {
+					if (nbTry > 0) {
+						// for test purpose
+						questionType = getOneRandom(availableQuestionTypes);
+					} else {
+						questionType = availableQuestionTypes.find((qt) => qt.key === testQuestion);
+					}
+				} else {
+                	questionType = getOneRandom(availableQuestionTypes);
+				}
             }
 
             switch (questionType.key) {
@@ -253,6 +271,17 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 						? getChoices(c, language, answer, answersFrom, questionType, DIFFICULTY_NORMAL)
 						: undefined;
                     break;
+                
+				
+				case 'language':
+					const countryLang = shuffle(Object.keys(c.languages)).find(l => countriesPerLanguages[l] && (countriesPerLanguages[l].length >= 3));
+					if (countryLang) {
+						question = c.languages[countryLang];
+                    	answer = getCountryValue(c, language, questionType.answerProperty);
+						choices = getCountriesNotLanguage(c, answer, countryLang, allCountries, language)
+					}
+					// console.log('language', c.name.common, answer, choices, c.languages);
+                    break;
             }
             // console.log(c.name.common, answer, choices, questionType.key, c.borders);
 
@@ -279,6 +308,31 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 
     return questions;
 };
+
+const getCountriesNotLanguage = (country, answer, countryLang, allCountries, language) => {
+    const choices = [];
+    const indexUsed = [];
+    const max = allCountries.length;
+	let countryName;
+
+    while (choices.length < NB_CHOICES - 1) {
+        const rnd = Math.floor(Math.random() * max);
+		countryName = getCountryValue(allCountries[rnd], language, 'name-common');
+        if (
+			country.cca3 === allCountries[rnd].cca3 || // same country than answer
+			allCountries[rnd].languages[countryLang] !== undefined || // country has the language of the question
+            indexUsed.indexOf(rnd) >= 0 || // already used
+            choices.indexOf(countryName) >= 0 // already in choices
+        ) {
+            continue;
+        }
+        choices.push(countryName);
+        indexUsed.push(rnd);
+    }
+    // ajouter la bonne réponse parmis les choix
+    choices.splice(((choices.length + 1) * Math.random()) | 0, 0, answer);
+    return choices;
+}
 
 const getCountriesNotBorder = (country, answer, allCountries, language) => {
     const choices = [];

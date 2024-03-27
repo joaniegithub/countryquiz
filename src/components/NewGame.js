@@ -3,7 +3,7 @@ import { ReactComponent as Brain } from 'assets/images/brain.svg';
 import { ReactComponent as Flag } from 'assets/images/flag1.svg';
 import { ReactComponent as Location } from 'assets/images/location.svg';
 import { ReactComponent as WorldMap } from 'assets/images/map.svg';
-import { CAPITAL, DIFFICULTY_NORMAL, FLAG, FULL, SHORT, TRIVIA, difficultyLevels, gameModes } from 'data/config';
+import { CAPITAL, DIFFICULTY_NORMAL, FLAG, FULL, SHORT, TRIVIA, difficultyLevels, gameModes, questionTypes } from 'data/config';
 import regionsData from 'data/regions.json';
 import * as React from 'react';
 import { useState } from 'react';
@@ -160,11 +160,13 @@ const NewGame = (props) => {
 							{gameModes
 								.filter((option) => option.isMain)
 								.map((option) => {
+									const questionType = questionTypes.find(qt => option.questionType === qt.key);
 									return (
 										<Button
 											variant="mode"
 											size="large"
 											key={option.key}
+											disabled={questionType !== undefined && questionType.disabledOffline && !navigator.onLine}
 											sx={{
 												width: 'calc(50% - 12px)',
 												display: 'flex',
