@@ -1,0 +1,9 @@
+<svg width="900" height="600" viewBox="0 0 72 48">
+    <clipPath id="tza_a">
+        <path d="M0 0v48h72V0z"/>
+    </clipPath>
+    <path d="M0 48V0h72z" fill="#1eb53a"/>
+    <path d="M0 48h72V0z" fill="#00a3dd"/>
+    <path d="M0 48 72 0" stroke="#fcd116" stroke-width="19" clip-path="url(#tza_a)"/>
+    <path d="M0 48 72 0" stroke="#000" stroke-width="13" clip-path="url(#tza_a)"/>
+</svg>
