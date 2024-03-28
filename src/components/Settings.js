@@ -8,28 +8,34 @@ import InstallDesktopIcon from '@mui/icons-material/InstallDesktop';
 import InstallMobileIcon from '@mui/icons-material/InstallMobile';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {
-    Button,
     Dialog,
     DialogContent,
     DialogTitle,
+    FormControlLabel,
     IconButton,
     Stack,
+    Switch,
     ToggleButton,
     ToggleButtonGroup,
     Typography,
 } from '@mui/material';
 
 import { editSettings } from '../store/actions';
-import { useIsDarkMode, useLanguage } from '../store/selector';
+import { useIsDarkMode, useLanguage, useShowAdvancedOptions } from '../store/selector';
+import MainButton from './ui/MainButton';
 
 const Settings = (props) => {
     const { settingsDialogOpen, handleClose, deferredPrompt } = props;
     const [showInstallButton, setShowInstallButton] = useState(true);
     const dispatch = useDispatch();
+    const showAdvancedOptions = useShowAdvancedOptions();
     const isDarkMode = useIsDarkMode();
     const language = useLanguage();
     const { t, i18n } = useTranslation();
 
+    const handleClickAdvancedOptions = (event) => {
+        dispatch(editSettings({ showAdvancedOptions: event.target.checked }));
+    };
     const handleClickLightMode = () => {
         dispatch(editSettings({ isDarkMode: !isDarkMode }));
     };
@@ -92,27 +98,57 @@ const Settings = (props) => {
                             </ToggleButton>
                         ))}
                     </ToggleButtonGroup>
-                    <Button
-                        onClick={handleClickLightMode}
-                        value={isDarkMode}
-                        endIcon={isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
+					<FormControlLabel
+						control={<Switch checked={showAdvancedOptions} />}
+						onChange={handleClickAdvancedOptions}
+						label={
+							<Typography fontSize="14px" color="textSecondary">
+								{t('Advanced game options')}
+							</Typography>
+						}
+						sx={{
+							margin: '-10px 0 -10px -7px',
+						}}
+					/>
+                    <MainButton
+							buttonP={{
+								variant: "text",
+								value: isDarkMode,
+								color: 'primary',
+								size: 'small',
+								onClick: handleClickLightMode,
+								endIcon: isDarkMode ? <LightModeIcon /> : <DarkModeIcon />
+							}}
+							typoP={{
+								fontSize: '16px',
+								fontWeight: '700',
+								lineHeight: '28px',
+							}}
                     >
                         {t(isDarkMode ? 'Light Mode' : 'Dark Mode')}
-                    </Button>
+                    </MainButton>
                     {deferredPrompt && showInstallButton && (
-                        <Button
-                            variant="outlined"
-                            onClick={handleClickInstall}
-                            endIcon={isMobile ? <InstallMobileIcon /> : <InstallDesktopIcon />}
+                        <MainButton
+							buttonP={{
+								variant: "outlined",
+								color: 'primary',
+								size: 'large',
+								onClick: handleClickInstall,
+								endIcon: isMobile ? <InstallMobileIcon /> : <InstallDesktopIcon />
+							}}
+							typoP={{
+								fontSize: '16px',
+								fontWeight: '700',
+								lineHeight: '28px',
+							}}
                         >
                             {`${t('Install')} ${t('Country')} ${t('Quiz')}`}
-                        </Button>
+                        </MainButton>
                     )}
                     <Typography
                         component="p"
                         fontSize="10px"
                         textAlign="center"
-                        // lineHeight={`${HEIGHT}px`}
                     >
                         {`${t('Country')} ${t('Quiz')}`} @2024 Joanie Lessnick
                     </Typography>

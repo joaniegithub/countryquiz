@@ -13,6 +13,7 @@
     "Wiki": "Wiki Pays",
 
     "Settings": "Paramètres",
+    "Advanced game options": "Options de jeu avancées",
     "Dark Mode": "Mode sombre",
     "Light Mode": "Mode clair",
     "Install": "Installer",
@@ -48,6 +49,7 @@
     "Normal": "Normal",
     "Hard": "Difficile",
     "Expert": "Expert",
+    "Hide map background": "Cacher l'arrière-plan de carte",
     "Start Game": "Débuter la partie",
 
     "Next": "Suivant",

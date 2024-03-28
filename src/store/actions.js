@@ -21,7 +21,7 @@ export const newGame = () => {
     };
 };
 
-export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel, _chosenIndependantOnly, _chosenGameLength) => {
+export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel, _chosenIndependantOnly, _chosenGameLength, _chosenHideBackgroundMap) => {
     return {
         type: constants.START_GAME,
         chosenGameMode: _chosenGameMode,
@@ -29,6 +29,7 @@ export const startGame = (_chosenGameMode, _chosenRegion, _chosenDifficultyLevel
         chosenDifficultyLevel: _chosenDifficultyLevel,
         chosenIndependantOnly: _chosenIndependantOnly,
         chosenGameLength: _chosenGameLength,
+        chosenHideBackgroundMap: _chosenHideBackgroundMap,
     };
 };
 

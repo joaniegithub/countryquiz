@@ -141,31 +141,6 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
             }
 
             switch (questionType.key) {
-                case 'capital':
-                    question = getCountryValue(c, language, questionType.questionProperty);
-                    answer = getCountryValue(c, language, questionType.answerProperty);
-                    choices = answer
-                        ? getChoices(c, language, answer, capitalChoices, questionType, chosenDifficultyLevel)
-                        : undefined;
-                    break;
-                case 'country_capital':
-                    question = getCountryValue(c, language, questionType.questionProperty);
-                    answer = getCountryValue(c, language, questionType.answerProperty);
-                    choices = answer
-                        ? getChoices(c, language, answer, countryChoices, questionType, chosenDifficultyLevel)
-                        : undefined;
-                    break;
-                case 'is_capital':
-                    answer = getCountryValue(c, language, questionType.answerProperty);
-                    choices = answer ? getChoices(c, language, answer, cityChoicesFlat, questionType, DIFFICULTY_NORMAL) : undefined;
-                    break;
-                case 'not_capital':
-                    answer = getCountryValue(c, language, 'cities', 1);
-                    choices = answer
-                        ? getChoices(c, language, answer, capitalChoicesFlat, questionType, DIFFICULTY_NORMAL)
-                        : undefined;
-                    break;
-
                 case 'flag':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
@@ -181,6 +156,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         : undefined;
                     break;
 
+
                 case 'country_map':
                     question = getCountryValue(c, language, questionType.questionProperty);
                     answer = getCountryValue(c, language, questionType.answerProperty);
@@ -188,6 +164,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         ? getChoices(c, language, answer, countryChoices, questionType, chosenDifficultyLevel)
                         : undefined;
                     break;
+
 
                 case 'name_official':
                     question = getCountryValue(c, language, questionType.questionProperty);
@@ -205,6 +182,7 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
                         : undefined;
 					answerAdditionnalText = getCountryValue(c, language, 'name-official');
                     break;
+
 
                 case 'share_border':
                     question = getCountryValue(c, language, questionType.questionProperty);
@@ -282,6 +260,34 @@ export const getQuestions = (language, mode, chosenRegion, chosenDifficultyLevel
 					}
 					// console.log('language', c.name.common, answer, choices, c.languages);
                     break;
+				
+				
+                case 'is_capital':
+                    answer = getCountryValue(c, language, questionType.answerProperty);
+                    choices = answer ? getChoices(c, language, answer, cityChoicesFlat, questionType, DIFFICULTY_NORMAL) : undefined;
+                    break;
+                case 'not_capital':
+                    answer = getCountryValue(c, language, 'cities', 1);
+                    choices = answer
+                        ? getChoices(c, language, answer, capitalChoicesFlat, questionType, DIFFICULTY_NORMAL)
+                        : undefined;
+                    break;
+                case 'capital':
+                    question = getCountryValue(c, language, questionType.questionProperty);
+                    answer = getCountryValue(c, language, questionType.answerProperty);
+                    choices = answer
+                        ? getChoices(c, language, answer, capitalChoices, questionType, chosenDifficultyLevel)
+                        : undefined;
+                    break;
+                case 'country_capital':
+				default:
+                    question = getCountryValue(c, language, questionType.questionProperty);
+                    answer = getCountryValue(c, language, questionType.answerProperty);
+                    choices = answer
+                        ? getChoices(c, language, answer, countryChoices, questionType, chosenDifficultyLevel)
+                        : undefined;
+                    break;
+
             }
             // console.log(c.name.common, answer, choices, questionType.key, c.borders);
 

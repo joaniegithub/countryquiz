@@ -3,14 +3,14 @@ import { ReactComponent as Brain } from 'assets/images/brain.svg';
 import { ReactComponent as Flag } from 'assets/images/flag1.svg';
 import { ReactComponent as Location } from 'assets/images/location.svg';
 import { ReactComponent as WorldMap } from 'assets/images/map.svg';
-import { CAPITAL, DIFFICULTY_NORMAL, FLAG, FULL, SHORT, TRIVIA, difficultyLevels, gameModes, questionTypes } from 'data/config';
+import { CAPITAL, COUNTRY_BY_MAP, DIFFICULTY_NORMAL, FLAG, FULL, SHORT, TRIVIA, difficultyLevels, gameModes, questionTypes } from 'data/config';
 import regionsData from 'data/regions.json';
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { startGame } from 'store/actions';
-import { useGameOptions } from 'store/selector';
+import { useShowAdvancedOptions, useGameOptions } from 'store/selector';
 
 import {
     Button,
@@ -24,7 +24,6 @@ import {
     Typography,
     alpha,
 } from '@mui/material';
-
 import FunTypo from './ui/FunTypo';
 import MainButton from './ui/MainButton';
 
@@ -36,6 +35,8 @@ const NewGame = (props) => {
     const [step, setStep] = useState(0);
 
     const gameOptions = useGameOptions();
+    const showAdvancedOptions = useShowAdvancedOptions();
+	console.log(showAdvancedOptions);
 
     const [independantOnly, setIndependantOnly] = useState((gameOptions && gameOptions.independantOnly) ?? true);
     const [gameMode, setGameMode] = useState((gameOptions && gameOptions.gameMode) || CAPITAL);
@@ -45,6 +46,7 @@ const NewGame = (props) => {
     const [difficultyLevel, setDifficultyLevel] = useState(
         (gameOptions && gameOptions.difficultyLevel) ?? DIFFICULTY_NORMAL
     );
+    const [hideBackgroundMap, setHideBackgroundMap] = useState((gameOptions && gameOptions.hideBackgroundMap) ?? false);
 
     const handleClickMode = (event, gameModeKey) => {
         setGameMode(gameModeKey);
@@ -66,10 +68,6 @@ const NewGame = (props) => {
         setIndependantOnly(event.target.checked);
     };
 
-    const handleChangeMode = (event) => {
-        setGameMode(event.target.value);
-    };
-
     const handleChangeRegion = (event) => {
         setRegion(event.target.value);
     };
@@ -78,8 +76,12 @@ const NewGame = (props) => {
         setDifficultyLevel(event.target.value);
     };
 
+    const handleClickHideBackgroundMap = (event) => {
+        setHideBackgroundMap(event.target.value);
+    };
+
     const handleClickStart = () => {
-        dispatch(startGame(gameSubMode, region, difficultyLevel, independantOnly, gameLength));
+        dispatch(startGame(gameSubMode, region, difficultyLevel, independantOnly, gameLength, hideBackgroundMap));
     };
 
     const getSVG = (mode) => {
@@ -95,6 +97,7 @@ const NewGame = (props) => {
                 svg = <Flag />;
                 break;
             case 'trivia':
+			default:
                 svg = <Brain />;
                 break;
         }
@@ -217,25 +220,12 @@ const NewGame = (props) => {
                                 <Typography
                                     variant="h2"
                                     display="block"
-                                    // mt="-20px !important"
                                     fontSize="32px"
                                     lineHeight="32px"
                                     fontWeight="800"
                                     textAlign="center"
                                 >
                                     {t('Options')}
-                                    {/*<FunTypo
-										text=
-										color={theme.palette.text.main.replace('#', '')}
-										stroke={false}
-										strokeWidth="2px"
-										distance="3px"
-										sx={{
-											fontSize: '32px',
-											lineHeight: '48px',
-											fontWeight: 800,
-										}}
-									/>*/}
                                 </Typography>
 								<div>
 									<Button
@@ -271,26 +261,9 @@ const NewGame = (props) => {
 										</Typography>
 									</Button>
 								</div>
-                                {/*<TextField
-									fullWidth
-									label={t('Mode')}
-									name="Mode"
-									onChange={handleChangeMode}
-									required
-									select
-									SelectProps={{ native: true }}
-									value={gameMode}
-								>
-									{gameModes.map((option) => (
-										<option key={option.key} value={option.key} disabled={option.disabled}>
-											{option.name[i18n.language]}
-										</option>
-									))}
-								</TextField>*/}
                                 {(gameMode === FLAG || gameMode === CAPITAL) && (
 									<>
                                         <ToggleButtonGroup
-                                            // disabled={gameMode === TRIVIA}
                                             variant="outlined"
                                             color="secondary"
                                             value={gameSubMode}
@@ -304,9 +277,6 @@ const NewGame = (props) => {
                                                 justifyContent: 'center',
                                             }}
                                         >
-                                            {/*<Typography fontSize="12px" color="textSecondary" lineHeight="38.75px"  mr="8px">
-												{t('Find')}:
-										</Typography>*/}
                                             <ToggleButton key={gameMode} value={gameMode}>
                                                 {gameModes.find((m) => m.key === gameMode).subModeLabel[i18n.language]}
                                             </ToggleButton>
@@ -321,50 +291,33 @@ const NewGame = (props) => {
                                     </>
                                 )}
                                 {gameMode !== TRIVIA && (
-                                    <>
-                                        <div>
-											<TextField
-												disabled={gameMode === TRIVIA}
-												fullWidth
-												label={t('Region')}
-												name="Region"
-												onChange={handleChangeRegion}
-												required
-												select
-												SelectProps={{ native: true }}
-												value={region}
-                                                sx={{
-                                                    mt: '4px',
-                                                }}
-											>
-												<option key="all" value="all">
-													{t('World')}
-												</option>
-												{regionsData.map((option) =>
-													option.eng === 'Antarctic' ? null : (
-														<option key={option.eng} value={option.eng}>
-															{option[i18n.language]}
-														</option>
-													)
-												)}
-											</TextField>
-                                        </div>
-                                        <div>
-                                            <FormControlLabel
-                                                disabled={gameMode === TRIVIA}
-                                                control={<Switch checked={independantOnly} />}
-                                                onChange={handleChangeIndependant}
-                                                label={
-                                                    <Typography fontSize="14px" color="textSecondary">
-                                                        {t('Independent countries only')}
-                                                    </Typography>
-                                                }
-                                                sx={{
-                                                    margin: '-10px 0 -10px -7px',
-                                                }}
-                                            />
-                                        </div>
-                                    </>
+									<div>
+										<TextField
+											disabled={gameMode === TRIVIA}
+											fullWidth
+											label={t('Region')}
+											name="Region"
+											onChange={handleChangeRegion}
+											required
+											select
+											SelectProps={{ native: true }}
+											value={region}
+											sx={{
+												mt: '4px',
+											}}
+										>
+											<option key="all" value="all">
+												{t('World')}
+											</option>
+											{regionsData.map((option) =>
+												option.eng === 'Antarctic' ? null : (
+													<option key={option.eng} value={option.eng}>
+														{option[i18n.language]}
+													</option>
+												)
+											)}
+										</TextField>
+									</div>
                                 )}
                                 {<ToggleButtonGroup
 									variant="outlined"
@@ -387,37 +340,71 @@ const NewGame = (props) => {
 										{t("Full")}
 									</ToggleButton>
 								</ToggleButtonGroup>}
-                                <ToggleButtonGroup
-                                    // disabled={gameMode === TRIVIA}
-                                    variant="outlined"
-                                    color="secondary"
-                                    value={difficultyLevel}
-                                    exclusive
-                                    onChange={handleChangeDifficultyLevel}
-                                    aria-label={t('Difficulty')}
-                                    label={t('Difficulty')}
-                                    name="Difficulty"
-                                    size="small"
-                                    sx={{
-                                        justifyContent: 'center',
-                                    }}
-                                >
-                                    {difficultyLevels.map((option) => (
-                                        <ToggleButton key={option.key} value={option.key} disabled={option.disabled}>
-                                            {t(option.name)}
-                                        </ToggleButton>
-                                    ))}
-                                </ToggleButtonGroup>
+								<ToggleButtonGroup
+									variant="outlined"
+									color="secondary"
+									value={difficultyLevel}
+									exclusive
+									onChange={handleChangeDifficultyLevel}
+									aria-label={t('Difficulty')}
+									label={t('Difficulty')}
+									name="Difficulty"
+									size="small"
+									sx={{
+										justifyContent: 'center',
+									}}
+								>
+									{difficultyLevels.map((option) => (
+										<ToggleButton key={option.key} value={option.key} disabled={option.disabled}>
+											{t(option.name)}
+										</ToggleButton>
+									))}
+								</ToggleButtonGroup>
+								{showAdvancedOptions && (
+									<>
+										{gameMode !== TRIVIA && (
+											<>
+												<div>
+													<FormControlLabel
+														disabled={gameMode === TRIVIA}
+														control={<Switch checked={independantOnly} />}
+														onChange={handleChangeIndependant}
+														label={
+															<Typography fontSize="14px" color="textSecondary">
+																{t('Independent countries only')}
+															</Typography>
+														}
+														sx={{
+															margin: '-10px 0 -10px -7px',
+														}}
+													/>
+												</div>
+											</>
+										)}
+										{(gameMode === TRIVIA || gameMode === COUNTRY_BY_MAP) && (
+											<div>
+												<FormControlLabel
+													control={<Switch checked={hideBackgroundMap} />}
+													onChange={handleClickHideBackgroundMap}
+													label={
+														<Typography fontSize="14px" color="textSecondary">
+															{t('Hide map background')}
+														</Typography>
+													}
+													sx={{
+														margin: '-10px 0 -10px -7px',
+													}}
+												/>
+											</div>
+										)}
+									</>
+								)}
                                 <MainButton
                                     buttonP={{
                                         color: 'primary',
                                         size: 'large',
                                         onClick: handleClickStart,
                                     }}
-                                    // typoP={{
-                                    // 	fontSize: "20px",
-                                    // 	fontWeight: "700",
-                                    // }}
                                 >
                                     {t('Start Game')}
                                 </MainButton>
@@ -431,45 +418,3 @@ const NewGame = (props) => {
 };
 
 export default NewGame;
-
-/*
-
-<TextField
-	fullWidth
-	label="Difficulty"
-	name="Difficulty"
-	onChange={handleChangeDifficultyLevel}
-	required
-	select
-	SelectProps={{ native: true }}
-	value={difficultyLevel}
-	
->
-	{difficultyLevels.map((option) => (
-		<option key={option.key} value={option.key} disabled={option.disabled}>
-			{option.name}
-		</option>
-	))}
-</TextField>
-<FormControl>
-	<FormLabel id="demo-row-radio-buttons-group-label">Difficulty</FormLabel>
-	<RadioGroup
-		sx={{
-			flexDirection: {
-				xs: "column",
-				sm: "row",
-			},
-		}}
-		aria-labelledby="demo-row-radio-buttons-group-label"
-		name="row-radio-buttons-group"
-		onChange={handleChangeDifficultyLevel}
-		value={difficultyLevel}
-	>
-		{/* TODO: link levels avec les niveaux disponibles pour le mode choisi * /}
-		<FormControlLabel value="flashcard" control={<Radio size="small" />} label="Flashcard" disabled={true} />
-		<FormControlLabel value="normal" control={<Radio size="small" />} label="Normal" />
-		<FormControlLabel value="hard" control={<Radio size="small" />} label="Hard" />
-		<FormControlLabel value="expert" control={<Radio size="small" />} label="Expert" disabled={true} />
-	</RadioGroup>
-</FormControl>
-*/

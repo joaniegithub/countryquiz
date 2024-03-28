@@ -29,7 +29,7 @@ const GameQuestion = (props) => {
 	const questionType = questionTypes.find(qt => qt.key === question.questionTypeKey);
 
     // preload images for next Question
-    const nextQuestionImages = () => {
+    /*const nextQuestionImages = () => {
         const nextQuestion = game.questions && game.questions.length >= turn && game.questions[turn + 1];
         const nextQuestionKey = nextQuestion?.questionTypeKey;
         if (nextQuestionKey === 'flag' || nextQuestionKey === 'country_flag') {
@@ -43,7 +43,7 @@ const GameQuestion = (props) => {
             });
         }
         return null;
-    };
+    };*/
 
     const handleChoiceClick = (_chosenAnswer) => {
         if (phase === 0) {

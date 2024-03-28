@@ -13,6 +13,7 @@
     "Wiki": "Country Wiki",
 
     "Settings": "Settings",
+    "Advanced game options": "Advanced game options",
     "Dark Mode": "Dark Mode",
     "Light Mode": "Light Mode",
     "Install": "Install",
@@ -48,6 +49,7 @@
     "Normal": "Normal",
     "Hard": "Hard",
     "Expert": "Expert",
+    "Hide map background": "Hide map background",
     "Start Game": "Start Game",
 
     "Next": "Next",

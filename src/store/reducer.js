@@ -6,6 +6,7 @@ import { shuffle } from 'util/util';
 import { getQuestions } from './QuizBuilder';
 
 export const defaultSettings = {
+    showAdvancedOptions: false,
     isDarkMode: false,
     language: 'eng',
 };
@@ -69,6 +70,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                           independantOnly: game.independantOnly,
                           difficultyLevel: game.difficultyLevel,
                           gameLength: game.gameLength,
+                          hideBackgroundMap: game.hideBackgroundMap,
                       }
                     : undefined,
             };
@@ -79,6 +81,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
             const chosenDifficultyLevel = payload.chosenDifficultyLevel;
             const chosenIndependantOnly = payload.chosenIndependantOnly;
             const chosenGameLength = payload.chosenGameLength;
+            const chosenHideBackgroundMap = payload.chosenHideBackgroundMap;
             const mode = gameModes.find((gm) => gm.key === chosenGameMode);
 
             const questions = getQuestions(
@@ -100,6 +103,7 @@ const reducer = (state = defaultState, { type, ...payload }) => {
                     independantOnly: chosenIndependantOnly,
                     difficultyLevel: chosenDifficultyLevel,
                     gameLength: chosenGameLength,
+                    hideBackgroundMap: chosenHideBackgroundMap,
                     questions: shuffle(questions),
                 },
             };

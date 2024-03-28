@@ -26,6 +26,11 @@ const GameFlag = (props) => {
 			<SvgCountry />
 		</Box>
 	);
+};
+
+export default GameFlag;
+
+/*
     return (
         <Box
             component="img"
@@ -43,6 +48,4 @@ const GameFlag = (props) => {
             }}
         />
     );
-};
-
-export default GameFlag;
+*/

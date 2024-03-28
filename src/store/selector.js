@@ -12,6 +12,11 @@ export const useIsDarkMode = () => {
         return state.settings.isDarkMode;
     });
 };
+export const useShowAdvancedOptions = () => {
+    return useSelector((state) => {
+        return state.settings.showAdvancedOptions;
+    });
+};
 export const useLanguage = () => {
     return useSelector((state) => {
         return state.settings.language;
