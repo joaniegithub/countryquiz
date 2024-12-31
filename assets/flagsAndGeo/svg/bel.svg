@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 390" width="450" height="390">
-<rect width="450" height="390" fill="#ED2939"/>
-<rect width="300" height="390" fill="#FAE042"/>
-<rect width="150" height="390"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="390" viewBox="0 0 450 390">
+    <path fill="#ED2939" d="M300 0h150v390H300z"/>
+    <path fill="#FAE042" d="M150 0h150v390H150z"/>
+    <path fill="#000" d="M0 0h150v390H0z"/>
 </svg>
