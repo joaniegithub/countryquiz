@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/countryquiz/static/css/main.78b6a010.css",
-    "main.js": "/countryquiz/static/js/main.8730e0fc.js",
-    "static/js/787.1d7f4b68.chunk.js": "/countryquiz/static/js/787.1d7f4b68.chunk.js",
-    "service-worker.js": "/countryquiz/service-worker.js",
-    "static/media/brain.svg": "/countryquiz/static/media/brain.b5981939db193a6be61da8ce56b0988e.svg",
-    "static/media/globe.svg": "/countryquiz/static/media/globe.ea43faff935757145bde9cbcdda36091.svg",
-    "index.html": "/countryquiz/index.html",
-    "static/media/map.svg": "/countryquiz/static/media/map.0f6e419f05fd4e723b364509f4777948.svg",
-    "static/media/flag1.svg": "/countryquiz/static/media/flag1.08df7bac060942be3983d6dc6d3cb70f.svg",
-    "static/media/location.svg": "/countryquiz/static/media/location.ef60cf16bbc53a4b2458a4215b59b1bb.svg",
-    "main.78b6a010.css.map": "/countryquiz/static/css/main.78b6a010.css.map",
-    "main.8730e0fc.js.map": "/countryquiz/static/js/main.8730e0fc.js.map",
-    "787.1d7f4b68.chunk.js.map": "/countryquiz/static/js/787.1d7f4b68.chunk.js.map"
+    "main.css": "/geogo/static/css/main.78b6a010.css",
+    "main.js": "/geogo/static/js/main.6f123992.js",
+    "static/js/453.a3e01722.chunk.js": "/geogo/static/js/453.a3e01722.chunk.js",
+    "service-worker.js": "/geogo/service-worker.js",
+    "static/media/brain.svg": "/geogo/static/media/brain.b5981939db193a6be61da8ce56b0988e.svg",
+    "static/media/globe.svg": "/geogo/static/media/globe.ea43faff935757145bde9cbcdda36091.svg",
+    "index.html": "/geogo/index.html",
+    "static/media/map.svg": "/geogo/static/media/map.0f6e419f05fd4e723b364509f4777948.svg",
+    "static/media/flag1.svg": "/geogo/static/media/flag1.08df7bac060942be3983d6dc6d3cb70f.svg",
+    "static/media/location.svg": "/geogo/static/media/location.ef60cf16bbc53a4b2458a4215b59b1bb.svg",
+    "main.78b6a010.css.map": "/geogo/static/css/main.78b6a010.css.map",
+    "main.6f123992.js.map": "/geogo/static/js/main.6f123992.js.map",
+    "453.a3e01722.chunk.js.map": "/geogo/static/js/453.a3e01722.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78b6a010.css",
-    "static/js/main.8730e0fc.js"
+    "static/js/main.6f123992.js"
   ]
 }
