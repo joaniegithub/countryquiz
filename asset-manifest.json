@@ -1,9 +1,16 @@
 {
   "files": {
-    "main.css": "/countryquiz/static/css/main.ca4a6668.css",
-    "main.js": "/countryquiz/static/js/main.8032b906.js",
+    "main.css": "/countryquiz/static/css/main.08283aff.css",
+    "main.js": "/countryquiz/static/js/main.6acf76bb.js",
     "static/js/488.c3cde60b.chunk.js": "/countryquiz/static/js/488.c3cde60b.chunk.js",
     "service-worker.js": "/countryquiz/service-worker.js",
+    "static/media/Poppins-Italic.woff2": "/countryquiz/static/media/Poppins-Italic.ed357fa1fa06a3e00d46.woff2",
+    "static/media/Poppins-Semibold.woff2": "/countryquiz/static/media/Poppins-Semibold.91145014c0350c248ed2.woff2",
+    "static/media/Poppins-Regular.woff2": "/countryquiz/static/media/Poppins-Regular.405055dd680fa1dcdfa2.woff2",
+    "static/media/Poppins-ExtraBold.woff2": "/countryquiz/static/media/Poppins-ExtraBold.ca6a92cea2062ebec667.woff2",
+    "static/media/Poppins-Bold.woff2": "/countryquiz/static/media/Poppins-Bold.d86662fe776dae29ea78.woff2",
+    "static/media/Poppins-Medium.woff2": "/countryquiz/static/media/Poppins-Medium.08491d3f7fe7ae88ef44.woff2",
+    "static/media/Poppins-Light.woff2": "/countryquiz/static/media/Poppins-Light.05a697e23555546c5179.woff2",
     "static/media/landmark.svg": "/countryquiz/static/media/landmark.327d11fad0164dbf286ef9101e6b62ed.svg",
     "static/media/brain.svg": "/countryquiz/static/media/brain.b5981939db193a6be61da8ce56b0988e.svg",
     "static/media/peak.svg": "/countryquiz/static/media/peak.e7af79a7ae8106d0694759524646e32e.svg",
@@ -11,12 +18,12 @@
     "static/media/map.svg": "/countryquiz/static/media/map.0f6e419f05fd4e723b364509f4777948.svg",
     "static/media/flag1.svg": "/countryquiz/static/media/flag1.08df7bac060942be3983d6dc6d3cb70f.svg",
     "static/media/location.svg": "/countryquiz/static/media/location.ef60cf16bbc53a4b2458a4215b59b1bb.svg",
-    "main.ca4a6668.css.map": "/countryquiz/static/css/main.ca4a6668.css.map",
-    "main.8032b906.js.map": "/countryquiz/static/js/main.8032b906.js.map",
+    "main.08283aff.css.map": "/countryquiz/static/css/main.08283aff.css.map",
+    "main.6acf76bb.js.map": "/countryquiz/static/js/main.6acf76bb.js.map",
     "488.c3cde60b.chunk.js.map": "/countryquiz/static/js/488.c3cde60b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca4a6668.css",
-    "static/js/main.8032b906.js"
+    "static/css/main.08283aff.css",
+    "static/js/main.6acf76bb.js"
   ]
 }

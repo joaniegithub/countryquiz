@@ -1,7 +1,7 @@
 {
     "short_name": "GeoGo Quiz",
     "name": "GeoGo Quiz",
-    "description": "A quiz game about countries, flags, location on a map, capitals and general facts.",
+    "description": "A quiz game about countries, flags, map, capitals, mountains, landmarks.",
     "icons": [
         {
             "src": "icons/icon-192x192.png",
