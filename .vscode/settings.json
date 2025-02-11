@@ -1,0 +1,11 @@
+{
+    "prettier.requireConfig": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4,
+    "prettier.useEditorConfig": false,
+    "prettier.printWidth": 80,
+    "editor.formatOnSave": true,
+    "prettier.jsxBracketSameLine": false,
+    "prettier.arrowParens": "avoid",
+    "editor.minimap.enabled": false
+}
