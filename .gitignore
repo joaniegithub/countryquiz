@@ -11,6 +11,10 @@
 
 # production
 /build
+/public
+
+# production
+/src
 
 # misc
 .DS_Store
